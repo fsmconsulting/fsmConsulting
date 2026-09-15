@@ -1,3 +1,5 @@
+import { Mail, Phone } from "lucide-react";
+
 export default function Closing() {
   return (
     <section id="contact" className="relative overflow-hidden bg-navy py-24 text-white md:py-32">
@@ -16,7 +18,7 @@ export default function Closing() {
             Start a Conversation &middot; Advisory Inquiries
           </span>
           <h2 className="mt-3 font-serif text-[34px] font-normal leading-tight md:text-[50px]">
-            Let&rsquo;s talk about what your project needs to move faster.
+            What is your next brilliant move?
           </h2>
           <p className="mt-6 text-[17px] leading-relaxed text-gray-300 md:text-[18px]">
             Whether structuring an independent verification protocol, mobilizing
@@ -24,39 +26,25 @@ export default function Closing() {
             states and African regions, our partners are ready to assist.
           </p>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {/* Email Contact Card */}
+          <div className="mt-10 flex flex-wrap items-center gap-8 md:gap-12">
             <a
               href="mailto:info@fsmconsulting.com"
-              className="group border border-white/15 bg-white/[0.04] p-6 transition-all duration-200 hover:border-gold hover:bg-white/[0.08]"
+              className="group flex items-center gap-3 text-white transition-colors duration-200 hover:text-gold-light"
             >
-              <div className="flex items-center justify-between text-xs font-mono uppercase tracking-wider text-gray-400">
-                <span>Electronic Mail</span>
-                <span className="transition-transform group-hover:translate-x-1 group-hover:text-gold-light">&rarr;</span>
-              </div>
-              <div className="mt-3 font-serif text-[20px] font-medium text-white group-hover:text-gold-light">
+              <Mail className="h-5 w-5 text-red-500 transition-transform duration-200 group-hover:scale-110" />
+              <span className="font-serif text-[18px] font-medium md:text-[21px]">
                 info@fsmconsulting.com
-              </div>
-              <div className="mt-1 text-xs text-gray-400">
-                Direct advisory inquiries & RFP submissions
-              </div>
+              </span>
             </a>
 
-            {/* Phone Contact Card */}
             <a
               href="tel:+2349040009512"
-              className="group border border-white/15 bg-white/[0.04] p-6 transition-all duration-200 hover:border-gold hover:bg-white/[0.08]"
+              className="group flex items-center gap-3 text-white transition-colors duration-200 hover:text-gold-light"
             >
-              <div className="flex items-center justify-between text-xs font-mono uppercase tracking-wider text-gray-400">
-                <span>Direct Line</span>
-                <span className="transition-transform group-hover:translate-x-1 group-hover:text-gold-light">&rarr;</span>
-              </div>
-              <div className="mt-3 font-serif text-[20px] font-medium text-white group-hover:text-gold-light">
+              <Phone className="h-5 w-5 text-green-500 transition-transform duration-200 group-hover:scale-110" />
+              <span className="font-serif text-[18px] font-medium md:text-[21px]">
                 +234 904 000 9512
-              </div>
-              <div className="mt-1 text-xs text-gray-400">
-                Abuja Headquarters &middot; Mon&ndash;Fri 8am&ndash;6pm WAT
-              </div>
+              </span>
             </a>
           </div>
         </div>

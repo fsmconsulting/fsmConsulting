@@ -1,11 +1,8 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Ecosystem from "@/components/Ecosystem";
-import Services from "@/components/Services";
-import Sectors from "@/components/Sectors";
-import NetworkSection from "@/components/NetworkSection";
-import Partners from "@/components/Partners";
+import FunderLogoStrip from "@/components/FunderLogoStrip";
+import DeliveryModelSection from "@/components/DeliveryModelSection";
+import FeaturedInsightsSection from "@/components/FeaturedInsightsSection";
 import Closing from "@/components/Closing";
 import Footer from "@/components/Footer";
 
@@ -15,12 +12,9 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <About />
-        <Ecosystem />
-        <Services />
-        <Sectors />
-        <NetworkSection />
-        <Partners />
+        <FunderLogoStrip />
+        <DeliveryModelSection />
+        <FeaturedInsightsSection />
         <Closing />
       </main>
       <Footer />

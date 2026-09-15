@@ -43,12 +43,6 @@ export default function Hero() {
               See what we deliver
             </a>
           </div>
-
-          <div className="mt-16 flex flex-wrap gap-14 border-t border-ivory/15 pt-6">
-            <Stat value="14" label="Service lines" />
-            <Stat value="6+" label="Countries of active reach" />
-            <Stat value="36" label="Nigerian states covered" />
-          </div>
         </div>
       </div>
     </section>

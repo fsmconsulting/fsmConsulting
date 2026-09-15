@@ -30,6 +30,23 @@ export default function Nav() {
     const humanCapital = sectorsData.filter((s) => s.category === "human-capital");
     const infrastructureEnv = sectorsData.filter((s) => s.category === "infrastructure-environment");
 
+    const renderSectorDropdownItem = (s: (typeof sectorsData)[number]) => (
+        <li key={s.id}>
+            <Link
+                href={`/sectors/${s.id}`}
+                onClick={() => setSectorsDropdownOpen(false)}
+                className="group flex items-center justify-between rounded-lg bg-slate-800/90 px-3.5 py-2.5 shadow-[0_2px_8px_rgba(255,255,255,0.08)] transition-all duration-200 hover:bg-slate-700/90 hover:shadow-[0_4px_18px_rgba(255,255,255,0.22)] hover:-translate-y-0.5"
+            >
+                <span className="text-[12.5px] font-medium text-gray-200 transition-colors duration-200 group-hover:text-gold-light">
+                    {s.title}
+                </span>
+                <span className="text-[11px] text-gold-light/70 transition-all duration-200 group-hover:text-gold-light group-hover:translate-x-1">
+                    &rarr;
+                </span>
+            </Link>
+        </li>
+    );
+
     const isSectorsActive = pathname.startsWith("/sectors");
 
     const isActive = (href: string) => {
@@ -227,88 +244,28 @@ export default function Nav() {
                                         {/* Column 1: Governance & Digital */}
                                         <div>
                                             <ul className="space-y-2">
-                                                {governanceDigital.map((s) => (
-                                                    <li key={s.id}>
-                                                        <Link
-                                                            href={`/sectors/${s.id}`}
-                                                            onClick={() => setSectorsDropdownOpen(false)}
-                                                            className="group flex items-center justify-between rounded-lg bg-slate-800/90 px-3.5 py-2.5 shadow-[0_2px_8px_rgba(255,255,255,0.08)] transition-all duration-200 hover:bg-slate-700/90 hover:shadow-[0_4px_18px_rgba(255,255,255,0.22)] hover:-translate-y-0.5"
-                                                        >
-                                                            <span className="text-[12.5px] font-medium text-gray-200 transition-colors duration-200 group-hover:text-gold-light">
-                                                                {s.title}
-                                                            </span>
-                                                            <span className="text-[11px] text-gold-light/70 transition-all duration-200 group-hover:text-gold-light group-hover:translate-x-1">
-                                                                &rarr;
-                                                            </span>
-                                                        </Link>
-                                                    </li>
-                                                ))}
+                                                {governanceDigital.map(renderSectorDropdownItem)}
                                             </ul>
                                         </div>
 
                                         {/* Column 2: Economic Growth & Finance */}
                                         <div>
                                             <ul className="space-y-2">
-                                                {economicFinance.map((s) => (
-                                                    <li key={s.id}>
-                                                        <Link
-                                                            href={`/sectors/${s.id}`}
-                                                            onClick={() => setSectorsDropdownOpen(false)}
-                                                            className="group flex items-center justify-between rounded-lg bg-slate-800/90 px-3.5 py-2.5 shadow-[0_2px_8px_rgba(255,255,255,0.08)] transition-all duration-200 hover:bg-slate-700/90 hover:shadow-[0_4px_18px_rgba(255,255,255,0.22)] hover:-translate-y-0.5"
-                                                        >
-                                                            <span className="text-[12.5px] font-medium text-gray-200 transition-colors duration-200 group-hover:text-gold-light">
-                                                                {s.title}
-                                                            </span>
-                                                            <span className="text-[11px] text-gold-light/70 transition-all duration-200 group-hover:text-gold-light group-hover:translate-x-1">
-                                                                &rarr;
-                                                            </span>
-                                                        </Link>
-                                                    </li>
-                                                ))}
+                                                {economicFinance.map(renderSectorDropdownItem)}
                                             </ul>
                                         </div>
 
                                         {/* Column 3: Human Capital & Social */}
                                         <div>
                                             <ul className="space-y-2">
-                                                {humanCapital.map((s) => (
-                                                    <li key={s.id}>
-                                                        <Link
-                                                            href={`/sectors/${s.id}`}
-                                                            onClick={() => setSectorsDropdownOpen(false)}
-                                                            className="group flex items-center justify-between rounded-lg bg-slate-800/90 px-3.5 py-2.5 shadow-[0_2px_8px_rgba(255,255,255,0.08)] transition-all duration-200 hover:bg-slate-700/90 hover:shadow-[0_4px_18px_rgba(255,255,255,0.22)] hover:-translate-y-0.5"
-                                                        >
-                                                            <span className="text-[12.5px] font-medium text-gray-200 transition-colors duration-200 group-hover:text-gold-light">
-                                                                {s.title}
-                                                            </span>
-                                                            <span className="text-[11px] text-gold-light/70 transition-all duration-200 group-hover:text-gold-light group-hover:translate-x-1">
-                                                                &rarr;
-                                                            </span>
-                                                        </Link>
-                                                    </li>
-                                                ))}
+                                                {humanCapital.map(renderSectorDropdownItem)}
                                             </ul>
                                         </div>
 
                                         {/* Column 4: Infrastructure & Environment */}
                                         <div>
                                             <ul className="space-y-2">
-                                                {infrastructureEnv.map((s) => (
-                                                    <li key={s.id}>
-                                                        <Link
-                                                            href={`/sectors/${s.id}`}
-                                                            onClick={() => setSectorsDropdownOpen(false)}
-                                                            className="group flex items-center justify-between rounded-lg bg-slate-800/90 px-3.5 py-2.5 shadow-[0_2px_8px_rgba(255,255,255,0.08)] transition-all duration-200 hover:bg-slate-700/90 hover:shadow-[0_4px_18px_rgba(255,255,255,0.22)] hover:-translate-y-0.5"
-                                                        >
-                                                            <span className="text-[12.5px] font-medium text-gray-200 transition-colors duration-200 group-hover:text-gold-light">
-                                                                {s.title}
-                                                            </span>
-                                                            <span className="text-[11px] text-gold-light/70 transition-all duration-200 group-hover:text-gold-light group-hover:translate-x-1">
-                                                                &rarr;
-                                                            </span>
-                                                        </Link>
-                                                    </li>
-                                                ))}
+                                                {infrastructureEnv.map(renderSectorDropdownItem)}
                                             </ul>
                                         </div>
                                     </div>

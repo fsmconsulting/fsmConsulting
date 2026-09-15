@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import AboutHero from "@/components/about/AboutHero";
 import ExecutiveSummary from "@/components/about/ExecutiveSummary";
+import FounderSection from "@/components/FounderSection";
 import VisionMissionValues from "@/components/about/VisionMissionValues";
 import ImpactFramework from "@/components/about/ImpactFramework";
 import DeliveryModel from "@/components/about/DeliveryModel";
@@ -24,6 +25,7 @@ export default function AboutPage() {
       <main>
         <AboutHero />
         <ExecutiveSummary />
+        <FounderSection variant="full" id="founder" />
         <VisionMissionValues />
         <ImpactFramework />
         <DeliveryModel />

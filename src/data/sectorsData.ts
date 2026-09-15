@@ -1088,3 +1088,35 @@ export function getSectorBySlug(slug: string): SectorItem | undefined {
 export function getSectorsByCategory(category: SectorItem["category"]): SectorItem[] {
   return sectorsData.filter((s) => s.category === category);
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Lightweight strip config — used by SectorExpertiseStrip on the homepage.
+   Keeps icon mapping co-located with the sector list so /sectors page can
+   optionally reuse it later without duplicating names or slugs.
+───────────────────────────────────────────────────────────────────────────── */
+export interface SectorStripItem {
+  name: string;
+  slug: string;
+  /** Lucide icon name — resolved to a component in the consuming file */
+  iconName: string;
+  /** Thematic color for the icon — applied inline so each sector reads at a glance */
+  iconColor: string;
+}
+
+export const sectorStrip: SectorStripItem[] = [
+  { name: "Governance & Public Administration", slug: "governance-public-administration", iconName: "Landmark",      iconColor: "#60A5FA" }, // blue
+  { name: "Agriculture & Rural Development",    slug: "agriculture-rural-development",   iconName: "Wheat",         iconColor: "#4ADE80" }, // green
+  { name: "Health Systems Strengthening",       slug: "health-systems-strengthening",    iconName: "HeartPulse",    iconColor: "#F87171" }, // red
+  { name: "Education & Skills Development",     slug: "education-skills-development",    iconName: "GraduationCap", iconColor: "#FBBF24" }, // amber
+  { name: "Infrastructure Development",         slug: "infrastructure-development",      iconName: "HardHat",       iconColor: "#FB923C" }, // orange
+  { name: "Private Sector Development",         slug: "private-sector-development",      iconName: "Briefcase",     iconColor: "#A78BFA" }, // violet
+  { name: "Investment Promotion",               slug: "investment-promotion",            iconName: "TrendingUp",    iconColor: "#D9C68A" }, // gold
+  { name: "Digital Economy",                    slug: "digital-economy",                 iconName: "Cpu",           iconColor: "#22D3EE" }, // cyan
+  { name: "Climate Change & Sustainability",    slug: "climate-change-sustainability",   iconName: "Leaf",          iconColor: "#34D399" }, // emerald
+  { name: "Social Protection",                  slug: "social-protection",               iconName: "ShieldHalf",    iconColor: "#F472B6" }, // pink
+  { name: "Women's Economic Empowerment",       slug: "womens-economic-empowerment",     iconName: "Users",         iconColor: "#E879F9" }, // fuchsia
+  { name: "Land Administration & Governance",   slug: "land-administration-governance",  iconName: "Map",           iconColor: "#A3E635" }, // lime
+  { name: "Financial Inclusion",                slug: "financial-inclusion",             iconName: "Banknote",      iconColor: "#6EE7B7" }, // teal
+  { name: "Water, Sanitation & Hygiene",        slug: "water-sanitation-hygiene",        iconName: "Droplets",      iconColor: "#38BDF8" }, // sky
+  { name: "Energy & Renewable Energy",          slug: "energy-renewable-energy",         iconName: "Zap",           iconColor: "#FDE047" }, // yellow
+];
