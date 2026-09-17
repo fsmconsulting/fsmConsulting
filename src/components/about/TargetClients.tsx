@@ -84,7 +84,7 @@ export default function TargetClients() {
           {clientSegments.map((segment) => (
             <div
               key={segment.category}
-              className="rounded-xl border border-navy/10 bg-white p-7 shadow-sm transition-all duration-200 hover:border-gold hover:shadow"
+              className="rounded-none border border-navy/10 bg-white p-7 shadow-none transition-all duration-200 hover:border-gold hover:shadow"
             >
               <div className="border-b border-navy/10 pb-3">
                 <span className="font-mono text-xs font-semibold text-gold">
@@ -107,7 +107,7 @@ export default function TargetClients() {
         </div>
 
         {/* Priority Sectors Pill Grid */}
-        <div className="mt-16 rounded-xl border border-navy/10 bg-white p-8 md:p-10">
+        <div className="mt-16 rounded-none border border-navy/10 bg-white p-8 md:p-10">
           <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
             Multidisciplinary Roster
           </span>
@@ -122,7 +122,7 @@ export default function TargetClients() {
             {sectors.map((sec) => (
               <span
                 key={sec}
-                className="rounded-md border border-navy/10 bg-sand px-3.5 py-1.5 text-[13px] font-medium text-navy transition-colors hover:border-gold hover:bg-gold/10"
+                className="rounded-none border border-navy/10 bg-sand px-3.5 py-1.5 text-[13px] font-medium text-navy transition-colors hover:border-gold hover:bg-gold/10"
               >
                 {sec}
               </span>

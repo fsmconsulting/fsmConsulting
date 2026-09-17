@@ -349,7 +349,7 @@ export default function PracticeClusters() {
               onClick={() => setActiveCluster("all")}
               className={`rounded px-4 py-2 text-[13px] font-medium transition-all ${
                 activeCluster === "all"
-                  ? "bg-navy text-white shadow-sm"
+                  ? "bg-navy text-white shadow-none"
                   : "bg-white text-navy border border-navy/10 hover:bg-navy/5"
               }`}
             >
@@ -359,7 +359,7 @@ export default function PracticeClusters() {
               onClick={() => setActiveCluster("delivery")}
               className={`rounded px-4 py-2 text-[13px] font-medium transition-all ${
                 activeCluster === "delivery"
-                  ? "bg-navy text-white shadow-sm"
+                  ? "bg-navy text-white shadow-none"
                   : "bg-white text-navy border border-navy/10 hover:bg-navy/5"
               }`}
             >
@@ -369,7 +369,7 @@ export default function PracticeClusters() {
               onClick={() => setActiveCluster("governance")}
               className={`rounded px-4 py-2 text-[13px] font-medium transition-all ${
                 activeCluster === "governance"
-                  ? "bg-navy text-white shadow-sm"
+                  ? "bg-navy text-white shadow-none"
                   : "bg-white text-navy border border-navy/10 hover:bg-navy/5"
               }`}
             >
@@ -379,7 +379,7 @@ export default function PracticeClusters() {
               onClick={() => setActiveCluster("innovation")}
               className={`rounded px-4 py-2 text-[13px] font-medium transition-all ${
                 activeCluster === "innovation"
-                  ? "bg-navy text-white shadow-sm"
+                  ? "bg-navy text-white shadow-none"
                   : "bg-white text-navy border border-navy/10 hover:bg-navy/5"
               }`}
             >
@@ -396,10 +396,10 @@ export default function PracticeClusters() {
               <div
                 key={practice.id}
                 id={practice.id}
-                className={`flex flex-col justify-between rounded-xl border bg-white p-7 transition-all duration-300 ${
+                className={`flex flex-col justify-between rounded-none border bg-white p-7 transition-all duration-300 ${
                   isExpanded
-                    ? "border-gold shadow-md ring-1 ring-gold/30"
-                    : "border-navy/10 shadow-sm hover:border-navy/30"
+                    ? "border-gold shadow-none ring-1 ring-gold/30"
+                    : "border-navy/10 shadow-none hover:border-navy/30"
                 }`}
               >
                 <div>
@@ -434,14 +434,14 @@ export default function PracticeClusters() {
                   </p>
 
                   {/* Deliverables List (Always or Expanded) */}
-                  <div className="mt-5 rounded-lg border border-navy/5 bg-sand p-5">
+                  <div className="mt-5 rounded-none border border-navy/5 bg-sand p-5">
                     <span className="block text-[11.5px] font-mono font-semibold uppercase tracking-wider text-navy">
                       Core Deliverables &amp; Specialized Services:
                     </span>
                     <ul className="mt-3 space-y-2">
                       {(isExpanded ? practice.deliverables : practice.deliverables.slice(0, 4)).map((item) => (
                         <li key={item} className="flex items-start gap-2.5 text-[13.5px] text-ink/75">
-                          <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                          <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-none bg-gold" />
                           <span>{item}</span>
                         </li>
                       ))}

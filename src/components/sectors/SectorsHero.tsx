@@ -3,15 +3,15 @@ export default function SectorsHero() {
     <section className="relative overflow-hidden bg-navy pt-16 pb-20 text-ivory md:pt-24 md:pb-28">
       {/* Background ambient accents */}
       <div className="pointer-events-none absolute inset-0 opacity-20">
-        <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-blue-bright/20 blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 h-80 w-80 rounded-full bg-gold/15 blur-3xl" />
+        <div className="absolute -top-24 -right-24 h-96 w-96 rounded-none bg-blue-bright/20 blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 h-80 w-80 rounded-none bg-gold/15 blur-3xl" />
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:32px_32px] opacity-10" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         {/* Top Eyebrow Tag */}
         <div className="flex flex-wrap items-center gap-3">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold/10 px-3.5 py-1 text-[12px] font-semibold uppercase tracking-[0.18em] text-gold-light">
+          <span className="inline-flex items-center gap-1.5 rounded-none border border-gold/40 bg-gold/10 px-3.5 py-1 text-[12px] font-semibold uppercase tracking-[0.18em] text-gold-light">
             Sectoral Depth &middot; FSM Consulting Limited
           </span>
           <span className="text-[12px] tracking-wider text-ivory/50">

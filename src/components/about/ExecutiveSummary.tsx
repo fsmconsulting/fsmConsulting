@@ -65,7 +65,7 @@ export default function ExecutiveSummary() {
             </p>
           </div>
 
-          <div className="flex flex-col justify-center rounded-lg border border-navy/10 bg-sand p-8 md:p-10">
+          <div className="flex flex-col justify-center rounded-none border border-navy/10 bg-sand p-8 md:p-10">
             <div className="border-b border-navy/10 pb-4">
               <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-gold">
                 The FSM Value Proposition
@@ -101,7 +101,7 @@ export default function ExecutiveSummary() {
             {pillars.map((pillar) => (
               <div
                 key={pillar.num}
-                className="group relative rounded-lg border border-navy/10 bg-white p-6 transition-all duration-300 hover:border-gold hover:shadow-md"
+                className="group relative rounded-none border border-navy/10 bg-white p-6 transition-all duration-300 hover:border-gold hover:shadow-none"
               >
                 <span className="block font-serif text-[22px] font-semibold text-gold transition-transform duration-300 group-hover:scale-105">
                   {pillar.num}

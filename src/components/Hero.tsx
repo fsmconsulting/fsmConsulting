@@ -31,9 +31,9 @@ export default function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-8">
             <a
               href="#contact"
-              className="group inline-flex items-center gap-2 bg-gold px-6.5 py-3.5 text-[14.5px] font-semibold text-navy transition-all duration-200 hover:brightness-110 hover:scale-[1.03] active:scale-[0.98]"
+              className="group inline-flex items-center gap-2 bg-gold px-6.5 py-3.5 text-[13px] font-medium uppercase tracking-[0.06em] text-navy transition-colors duration-200 hover:bg-gold-light"
             >
-              <span className="transition-transform duration-200 group-hover:scale-105 inline-block">Start a conversation</span>
+              <span className="inline-block">Discuss an assignment</span>
               <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
             </a>
             <a

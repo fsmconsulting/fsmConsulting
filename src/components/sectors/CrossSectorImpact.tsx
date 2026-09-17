@@ -38,7 +38,7 @@ export default function CrossSectorImpact() {
           {crossCuttingPillars.map((p) => (
             <div
               key={p.title}
-              className="flex flex-col justify-between rounded-xl border border-navy/10 bg-sand p-6 transition-all duration-200 hover:border-gold hover:shadow-sm"
+              className="flex flex-col justify-between rounded-none border border-navy/10 bg-sand p-6 transition-all duration-200 hover:border-gold hover:shadow-none"
             >
               <div>
                 <div className="flex h-8 w-8 items-center justify-center rounded bg-navy text-gold-light">
@@ -58,7 +58,7 @@ export default function CrossSectorImpact() {
         </div>
 
         {/* CTA banner */}
-        <div className="mt-16 flex flex-col justify-between gap-6 rounded-2xl border border-navy/10 bg-navy p-8 text-white sm:flex-row sm:items-center md:p-10">
+        <div className="mt-16 flex flex-col justify-between gap-6 rounded-none border border-navy/10 bg-navy p-8 text-white sm:flex-row sm:items-center md:p-10">
           <div>
             <span className="font-mono text-xs font-semibold uppercase tracking-wider text-gold">
               Consult With Our Sector Leads

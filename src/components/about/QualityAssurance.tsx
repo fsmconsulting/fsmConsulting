@@ -31,7 +31,7 @@ export default function QualityAssurance() {
             </p>
           </div>
 
-          <div className="rounded-xl border border-navy/15 bg-navy p-8 text-white">
+          <div className="rounded-none border border-navy/15 bg-navy p-8 text-white">
             <div className="border-b border-white/15 pb-4">
               <span className="font-mono text-xs font-semibold uppercase tracking-wider text-gold">
                 Corporate Governance &amp; Registration
@@ -83,10 +83,10 @@ export default function QualityAssurance() {
             {policies.map((p) => (
               <div
                 key={p.title}
-                className="rounded-lg border border-navy/10 bg-sand p-5 transition-all duration-200 hover:border-gold hover:bg-white hover:shadow-sm"
+                className="rounded-none border border-navy/10 bg-sand p-5 transition-all duration-200 hover:border-gold hover:bg-white hover:shadow-none"
               >
                 <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-gold" />
+                  <span className="h-2 w-2 rounded-none bg-gold" />
                   <h4 className="font-serif text-[16px] font-medium text-navy">
                     {p.title}
                   </h4>

@@ -37,7 +37,7 @@ export default function SectorDirectory() {
                 onClick={() => setFilter(cat.id)}
                 className={`rounded px-4 py-2 text-[13px] font-medium transition-all ${
                   filter === cat.id
-                    ? "bg-navy text-white shadow-sm"
+                    ? "bg-navy text-white shadow-none"
                     : "bg-white text-navy border border-navy/10 hover:bg-navy/5"
                 }`}
               >
@@ -58,9 +58,9 @@ export default function SectorDirectory() {
                 <div
                   key={sec.id}
                   onClick={() => setActiveSectorId(sec.id)}
-                  className={`cursor-pointer rounded-xl border p-5 transition-all duration-200 ${
+                  className={`cursor-pointer rounded-none border p-5 transition-all duration-200 ${
                     isSelected
-                      ? "border-gold bg-white shadow-md ring-1 ring-gold/40"
+                      ? "border-gold bg-white shadow-none ring-1 ring-gold/40"
                       : "border-navy/10 bg-white/70 hover:border-navy/30 hover:bg-white"
                   }`}
                 >
@@ -99,7 +99,7 @@ export default function SectorDirectory() {
           </div>
 
           {/* Deep Detail Panel */}
-          <div className="rounded-2xl border border-navy/15 bg-white p-8 shadow-sm md:p-10 sticky top-28">
+          <div className="rounded-none border border-navy/15 bg-white p-8 shadow-none md:p-10 sticky top-28">
             <div className="flex flex-wrap items-center justify-between gap-4 border-b border-navy/10 pb-4">
               <div>
                 <span className="font-mono text-xs font-semibold uppercase tracking-wider text-gold">
@@ -129,7 +129,7 @@ export default function SectorDirectory() {
             </p>
 
             {/* Key Stats Row */}
-            <div className="mt-6 grid grid-cols-3 gap-3 rounded-lg border border-navy/10 bg-[#fcfdfe] p-4 text-center">
+            <div className="mt-6 grid grid-cols-3 gap-3 rounded-none border border-navy/10 bg-[#fcfdfe] p-4 text-center">
               {activeSector.stats.map((stat, sIdx) => (
                 <div key={sIdx} className="flex flex-col">
                   <span className="font-serif text-[20px] font-bold text-navy">{stat.value}</span>
@@ -139,14 +139,14 @@ export default function SectorDirectory() {
             </div>
 
             {/* Key Focus Areas */}
-            <div className="mt-6 rounded-lg border border-navy/5 bg-sand p-5">
+            <div className="mt-6 rounded-none border border-navy/5 bg-sand p-5">
               <h4 className="font-mono text-xs font-semibold uppercase tracking-wider text-navy">
                 Key Strategic Focus Areas:
               </h4>
               <ul className="mt-3 space-y-2">
                 {activeSector.focusAreas.map((fa, fIdx) => (
                   <li key={fIdx} className="flex items-start gap-2.5 text-[13.5px] text-ink/75">
-                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-none bg-gold" />
                     <div>
                       <strong className="text-navy">{fa.title}: </strong>
                       <span>{fa.description}</span>

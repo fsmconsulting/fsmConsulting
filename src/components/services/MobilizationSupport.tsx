@@ -57,7 +57,7 @@ export default function MobilizationSupport() {
             {supportPillars.map((pillar) => (
               <div
                 key={pillar.title}
-                className="rounded-xl border border-navy/10 bg-white p-6 shadow-sm transition-all duration-200 hover:border-gold hover:shadow"
+                className="rounded-none border border-navy/10 bg-white p-6 shadow-none transition-all duration-200 hover:border-gold hover:shadow"
               >
                 <h3 className="font-serif text-[18px] font-medium text-navy">
                   {pillar.title}

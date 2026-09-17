@@ -1,26 +1,27 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* McKinsey & Company Inspired Palette with FSM Accents */
-  --color-navy: #051c2c;
-  --color-navy-2: #0a2540;
-  --color-navy-3: #001326;
-  --color-blue-accent: #005696;
-  --color-blue-bright: #0077c8;
+  /* FSM Consulting — Premium Institutional Design System */
+  --color-navy: #061a29;
+  --color-navy-2: #09263a;
+  --color-navy-3: #12364b;
+  --color-blue-accent: #1d4961;
+  --color-blue-bright: #2f6e8c;
 
-  --color-gold: #b8923f;
-  --color-gold-light: #d9c68a;
+  --color-gold: #c6a15b;
+  --color-gold-light: #d7b970;
 
-  --color-sand: #f8f9fa;
-  --color-sand-2: #f0f3f6;
+  --color-sand: #f5f3ee;
+  --color-sand-2: #ede9df;
 
-  --color-ink: #121212;
-  --color-ink-muted: #4a5568;
-  --color-ivory: #ede9e0;
+  --color-ink: #152532;
+  --color-ink-muted: #61717c;
+  --color-ivory: #f5f3ee;
+  --color-line: #d9ddd9;
 
   /* Typography */
-  --font-serif: var(--font-fraunces);
-  --font-sans: var(--font-plex-sans);
+  --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
 }
 
 html {
@@ -36,7 +37,7 @@ body {
 }
 
 ::selection {
-  background-color: #051c2c;
+  background-color: #061a29;
   color: #ffffff;
 }
 
@@ -410,30 +411,23 @@ body {
   flex-direction: column;
   gap: 0;
   background: #ffffff;
-  border: 1px solid rgba(5, 28, 44, 0.16);
-  border-top: 3px solid var(--color-gold);
-  box-shadow:
-    0 12px 32px rgba(5, 28, 44, 0.38),
-    0 4px 12px rgba(5, 28, 44, 0.24);
+  border: 1px solid var(--color-line);
+  border-top: 2px solid var(--color-navy);
   padding: 1.75rem 1.5rem 1.5rem;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
   transition:
-    transform 0.22s ease,
-    box-shadow 0.22s ease,
-    border-top-color 0.22s ease;
+    border-top-color 0.22s ease,
+    background-color 0.22s ease;
   /* Ensure minimum tap area on mobile */
   min-height: 44px;
   outline-offset: 3px;
 }
 
 .delivery-card:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 20px 44px rgba(5, 28, 44, 0.5),
-    0 8px 18px rgba(5, 28, 44, 0.32);
-  border-top-color: var(--color-gold-light);
+  border-top-color: var(--color-gold);
+  background-color: var(--color-sand);
 }
 
 .delivery-card:focus-visible {

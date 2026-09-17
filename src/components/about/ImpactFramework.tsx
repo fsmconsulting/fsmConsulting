@@ -68,7 +68,7 @@ export default function ImpactFramework() {
               To help clients achieve their development objectives efficiently and effectively, we combine strategic advisory, technical assistance, independent verification, and hands-on operational delivery into a single integrated platform.
             </p>
 
-            <div className="mt-8 rounded-lg border border-gold/30 bg-gold/10 p-5">
+            <div className="mt-8 rounded-none border border-gold/30 bg-gold/10 p-5">
               <span className="text-xs font-mono font-semibold uppercase tracking-wider text-gold-light">
                 The FSM Advantage
               </span>
@@ -78,7 +78,7 @@ export default function ImpactFramework() {
             </div>
           </div>
 
-          <div className="rounded-xl border border-white/15 bg-navy-2 p-8">
+          <div className="rounded-none border border-white/15 bg-navy-2 p-8">
             <h3 className="font-serif text-[20px] font-medium text-gold-light">
               Integrated Capabilities Matrix
             </h3>
@@ -90,7 +90,7 @@ export default function ImpactFramework() {
               {integratedCapabilities.map((cap) => (
                 <div key={cap.title} className="py-3.5 first:pt-0 last:pb-0">
                   <div className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+                    <span className="h-1.5 w-1.5 rounded-none bg-gold" />
                     <span className="text-[15px] font-medium text-white">{cap.title}</span>
                   </div>
                   <p className="mt-1 pl-3.5 text-[13px] text-ivory/70">{cap.desc}</p>
@@ -118,7 +118,7 @@ export default function ImpactFramework() {
             {impactSteps.map((s, idx) => (
               <div
                 key={s.letter}
-                className="group relative flex flex-col justify-between rounded-lg border border-white/10 bg-navy-3/60 p-6 transition-all duration-300 hover:border-gold hover:bg-navy-3"
+                className="group relative flex flex-col justify-between rounded-none border border-white/10 bg-navy-3/60 p-6 transition-all duration-300 hover:border-gold hover:bg-navy-3"
               >
                 <div>
                   <div className="flex items-center justify-between border-b border-white/10 pb-3">

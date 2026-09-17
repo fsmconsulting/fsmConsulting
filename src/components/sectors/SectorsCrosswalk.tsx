@@ -62,7 +62,7 @@ export default function SectorsCrosswalk() {
           {sectors.map((sec) => (
             <div
               key={sec.title}
-              className="flex flex-col justify-between rounded-xl border border-navy/10 bg-sand p-6 transition-all duration-200 hover:border-gold hover:shadow-sm"
+              className="flex flex-col justify-between rounded-none border border-navy/10 bg-sand p-6 transition-all duration-200 hover:border-gold hover:shadow-none"
             >
               <div>
                 <h3 className="font-serif text-[18px] font-medium text-navy">

@@ -29,7 +29,7 @@ export default function Sectors() {
             <Link
               key={sector.id}
               href={`/sectors/${sector.id}`}
-              className="group flex flex-col justify-between border border-gray-200 bg-[#fbfcfd] p-5 transition-all duration-200 hover:border-navy hover:bg-white hover:shadow-md hover:-translate-y-1"
+              className="group flex flex-col justify-between border border-gray-200 bg-[#fbfcfd] p-5 transition-all duration-200 hover:border-navy hover:bg-white hover:shadow-none hover:-translate-y-1"
             >
               <div className="flex items-start justify-between">
                 <span className="font-mono text-xs font-semibold text-gray-400 group-hover:text-blue-accent">

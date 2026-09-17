@@ -53,10 +53,10 @@ export default function VisionMissionValues() {
         <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
           
           {/* Vision Card */}
-          <div className="relative overflow-hidden rounded-xl border border-navy/15 bg-white p-8 shadow-sm md:p-10">
+          <div className="relative overflow-hidden rounded-none border border-navy/15 bg-white p-8 shadow-none md:p-10">
             <div className="absolute top-0 left-0 h-1.5 w-full bg-gold" />
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/15 font-serif text-[18px] font-bold text-gold">
+              <span className="flex h-10 w-10 items-center justify-center rounded-none bg-gold/15 font-serif text-[18px] font-bold text-gold">
                 V
               </span>
               <h3 className="font-serif text-[24px] font-medium text-navy md:text-[28px]">
@@ -72,10 +72,10 @@ export default function VisionMissionValues() {
           </div>
 
           {/* Mission Card */}
-          <div className="relative overflow-hidden rounded-xl border border-navy/15 bg-white p-8 shadow-sm md:p-10">
+          <div className="relative overflow-hidden rounded-none border border-navy/15 bg-white p-8 shadow-none md:p-10">
             <div className="absolute top-0 left-0 h-1.5 w-full bg-navy" />
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-navy/10 font-serif text-[18px] font-bold text-navy">
+              <span className="flex h-10 w-10 items-center justify-center rounded-none bg-navy/10 font-serif text-[18px] font-bold text-navy">
                 M
               </span>
               <h3 className="font-serif text-[24px] font-medium text-navy md:text-[28px]">
@@ -107,7 +107,7 @@ export default function VisionMissionValues() {
             {coreValues.map((val) => (
               <div
                 key={val.title}
-                className="rounded-lg border border-navy/10 bg-white p-6 shadow-sm transition-all duration-200 hover:border-gold hover:shadow"
+                className="rounded-none border border-navy/10 bg-white p-6 shadow-none transition-all duration-200 hover:border-gold hover:shadow"
               >
                 <div className="flex items-center justify-between">
                   <h4 className="font-serif text-[20px] font-medium text-navy">

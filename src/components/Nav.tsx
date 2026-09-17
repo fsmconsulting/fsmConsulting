@@ -35,7 +35,7 @@ export default function Nav() {
             <Link
                 href={`/sectors/${s.id}`}
                 onClick={() => setSectorsDropdownOpen(false)}
-                className="group flex items-center justify-between rounded-lg bg-slate-800/90 px-3.5 py-2.5 shadow-[0_2px_8px_rgba(255,255,255,0.08)] transition-all duration-200 hover:bg-slate-700/90 hover:shadow-[0_4px_18px_rgba(255,255,255,0.22)] hover:-translate-y-0.5"
+                className="group flex items-center justify-between border border-white/10 bg-navy-2/60 px-3.5 py-2.5 transition-colors duration-200 hover:border-gold/40 hover:bg-navy-2"
             >
                 <span className="text-[12.5px] font-medium text-gray-200 transition-colors duration-200 group-hover:text-gold-light">
                     {s.title}
@@ -87,7 +87,7 @@ export default function Nav() {
         : [];
 
     return (
-        <header className="sticky top-0 z-50 border-b border-navy/10 bg-white text-navy shadow-sm transition-all">
+        <header className="sticky top-0 z-50 border-b border-navy/10 bg-white text-navy transition-all">
             {/* Top Utility Bar */}
             <div className="border-b border-navy/10 bg-[#001326] text-[12px] text-gray-400">
                 <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1.5 md:px-10">
@@ -134,7 +134,7 @@ export default function Nav() {
 
                     {/* Logo / Brand */}
                     <Link href="/" className="group flex items-center gap-3">
-                        <div className="flex h-14 w-14 items-center justify-center rounded p-1 transition-transform duration-300 group-hover:scale-105">
+                        <div className="flex h-14 w-14 items-center justify-center p-1">
                             <Image
                                 src="/FSMLogo.png"
                                 alt="FSM Consulting Logo"
@@ -238,7 +238,7 @@ export default function Nav() {
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <div className="rounded-2xl bg-navy p-6 shadow-[0_10px_35px_rgba(255,255,255,0.15),0_20px_45px_rgba(0,0,0,0.5)]">
+                                <div className="border border-navy/10 bg-navy p-6">
                                     {/* 4 Thematic Columns */}
                                     <div className="grid grid-cols-4 gap-4">
                                         {/* Column 1: Governance & Digital */}
@@ -306,17 +306,17 @@ export default function Nav() {
 
                     <Link
                         href="/#contact"
-                        className="group inline-flex items-center gap-2 bg-gold-light px-5 py-2.5 text-[13.5px] font-medium text-navy shadow-sm transition-all duration-200 hover:brightness-110"
+                        className="group inline-flex items-center gap-2 bg-navy px-5 py-2.5 text-[13px] font-medium uppercase tracking-[0.06em] text-white transition-colors duration-200 hover:bg-navy-2"
                     >
-                        <span className="transition-transform duration-200 group-hover:scale-105 inline-block">Start a conversation</span>
-                        <span className="transition-transform duration-200 group-hover:translate-x-1 inline-block">&rarr;</span>
+                        <span className="inline-block">Discuss an assignment</span>
+                        <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
                     </Link>
                 </div>
             </div>
 
             {/* Quick Search Overlay if toggled */}
             {searchOpen && (
-                <div className="border-t border-navy/10 bg-gray-50 px-6 py-4 shadow-inner md:px-10">
+                <div className="border-t border-navy/10 bg-gray-50 px-6 py-4 md:px-10">
                     <div className="mx-auto max-w-7xl">
                         <div className="flex items-center gap-3">
                             <svg className="h-5 w-5 text-navy/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -356,7 +356,7 @@ export default function Nav() {
                                                 setSearchOpen(false);
                                                 setSearchQuery("");
                                             }}
-                                            className="rounded border border-gray-200 bg-white p-2.5 transition hover:border-navy hover:shadow-xs"
+                                            className="border border-gray-200 bg-white p-2.5 transition hover:border-navy"
                                         >
                                             <span className="font-serif text-[13px] font-medium text-navy block">
                                                 {sector.title}
@@ -375,7 +375,7 @@ export default function Nav() {
 
             {/* Mobile Drawer */}
             {mobileMenuOpen && (
-                <div className="border-t border-navy/10 bg-white px-6 py-6 shadow-xl lg:hidden max-h-[85vh] overflow-y-auto">
+                <div className="border-t border-navy/10 bg-white px-6 py-6 lg:hidden max-h-[85vh] overflow-y-auto">
                     <nav className="flex flex-col gap-3 text-[15px] font-medium text-navy">
                         <Link
                             href="/"
@@ -466,9 +466,9 @@ export default function Nav() {
                             <Link
                                 href="/#contact"
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="flex w-full items-center justify-center bg-gold-light py-3 text-center text-sm font-semibold text-navy hover:brightness-105"
+                                className="flex w-full items-center justify-center bg-navy py-3 text-center text-[13px] font-medium uppercase tracking-[0.06em] text-white hover:bg-navy-2"
                             >
-                                Start a conversation &rarr;
+                                Discuss an assignment &rarr;
                             </Link>
                         </div>
                     </nav>

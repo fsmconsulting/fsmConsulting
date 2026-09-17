@@ -30,7 +30,7 @@ export default function Partners() {
                 key={p}
                 className="group flex items-center gap-3 transition-colors hover:text-navy"
               >
-                <span className="h-1.5 w-1.5 rounded-full bg-gold/60 group-hover:bg-gold" />
+                <span className="h-1.5 w-1.5 rounded-none bg-gold/60 group-hover:bg-gold" />
                 <span className="font-serif text-[15px] font-medium tracking-tight text-gray-700 group-hover:text-navy">
                   {p}
                 </span>

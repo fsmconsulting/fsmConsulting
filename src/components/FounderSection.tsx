@@ -34,7 +34,7 @@ export default function FounderSection({
         <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-12 items-start">
           {/* Portrait Column (Desktop ~35%) */}
           <div className="md:col-span-4 lg:col-span-4">
-            <div className="relative aspect-[4/5] w-full max-w-[320px] md:max-w-none mx-auto overflow-hidden rounded-xl bg-navy/5 shadow-sm border border-navy/10">
+            <div className="relative aspect-[4/5] w-full max-w-[320px] md:max-w-none mx-auto overflow-hidden rounded-none bg-navy/5 shadow-none border border-navy/10">
               <Image
                 src={founderData.photoPath}
                 alt={founderData.photoAlt}

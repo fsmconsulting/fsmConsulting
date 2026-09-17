@@ -135,8 +135,8 @@ export default async function SectorDetailPage({ params }: PageProps) {
           /* Default header for sectors without an image */
           <section className="relative overflow-hidden border-b border-navy/10 bg-[#001326] text-white">
             {/* Subtle background mesh glow */}
-            <div className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full bg-blue-accent/20 blur-3xl" />
-            <div className="pointer-events-none absolute bottom-0 left-1/4 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
+            <div className="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-none bg-blue-accent/20 blur-3xl" />
+            <div className="pointer-events-none absolute bottom-0 left-1/4 h-72 w-72 rounded-none bg-gold/10 blur-3xl" />
 
             <div className="relative mx-auto max-w-7xl px-6 py-12 md:px-10 md:py-20">
               <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.3fr_0.7fr] lg:items-end">
@@ -156,7 +156,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
                   <div className="mt-8 flex flex-wrap items-center gap-4">
                     <Link
                       href="/#contact"
-                      className="group inline-flex items-center gap-2 bg-gold-light px-6 py-3 text-[14px] font-semibold text-navy transition-all duration-200 hover:brightness-110 shadow-sm"
+                      className="group inline-flex items-center gap-2 bg-gold-light px-6 py-3 text-[14px] font-semibold text-navy transition-all duration-200 hover:brightness-110 shadow-none"
                     >
                       <span>Engage Our Sector Experts</span>
                       <span className="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
@@ -172,7 +172,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
                 </div>
 
                 {/* Stat callouts block */}
-                <div className="flex flex-col gap-4 rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm lg:p-8">
+                <div className="flex flex-col gap-4 rounded-none border border-white/10 bg-white/5 p-6 backdrop-blur-sm lg:p-8">
                   <div className="border-b border-white/10 pb-3">
                     <span className="text-xs font-semibold uppercase tracking-[0.15em] text-gray-400">
                       Operational Impact Benchmarks
@@ -212,14 +212,14 @@ export default async function SectorDetailPage({ params }: PageProps) {
                 <p className="mt-6 text-[15px] leading-relaxed text-gray-600">
                   Across Africa&rsquo;s development landscape, ambitious strategies frequently encounter execution friction, including fiduciary complexity, inter-agency coordination hurdles, community safeguards requirements, and verified measurement gaps.
                 </p>
-                <div className="mt-6 rounded-lg border-l-4 border-navy bg-white p-5 shadow-sm">
+                <div className="mt-6 rounded-none border-l-4 border-navy bg-white p-5 shadow-none">
                   <p className="text-[14px] italic text-navy/80">
                     &ldquo;FSM Consulting operates at the intersection of international development standards and ground-level African realities, ensuring investments produce verifiable, enduring value.&rdquo;
                   </p>
                 </div>
               </div>
 
-              <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
+              <div className="rounded-none border border-gray-200 bg-white p-8 shadow-none">
                 <h3 className="font-serif text-[20px] font-medium text-navy">
                   Strategic Imperative for {sector.shortTitle || sector.title}
                 </h3>
@@ -235,7 +235,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
                     {sector.targetClients.map((client, idx) => (
                       <span
                         key={idx}
-                        className="inline-flex items-center rounded-full bg-sand-2 px-3 py-1 text-xs font-medium text-navy"
+                        className="inline-flex items-center rounded-none bg-sand-2 px-3 py-1 text-xs font-medium text-navy"
                       >
                         {client}
                       </span>
@@ -266,14 +266,14 @@ export default async function SectorDetailPage({ params }: PageProps) {
               {sector.focusAreas.map((area, index) => (
                 <div
                   key={index}
-                  className="flex flex-col justify-between rounded-xl border border-gray-200 bg-[#fcfdfe] p-7 transition-all duration-300 hover:border-navy hover:bg-white hover:shadow-lg hover:-translate-y-1"
+                  className="flex flex-col justify-between rounded-none border border-gray-200 bg-[#fcfdfe] p-7 transition-all duration-300 hover:border-navy hover:bg-white hover:shadow-none hover:-translate-y-1"
                 >
                   <div>
                     <div className="flex items-center justify-between">
                       <span className="font-mono text-xs font-semibold text-blue-accent">
                         Area 0{index + 1}
                       </span>
-                      <span className="h-2 w-2 rounded-full bg-gold" />
+                      <span className="h-2 w-2 rounded-none bg-gold" />
                     </div>
                     <h3 className="mt-4 font-serif text-[20px] font-medium text-navy">
                       {area.title}
@@ -321,9 +321,9 @@ export default async function SectorDetailPage({ params }: PageProps) {
                   {sector.interventions.map((intervention, iIdx) => (
                     <div
                       key={iIdx}
-                      className="flex items-start gap-4 rounded-lg border border-gray-200 bg-white p-4 shadow-xs transition-colors hover:border-blue-accent"
+                      className="flex items-start gap-4 rounded-none border border-gray-200 bg-white p-4 shadow-xs transition-colors hover:border-blue-accent"
                     >
-                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-navy text-xs font-semibold text-gold-light">
+                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-none bg-navy text-xs font-semibold text-gold-light">
                         {iIdx + 1}
                       </div>
                       <p className="text-[14.5px] font-medium leading-normal text-navy">
@@ -337,7 +337,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
               {/* Right Column: Deployed Expert Roles & Capabilities Crosswalk */}
               <div className="flex flex-col gap-6">
                 {/* Deployed Experts Card */}
-                <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+                <div className="rounded-none border border-gray-200 bg-white p-6 shadow-none">
                   <div className="flex items-center justify-between border-b border-gray-100 pb-4">
                     <div>
                       <span className="text-[11px] font-semibold uppercase tracking-wider text-blue-accent">
@@ -358,9 +358,9 @@ export default async function SectorDetailPage({ params }: PageProps) {
                     {sector.expertRoles.map((role, rIdx) => (
                       <span
                         key={rIdx}
-                        className="inline-flex items-center gap-1.5 rounded-md border border-navy/10 bg-sand px-3 py-1.5 text-[13px] font-medium text-navy"
+                        className="inline-flex items-center gap-1.5 rounded-none border border-navy/10 bg-sand px-3 py-1.5 text-[13px] font-medium text-navy"
                       >
-                        <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+                        <span className="h-1.5 w-1.5 rounded-none bg-gold" />
                         {role}
                       </span>
                     ))}
@@ -368,7 +368,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
                 </div>
 
                 {/* Service Offerings Crosswalk Card */}
-                <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+                <div className="rounded-none border border-gray-200 bg-white p-6 shadow-none">
                   <div className="flex items-center justify-between border-b border-gray-100 pb-4">
                     <div>
                       <span className="text-[11px] font-semibold uppercase tracking-wider text-blue-accent">
@@ -428,7 +428,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
                   <Link
                     key={rel.id}
                     href={`/sectors/${rel.id}`}
-                    className="group flex flex-col justify-between rounded-xl border border-gray-200 bg-[#fbfcfd] p-6 transition-all duration-200 hover:border-navy hover:bg-white hover:shadow-md hover:-translate-y-1"
+                    className="group flex flex-col justify-between rounded-none border border-gray-200 bg-[#fbfcfd] p-6 transition-all duration-200 hover:border-navy hover:bg-white hover:shadow-none hover:-translate-y-1"
                   >
                     <div>
                       <div className="flex items-center justify-between text-xs text-gray-400">
@@ -460,7 +460,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
               href={`/sectors/${prevSector.id}`}
               className="group flex items-center gap-3 text-left"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-white text-navy transition-colors group-hover:border-navy group-hover:bg-navy group-hover:text-white">
+              <span className="flex h-10 w-10 items-center justify-center rounded-none border border-gray-300 bg-white text-navy transition-colors group-hover:border-navy group-hover:bg-navy group-hover:text-white">
                 &larr;
               </span>
               <div>
@@ -485,7 +485,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
                   {nextSector.title}
                 </span>
               </div>
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-white text-navy transition-colors group-hover:border-navy group-hover:bg-navy group-hover:text-white">
+              <span className="flex h-10 w-10 items-center justify-center rounded-none border border-gray-300 bg-white text-navy transition-colors group-hover:border-navy group-hover:bg-navy group-hover:text-white">
                 &rarr;
               </span>
             </Link>
@@ -507,7 +507,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/#contact"
-                className="group inline-flex items-center gap-2 bg-gold-light px-7 py-3.5 text-[14.5px] font-semibold text-navy shadow-sm transition-all duration-200 hover:brightness-110"
+                className="group inline-flex items-center gap-2 bg-gold-light px-7 py-3.5 text-[14.5px] font-semibold text-navy shadow-none transition-all duration-200 hover:brightness-110"
               >
                 <span>Initiate Sector Advisory Consultation</span>
                 <span className="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>

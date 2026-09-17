@@ -72,14 +72,14 @@ export default function Differentiators() {
           {differentiators.map((diff) => (
             <div
               key={diff.num}
-              className="flex flex-col justify-between rounded-xl border border-navy/10 bg-white p-7 shadow-sm transition-all duration-200 hover:border-gold hover:shadow-md"
+              className="flex flex-col justify-between rounded-none border border-navy/10 bg-white p-7 shadow-none transition-all duration-200 hover:border-gold hover:shadow-none"
             >
               <div>
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-sm font-bold text-gold">
                     {diff.num}
                   </span>
-                  <span className="h-2 w-2 rounded-full bg-navy/20" />
+                  <span className="h-2 w-2 rounded-none bg-navy/20" />
                 </div>
                 <h3 className="mt-4 font-serif text-[19px] font-medium text-navy">
                   {diff.title}

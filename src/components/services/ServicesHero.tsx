@@ -3,15 +3,15 @@ export default function ServicesHero() {
     <section className="relative overflow-hidden bg-navy pt-16 pb-20 text-ivory md:pt-24 md:pb-28">
       {/* Background ambient accents */}
       <div className="pointer-events-none absolute inset-0 opacity-20">
-        <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-blue-bright/20 blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 h-80 w-80 rounded-full bg-gold/15 blur-3xl" />
+        <div className="absolute -top-24 -right-24 h-96 w-96 rounded-none bg-blue-bright/20 blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 h-80 w-80 rounded-none bg-gold/15 blur-3xl" />
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:32px_32px] opacity-10" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         {/* Top Eyebrow Tag */}
         <div className="flex flex-wrap items-center gap-3">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold/10 px-3.5 py-1 text-[12px] font-semibold uppercase tracking-[0.18em] text-gold-light">
+          <span className="inline-flex items-center gap-1.5 rounded-none border border-gold/40 bg-gold/10 px-3.5 py-1 text-[12px] font-semibold uppercase tracking-[0.18em] text-gold-light">
             Services &amp; Capabilities &middot; Practice Architecture
           </span>
           <span className="text-[12px] tracking-wider text-ivory/50">
@@ -34,7 +34,7 @@ export default function ServicesHero() {
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3">
           <a
             href="#cluster-delivery"
-            className="group rounded-lg border border-white/15 bg-white/5 p-5 transition-all duration-200 hover:border-gold hover:bg-white/10"
+            className="group rounded-none border border-white/15 bg-white/5 p-5 transition-all duration-200 hover:border-gold hover:bg-white/10"
           >
             <span className="text-[11px] font-mono uppercase tracking-wider text-gold-light">
               Cluster 01 &rarr;
@@ -49,7 +49,7 @@ export default function ServicesHero() {
 
           <a
             href="#cluster-governance"
-            className="group rounded-lg border border-white/15 bg-white/5 p-5 transition-all duration-200 hover:border-gold hover:bg-white/10"
+            className="group rounded-none border border-white/15 bg-white/5 p-5 transition-all duration-200 hover:border-gold hover:bg-white/10"
           >
             <span className="text-[11px] font-mono uppercase tracking-wider text-gold-light">
               Cluster 02 &rarr;
@@ -64,7 +64,7 @@ export default function ServicesHero() {
 
           <a
             href="#cluster-innovation"
-            className="group rounded-lg border border-white/15 bg-white/5 p-5 transition-all duration-200 hover:border-gold hover:bg-white/10"
+            className="group rounded-none border border-white/15 bg-white/5 p-5 transition-all duration-200 hover:border-gold hover:bg-white/10"
           >
             <span className="text-[11px] font-mono uppercase tracking-wider text-gold-light">
               Cluster 03 &rarr;

@@ -71,7 +71,7 @@ export default function DeliveryModel() {
             </p>
           </div>
 
-          <div className="rounded-xl border border-navy/10 bg-sand p-8">
+          <div className="rounded-none border border-navy/10 bg-sand p-8">
             <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-gold">
               The FSM Mantra
             </span>
@@ -102,7 +102,7 @@ export default function DeliveryModel() {
             {channels.map((chan) => (
               <div
                 key={chan.title}
-                className="flex flex-col justify-between rounded-lg border border-navy/10 bg-sand-2 p-6 transition-all duration-200 hover:border-navy hover:shadow-sm"
+                className="flex flex-col justify-between rounded-none border border-navy/10 bg-sand-2 p-6 transition-all duration-200 hover:border-navy hover:shadow-none"
               >
                 <div>
                   <span className="inline-block rounded bg-navy/5 px-2 py-0.5 text-[11px] font-medium text-navy">
@@ -121,7 +121,7 @@ export default function DeliveryModel() {
         </div>
 
         {/* 8-Stage Delivery Pipeline */}
-        <div className="mt-20 rounded-2xl border border-navy/10 bg-navy p-8 text-white md:p-12">
+        <div className="mt-20 rounded-none border border-navy/10 bg-navy p-8 text-white md:p-12">
           <div className="mb-10 text-center">
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-gold">
               End-to-End Pipeline
@@ -138,7 +138,7 @@ export default function DeliveryModel() {
             {pipelineStages.map((stage) => (
               <div
                 key={stage.step}
-                className="relative rounded-lg border border-white/10 bg-white/5 p-5 transition-colors hover:border-gold/50 hover:bg-white/10"
+                className="relative rounded-none border border-white/10 bg-white/5 p-5 transition-colors hover:border-gold/50 hover:bg-white/10"
               >
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-xs font-bold text-gold">
@@ -158,7 +158,7 @@ export default function DeliveryModel() {
         </div>
 
         {/* Mobilization & Operational Support */}
-        <div className="mt-20 grid grid-cols-1 items-center gap-12 rounded-xl border border-navy/10 bg-sand p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-12">
+        <div className="mt-20 grid grid-cols-1 items-center gap-12 rounded-none border border-navy/10 bg-sand p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-12">
           <div>
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Operational Infrastructure
@@ -174,7 +174,7 @@ export default function DeliveryModel() {
             </p>
           </div>
 
-          <div className="rounded-lg border border-navy/10 bg-white p-6 shadow-sm">
+          <div className="rounded-none border border-navy/10 bg-white p-6 shadow-none">
             <span className="font-mono text-xs font-semibold uppercase tracking-wider text-gold">
               Comprehensive Field Support
             </span>

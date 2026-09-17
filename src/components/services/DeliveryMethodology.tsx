@@ -48,7 +48,7 @@ export default function DeliveryMethodology() {
           {deliveryEngines.map((engine) => (
             <div
               key={engine.title}
-              className="flex flex-col justify-between rounded-xl border border-white/10 bg-navy-2 p-6 transition-all duration-200 hover:border-gold/60 hover:bg-navy-3"
+              className="flex flex-col justify-between rounded-none border border-white/10 bg-navy-2 p-6 transition-all duration-200 hover:border-gold/60 hover:bg-navy-3"
             >
               <div>
                 <span className="inline-block rounded bg-gold/15 px-2.5 py-1 text-[11px] font-mono font-semibold uppercase tracking-wider text-gold-light">
@@ -79,7 +79,7 @@ export default function DeliveryMethodology() {
         </div>
 
         {/* Field Verification Banner */}
-        <div className="mt-16 rounded-2xl border border-gold/30 bg-navy-3/90 p-8 md:p-10">
+        <div className="mt-16 rounded-none border border-gold/30 bg-navy-3/90 p-8 md:p-10">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
               <span className="font-mono text-xs font-semibold uppercase tracking-wider text-gold">
@@ -93,21 +93,21 @@ export default function DeliveryMethodology() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 rounded-lg border border-white/10 bg-white/5 p-6 text-[13.5px]">
+            <div className="flex flex-col gap-3 rounded-none border border-white/10 bg-white/5 p-6 text-[13.5px]">
               <div className="flex items-center gap-3">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 font-mono text-xs font-bold text-gold">
+                <span className="flex h-6 w-6 items-center justify-center rounded-none bg-gold/20 font-mono text-xs font-bold text-gold">
                   1
                 </span>
                 <span>GPS &amp; Timestamped Photographic Verification</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 font-mono text-xs font-bold text-gold">
+                <span className="flex h-6 w-6 items-center justify-center rounded-none bg-gold/20 font-mono text-xs font-bold text-gold">
                   2
                 </span>
                 <span>Direct Beneficiary Feedback &amp; Citizen Surveys</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gold/20 font-mono text-xs font-bold text-gold">
+                <span className="flex h-6 w-6 items-center justify-center rounded-none bg-gold/20 font-mono text-xs font-bold text-gold">
                   3
                 </span>
                 <span>Technical Engineering &amp; Fiduciary Milestone Audits</span>

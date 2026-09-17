@@ -48,7 +48,7 @@ export default function NetworkSection() {
           </div>
 
           {/* Regional Footprint Matrix Card */}
-          <div className="border border-gray-200 bg-white p-8 shadow-sm">
+          <div className="border border-gray-200 bg-white p-8 shadow-none">
             <div className="border-b border-gray-200 pb-4">
               <span className="font-mono text-xs uppercase tracking-widest text-gray-400">
                 Network Coverage Matrix // 2026

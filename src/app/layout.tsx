@@ -1,21 +1,6 @@
 import type { Metadata } from "next";
-import { Fraunces, IBM_Plex_Sans} from "next/font/google";
+import "./fonts.css";
 import "./globals.css";
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
-
-const plexSans = IBM_Plex_Sans({
-  variable: "--font-plex-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "FSM Consulting Limited | Africa's Development Delivery Partner",
@@ -28,7 +13,7 @@ export default function RootLayout({
   return (
     <html
     lang="en"
-    className={`${fraunces.variable} ${plexSans.variable} h-full antialiased`}>
+    className="h-full antialiased">
       <body className="min-h-full bg-white text-ink font-sans antialiased">{children}</body>
     </html>
   )

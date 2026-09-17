@@ -161,7 +161,7 @@ export default function Footer() {
                 </a>
               </p>
               <div className="pt-2">
-                <span className="inline-block border border-white/20 px-2 py-1 text-[11px] font-mono text-gray-400">
+                <span className="inline-block border border-white/20 px-2 py-1 text-[11px] font-mono text-gray-400 rounded-none">
                   SCUML Registered Entity
                 </span>
               </div>

@@ -58,7 +58,7 @@ export default function ExpertNetwork() {
             </p>
           </div>
 
-          <div className="rounded-xl border border-white/15 bg-navy-2 p-8">
+          <div className="rounded-none border border-white/15 bg-navy-2 p-8">
             <span className="font-mono text-xs font-semibold uppercase tracking-wider text-gold-light">
               Mobilization Capability
             </span>
@@ -79,7 +79,7 @@ export default function ExpertNetwork() {
           {expertDisciplines.map((disc) => (
             <div
               key={disc.role}
-              className="flex flex-col justify-between rounded-xl border border-white/10 bg-navy-3/70 p-6 transition-all duration-200 hover:border-gold/50 hover:bg-navy-3"
+              className="flex flex-col justify-between rounded-none border border-white/10 bg-navy-3/70 p-6 transition-all duration-200 hover:border-gold/50 hover:bg-navy-3"
             >
               <div>
                 <h4 className="font-serif text-[18px] font-medium text-white">

@@ -15,7 +15,7 @@ export default function Closing() {
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <div className="max-w-3xl">
           <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-gold-light">
-            Start a Conversation &middot; Advisory Inquiries
+            Discuss an Assignment &middot; Advisory Inquiries
           </span>
           <h2 className="mt-3 font-serif text-[34px] font-normal leading-tight md:text-[50px]">
             What is your next brilliant move?

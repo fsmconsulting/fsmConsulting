@@ -86,7 +86,7 @@ export default function Services() {
           {practices.map((practice, idx) => (
             <div
               key={practice.title}
-              className={`group relative flex flex-col justify-between border border-white/10 bg-white/5 backdrop-blur-sm p-8 transition-all duration-300 hover:bg-white/10 hover:shadow-xl hover:-translate-y-1 cursor-pointer ${
+              className={`group relative flex flex-col justify-between border border-white/10 bg-white/5 backdrop-blur-sm p-8 transition-all duration-300 hover:bg-white/10 hover:shadow-none hover:-translate-y-1 cursor-pointer ${
                 idx === 0 ? "md:col-span-2 lg:col-span-2" : ""
               }`}
             >
