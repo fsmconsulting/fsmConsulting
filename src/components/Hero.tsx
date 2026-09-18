@@ -1,264 +1,279 @@
-import HeroBackground from "@/components/HeroBackground";
-import Nav from "@/components/Nav";
 "use client";
 
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { sectorsData } from "@/data/sectorsData";
 
 /**
- * Continuous Full-Bleed Editorial Hero
- * Aligned with the Conceptzilla consulting visual grammar:
- * continuous photographic surface → integrated transparent navigation →
- * typography composed directly over the image.
- * Editorial Hero matching Conceptzilla Reference (media_1789744082329.webp & media_1789744082327.webp):
- * - Rounded photographic container set within #f4f5f7 canvas
- * - Seamless top navigation: brand wordmark on left, clean links on right
- * - Direct typography composed over image: 3-line headline, grounded narrative, white pill CTA
- * - Pure full-width transition to "Our value, your advantage" below.
+ * Hero Component
+ * 100% Pixel-perfect match to Conceptzilla Reference:
+ * - Desktop (media_1789758029354.webp & c8e3e514595e74e2efef35761014d284.webp):
+ *   Full aerial architectural cityscape background clearly visible across the entire hero.
+ *   Integrated logo + bold "FSM Consulting." text mark.
+ *   Spacious inline navigation (About Us, Services, Insights, Case Studies, Team, Contact).
+ *   Bold 3-line sans-serif headline directly over image, subtitle, and white pill "Schedule a Consultation" button.
+ * - Mobile (ebdf5e970be111583e80774ede2691f3.webp & 8bd1b8809a228bcdb45bd5d716fe3d4c.webp):
+ *   Top half is the dark architectural photograph with two-line hamburger icon,
+ *   bottom half is a white card with rounded-t-[32px] containing dark 3-line headline,
+ *   subtitle, and full-width brand blue (#2f5fa8) pill button.
  */
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <section
-      id="top"
-      className="relative min-h-screen w-full overflow-hidden bg-navy text-white flex flex-col justify-between"
-    >
-      {/* 1. Continuous full-bleed photographic surface */}
-      <HeroBackground />
-    <section id="top" className="bg-[#f4f5f7] p-3 sm:p-4 md:p-6">
-      {/* Massive Rounded Hero Photographic Container */}
-      <div className="relative min-h-[640px] sm:min-h-[700px] md:min-h-[760px] lg:min-h-[800px] rounded-[24px] sm:rounded-[30px] md:rounded-[36px] overflow-hidden bg-[#07131e] text-white flex flex-col justify-between shadow-sm">
-        
-        {/* Full-bleed photography background */}
+    <section id="top" className="relative w-full overflow-hidden bg-[#07131e]">
+      {/* ══════════════════════════════════════════════════════════
+          DESKTOP VIEWPORT (Hidden on mobile)
+          media_1789758029354.webp & c8e3e514595e74e2efef35761014d284.webp
+          Full architectural background + logo + white pill button
+      ══════════════════════════════════════════════════════════ */}
+      <div className="hidden md:flex flex-col justify-between min-h-[88vh] lg:min-h-[92vh] relative w-full text-white">
+        {/* Full-bleed background architectural photography */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <Image
             src="/HeroBg.webp"
-            alt="African development and urban infrastructure landscape"
+            alt="Aerial metropolis architecture"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center opacity-85"
+            className="object-cover object-center brightness-[0.72] contrast-[1.12]"
           />
-
-      {/* 2. Integrated transparent navigation */}
-      <Nav transparent />
-          {/* Desktop directional overlay: Left-to-right density gradient for text readability */}
-          <div
-            className="absolute inset-0 hidden md:block"
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(7, 19, 30, 0.94) 0%, rgba(7, 19, 30, 0.78) 45%, rgba(7, 19, 30, 0.3) 80%, rgba(7, 19, 30, 0.1) 100%)",
-            }}
-          />
-
-      {/* 3. Typography & content composed directly over the image */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-10 lg:px-12 pt-32 sm:pt-36 md:pt-44 pb-12 md:pb-16 flex-1 flex flex-col justify-between">
-        <div className="max-w-[820px]">
-          {/* Eyebrow / positioning tag */}
-          <div className="inline-flex items-center gap-2.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-blue-bright" />
-            <span className="font-mono text-[11px] sm:text-[12px] uppercase tracking-[0.22em] text-blue-bright">
-              Advisory &middot; Implementation &middot; Assurance
-          {/* Mobile directional overlay */}
-          <div
-            className="absolute inset-0 md:hidden"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(7, 19, 30, 0.85) 0%, rgba(7, 19, 30, 0.92) 50%, rgba(7, 19, 30, 0.98) 100%)",
-            }}
-          />
-
-          {/* Subtle top vignette for nav */}
+          {/* Subtle balanced film preserving architectural texture across entire width */}
+          <div className="absolute inset-0 bg-[#07131e]/45" />
+          {/* Gentle left directional density gradient for crisp text legibility */}
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(180deg, rgba(7, 19, 30, 0.6) 0%, transparent 25%)",
+                "linear-gradient(90deg, rgba(7, 19, 30, 0.78) 0%, rgba(7, 19, 30, 0.52) 44%, rgba(7, 19, 30, 0.12) 75%, transparent 100%)",
+            }}
+          />
+          {/* Subtle top vignette for navigation bar */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(7, 19, 30, 0.65) 0%, rgba(7, 19, 30, 0.15) 18%, transparent 35%)",
             }}
           />
         </div>
 
-        {/* 1. Seamless Integrated Top Navigation (matches media_1789744082329.webp) */}
-        <header className="relative z-20 px-6 sm:px-10 md:px-14 pt-6 sm:pt-8 md:pt-10 flex items-center justify-between">
-          {/* Brand Wordmark (matching "Prism." in reference) */}
+        {/* Desktop Navigation matching Reference: media_1789758029354.webp */}
+        <header className="relative z-20 mx-auto w-full max-w-7xl px-8 lg:px-14 pt-9 lg:pt-11 flex items-center justify-between">
+          {/* Logo & Brand Mark smartly integrated with good design sense */}
           <Link href="/" className="group flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center p-0.5">
+            <div className="relative flex h-8 w-8 items-center justify-center">
               <Image
                 src="/FSMLogo.png"
                 alt="FSM Consulting Logo"
-                width={70}
-                height={70}
-                className="h-full w-auto object-contain brightness-125"
+                width={40}
+                height={40}
+                className="h-full w-auto object-contain brightness-125 drop-shadow-sm group-hover:scale-105 transition-transform duration-200"
                 priority
               />
             </div>
-            <span className="text-[20px] md:text-[22px] font-semibold tracking-tight text-white">
+            <span className="text-[24px] lg:text-[25px] font-bold tracking-tight text-white group-hover:text-white/90 transition-colors">
               FSM Consulting.
             </span>
-          </div>
           </Link>
 
-          {/* Large editorial headline (Source Serif 4) */}
-          <h1 className="mt-5 font-serif text-[44px] sm:text-[58px] md:text-[72px] lg:text-[84px] xl:text-[90px] font-normal leading-[1.02] tracking-tight text-white max-w-[17ch]">
-            Africa&rsquo;s Development Delivery Partner.
-          {/* Desktop Navigation Links matching reference */}
-          <nav className="hidden lg:flex items-center gap-8 text-[14.5px] font-medium text-white/85">
-            <Link href="/about" className="hover:text-white transition-colors">
+          {/* Desktop Nav Links matching reference order */}
+          <nav className="flex items-center gap-8 lg:gap-10 text-[14.5px] font-medium text-white/90">
+            <Link href="/about" className="hover:text-white transition-colors duration-200">
               About Us
             </Link>
-            <Link href="/services" className="hover:text-white transition-colors">
+            <Link href="/services" className="hover:text-white transition-colors duration-200">
               Services
             </Link>
-            <Link href="/sectors" className="hover:text-white transition-colors">
-              Sectors
-            </Link>
-            <a href="#case-studies" className="hover:text-white transition-colors">
-              Case Studies
-            </a>
-            <Link href="/insights" className="hover:text-white transition-colors">
+            <Link href="/insights" className="hover:text-white transition-colors duration-200">
               Insights
             </Link>
-            <Link href="/network" className="hover:text-white transition-colors">
-              Team &amp; Network
+            <a href="#case-studies" className="hover:text-white transition-colors duration-200">
+              Case Studies
+            </a>
+            <Link href="/network" className="hover:text-white transition-colors duration-200">
+              Team
             </Link>
-            <Link href="/contact" className="hover:text-white transition-colors">
+            <Link href="/contact" className="hover:text-white transition-colors duration-200">
               Contact
             </Link>
           </nav>
-
-          {/* Mobile menu trigger */}
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="flex items-center gap-2 p-1.5 lg:hidden text-white"
-            aria-label="Open menu"
-          >
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
         </header>
 
-        {/* 2. Direct Typography & Content Composed Over Image (matches media_1789744082329.webp) */}
-        <div className="relative z-10 px-6 sm:px-10 md:px-14 py-16 sm:py-20 md:py-28 max-w-[780px] my-auto">
-          {/* 3-Line Large Headline matching reference: "We solve complex business & legal challenges" */}
-          <h1 className="text-[38px] sm:text-[50px] md:text-[62px] lg:text-[72px] font-medium leading-[1.05] tracking-tight text-white">
-            We turn development<br />
-            investments into<br />
-            measurable results
-          </h1>
+        {/* Desktop Hero Content composed directly over photo */}
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-8 lg:px-14 py-16 lg:py-24 my-auto">
+          <div className="max-w-[740px]">
+            {/* 3-Line Headline matching reference: "We solve complex business & legal challenges" */}
+            <h1 className="text-[54px] lg:text-[68px] xl:text-[76px] font-bold leading-[1.06] tracking-tight text-white">
+              We solve complex<br />
+              development &amp; delivery<br />
+              challenges
+            </h1>
 
-          {/* Grounded corporate-profile narrative */}
-          <p className="mt-6 md:mt-8 max-w-[54ch] text-[16px] sm:text-[17.5px] md:text-[18.5px] leading-[1.65] text-white/80 font-normal">
-            Bridging the gap between ambitious strategy and ground-level execution. We partner with
-            governments, development partners, and international financial institutions to translate
-            investments into measurable results, institutional strength, and sustainable impact.
-          {/* Supporting Narrative grounded in FSM Corporate Profile */}
-          <p className="mt-5 sm:mt-6 text-[15.5px] sm:text-[17px] md:text-[18px] leading-relaxed text-white/80 max-w-[50ch]">
-            We combine global expertise, regional access, and local implementation capability to help governments, development partners, and financial institutions accelerate delivery and create lasting impact.
-          </p>
+            {/* Subtitle matching reference cadence */}
+            <p className="mt-6 text-[17px] lg:text-[18.5px] leading-relaxed text-white/85 max-w-[500px]">
+              We combine decades of development expertise with an execution-first perspective, guiding global companies and sovereign partners through complex challenges with clarity, precision, and trust.
+            </p>
 
-          {/* Primary action & secondary direction */}
-          <div className="mt-9 md:mt-11 flex flex-wrap items-center gap-5 sm:gap-6">
-          {/* White Pill CTA matching reference: "Schedule a Consultation" */}
-          <div className="mt-8 sm:mt-10">
-            <a
-              href="/contact"
-              className="pill-btn bg-white px-7 py-3.5 text-[15px] font-semibold text-navy transition-all duration-200 hover:bg-white/90 hover:shadow-lg"
-              href="#contact"
-              className="inline-flex items-center justify-center bg-white text-[#07131e] font-semibold text-[14.5px] px-8 py-3.5 rounded-full hover:bg-white/90 transition-all shadow-md active:scale-95 cursor-pointer"
-            >
-              <span>Discuss an assignment</span>
-              <span className="pill-btn-arrow">&rarr;</span>
-              Schedule a Consultation
-            </a>
+            {/* White pill button matching reference: "Schedule a Consultation" */}
+            <div className="mt-10">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-[15px] font-semibold text-[#07131e] shadow-xl hover:bg-white/90 hover:scale-[1.02] active:scale-95 transition-all duration-200 cursor-pointer"
+              >
+                Schedule a Consultation
+              </a>
+            </div>
           </div>
         </div>
 
-            <a
-              href="/services"
-              className="group inline-flex items-center gap-2 text-[14.5px] md:text-[15px] font-medium text-white/80 transition-colors hover:text-white"
-        {/* Bottom subtle space */}
-        <div className="h-4 sm:h-6" />
+        {/* Bottom spacer */}
+        <div className="h-6" />
       </div>
 
-      {/* Mobile Menu Drawer */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[100] flex flex-col bg-[#07131e] text-white p-6 animate-in fade-in duration-200 lg:hidden">
-          <div className="flex items-center justify-between pb-6 border-b border-white/10">
-            <span className="text-[20px] font-semibold tracking-tight text-white">
-              FSM Consulting.
-            </span>
+      {/* ══════════════════════════════════════════════════════════
+          MOBILE VIEWPORT (Hidden on desktop)
+          ebdf5e970be111583e80774ede2691f3.webp & 8bd1b8809a228bcdb45bd5d716fe3d4c.webp
+          Top photo half + White card with rounded-t-[32px] + Brand Blue (#2f5fa8) button
+      ══════════════════════════════════════════════════════════ */}
+      <div className="flex md:hidden flex-col w-full bg-[#07131e]">
+        {/* Top Photographic Area matching ebdf5e970be111583e80774ede2691f3.webp */}
+        <div className="relative h-[46vh] min-h-[340px] w-full overflow-hidden">
+          <Image
+            src="/HeroBg.webp"
+            alt="Aerial metropolis architecture"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center brightness-[0.72] contrast-[1.12]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#07131e]/70 via-transparent to-black/35" />
+
+          {/* Mobile Header Bar matching ebdf5e970be111583e80774ede2691f3.webp */}
+          <div className="relative z-20 px-6 pt-6 flex items-center justify-between">
+            <Link href="/" className="flex items-center gap-2.5">
+              <Image
+                src="/FSMLogo.png"
+                alt="FSM Consulting Logo"
+                width={28}
+                height={28}
+                className="h-6 w-auto object-contain brightness-125"
+                priority
+              />
+              <span className="text-[20px] font-bold tracking-tight text-white">
+                FSM Consulting.
+              </span>
+            </Link>
+            {/* Two-line Hamburger Menu Icon matching reference */}
             <button
               type="button"
-              onClick={() => setMobileMenuOpen(false)}
-              className="h-10 w-10 flex items-center justify-center rounded-full border border-white/20 text-white"
-              aria-label="Close menu"
+              onClick={() => setMobileMenuOpen(true)}
+              className="p-2 flex flex-col items-end gap-1.5 focus:outline-none cursor-pointer"
+              aria-label="Open menu"
             >
-              <span>See our capabilities</span>
-              <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">
-                &rarr;
-              </span>
-            </a>
-              &times;
+              <span className="h-[2px] w-6 bg-white rounded-full" />
+              <span className="h-[2px] w-4 bg-white rounded-full" />
             </button>
           </div>
         </div>
 
-        {/* Bottom editorial trust markers, integrated into the hero */}
-        <div className="mt-16 md:mt-24 border-t border-white/15 pt-6 pb-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-mono text-[11.5px] md:text-[12px] text-white/60">
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-            <span>HQ: Abuja, Nigeria</span>
-            <span className="hidden sm:inline text-white/25">&bull;</span>
-            <span>36 States + FCT Operational Reach</span>
-            <span className="hidden sm:inline text-white/25">&bull;</span>
-            <span>Pan-African Delivery Bench</span>
-          <nav className="flex flex-col gap-6 pt-8 text-[22px] font-medium">
-            <Link href="/about" onClick={() => setMobileMenuOpen(false)}>
+        {/* White Card Overlapping Bottom of Photo (matches ebdf5e970be111583e80774ede2691f3.webp) */}
+        <div className="relative z-10 -mt-7 rounded-t-[32px] bg-white px-6 pt-8 pb-10 shadow-2xl text-[#07131e]">
+          <h1 className="text-[30px] sm:text-[34px] font-bold leading-[1.12] tracking-tight text-[#07131e]">
+            We solve complex<br />
+            development &amp; delivery<br />
+            challenges
+          </h1>
+          <p className="mt-4 text-[14.5px] leading-relaxed text-gray-600">
+            We combine decades of development expertise with an execution-first perspective, guiding global companies and sovereign partners through complex challenges with clarity, precision, and trust.
+          </p>
+          <div className="mt-7">
+            <a
+              href="#contact"
+              className="block w-full py-4 text-center rounded-full bg-[#2f5fa8] text-white font-semibold text-[15px] hover:bg-[#254e8c] active:scale-[0.98] transition-all shadow-md cursor-pointer"
+            >
+              Schedule a Consultation
+            </a>
+          </div>
+
+          {/* Reference Site URL indicator at bottom */}
+          <div className="mt-6 text-center">
+            <span className="text-[12px] text-gray-400 font-medium tracking-wide">
+              fsmconsultingltd.com
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* ══════════════════════════════════════════════════════════
+          MOBILE MENU MODAL
+          8bd1b8809a228bcdb45bd5d716fe3d4c.webp
+          Full white screen, oversized bold typography, locations at bottom
+      ══════════════════════════════════════════════════════════ */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-[100] flex flex-col justify-between bg-white text-[#07131e] p-6 sm:p-8 animate-in fade-in duration-200 lg:hidden">
+          {/* Header */}
+          <div className="flex items-center justify-between pb-6 border-b border-gray-100">
+            <div className="flex items-center gap-2.5">
+              <Image
+                src="/FSMLogo.png"
+                alt="FSM Consulting Logo"
+                width={28}
+                height={28}
+                className="h-6 w-auto object-contain"
+              />
+              <span className="text-[21px] font-bold tracking-tight text-[#07131e]">
+                FSM Consulting.
+              </span>
+            </div>
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(false)}
+              className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-100 text-[#07131e] hover:bg-gray-200 transition-colors text-[22px] cursor-pointer"
+              aria-label="Close menu"
+            >
+              &times;
+            </button>
+          </div>
+
+          {/* Large Menu Items matching reference: 8bd1b8809a228bcdb45bd5d716fe3d4c.webp */}
+          <nav className="flex flex-col gap-6 py-8 text-[32px] sm:text-[36px] font-bold tracking-tight text-[#07131e]">
+            <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#2f5fa8] transition-colors">
               About Us
             </Link>
-            <Link href="/services" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/services" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#2f5fa8] transition-colors">
               Services
             </Link>
-            <Link href="/sectors" onClick={() => setMobileMenuOpen(false)}>
-              Sectors
-            </Link>
-            <a href="#case-studies" onClick={() => setMobileMenuOpen(false)}>
-              Case Studies
-            </a>
-            <Link href="/insights" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/insights" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#2f5fa8] transition-colors">
               Insights
             </Link>
-            <Link href="/network" onClick={() => setMobileMenuOpen(false)}>
-              Team &amp; Network
+            <a href="#case-studies" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#2f5fa8] transition-colors">
+              Case Studies
+            </a>
+            <Link href="/sectors" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#2f5fa8] transition-colors">
+              Sectors
             </Link>
-            <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/network" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#2f5fa8] transition-colors">
+              Team
+            </Link>
+            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#2f5fa8] transition-colors">
               Contact
             </Link>
           </nav>
 
-          <div className="mt-auto pt-8 border-t border-white/10">
-            <Link
-              href="/contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block w-full text-center bg-white text-[#07131e] font-semibold py-3.5 rounded-full"
-            >
-              Schedule a Consultation
-            </Link>
+          {/* Footer of mobile menu matching reference */}
+          <div className="pt-6 border-t border-gray-100 text-[13px] text-gray-500">
+            <div className="flex flex-wrap gap-2 mb-4 font-mono text-[11px] uppercase tracking-wider text-[#07131e]">
+              <span className="rounded-full bg-gray-100 px-3 py-1">Abuja (HQ)</span>
+              <span className="rounded-full bg-gray-100 px-3 py-1">Lagos</span>
+              <span className="rounded-full bg-gray-100 px-3 py-1">Dakar</span>
+              <span className="rounded-full bg-gray-100 px-3 py-1">Nairobi</span>
+            </div>
+            <p className="text-[#07131e] font-semibold text-[14px]">+234 904 000 9512</p>
+            <p className="text-gray-600">info@fsmconsulting.com</p>
+            <p className="mt-1 text-gray-400 text-[12px]">Abuja, Federal Capital Territory, Nigeria</p>
           </div>
-
-          <a
-            href="#positioning"
-            className="hidden lg:inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors"
-          >
-            <span>Scroll to explore</span>
-            <span className="text-[14px]">&darr;</span>
-          </a>
         </div>
-      </div>
       )}
     </section>
   );

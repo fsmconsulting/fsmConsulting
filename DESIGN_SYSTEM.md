@@ -131,12 +131,16 @@ The corporate profile explicitly positions FSM around development delivery, impl
 ---
 
 # 04 — REFERENCE TRANSLATION
+# 04 — REFERENCE TRANSLATION (CONCEPTZILLA "PRISM" VISUAL GRAMMAR)
 
 The reference is **not** being copied.
+The reference is **not** being copied blindly. We translate its exact design grammar into FSM's institutional identity.
 
 We are translating its design grammar.
+The visual foundation is the Conceptzilla "Prism" consulting firm reference (`media_1789744082327.webp`, `ebdf5e970be111583e80774ede2691f3.webp`, `8bd1b8809a228bcdb45bd5d716fe3d4c.webp`, `91e92a42cb383981c55b96b7197da0d2.webp`, `media_1789744082297.webp`, `2433588c582ab68b20ec69ab1722d0b2.webp`, and `540aa52634cc0b07c8d6bf69c6049af7.webp`).
 
 The reference contributes:
+### Core Reference Architecture Rules:
 
 * composition
 * spatial rhythm
@@ -150,8 +154,14 @@ The reference contributes:
 * navigation behavior
 * responsive principles
 * information density
+1. **Hero (Never a Floating Card on Desktop)**:
+   - **Desktop**: Full-bleed edge-to-edge dark photographic surface (`100vw`, `min-h-[90vh]`). Integrated transparent navigation bar (`FSM Consulting.`, nav links). Bold 3-line headline directly composed over the photo. Subtitle paragraph. White pill button (`Schedule a Consultation`).
+   - **Mobile**: Top half photo (`~48vh`); bottom half white card rounding up with `rounded-t-[32px]`, dark bold headline, subtext, and full-width dark pill button (`Schedule a Consultation`).
+   - **Mobile Menu**: Full-screen white modal drawer with bold oversized links (`text-[32px]`), close button, and regional office locations + contact info at bottom.
 
 FSM contributes:
+2. **"Our value, your advantage"**:
+   - 4-column open layout with clean, elegant icons (Target, Globe, CheckCircle, Shield), bold titles, and institutional copy derived strictly from FSM's corporate profile.
 
 * brand colors
 * typography
@@ -163,14 +173,37 @@ FSM contributes:
 * Impact 360 methodology
 * Africa network
 * institutional positioning
+3. **"Services overview"**:
+   - Two-column layout: left column contains only the bold section title ("Services overview"); right column contains a 2x2 grid of `#f4f5f7` rounded cards (`rounded-[20px]`) with concise descriptions and "Learn More →" hover links.
 
 The implementation must therefore look like:
+4. **Financing / Partner Strip**:
+   - Centered headline: "Supporting projects financed by global development partners".
+   - Balanced logo grid (World Bank, AfDB, IsDB, USAID, FCDO, EU, GIZ, UN Agencies).
+   - 3-dash slider indicator (`[ —  -  - ]`) centered below the logos.
 
 > **FSM designed using the visual intelligence of the chosen reference.**
+5. **"Case studies"**:
+   - Header row with bold title, `Regional | Global` pill filter toggle, and `← →` circle navigation buttons.
+   - Deep Midnight Navy cards (`#07131e`) matching reference geometry (the reference uses green; FSM uses Midnight Navy).
+   - Structured internal layout: Entity badge, Challenge description, Impact description, and bottom pill button (`Learn More →`).
 
 Not:
+6. **Featured Insights**:
+   - Top editorial statement spanning the width ("We don't just advise clients — we bridge the gap between ambitious strategy and ground-level execution...").
+   - Exactly 3 prominent cards side-by-side with rounded photography (`rounded-[18px]`, `hover:scale-105`), bold titles, deks.
+   - Light grey pill button (`Show All Insights`) at the bottom.
 
 > “Conceptzilla website with FSM text.”
+7. **Purposeful Motion & Interactivity**:
+   - Subtle hover lifts (`hover:-translate-y-1.5` / `hover:-translate-y-2`).
+   - Controlled image zooms (`group-hover:scale-105`).
+   - Interactive filter toggles and arrow shift states (`group-hover:translate-x-1.5`).
+   - Smooth transitions without noisy bounce or gratuitous 3D tilt.
+
+The implementation must look like:
+
+> **FSM designed using the visual intelligence of the Conceptzilla Prism reference — exact in composition, layout, typography rhythm, and interaction, translated faithfully into FSM's deep navy institutional brand.**
 
 ---
 
@@ -186,7 +219,9 @@ This is intentional.
 --color-navy: #061A29;
 --color-navy-2: #09263A;
 --color-navy-3: #12364B;
---color-blue-accent: #1D4961;
+--color-brand: #2F5FA8;
+--color-blue-accent: #2F5FA8;
+--color-blue-bright: #2F5FA8;
 ```
 
 ### `--color-navy`

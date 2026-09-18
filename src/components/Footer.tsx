@@ -1,40 +1,58 @@
-import Image from "next/image";
 import Link from "next/link";
 
+/**
+ * Institutional Footer Component
+ * Matches Conceptzilla visual grammar:
+ * - Deep navy (#07131e) background with crisp typography and subtle borders
+ * - Brand heading with "FSM Consulting." mark & regional presence badges
+ * - Clean 4-column directory for Practice Areas, Priority Sectors, Institutional, and Headquarters
+ * - Accent color #2f5fa8 for hover states and Back to Top
+ */
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-navy text-gray-400">
-      <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
-        {/* Top Branding Section */}
-        <div className="flex flex-col justify-between gap-6 border-b border-white/10 pb-12 lg:flex-row lg:items-center">
-          <div className="flex items-center gap-4">
-            <Image
-              src="/FSMLogo.png"
-              alt="FSM Consulting Logo"
-              width={70}
-              height={65}
-              className="h-12 w-auto md:h-14 object-contain brightness-110"
-              unoptimized
-            />
-            <span className="font-serif text-[22px] font-medium tracking-tight text-white md:text-[24px]">
-              FSM Consulting Limited
-            </span>
+    <footer className="border-t border-white/10 bg-[#07131e] text-gray-400 antialiased" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" className="sr-only">Footer</h2>
+      
+      <div className="mx-auto max-w-7xl px-8 lg:px-14 py-16 lg:py-20">
+        {/* Top Branding & Regional Footprint Bar */}
+        <div className="flex flex-col justify-between gap-8 border-b border-white/10 pb-12 lg:flex-row lg:items-center">
+          <div>
+            <Link href="/" className="inline-block">
+              <span className="text-[26px] lg:text-[28px] font-bold tracking-tight text-white hover:text-white/90 transition-colors">
+                FSM Consulting.
+              </span>
+            </Link>
+            <p className="mt-2 text-[14.5px] text-gray-400 max-w-lg leading-relaxed">
+              Africa&rsquo;s Development Delivery Partner. Turning investments into measurable results across sovereign and cross-border initiatives.
+            </p>
           </div>
-          <p className="max-w-xl text-[14px] leading-relaxed text-gray-400">
-            Africa&rsquo;s Development Delivery Partner. Accelerating
-            implementation, strengthening institutions, and delivering
-            measurable results across sovereign and cross-border initiatives.
-          </p>
+
+          {/* Regional Presence Badges matching reference style */}
+          <div className="flex flex-col items-start lg:items-end gap-3">
+            <span className="font-mono text-[11px] uppercase tracking-wider text-gray-400">
+              Regional Delivery Footprint
+            </span>
+            <div className="flex flex-wrap gap-2">
+              {["Abuja (HQ)", "Lagos", "Dakar", "Nairobi"].map((city) => (
+                <span
+                  key={city}
+                  className="rounded-full bg-white/5 border border-white/10 px-3.5 py-1 text-[12px] font-medium text-white/90"
+                >
+                  {city}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* 4-Column Directory Grid */}
-        <div className="grid grid-cols-2 gap-10 py-12 md:grid-cols-4 lg:gap-12">
-          {/* Practice Areas */}
+        <div className="grid grid-cols-2 gap-10 py-12 md:grid-cols-4 lg:gap-14">
+          {/* Column 1: Core Practice Areas */}
           <div>
-            <h4 className="font-serif text-[15px] font-medium text-white">
+            <h3 className="text-[14px] font-semibold uppercase tracking-wider text-white">
               Practice Areas
-            </h4>
-            <ul className="mt-4 space-y-2.5 text-[13.5px]">
+            </h3>
+            <ul className="mt-5 space-y-3 text-[13.5px]">
               <li>
                 <Link href="/services" className="hover:text-white transition-colors">
                   Project Assurance &amp; IVA
@@ -42,7 +60,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services" className="hover:text-white transition-colors">
-                  MEAL &amp; Outcome Harvesting
+                  Implementation Acceleration
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-white transition-colors">
+                  MEAL &amp; Evidence Tracking
                 </Link>
               </li>
               <li>
@@ -52,23 +75,18 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services" className="hover:text-white transition-colors">
-                  Digital Systems &amp; GIS Dashboards
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:text-white transition-colors">
-                  Procurement &amp; Fiduciary
+                  Fiduciary &amp; Procurement
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Key Sectors */}
+          {/* Column 2: Priority Sectors */}
           <div>
-            <h4 className="font-serif text-[15px] font-medium text-white">
+            <h3 className="text-[14px] font-semibold uppercase tracking-wider text-white">
               Key Sectors
-            </h4>
-            <ul className="mt-4 space-y-2.5 text-[13.5px]">
+            </h3>
+            <ul className="mt-5 space-y-3 text-[13.5px]">
               <li>
                 <Link href="/sectors/governance-public-administration" className="hover:text-white transition-colors">
                   Governance &amp; Public Admin
@@ -76,12 +94,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/sectors/agriculture-rural-development" className="hover:text-white transition-colors">
-                  Agriculture &amp; Rural Development
+                  Agriculture &amp; Rural Dev
                 </Link>
               </li>
               <li>
                 <Link href="/sectors/health-systems-strengthening" className="hover:text-white transition-colors">
-                  Health Systems Strengthening
+                  Health Systems
                 </Link>
               </li>
               <li>
@@ -91,33 +109,18 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/sectors/infrastructure-development" className="hover:text-white transition-colors">
-                  Infrastructure Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/sectors/digital-economy" className="hover:text-white transition-colors">
-                  Digital Economy
-                </Link>
-              </li>
-              <li>
-                <Link href="/sectors/climate-change-sustainability" className="hover:text-white transition-colors">
-                  Climate &amp; Sustainability
-                </Link>
-              </li>
-              <li>
-                <Link href="/sectors/water-sanitation-hygiene" className="hover:text-white transition-colors">
-                  WASH (Water &amp; Sanitation)
+                  Infrastructure
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Firm & Network */}
+          {/* Column 3: Institutional Navigation */}
           <div>
-            <h4 className="font-serif text-[15px] font-medium text-white">
-              Our Firm
-            </h4>
-            <ul className="mt-4 space-y-2.5 text-[13.5px]">
+            <h3 className="text-[14px] font-semibold uppercase tracking-wider text-white">
+              Company
+            </h3>
+            <ul className="mt-5 space-y-3 text-[13.5px]">
               <li>
                 <Link href="/about" className="hover:text-white transition-colors">
                   About FSM Consulting
@@ -129,64 +132,73 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/network" className="hover:text-white transition-colors">
-                  Regional Network Reach
-                </Link>
-              </li>
-              <li>
                 <Link href="/insights" className="hover:text-white transition-colors">
                   Perspectives &amp; Insights
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition-colors">
-                  Executive Inquiries
+                <a href="#case-studies" className="hover:text-white transition-colors">
+                  Verified Case Studies
+                </a>
+              </li>
+              <li>
+                <Link href="/network" className="hover:text-white transition-colors">
+                  Advisory Bench &amp; Team
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact & Registered Office */}
+          {/* Column 4: Headquarters & Contact */}
           <div>
-            <h4 className="font-serif text-[15px] font-medium text-white">
+            <h3 className="text-[14px] font-semibold uppercase tracking-wider text-white">
               Headquarters
-            </h4>
-            <div className="mt-4 space-y-2 text-[13.5px] leading-relaxed">
-              <p className="text-gray-300">Abuja, Federal Capital Territory, Nigeria</p>
+            </h3>
+            <div className="mt-5 space-y-3 text-[13.5px] leading-relaxed">
+              <p className="text-gray-300">
+                Abuja, Federal Capital Territory,<br />Nigeria
+              </p>
               <p>
-                <a href="mailto:info@fsmconsulting.com" className="hover:text-white transition-colors">
+                <a href="mailto:info@fsmconsulting.com" className="text-gray-300 hover:text-white transition-colors">
                   info@fsmconsulting.com
                 </a>
               </p>
               <p>
-                <a href="tel:+2349040009512" className="hover:text-white transition-colors">
+                <a href="tel:+2349040009512" className="text-gray-300 hover:text-white transition-colors">
                   +234 904 000 9512
                 </a>
               </p>
               <div className="pt-2">
-                <span className="inline-block border border-white/20 px-2.5 py-1 text-[11px] font-mono text-gray-400 rounded-full">
-                  SCUML Registered Entity
-                </span>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-[#2f5fa8] hover:text-white transition-colors"
+                >
+                  <span>Schedule a Consultation</span>
+                  <span>&rarr;</span>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Utility Bar */}
-        <div className="flex flex-col justify-between gap-4 border-t border-white/10 pt-8 text-[12px] text-gray-500 sm:flex-row sm:items-center">
-          <div className="flex flex-wrap items-center gap-4">
+        {/* Bottom Utility & Copyright Bar */}
+        <div className="flex flex-col justify-between gap-4 border-t border-white/10 pt-8 text-[12.5px] text-gray-500 sm:flex-row sm:items-center">
+          <div className="flex flex-wrap items-center gap-3">
             <span>&copy; {new Date().getFullYear()} FSM Consulting Limited. All rights reserved.</span>
             <span>&middot;</span>
             <span className="font-mono text-gray-400">RC: 9616494</span>
           </div>
           <div className="flex items-center gap-6">
-            <Link href="/contact" className="transition-colors duration-200 hover:text-gray-300">
-              Confidentiality &amp; Code of Conduct
-            </Link>
-            <Link href="/contact" className="transition-colors duration-200 hover:text-gray-300">
+            <Link href="/contact" className="hover:text-gray-300 transition-colors">
               Terms of Engagement
             </Link>
-            <a href="#top" className="inline-flex items-center gap-1 text-blue-bright transition-all duration-200 hover:brightness-125">
+            <Link href="/contact" className="hover:text-gray-300 transition-colors">
+              Confidentiality
+            </Link>
+            <a
+              href="#top"
+              className="inline-flex items-center gap-1 font-medium text-[#2f5fa8] hover:text-white transition-colors"
+            >
               <span>Back to top</span>
               <span>&uarr;</span>
             </a>
