@@ -13,7 +13,7 @@ export default function Hero() {
       className="relative min-h-screen w-full overflow-hidden bg-navy text-white flex flex-col justify-between"
     >
       {/* 1. Continuous Full-Bleed Photographic Surface */}
-      <HeroBackground />
+      <HeroBackground src="/HeroBg.webp" />
 
       {/* 2. Integrated Transparent Navigation */}
       <Nav transparent />

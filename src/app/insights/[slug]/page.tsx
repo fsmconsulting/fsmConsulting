@@ -83,10 +83,10 @@ export default async function InsightDetailPage({ params }: PageProps) {
 
               <div className="mt-12 border-t border-navy/10 pt-8">
                 <Link
-                  href="/insights"
+                  href="/#insights"
                   className="text-[14px] font-medium text-navy/70 transition-colors duration-200 hover:text-navy"
                 >
-                  &larr; All insights
+                  &larr; Back to Perspectives &amp; Insights
                 </Link>
               </div>
             </div>

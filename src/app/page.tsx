@@ -8,7 +8,6 @@ import DeliveryChain from "@/components/delivery-ecosystem/DeliveryChain";
 import ImpactProcess from "@/components/ImpactProcess";
 import CaseStudies from "@/components/CaseStudies";
 import FeaturedInsightsSection from "@/components/FeaturedInsightsSection";
-import NetworkSection from "@/components/NetworkSection";
 import Closing from "@/components/Closing";
 import Footer from "@/components/Footer";
 
@@ -19,37 +18,35 @@ export default function Home() {
         {/* 1. Major Photographic Editorial Hero */}
         <Hero />
 
-        {/* 2. Open Value Advantage */}
-        <ValueAdvantage />
-
-        {/* 3. Open Editorial Positioning (Global, Regional, National, Local) */}
-        <PositioningPillars />
-
-        {/* 4. Open Ruled Platform Metrics */}
-        <KeyFigures />
-
-        {/* 5. Structured Services & Capabilities (14 Practice Lines in 4 Clusters) */}
-        <HomeServices />
-
-        {/* 6. Understated Development Financing Framework Strip */}
+        {/* 2. Development Financing Framework Strip (Infinite Marquee) */}
         <FunderLogoStrip />
 
-        {/* 7. Operational Delivery Chain (8-Stage Movement to Measurable Results) */}
-        <DeliveryChain />
+        {/* 3. Open Value Advantage */}
+        <ValueAdvantage />
 
-        {/* 8. FSM Impact 360™ Continuous Framework (Contained Navy Surface) */}
-        <ImpactProcess />
+        {/* 4. Open Editorial Positioning (Global, Regional, National, Local) */}
+        <PositioningPillars />
 
-        {/* 9. Verified Case Studies & Disclosure Protocol */}
-        <CaseStudies />
+        {/* 5. Open Ruled Platform Metrics */}
+        <KeyFigures />
 
-        {/* 10. Editorial Perspectives & Insights */}
+        {/* 6. Structured Services & Capabilities (14 Practice Lines in 4 Clusters) */}
+        <HomeServices />
+
+        {/* 7. Editorial Perspectives & Insights */}
         <FeaturedInsightsSection />
 
-        {/* 11. Regional Delivery Footprint & 36 States + FCT Reach */}
-        <NetworkSection />
+        {/* 8. Operational Delivery Chain (8-Stage Movement to Measurable Results) */}
+        <DeliveryChain />
 
-        {/* 12. Closing Call-To-Action (Major Contained Surface) */}
+        {/* 9. FSM Impact 360™ Continuous Framework (Contained Navy Surface) */}
+        <ImpactProcess />
+
+        {/* 10. Verified Case Studies & Disclosure Protocol */}
+        <CaseStudies />
+
+
+        {/* 11. Closing Call-To-Action (Major Contained Surface) */}
         <Closing />
       </main>
 

@@ -27,9 +27,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
     if (href === "/" && pathname === "/") return true;
     if (href === "/about" && pathname === "/about") return true;
     if (href === "/services" && pathname.startsWith("/services")) return true;
-    if (href === "/delivery-ecosystem" && pathname === "/delivery-ecosystem") return true;
     if (href === "/network" && pathname === "/network") return true;
-    if (href === "/insights" && pathname.startsWith("/insights")) return true;
     return false;
   };
 
@@ -147,9 +145,6 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
 
         {/* Desktop Navigation Links */}
         <nav className="hidden items-center gap-7 text-[14px] lg:flex">
-          <Link href="/" className={`relative py-1 transition-colors ${isActive("/") ? linkActiveCls : linkIdleCls}`}>
-            Home
-          </Link>
           <Link
             href="/about"
             className={`relative py-1 transition-colors ${isActive("/about") ? linkActiveCls : linkIdleCls}`}
@@ -262,24 +257,10 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
           </div>
 
           <Link
-            href="/delivery-ecosystem"
-            className={`relative py-1 transition-colors ${
-              isActive("/delivery-ecosystem") ? linkActiveCls : linkIdleCls
-            }`}
-          >
-            Delivery Ecosystem
-          </Link>
-          <Link
             href="/network"
             className={`relative py-1 transition-colors ${isActive("/network") ? linkActiveCls : linkIdleCls}`}
           >
             Our Network
-          </Link>
-          <Link
-            href="/insights"
-            className={`relative py-1 transition-colors ${isActive("/insights") ? linkActiveCls : linkIdleCls}`}
-          >
-            Insights
           </Link>
         </nav>
 
@@ -406,15 +387,6 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
           <div className="flex-1 overflow-y-auto px-6 py-8">
             <nav className="flex flex-col space-y-5">
               <Link
-                href="/"
-                onClick={() => setMobileMenuOpen(false)}
-                className={`font-serif text-[28px] font-medium leading-tight transition-colors ${
-                  isActive("/") ? "text-white" : "text-white/65 hover:text-white"
-                }`}
-              >
-                Home
-              </Link>
-              <Link
                 href="/about"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`font-serif text-[28px] font-medium leading-tight transition-colors ${
@@ -463,11 +435,9 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
               </div>
 
               <Link
-                href="/delivery-ecosystem"
+                href="/#delivery-ecosystem"
                 onClick={() => setMobileMenuOpen(false)}
-                className={`font-serif text-[28px] font-medium leading-tight transition-colors ${
-                  isActive("/delivery-ecosystem") ? "text-white" : "text-white/65 hover:text-white"
-                }`}
+                className="font-serif text-[28px] font-medium leading-tight text-white/65 hover:text-white transition-colors"
               >
                 Delivery Ecosystem
               </Link>
@@ -479,15 +449,6 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                 }`}
               >
                 Our Network
-              </Link>
-              <Link
-                href="/insights"
-                onClick={() => setMobileMenuOpen(false)}
-                className={`font-serif text-[28px] font-medium leading-tight transition-colors ${
-                  isActive("/insights") ? "text-white" : "text-white/65 hover:text-white"
-                }`}
-              >
-                Insights
               </Link>
             </nav>
 

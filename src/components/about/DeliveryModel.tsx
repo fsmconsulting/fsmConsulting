@@ -51,16 +51,16 @@ const logistics = [
 
 export default function DeliveryModel() {
   return (
-    <section className="border-b border-navy/10 bg-white py-20 md:py-28">
+    <section className="border-b border-navy/10 bg-white py-24">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        
+
         {/* Section Header */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div>
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Operating Architecture &middot; Geographic Reach
             </span>
-            <h2 className="mt-3 font-serif text-[32px] font-medium leading-tight text-navy md:text-[42px]">
+            <h2 className="mt-3 font-sans text-[32px] font-bold leading-tight text-navy md:text-[42px]">
               Built for seamless cross-border delivery across Africa.
             </h2>
             <p className="mt-6 text-[16px] leading-relaxed text-ink/80">
@@ -75,7 +75,7 @@ export default function DeliveryModel() {
             <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
               The FSM Mantra
             </span>
-            <h3 className="mt-2 font-serif text-[24px] font-medium text-navy">
+            <h3 className="mt-2 font-sans text-[24px] font-bold text-navy">
               Global Expertise. Regional Access. Local Capability.
             </h3>
             <p className="mt-4 text-[14.5px] leading-relaxed text-ink/75">
@@ -93,7 +93,7 @@ export default function DeliveryModel() {
             <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
               Four Channels of Access
             </span>
-            <h3 className="mt-1 font-serif text-[24px] font-medium text-navy md:text-[30px]">
+            <h3 className="mt-1 font-sans text-[24px] font-bold text-navy md:text-[30px]">
               Complementary Delivery Mechanisms
             </h3>
           </div>
@@ -108,7 +108,7 @@ export default function DeliveryModel() {
                   <span className="inline-block rounded-full bg-navy/5 px-3 py-1 text-[11px] font-medium text-navy">
                     {chan.tag}
                   </span>
-                  <h4 className="mt-3 font-serif text-[18px] font-medium text-navy">
+                  <h4 className="mt-3 font-sans text-[18px] font-semibold text-navy">
                     {chan.title}
                   </h4>
                   <p className="mt-2 text-[13.5px] leading-relaxed text-ink/70">
@@ -126,7 +126,7 @@ export default function DeliveryModel() {
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-bright">
               End-to-End Pipeline
             </span>
-            <h3 className="mt-2 font-serif text-[26px] font-medium text-white md:text-[34px]">
+            <h3 className="mt-2 font-sans text-[26px] font-bold text-white md:text-[34px]">
               The FSM Cross-Border Delivery Model
             </h3>
             <p className="mx-auto mt-2 max-w-2xl text-[14.5px] text-white/70">
@@ -146,7 +146,7 @@ export default function DeliveryModel() {
                   </span>
                   <span className="text-white/30">&rarr;</span>
                 </div>
-                <h4 className="mt-3 font-serif text-[16.5px] font-medium text-white">
+                <h4 className="mt-3 font-sans text-[16.5px] font-semibold text-white">
                   {stage.title}
                 </h4>
                 <p className="mt-1 text-[13px] text-white/70">
@@ -163,7 +163,7 @@ export default function DeliveryModel() {
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Operational Infrastructure
             </span>
-            <h3 className="mt-2 font-serif text-[26px] font-medium text-navy md:text-[32px]">
+            <h3 className="mt-2 font-sans text-[26px] font-bold text-navy md:text-[32px]">
               We don&rsquo;t just mobilize expertise. We mobilize the systems needed to deliver.
             </h3>
             <p className="mt-4 text-[15px] leading-relaxed text-ink/75">

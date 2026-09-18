@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import Nav from "@/components/Nav";
+import HeroBackground from "@/components/HeroBackground";
 import Closing from "@/components/Closing";
 import Footer from "@/components/Footer";
 import { sectorsData, getSectorBySlug } from "@/data/sectorsData";
@@ -53,18 +53,10 @@ export default async function SectorDetailPage({ params }: PageProps) {
       <main>
         {/* Shorter Editorial Header (Design System §13) */}
         <section className="relative overflow-hidden bg-navy text-white min-h-[480px] md:min-h-[540px] flex flex-col justify-between">
-          {sector.heroImage && (
-            <div className="duotone-navy pointer-events-none absolute inset-0">
-              <Image
-                src={sector.heroImage}
-                alt={sector.title}
-                fill
-                priority
-                sizes="100vw"
-                className="object-cover"
-              />
-            </div>
-          )}
+          <HeroBackground
+            src={sector.heroImage || "/HeroBg.webp"}
+            alt={sector.title}
+          />
 
           <Nav transparent />
 

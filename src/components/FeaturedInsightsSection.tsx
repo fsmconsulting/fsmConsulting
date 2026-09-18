@@ -20,7 +20,7 @@ export default function FeaturedInsightsSection({
 
   return (
     <section
-      id="featured-insights"
+      id="insights"
       className="bg-white px-6 py-20 md:px-10 md:py-28"
       aria-labelledby="insights-heading"
     >
@@ -34,89 +34,140 @@ export default function FeaturedInsightsSection({
               {heading}
             </h2>
           </div>
-          <Link
-            href="/insights"
-            className="group inline-flex items-center gap-1.5 text-[14px] font-medium text-navy hover:text-blue-bright transition-colors"
-          >
-            <span>View all perspectives</span>
-            <span className="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
-          </Link>
+          <p className="max-w-md text-[14.5px] leading-relaxed text-ink-muted">
+            Our perspectives on what makes development investments translate into measurable, sustainable results.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
-          {/* Featured Dominant Editorial Block (7 Cols) */}
-          {featured && (
+        {secondary.length > 0 ? (
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
+            {/* Featured Dominant Editorial Block (7 Cols) */}
+            {featured && (
+              <Link
+                href={`/insights/${featured.slug}`}
+                className="surface-card group col-span-1 flex flex-col overflow-hidden border border-navy/10 bg-canvas transition-colors duration-300 hover:border-navy/30 lg:col-span-7"
+                aria-label={`Read featured insight: ${featured.title}`}
+              >
+                <div className="relative aspect-[16/10] w-full overflow-hidden">
+                  <Image
+                    src={featured.image}
+                    alt={featured.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 58vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    priority
+                  />
+                </div>
+                <div className="flex flex-1 flex-col justify-between p-8 md:p-10">
+                  <div>
+                    <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
+                      {featured.category}
+                    </span>
+                    <h3 className="mt-3 font-serif text-[24px] font-medium leading-snug text-navy md:text-[30px]">
+                      {featured.title}
+                    </h3>
+                    <p className="mt-3.5 max-w-[54ch] text-[15px] leading-relaxed text-ink-muted">
+                      {featured.dek}
+                    </p>
+                  </div>
+                  <div className="mt-8 flex items-center justify-between border-t border-navy/10 pt-4 font-mono text-[12px] text-ink-muted">
+                    <div className="flex items-center gap-3">
+                      <span>{featured.author}</span>
+                      {featured.date && (
+                        <>
+                          <span aria-hidden="true">&bull;</span>
+                          <time>{featured.date}</time>
+                        </>
+                      )}
+                    </div>
+                    <span className="text-[13px] font-medium text-navy group-hover:text-blue-bright transition-colors">
+                      Read article &rarr;
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            )}
+
+            {/* Secondary Editorial Stories Column (5 Cols) */}
+            <div className="col-span-1 flex flex-col gap-4 lg:col-span-5">
+              {secondary.map((item) => (
+                <Link
+                  key={item.slug}
+                  href={`/insights/${item.slug}`}
+                  className="surface-card-sm group flex flex-1 flex-col justify-between border border-navy/10 bg-canvas p-6 transition-colors duration-300 hover:border-navy/30 md:p-7"
+                  aria-label={`Read insight: ${item.title}`}
+                >
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
+                        {item.category}
+                      </span>
+                      <time className="font-mono text-[11px] text-ink-muted">{item.date}</time>
+                    </div>
+                    <h3 className="mt-2.5 font-serif text-[18px] font-medium leading-snug text-navy md:text-[20px]">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 line-clamp-2 text-[13.5px] leading-relaxed text-ink-muted">
+                      {item.dek}
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-navy/10 flex items-center justify-between text-[12.5px] text-ink-muted">
+                    <span>{item.author}</span>
+                    <span className="text-navy group-hover:translate-x-1 transition-transform">&rarr;</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ) : (
+          /* Single Featured Insight: Balanced horizontal layout */
+          featured && (
             <Link
               href={`/insights/${featured.slug}`}
-              className="surface-card group col-span-1 flex flex-col overflow-hidden border border-navy/10 bg-canvas transition-colors duration-300 hover:border-navy/30 lg:col-span-7"
-              aria-label={`Read featured insight: ${featured.title}`}
+              className="surface-card group grid grid-cols-1 overflow-hidden border border-navy/10 bg-canvas transition-colors duration-300 hover:border-navy/30 md:grid-cols-12"
+              aria-label={`Read insight: ${featured.title}`}
             >
-              <div className="relative aspect-[16/10] w-full overflow-hidden">
+              <div className="relative aspect-[16/10] md:aspect-auto md:min-h-[380px] w-full overflow-hidden md:col-span-6">
                 <Image
                   src={featured.image}
                   alt={featured.title}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 58vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   priority
                 />
               </div>
-              <div className="flex flex-1 flex-col justify-between p-8 md:p-10">
+              <div className="flex flex-1 flex-col justify-between p-8 md:p-12 md:col-span-6">
                 <div>
                   <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
                     {featured.category}
                   </span>
-                  <h3 className="mt-3 font-serif text-[24px] font-medium leading-snug text-navy md:text-[30px]">
+                  <h3 className="mt-3 font-serif text-[26px] font-medium leading-snug text-navy md:text-[34px]">
                     {featured.title}
                   </h3>
-                  <p className="mt-3.5 max-w-[54ch] text-[15px] leading-relaxed text-ink-muted">
+                  <p className="mt-4 max-w-[54ch] text-[15.5px] leading-relaxed text-ink-muted">
                     {featured.dek}
                   </p>
                 </div>
-                <div className="mt-8 flex items-center gap-3 border-t border-navy/10 pt-4 font-mono text-[12px] text-ink-muted">
-                  <span>{featured.author}</span>
-                  {featured.date && (
-                    <>
-                      <span aria-hidden="true">&bull;</span>
-                      <time>{featured.date}</time>
-                    </>
-                  )}
+                <div className="mt-8 flex items-center justify-between border-t border-navy/10 pt-5 font-mono text-[12px] text-ink-muted">
+                  <div className="flex items-center gap-3">
+                    <span>{featured.author}</span>
+                    {featured.date && (
+                      <>
+                        <span aria-hidden="true">&bull;</span>
+                        <time>{featured.date}</time>
+                      </>
+                    )}
+                  </div>
+                  <span className="text-[13px] font-medium text-navy group-hover:text-blue-bright transition-colors inline-flex items-center gap-1.5">
+                    <span>Read perspective</span>
+                    <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+                  </span>
                 </div>
               </div>
             </Link>
-          )}
-
-          {/* Secondary Editorial Stories Column (5 Cols) */}
-          <div className="col-span-1 flex flex-col gap-4 lg:col-span-5">
-            {secondary.map((item) => (
-              <Link
-                key={item.slug}
-                href={`/insights/${item.slug}`}
-                className="surface-card-sm group flex flex-1 flex-col justify-between border border-navy/10 bg-canvas p-6 transition-colors duration-300 hover:border-navy/30 md:p-7"
-                aria-label={`Read insight: ${item.title}`}
-              >
-                <div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
-                      {item.category}
-                    </span>
-                    <time className="font-mono text-[11px] text-ink-muted">{item.date}</time>
-                  </div>
-                  <h3 className="mt-2.5 font-serif text-[18px] font-medium leading-snug text-navy md:text-[20px]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 line-clamp-2 text-[13.5px] leading-relaxed text-ink-muted">
-                    {item.dek}
-                  </p>
-                </div>
-                <div className="mt-4 pt-3 border-t border-navy/10 flex items-center justify-between text-[12.5px] text-ink-muted">
-                  <span>{item.author}</span>
-                  <span className="text-navy group-hover:translate-x-1 transition-transform">&rarr;</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
+          )
+        )}
       </div>
     </section>
   );

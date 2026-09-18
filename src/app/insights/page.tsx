@@ -1,30 +1,6 @@
-import type { Metadata } from "next";
-import Nav from "@/components/Nav";
-import PageHeader from "@/components/PageHeader";
-import InsightsIndex from "@/components/insights/InsightsIndex";
-import Closing from "@/components/Closing";
-import Footer from "@/components/Footer";
-
-export const metadata: Metadata = {
-  title: "Insights | FSM Consulting Limited",
-  description:
-    "Perspectives on development effectiveness, project delivery, and evidence-based verification from FSM Consulting Limited.",
-};
+import { redirect } from "next/navigation";
 
 export default function InsightsPage() {
-  return (
-    <>
-      <Nav />
-      <main>
-        <PageHeader
-          eyebrow="Insights"
-          title="Perspectives on development delivery."
-          intro="Our thinking on what makes development investments translate into measurable, sustainable results."
-        />
-        <InsightsIndex />
-        <Closing />
-      </main>
-      <Footer />
-    </>
-  );
+  redirect("/#insights");
 }
+

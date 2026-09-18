@@ -1,29 +1,51 @@
 import Image from "next/image";
 
+interface HeroBackgroundProps {
+  src?: string;
+  alt?: string;
+  className?: string;
+  imageClassName?: string;
+  priority?: boolean;
+  /**
+   * Direction of the dark-to-light gradient overlay on desktop.
+   * "right-to-left" (default) matches the homepage hero.
+   */
+  gradientDirection?: "right-to-left" | "left-to-right";
+}
+
 /**
  * Continuous full-bleed photographic hero background.
- * Delivers natural documentary African infrastructure imagery
- * with calibrated directional gradients for typography readability.
+ * Delivers natural documentary African infrastructure and sector imagery
+ * with calibrated directional gradients for typography readability (dark fade on left/text side to light on right).
  */
-export default function HeroBackground() {
+export default function HeroBackground({
+  src = "/",
+  alt = "African development and urban infrastructure landscape",
+  className = "",
+  imageClassName = "object-cover object-center opacity-85",
+  priority = true,
+  gradientDirection = "right-to-left",
+}: HeroBackgroundProps = {}) {
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden bg-navy">
+    <div className={`pointer-events-none absolute inset-0 overflow-hidden bg-navy ${className}`}>
       {/* Full-bleed photography */}
       <Image
-        src="/HeroBg.webp"
-        alt="African development and urban infrastructure landscape"
+        src={src}
+        alt={alt}
         fill
-        priority
+        priority={priority}
         sizes="100vw"
-        className="object-cover object-center opacity-85"
+        className={imageClassName}
       />
 
-      {/* Desktop directional overlay: Left-to-right density gradient */}
+      {/* Desktop directional overlay: gradient direction based on prop */}
       <div
         className="absolute inset-0 hidden md:block"
         style={{
           background:
-            "linear-gradient(90deg, rgba(7, 19, 30, 0.94) 0%, rgba(7, 19, 30, 0.86) 38%, rgba(7, 19, 30, 0.55) 62%, rgba(7, 19, 30, 0.2) 85%, rgba(7, 19, 30, 0.05) 100%)",
+            gradientDirection === "right-to-left"
+              ? "linear-gradient(90deg, rgba(7, 19, 30, 0.94) 0%, rgba(7, 19, 30, 0.86) 38%, rgba(7, 19, 30, 0.55) 62%, rgba(7, 19, 30, 0.2) 85%, rgba(7, 19, 30, 0.05) 100%)"
+              : "linear-gradient(270deg, rgba(7, 19, 30, 0.94) 0%, rgba(7, 19, 30, 0.86) 38%, rgba(7, 19, 30, 0.55) 62%, rgba(7, 19, 30, 0.2) 85%, rgba(7, 19, 30, 0.05) 100%)",
         }}
       />
 
@@ -47,3 +69,4 @@ export default function HeroBackground() {
     </div>
   );
 }
+

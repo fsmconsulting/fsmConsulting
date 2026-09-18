@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <Nav />
+      <Nav transparent />
       <main>
         <AboutHero />
         <ExecutiveSummary />

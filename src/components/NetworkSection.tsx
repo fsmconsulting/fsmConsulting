@@ -37,10 +37,10 @@ export default function NetworkSection() {
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
-                href="/network"
+                href="/contact"
                 className="pill-btn bg-navy px-6 py-3 text-[14px] font-semibold text-white hover:bg-navy-2 transition-colors"
               >
-                <span>Explore delivery network</span>
+                <span>Discuss an assignment</span>
                 <span className="pill-btn-arrow">&rarr;</span>
               </Link>
             </div>

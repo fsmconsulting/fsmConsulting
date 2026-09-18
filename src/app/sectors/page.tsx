@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Nav from "@/components/Nav";
 import SectorsHero from "@/components/sectors/SectorsHero";
 import SectorDirectory from "@/components/sectors/SectorDirectory";
 import ExpertNetwork from "@/components/sectors/ExpertNetwork";
@@ -15,7 +14,6 @@ export const metadata: Metadata = {
 export default function SectorsPage() {
   return (
     <>
-      <Nav />
       <main>
         <SectorsHero />
         <SectorDirectory />

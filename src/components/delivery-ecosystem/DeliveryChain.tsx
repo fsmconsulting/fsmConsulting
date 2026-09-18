@@ -7,15 +7,23 @@ export default function DeliveryChain() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="bg-white px-4 py-20 md:px-10 md:py-28" aria-labelledby="delivery-chain-heading">
-      <div className="mx-auto max-w-6xl">
-        <h2 id="delivery-chain-heading" className="font-serif text-[26px] font-medium text-navy md:text-[32px]">
-          The delivery chain
-        </h2>
-        <p className="mt-3 max-w-[60ch] text-[15px] leading-relaxed text-ink-muted">
-          Eight stages connect a client requirement to a measurable result. Select a stage for
-          detail.
-        </p>
+    <section
+      id="delivery-ecosystem"
+      className="bg-white px-6 py-20 md:px-10 md:py-28 border-t border-navy/10"
+      aria-labelledby="delivery-chain-heading"
+    >
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-12 max-w-3xl">
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+            Delivery Ecosystem &middot; Operational System
+          </span>
+          <h2 id="delivery-chain-heading" className="mt-2 font-serif text-[30px] font-normal text-navy md:text-[40px]">
+            An operational system connecting requirement to results.
+          </h2>
+          <p className="mt-4 text-[16px] leading-relaxed text-ink-muted">
+            Global and regional expertise becomes useful only when it connects to local delivery capability. Eight interconnected stages structure that movement:
+          </p>
+        </div>
 
         {/* Desktop: horizontal chain */}
         <div className="mt-12 hidden md:block">

@@ -1,7 +1,16 @@
+import HeroBackground from "@/components/HeroBackground";
+import Nav from "@/components/Nav";
+
 export default function SectorsHero() {
   return (
-    <section className="relative overflow-hidden bg-navy pt-20 pb-20 text-white md:pt-28 md:pb-28">
-      <div className="relative mx-auto max-w-7xl px-6 md:px-10">
+    <section className="relative overflow-hidden bg-navy text-white min-h-[500px] md:min-h-[580px] flex flex-col justify-between">
+      <HeroBackground
+        src="/HeroBg.webp"
+        alt="African development sectors and infrastructure"
+      />
+      <Nav transparent />
+
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pt-32 pb-14 md:px-10 md:pt-36 md:pb-16 flex-1 flex flex-col justify-between">
         {/* Top Eyebrow Tag */}
         <div className="flex flex-wrap items-center gap-3">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
@@ -65,3 +74,4 @@ export default function SectorsHero() {
     </section>
   );
 }
+

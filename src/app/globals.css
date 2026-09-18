@@ -1065,8 +1065,30 @@ body {
   animation: hero-card-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 }
 
+/* Infinite Horizontal Marquee */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-infinite {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-infinite:hover {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-card-enter { animation: none !important; }
+  .animate-marquee-infinite { animation: none !important; }
   .surface-card, .surface-card-hover, .bento-card, .pill-btn, .pill-btn-arrow, .img-hover-zoom img, .reveal-up {
     transition: none !important;
   }

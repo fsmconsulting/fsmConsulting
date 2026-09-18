@@ -124,7 +124,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/delivery-ecosystem" className="hover:text-white transition-colors">
+                <Link href="/#delivery-ecosystem" className="hover:text-white transition-colors">
                   Delivery Ecosystem
                 </Link>
               </li>
@@ -134,7 +134,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/insights" className="hover:text-white transition-colors">
+                <Link href="/#insights" className="hover:text-white transition-colors">
                   Perspectives &amp; Insights
                 </Link>
               </li>

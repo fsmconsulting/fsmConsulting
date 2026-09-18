@@ -4,9 +4,6 @@ export default function AboutHero() {
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         {/* Top Eyebrow Tag */}
         <div className="flex flex-wrap items-center gap-3">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
-            Corporate Profile &middot; Institutional Overview
-          </span>
           <span className="font-mono text-[11px] text-white/50">
             Abuja, Nigeria &bull; Pan-African Delivery
           </span>

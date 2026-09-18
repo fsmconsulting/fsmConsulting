@@ -12,14 +12,17 @@ const funders = [
 ];
 
 export default function FunderLogoStrip() {
+  // Duplicate array so it seamlessly loops indefinitely
+  const duplicatedFunders = [...funders, ...funders];
+
   return (
     <section
-      className="border-y border-navy/10 bg-white py-12 px-6 md:px-10"
+      className="border-y border-navy/10 bg-white py-8 px-4 sm:px-6 md:px-10 overflow-hidden"
       aria-label="Supported development financing frameworks"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col items-center justify-between gap-4 md:flex-row md:items-baseline">
-          <p className="max-w-xl font-mono text-[11px] uppercase tracking-[0.16em] text-ink-muted text-center md:text-left">
+        <div className="mb-6 flex flex-col items-center justify-between gap-3 text-center md:flex-row md:items-baseline md:text-left">
+          <p className="max-w-xl font-mono text-[11px] uppercase tracking-[0.16em] text-ink-muted">
             Supporting projects financed across major multilateral, bilateral, and sovereign development frameworks:
           </p>
           <span className="hidden font-mono text-[11px] text-ink-muted/70 md:inline">
@@ -27,26 +30,36 @@ export default function FunderLogoStrip() {
           </span>
         </div>
 
-        {/* Dignified static logo grid */}
-        <div className="mt-8 grid grid-cols-2 items-center justify-items-center gap-8 sm:grid-cols-4 lg:grid-cols-8">
-          {funders.map((funder) => (
-            <div
-              key={funder.name}
-              className="flex h-12 w-full items-center justify-center p-1"
-              title={funder.name}
-            >
-              <Image
-                src={funder.src}
-                alt={funder.name}
-                width={funder.width}
-                height={funder.height}
-                className="max-h-9 w-auto object-contain mix-blend-multiply opacity-75 transition-opacity duration-200 hover:opacity-100"
-                unoptimized
-              />
-            </div>
-          ))}
+        {/* Infinite looping horizontal marquee with edge fade masks */}
+        <div className="relative w-full overflow-hidden">
+          {/* Left gradient fade mask */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-16 md:w-28 bg-gradient-to-r from-white to-transparent" />
+
+          {/* Right gradient fade mask */}
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-16 md:w-28 bg-gradient-to-l from-white to-transparent" />
+
+          {/* Marquee Track */}
+          <div className="animate-marquee-infinite flex items-center gap-12 sm:gap-16 py-1">
+            {duplicatedFunders.map((funder, idx) => (
+              <div
+                key={`${funder.name}-${idx}`}
+                className="flex h-12 shrink-0 items-center justify-center px-4"
+                title={funder.name}
+              >
+                <Image
+                  src={funder.src}
+                  alt={funder.name}
+                  width={funder.width}
+                  height={funder.height}
+                  className="max-h-9 w-auto object-contain mix-blend-multiply opacity-75 transition-opacity duration-200 hover:opacity-100"
+                  unoptimized
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 }
+

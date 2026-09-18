@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <Nav />
+      <Nav transparent />
       <main>
         <ServicesHero />
         <PracticeClusters />

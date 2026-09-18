@@ -26,7 +26,7 @@ export const insights: Insight[] = [
     dek: "Many consulting firms measure success by activities completed, reports submitted, or contractual milestones met. FSM Consulting Limited measures it differently — and verifies it through evidence.",
     category: "Development Effectiveness",
     author: "FSM Consulting Limited",
-    image: "/images/insights/project-delivery.jpg",
+    image: "/projectManagement.webp",
     featured: true,
     body: [
       "Many consulting firms measure success by the completion of activities, submission of reports, or achievement of contractual milestones. FSM Consulting Limited measures success differently.",
