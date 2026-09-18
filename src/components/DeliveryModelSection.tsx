@@ -1,60 +1,37 @@
 import Link from "next/link";
-import { Globe, Map, Building2, Users, LucideIcon } from "lucide-react";
-import { capabilities, type Capability } from "@/data/capabilitiesData";
-
-const iconMap: Record<Capability["icon"], LucideIcon> = {
-  Globe,
-  Map,
-  Building2,
-  Users,
-};
+import { capabilities } from "@/data/capabilitiesData";
 
 export default function DeliveryModelSection() {
   return (
     <section
       id="delivery-model"
-      className="delivery-model-section"
+      className="bg-white px-4 py-20 md:px-10 md:py-28"
       aria-labelledby="delivery-model-heading"
     >
-      {/* Header */}
-      <div className="delivery-model-header">
-        <span className="delivery-model-eyebrow">We deliver</span>
-        <h2 id="delivery-model-heading" className="delivery-model-heading">
-          From Global Expertise To Local Impact.
+      <div className="mx-auto max-w-6xl">
+        <h2 id="delivery-model-heading" className="font-serif text-[30px] font-medium text-navy md:text-[40px]">
+          Services overview
         </h2>
-      </div>
 
-      {/* Cards grid */}
-      <div className="delivery-model-grid">
-        {capabilities.map((cap) => {
-          const Icon = iconMap[cap.icon];
-          return (
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-12 md:gap-5">
+          {capabilities.map((cap) => (
             <Link
               key={cap.slug}
               href={`/capabilities/${cap.slug}`}
-              className="delivery-card"
+              className="group rounded-[var(--radius-card)] bg-sand px-8 py-9 transition-colors duration-200 hover:bg-sand/70 md:px-10 md:py-10"
               aria-label={`Learn more about ${cap.title}`}
             >
-              {/* Gold top accent bar — thickens on hover via CSS */}
-              <span className="delivery-card-accent" aria-hidden="true" />
-
-              {/* Icon */}
-              <span className="delivery-card-icon" aria-hidden="true">
-                <Icon size={28} strokeWidth={1.5} />
-              </span>
-
-              {/* Body */}
-              <span className="delivery-card-title">{cap.title}</span>
-              <span className="delivery-card-desc">{cap.tagline}</span>
-
-              {/* Learn more affordance */}
-              <span className="delivery-card-cta" aria-hidden="true">
+              <h3 className="text-[19px] font-medium text-navy md:text-[21px]">{cap.title}</h3>
+              <p className="mt-3 max-w-[42ch] text-[15px] leading-relaxed text-ink-muted">
+                {cap.tagline}
+              </p>
+              <span className="mt-5 inline-flex items-center gap-1.5 text-[14px] font-medium text-navy/70 transition-colors duration-200 group-hover:text-navy">
                 Learn more
-                <span className="delivery-card-arrow">→</span>
+                <span className="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
               </span>
             </Link>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </section>
   );

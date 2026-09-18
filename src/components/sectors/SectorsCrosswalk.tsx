@@ -62,7 +62,7 @@ export default function SectorsCrosswalk() {
           {sectors.map((sec) => (
             <div
               key={sec.title}
-              className="flex flex-col justify-between rounded-none border border-navy/10 bg-sand p-6 transition-all duration-200 hover:border-gold hover:shadow-none"
+              className="flex flex-col justify-between rounded-[var(--radius-card-sm)] border border-navy/10 bg-sand p-6 transition-all duration-200 hover:border-navy hover:shadow-xs"
             >
               <div>
                 <h3 className="font-serif text-[18px] font-medium text-navy">
@@ -74,14 +74,14 @@ export default function SectorsCrosswalk() {
               </div>
 
               <div className="mt-5 border-t border-navy/10 pt-4">
-                <span className="block text-[11px] font-mono font-semibold uppercase tracking-wider text-gold">
+                <span className="block text-[11px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
                   Core Practice Linkages:
                 </span>
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {sec.practices.map((p) => (
                     <span
                       key={p}
-                      className="rounded bg-white px-2 py-0.5 text-[11px] font-medium text-navy shadow-xs"
+                      className="rounded-full bg-white px-2.5 py-0.5 text-[11px] font-medium text-navy border border-navy/10 shadow-xs"
                     >
                       {p}
                     </span>

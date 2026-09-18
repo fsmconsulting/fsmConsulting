@@ -8,8 +8,9 @@
   --color-blue-accent: #1d4961;
   --color-blue-bright: #2f6e8c;
 
-  --color-gold: #c6a15b;
-  --color-gold-light: #d7b970;
+  /* Zero Gold Rule: Gold palette fully retired and remapped to midnight blues */
+  --color-gold: #1d4961;
+  --color-gold-light: #2f6e8c;
 
   --color-sand: #f5f3ee;
   --color-sand-2: #ede9df;
@@ -207,7 +208,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-gold-light);
+  color: var(--color-blue-bright);
   margin-bottom: 0.6rem;
 }
 
@@ -264,13 +265,30 @@ body {
   }
 }
 
-/* Shared tile styles */
+/* Row 1 — 8 items */
+.sector-strip-row-1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Row 2 — 7 items */
+.sector-strip-row-2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+}
+
+/* Individual tile */
 .sector-strip-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
-  padding: 1.1rem 0.5rem;
+  gap: 0.4rem;
+  padding: 0.75rem 0.9rem;
   text-decoration: none;
   color: inherit;
   border-radius: 8px;
@@ -282,7 +300,7 @@ body {
 }
 
 .sector-strip-tile:focus-visible {
-  outline: 2px solid var(--color-gold-light);
+  outline: 2px solid var(--color-blue-bright);
   outline-offset: 2px;
 }
 
@@ -305,28 +323,31 @@ body {
   background-color: rgba(255, 255, 255, 0.06);
 }
 
-/* Icon wrapper — color is driven inline per sector */
-.sector-strip-icon {
+/* Icon container */
+.sector-strip-icon-box {
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: filter 0.18s ease, transform 0.18s ease;
+  border-radius: 8px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.sector-strip-tile:hover .sector-strip-icon,
-.sector-strip-tile-mobile:hover .sector-strip-icon {
-  filter: brightness(1.25);
-  transform: scale(1.1);
+.sector-strip-tile:hover .sector-strip-icon-box,
+.sector-strip-tile-mobile:hover .sector-strip-icon-box {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
-/* Label */
+/* Label text */
 .sector-strip-label {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
   text-align: center;
-  line-height: 1.4;
-  color: rgba(255, 255, 255, 0.72);
-  max-width: 12ch;
+  max-width: 90px;
+  line-height: 1.25;
   transition: color 0.18s ease;
 }
 
@@ -335,88 +356,69 @@ body {
   color: #ffffff;
 }
 
-/* ════════════════════════════════════════
-   Delivery Model Section (homepage)
-════════════════════════════════════════ */
-
-.delivery-model-section {
-  background-color: var(--color-sand);
-  padding: 5rem 1.5rem;
+/* Fade mask at edges */
+.sector-strip-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 32px,
+    black calc(100% - 32px),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 32px,
+    black calc(100% - 32px),
+    transparent 100%
+  );
 }
 
-.delivery-model-header {
-  max-width: 680px;
-  margin: 0 auto 3.5rem;
-  text-align: center;
+/* Scroll track */
+.sector-strip-track {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
 }
 
-.delivery-model-eyebrow {
-  display: block;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-blue-accent);
-  margin-bottom: 0.75rem;
+/* Hide scrollbar on touch devices */
+.sector-strip-track::-webkit-scrollbar {
+  display: none;
+}
+.sector-strip-track {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.delivery-model-heading {
-  font-family: var(--font-serif);
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 500;
-  color: var(--color-navy);
-  line-height: 1.1;
-  margin: 0 0 1rem;
-}
-
-.delivery-model-subheading {
-  font-size: 15.5px;
-  line-height: 1.65;
-  color: var(--color-ink-muted);
-  margin: 0;
-  max-width: 56ch;
-  margin-inline: auto;
-}
-
-/* Grid */
-.delivery-model-grid {
+/* Delivery Model Grid */
+.delivery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1024px) {
-  .delivery-model-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 640px) {
-  .delivery-model-section {
-    padding: 3.5rem 1.25rem;
-  }
-
-  .delivery-model-grid {
+  .delivery-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 }
 
-/* Card */
+/* Delivery Card */
 .delivery-card {
-  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0;
-  background: #ffffff;
-  border: 1px solid var(--color-line);
-  border-top: 2px solid var(--color-navy);
-  padding: 1.75rem 1.5rem 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-top: 3px solid #e5e7eb;
+  padding: 1.75rem 1.75rem 1.5rem;
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
+  outline: none;
+  position: relative;
   transition:
     border-top-color 0.22s ease,
     background-color 0.22s ease;
@@ -426,7 +428,7 @@ body {
 }
 
 .delivery-card:hover {
-  border-top-color: var(--color-gold);
+  border-top-color: var(--color-navy);
   background-color: var(--color-sand);
 }
 
@@ -528,7 +530,7 @@ body {
 .cap-detail-hero-icon {
   display: flex;
   align-items: center;
-  color: var(--color-gold);
+  color: var(--color-blue-bright);
   margin-bottom: 1rem;
 }
 
@@ -645,7 +647,7 @@ body {
   content: "–";
   position: absolute;
   left: 0;
-  color: var(--color-gold);
+  color: var(--color-blue-accent);
 }
 
 /* Other capabilities */
@@ -685,7 +687,7 @@ body {
   gap: 0.35rem;
   background: #ffffff;
   border: 1px solid #e4e7ec;
-  border-top: 2px solid var(--color-gold);
+  border-top: 2px solid var(--color-navy);
   padding: 1.25rem 1.25rem 1rem;
   text-decoration: none;
   color: inherit;
@@ -843,7 +845,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--color-gold);
+  color: var(--color-blue-accent);
   margin-bottom: 0.55rem;
 }
 
@@ -953,7 +955,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--color-gold);
+  color: var(--color-blue-accent);
 }
 
 .secondary-insight-title {

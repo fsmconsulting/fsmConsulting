@@ -31,9 +31,9 @@ export default function QualityAssurance() {
             </p>
           </div>
 
-          <div className="rounded-none border border-navy/15 bg-navy p-8 text-white">
+          <div className="rounded-[var(--radius-card)] border border-navy/15 bg-navy p-8 text-white">
             <div className="border-b border-white/15 pb-4">
-              <span className="font-mono text-xs font-semibold uppercase tracking-wider text-gold">
+              <span className="font-mono text-xs font-semibold uppercase tracking-wider text-blue-bright">
                 Corporate Governance &amp; Registration
               </span>
               <h3 className="mt-1 font-serif text-[22px] font-medium text-white">
@@ -41,28 +41,28 @@ export default function QualityAssurance() {
               </h3>
             </div>
 
-            <div className="mt-6 space-y-3.5 text-[14px] text-ivory/80">
+            <div className="mt-6 space-y-3.5 text-[14px] text-white/80">
               <div className="flex items-start gap-2.5">
-                <svg className="mt-1 h-4 w-4 shrink-0 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="mt-1 h-4 w-4 shrink-0 text-blue-bright" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
                 </svg>
                 <span>Incorporated under the Companies and Allied Matters Act, Federal Republic of Nigeria.</span>
               </div>
               <div className="flex items-start gap-2.5">
-                <svg className="mt-1 h-4 w-4 shrink-0 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="mt-1 h-4 w-4 shrink-0 text-blue-bright" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
                 </svg>
                 <span>Fully registered and compliant with federal corporate regulatory bodies and statutory tax requirements.</span>
               </div>
               <div className="flex items-start gap-2.5">
-                <svg className="mt-1 h-4 w-4 shrink-0 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="mt-1 h-4 w-4 shrink-0 text-blue-bright" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
                 </svg>
                 <span>Headquartered in Abuja, Nigeria with established regional delivery alliances across West, Central, and East Africa.</span>
               </div>
             </div>
 
-            <div className="mt-6 rounded border-t border-white/15 pt-4 text-xs text-gold-light">
+            <div className="mt-6 rounded border-t border-white/15 pt-4 text-xs text-white/60">
               Official Corporate Profile Reference Document
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function QualityAssurance() {
         {/* 8 Compliance Standards Grid */}
         <div className="mt-20">
           <div className="border-b border-navy/15 pb-4">
-            <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-gold">
+            <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
               Quality Framework
             </span>
             <h3 className="mt-1 font-serif text-[24px] font-medium text-navy md:text-[30px]">
@@ -83,10 +83,10 @@ export default function QualityAssurance() {
             {policies.map((p) => (
               <div
                 key={p.title}
-                className="rounded-none border border-navy/10 bg-sand p-5 transition-all duration-200 hover:border-gold hover:bg-white hover:shadow-none"
+                className="rounded-[var(--radius-card-sm)] border border-navy/10 bg-sand p-5 transition-all duration-200 hover:border-navy hover:bg-white hover:shadow-xs"
               >
                 <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-none bg-gold" />
+                  <span className="h-2 w-2 rounded-full bg-navy" />
                   <h4 className="font-serif text-[16px] font-medium text-navy">
                     {p.title}
                   </h4>

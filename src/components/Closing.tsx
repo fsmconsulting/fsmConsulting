@@ -14,7 +14,7 @@ export default function Closing() {
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <div className="max-w-3xl">
-          <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-gold-light">
+          <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-bright">
             Discuss an Assignment &middot; Advisory Inquiries
           </span>
           <h2 className="mt-3 font-serif text-[34px] font-normal leading-tight md:text-[50px]">
@@ -29,7 +29,7 @@ export default function Closing() {
           <div className="mt-10 flex flex-wrap items-center gap-8 md:gap-12">
             <a
               href="mailto:info@fsmconsulting.com"
-              className="group flex items-center gap-3 text-white transition-colors duration-200 hover:text-gold-light"
+              className="group flex items-center gap-3 text-white transition-colors duration-200 hover:text-blue-bright"
             >
               <Mail className="h-5 w-5 text-red-500 transition-transform duration-200 group-hover:scale-110" />
               <span className="font-serif text-[18px] font-medium md:text-[21px]">
@@ -39,7 +39,7 @@ export default function Closing() {
 
             <a
               href="tel:+2349040009512"
-              className="group flex items-center gap-3 text-white transition-colors duration-200 hover:text-gold-light"
+              className="group flex items-center gap-3 text-white transition-colors duration-200 hover:text-blue-bright"
             >
               <Phone className="h-5 w-5 text-green-500 transition-transform duration-200 group-hover:scale-110" />
               <span className="font-serif text-[18px] font-medium md:text-[21px]">

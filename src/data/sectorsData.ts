@@ -1110,7 +1110,7 @@ export const sectorStrip: SectorStripItem[] = [
   { name: "Education & Skills Development",     slug: "education-skills-development",    iconName: "GraduationCap", iconColor: "#FBBF24" }, // amber
   { name: "Infrastructure Development",         slug: "infrastructure-development",      iconName: "HardHat",       iconColor: "#FB923C" }, // orange
   { name: "Private Sector Development",         slug: "private-sector-development",      iconName: "Briefcase",     iconColor: "#A78BFA" }, // violet
-  { name: "Investment Promotion",               slug: "investment-promotion",            iconName: "TrendingUp",    iconColor: "#D9C68A" }, // gold
+  { name: "Investment Promotion",               slug: "investment-promotion",            iconName: "TrendingUp",    iconColor: "#818CF8" }, // indigo
   { name: "Digital Economy",                    slug: "digital-economy",                 iconName: "Cpu",           iconColor: "#22D3EE" }, // cyan
   { name: "Climate Change & Sustainability",    slug: "climate-change-sustainability",   iconName: "Leaf",          iconColor: "#34D399" }, // emerald
   { name: "Social Protection",                  slug: "social-protection",               iconName: "ShieldHalf",    iconColor: "#F472B6" }, // pink

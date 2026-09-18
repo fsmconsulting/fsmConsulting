@@ -65,9 +65,9 @@ export default function ExecutiveSummary() {
             </p>
           </div>
 
-          <div className="flex flex-col justify-center rounded-none border border-navy/10 bg-sand p-8 md:p-10">
+          <div className="flex flex-col justify-center rounded-[var(--radius-card)] border border-navy/10 bg-sand p-8 md:p-10">
             <div className="border-b border-navy/10 pb-4">
-              <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-gold">
+              <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
                 The FSM Value Proposition
               </span>
               <h3 className="mt-1 font-serif text-[22px] font-medium text-navy">
@@ -77,7 +77,7 @@ export default function ExecutiveSummary() {
             <p className="mt-4 text-[15px] leading-relaxed text-ink/75">
               Our distinctive value proposition lies in combining <strong className="font-semibold text-navy">Implementation Acceleration</strong>, <strong className="font-semibold text-navy">Project Readiness (D-Ready)</strong>, <strong className="font-semibold text-navy">Jobs &amp; Economic Growth Advisory</strong>, <strong className="font-semibold text-navy">Crisis &amp; Resilience Support</strong>, <strong className="font-semibold text-navy">Procurement &amp; Fiduciary Excellence</strong>, and <strong className="font-semibold text-navy">Technology-Enabled Development Delivery</strong> within a single unified platform.
             </p>
-            <div className="mt-6 rounded border-l-4 border-gold bg-white p-4 text-[14px] italic text-navy">
+            <div className="mt-6 rounded-[var(--radius-card-sm)] border-l-4 border-navy bg-white p-4 text-[14px] italic text-navy">
               &ldquo;Transforming resources into results, policies into action, and investments into sustainable development impact.&rdquo;
             </div>
           </div>
@@ -101,9 +101,9 @@ export default function ExecutiveSummary() {
             {pillars.map((pillar) => (
               <div
                 key={pillar.num}
-                className="group relative rounded-none border border-navy/10 bg-white p-6 transition-all duration-300 hover:border-gold hover:shadow-none"
+                className="group relative rounded-[var(--radius-card-sm)] border border-navy/10 bg-white p-6 transition-all duration-300 hover:border-navy hover:shadow-xs"
               >
-                <span className="block font-serif text-[22px] font-semibold text-gold transition-transform duration-300 group-hover:scale-105">
+                <span className="block font-serif text-[22px] font-semibold text-blue-accent transition-transform duration-300 group-hover:scale-105">
                   {pillar.num}
                 </span>
                 <h4 className="mt-3 font-serif text-[18px] font-medium text-navy">

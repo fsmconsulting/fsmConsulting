@@ -58,16 +58,16 @@ export default function SectorDirectory() {
                 <div
                   key={sec.id}
                   onClick={() => setActiveSectorId(sec.id)}
-                  className={`cursor-pointer rounded-none border p-5 transition-all duration-200 ${
+                  className={`cursor-pointer rounded-[var(--radius-card-sm)] border p-5 transition-all duration-200 ${
                     isSelected
-                      ? "border-gold bg-white shadow-none ring-1 ring-gold/40"
+                      ? "border-blue-accent bg-white shadow-xs ring-1 ring-blue-accent/40"
                       : "border-navy/10 bg-white/70 hover:border-navy/30 hover:bg-white"
                   }`}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <span className={`flex h-6 w-6 items-center justify-center rounded text-xs font-mono font-bold ${
-                        isSelected ? "bg-gold text-navy" : "bg-navy/10 text-navy"
+                      <span className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-mono font-bold ${
+                        isSelected ? "bg-navy text-white" : "bg-navy/10 text-navy"
                       }`}>
                         {sec.num}
                       </span>
@@ -99,10 +99,10 @@ export default function SectorDirectory() {
           </div>
 
           {/* Deep Detail Panel */}
-          <div className="rounded-none border border-navy/15 bg-white p-8 shadow-none md:p-10 sticky top-28">
+          <div className="rounded-[var(--radius-card)] border border-navy/15 bg-white p-8 shadow-none md:p-10 sticky top-28">
             <div className="flex flex-wrap items-center justify-between gap-4 border-b border-navy/10 pb-4">
               <div>
-                <span className="font-mono text-xs font-semibold uppercase tracking-wider text-gold">
+                <span className="font-mono text-xs font-semibold uppercase tracking-wider text-blue-accent">
                   Sector {activeSector.num} &middot; {activeSector.categoryLabel}
                 </span>
                 <h3 className="mt-1 font-serif text-[26px] font-medium text-navy md:text-[30px]">
@@ -113,14 +113,14 @@ export default function SectorDirectory() {
               {/* Link directly to dedicated page */}
               <Link
                 href={`/sectors/${activeSector.id}`}
-                className="inline-flex items-center gap-2 rounded bg-navy px-4 py-2 text-xs font-semibold text-white shadow-xs transition-all hover:bg-blue-accent"
+                className="pill-btn inline-flex items-center gap-2 bg-navy px-4 py-2 text-xs font-semibold text-white shadow-xs transition-all hover:bg-blue-accent"
               >
                 <span>Explore Dedicated Page</span>
-                <span>&rarr;</span>
+                <span className="pill-btn-arrow">&rarr;</span>
               </Link>
             </div>
 
-            <p className="mt-4 text-[14.5px] font-medium text-gold">
+            <p className="mt-4 text-[14.5px] font-medium text-blue-accent">
               {activeSector.tagline}
             </p>
 
@@ -129,7 +129,7 @@ export default function SectorDirectory() {
             </p>
 
             {/* Key Stats Row */}
-            <div className="mt-6 grid grid-cols-3 gap-3 rounded-none border border-navy/10 bg-[#fcfdfe] p-4 text-center">
+            <div className="mt-6 grid grid-cols-3 gap-3 rounded-[var(--radius-card-sm)] border border-navy/10 bg-[#fcfdfe] p-4 text-center">
               {activeSector.stats.map((stat, sIdx) => (
                 <div key={sIdx} className="flex flex-col">
                   <span className="font-serif text-[20px] font-bold text-navy">{stat.value}</span>
@@ -139,14 +139,14 @@ export default function SectorDirectory() {
             </div>
 
             {/* Key Focus Areas */}
-            <div className="mt-6 rounded-none border border-navy/5 bg-sand p-5">
+            <div className="mt-6 rounded-[var(--radius-card-sm)] border border-navy/5 bg-sand p-5">
               <h4 className="font-mono text-xs font-semibold uppercase tracking-wider text-navy">
                 Key Strategic Focus Areas:
               </h4>
               <ul className="mt-3 space-y-2">
                 {activeSector.focusAreas.map((fa, fIdx) => (
                   <li key={fIdx} className="flex items-start gap-2.5 text-[13.5px] text-ink/75">
-                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-none bg-gold" />
+                    <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-accent" />
                     <div>
                       <strong className="text-navy">{fa.title}: </strong>
                       <span>{fa.description}</span>

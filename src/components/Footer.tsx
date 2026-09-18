@@ -151,17 +151,17 @@ export default function Footer() {
             <div className="mt-4 space-y-2 text-[13.5px] leading-relaxed">
               <p className="text-gray-300">Abuja, Federal Capital Territory, Nigeria</p>
               <p>
-                <a href="mailto:info@fsmconsulting.com" className="hover:text-gold-light transition-colors">
+                <a href="mailto:info@fsmconsulting.com" className="hover:text-blue-bright transition-colors">
                   info@fsmconsulting.com
                 </a>
               </p>
               <p>
-                <a href="tel:+2349040009512" className="hover:text-gold-light transition-colors">
+                <a href="tel:+2349040009512" className="hover:text-blue-bright transition-colors">
                   +234 904 000 9512
                 </a>
               </p>
               <div className="pt-2">
-                <span className="inline-block border border-white/20 px-2 py-1 text-[11px] font-mono text-gray-400 rounded-none">
+                <span className="inline-block border border-white/20 px-2.5 py-1 text-[11px] font-mono text-gray-400 rounded-full">
                   SCUML Registered Entity
                 </span>
               </div>
@@ -180,7 +180,7 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <a href="#" className="transition-colors duration-200 hover:text-gray-300 cursor-pointer">Confidentiality &amp; Code of Conduct</a>
             <a href="#" className="transition-colors duration-200 hover:text-gray-300 cursor-pointer">Terms of Engagement</a>
-            <a href="#top" className="inline-flex items-center gap-1 text-gold-light transition-all duration-200 hover:brightness-125 hover:-translate-y-0.5">
+            <a href="#top" className="inline-flex items-center gap-1 text-blue-bright transition-all duration-200 hover:brightness-125 hover:-translate-y-0.5">
               Back to top <span className="inline-block transition-transform duration-300 hover:animate-bounce">&uarr;</span>
             </a>
           </div>

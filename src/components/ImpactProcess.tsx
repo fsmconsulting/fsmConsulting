@@ -24,10 +24,10 @@ export default function ImpactProcess() {
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
           {steps.map((step, i) => (
             <div key={step.title} className="relative">
-              <span className="mb-3 block font-serif text-[13px] text-gold">
+              <span className="mb-3 block font-serif text-[13px] text-blue-bright">
                 Step {i + 1}
               </span>
-              <span className="mb-2 block font-serif text-[30px] leading-none text-gold-light">
+              <span className="mb-2 block font-serif text-[30px] leading-none text-white">
                 {step.letter}
               </span>
               <h3 className="text-[14.5px] font-medium leading-snug">

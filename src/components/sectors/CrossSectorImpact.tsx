@@ -38,10 +38,10 @@ export default function CrossSectorImpact() {
           {crossCuttingPillars.map((p) => (
             <div
               key={p.title}
-              className="flex flex-col justify-between rounded-none border border-navy/10 bg-sand p-6 transition-all duration-200 hover:border-gold hover:shadow-none"
+              className="flex flex-col justify-between rounded-[var(--radius-card-sm)] border border-navy/10 bg-sand p-6 transition-all duration-200 hover:border-navy hover:shadow-xs"
             >
               <div>
-                <div className="flex h-8 w-8 items-center justify-center rounded bg-navy text-gold-light">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-navy text-white">
                   <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
                   </svg>
@@ -58,9 +58,9 @@ export default function CrossSectorImpact() {
         </div>
 
         {/* CTA banner */}
-        <div className="mt-16 flex flex-col justify-between gap-6 rounded-none border border-navy/10 bg-navy p-8 text-white sm:flex-row sm:items-center md:p-10">
+        <div className="mt-16 flex flex-col justify-between gap-6 rounded-[var(--radius-card)] border border-navy/10 bg-navy p-8 text-white sm:flex-row sm:items-center md:p-10">
           <div>
-            <span className="font-mono text-xs font-semibold uppercase tracking-wider text-gold">
+            <span className="font-mono text-xs font-semibold uppercase tracking-wider text-blue-bright">
               Consult With Our Sector Leads
             </span>
             <h3 className="mt-1 font-serif text-[22px] font-medium text-white md:text-[26px]">
@@ -69,9 +69,10 @@ export default function CrossSectorImpact() {
           </div>
           <a
             href="/#contact"
-            className="shrink-0 rounded bg-gold px-6 py-3 text-[14px] font-semibold text-navy transition-colors hover:bg-gold-light"
+            className="pill-btn inline-flex items-center bg-white px-6 py-3 text-[14px] font-semibold text-navy transition-colors hover:bg-white/90"
           >
-            Start a Conversation &rarr;
+            <span>Start a Conversation</span>
+            <span className="pill-btn-arrow ml-2">&rarr;</span>
           </a>
         </div>
 

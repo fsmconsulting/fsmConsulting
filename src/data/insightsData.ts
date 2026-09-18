@@ -7,6 +7,7 @@ export interface Insight {
   date: string;
   image: string;
   featured: boolean;
+  body?: string[];
 }
 
 export const insights: Insight[] = [

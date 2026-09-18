@@ -6,8 +6,8 @@ export default function HeroBackground() {
       {/* Background Image: HeroBg behind the animation */}
       <div className="absolute inset-0">
         <Image
-          src="/HeroBg.webp"
-          alt="FSM Consulting hero background"
+          src="/images/insights/project-delivery.jpg"
+          alt="Technical implementation and project delivery planners at work"
           fill
           priority
           sizes="100vw"

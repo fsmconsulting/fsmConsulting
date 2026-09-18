@@ -1,59 +1,43 @@
 import HeroBackground from "@/components/HeroBackground";
+import Nav from "@/components/Nav";
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden text-ivory min-h-screen flex items-center">
-      <HeroBackground />
+    <section id="top" className="bg-sand px-3 pt-3 md:px-6 md:pt-6">
+      <div className="bento-card hero-card-enter relative min-h-[580px] overflow-hidden bg-navy md:min-h-[700px]">
+        <HeroBackground />
+        <Nav transparent />
 
-      <div className="relative mx-auto max-w-6xl w-full px-6 py-28 md:px-10 md:py-36">
-        <div className="max-w-[640px]">
-          <h1 className="font-serif font-medium leading-[1.05]">
-            <span className="block text-[15px] font-sans font-medium uppercase tracking-[0.2em] text-ivory/60 md:text-[16px]">
-              Welcome to
-            </span>
-            <span className="block whitespace-nowrap text-[42px] md:text-[60px] lg:text-[72px]">
-              FSM Consulting
-            </span>
-            <span className="block text-[42px] md:text-[60px] lg:text-[72px]">
-              Limited
-            </span>
-          </h1>
+        <div className="relative flex min-h-[580px] items-end px-6 pb-12 pt-28 md:min-h-[700px] md:px-12 md:pb-16 md:pt-32">
+          <div className="max-w-[640px]">
+            <h1 className="font-serif text-[32px] font-medium leading-[1.12] text-white md:text-[46px] lg:text-[54px]">
+              We turn development investments into measurable results.
+            </h1>
 
-          <div className="my-6 h-0.5 w-16 bg-gold" />
+            <p className="mt-5 max-w-[52ch] text-[15.5px] leading-relaxed text-white/80">
+              Plans don&rsquo;t fail in the boardroom. They fail in procurement delays, missing
+              local partnerships, and capability gaps no strategy document accounts for. FSM
+              Consulting Limited closes that gap &mdash; from Nigeria to Africa and beyond.
+            </p>
 
-          <p className="max-w-[46ch] text-[17.5px] leading-relaxed text-ivory/80">
-            Plans don't fail in the boardroom. They fail in procurement delays, missing local partnerships, 
-            and capability gaps no strategy document accounts for. 
-            FSM Consulting Limited closes that gap, connecting governments and development partners with the people, 
-            partnerships, and technical capability needed to carry projects from concept to lasting impact, from Nigeria to Africa and beyond.
-          </p>
-
-          <div className="mt-9 flex flex-wrap items-center gap-8">
-            <a
-              href="#contact"
-              className="group inline-flex items-center gap-2 bg-gold px-6.5 py-3.5 text-[13px] font-medium uppercase tracking-[0.06em] text-navy transition-colors duration-200 hover:bg-gold-light"
-            >
-              <span className="inline-block">Discuss an assignment</span>
-              <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
-            </a>
-            <a
-              href="#services"
-              className="relative pb-1 text-[14.5px] font-medium text-ivory/80 transition-colors duration-200 hover:text-ivory after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-0 after:bg-ivory/60 after:transition-all after:duration-300 hover:after:w-full"
-            >
-              See what we deliver
-            </a>
+            <div className="mt-8 flex flex-wrap items-center gap-6">
+              <a
+                href="#contact"
+                className="pill-btn group inline-flex items-center gap-2 bg-white px-6.5 py-3.5 text-[14px] font-semibold text-navy transition-all hover:bg-white/90"
+              >
+                <span>Discuss an assignment</span>
+                <span className="pill-btn-arrow">&rarr;</span>
+              </a>
+              <a
+                href="#delivery-model"
+                className="relative pb-1 text-[14.5px] font-medium text-white/80 transition-colors duration-200 hover:text-white after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-0 after:bg-white/60 after:transition-all after:duration-300 hover:after:w-full"
+              >
+                See what we deliver
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <div>
-      <span className="block font-serif text-[30px] text-gold">{value}</span>
-      <span className="text-[13px] text-ivory/65">{label}</span>
-    </div>
   );
 }

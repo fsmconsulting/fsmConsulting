@@ -67,7 +67,7 @@ export default function Services() {
         {/* Section Header */}
         <div className="mb-14 grid grid-cols-1 gap-6 border-b border-white/15 pb-10 md:grid-cols-[1.2fr_0.8fr] md:items-end">
           <div>
-            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-gold-light">
+            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-bright">
               Services &amp; Capabilities
             </p>
             <h2 className="mt-2 font-serif text-[34px] font-normal text-white md:text-[44px]">
@@ -93,7 +93,7 @@ export default function Services() {
               <div>
                 {/* Category Tag */}
                 <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                  <span className="text-[11px] font-semibold uppercase tracking-widest text-gold-light">
+                  <span className="text-[11px] font-semibold uppercase tracking-widest text-blue-bright">
                     {practice.tag}
                   </span>
                 </div>
@@ -140,16 +140,16 @@ export default function Services() {
         </div>
 
         {/* Bottom Banner */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border border-gold-light/30 bg-gold-light/10 px-8 py-6 backdrop-blur-sm sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border border-white/20 bg-white/10 px-8 py-6 backdrop-blur-sm sm:flex-row">
           <div className="text-[14.5px] text-white/75">
             Explore detailed scopes, deliverables, and methodologies across all fourteen service lines.
           </div>
           <a
             href="/services"
-            className="group inline-flex items-center gap-2 bg-gold-light px-6 py-2.5 text-[13.5px] font-semibold text-navy transition-all duration-200 hover:brightness-110"
+            className="pill-btn group inline-flex items-center gap-2 bg-white px-6 py-2.5 text-[13.5px] font-semibold text-navy transition-all duration-200 hover:bg-white/90"
           >
             <span>Explore All 14 Practice Areas</span>
-            <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+            <span className="pill-btn-arrow">&rarr;</span>
           </a>
         </div>
 

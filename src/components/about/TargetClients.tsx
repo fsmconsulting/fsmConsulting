@@ -72,10 +72,10 @@ export default function TargetClients() {
             Institutional Ecosystem &middot; Who We Serve
           </span>
           <h2 className="mt-2 font-serif text-[32px] font-medium text-navy md:text-[42px]">
-            Target Clients &amp; Sector Expertise
+            Target Client Segments &amp; Sector Expertise
           </h2>
           <p className="mt-3 text-[16px] text-ink/70">
-            Trusted by sovereign entities, multilateral institutions, bilateral donors, and private investors across high-priority sectors.
+            FSM Consulting Limited focuses on supporting projects, reforms, and programs across public institutions, multilateral and bilateral development entities, and private sector partners.
           </p>
         </div>
 
@@ -84,11 +84,11 @@ export default function TargetClients() {
           {clientSegments.map((segment) => (
             <div
               key={segment.category}
-              className="rounded-none border border-navy/10 bg-white p-7 shadow-none transition-all duration-200 hover:border-gold hover:shadow"
+              className="rounded-[var(--radius-card-sm)] border border-navy/10 bg-white p-7 transition-all duration-200 hover:border-navy hover:shadow-xs"
             >
               <div className="border-b border-navy/10 pb-3">
-                <span className="font-mono text-xs font-semibold text-gold">
-                  PARTNER SEGMENT
+                <span className="font-mono text-xs font-semibold text-blue-accent">
+                  TARGET CATEGORY
                 </span>
                 <h3 className="mt-1 font-serif text-[18.5px] font-medium text-navy">
                   {segment.category}
@@ -97,7 +97,7 @@ export default function TargetClients() {
               <ul className="mt-4 space-y-2">
                 {segment.institutions.map((inst) => (
                   <li key={inst} className="flex items-start gap-2 text-[13.5px] text-ink/75">
-                    <span className="text-gold">&rsaquo;</span>
+                    <span className="text-blue-accent">&rsaquo;</span>
                     <span>{inst}</span>
                   </li>
                 ))}
@@ -107,7 +107,7 @@ export default function TargetClients() {
         </div>
 
         {/* Priority Sectors Pill Grid */}
-        <div className="mt-16 rounded-none border border-navy/10 bg-white p-8 md:p-10">
+        <div className="mt-16 rounded-[var(--radius-card)] border border-navy/10 bg-white p-8 md:p-10">
           <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
             Multidisciplinary Roster
           </span>
@@ -122,7 +122,7 @@ export default function TargetClients() {
             {sectors.map((sec) => (
               <span
                 key={sec}
-                className="rounded-none border border-navy/10 bg-sand px-3.5 py-1.5 text-[13px] font-medium text-navy transition-colors hover:border-gold hover:bg-gold/10"
+                className="rounded-full border border-navy/10 bg-sand px-3.5 py-1.5 text-[13px] font-medium text-navy transition-colors hover:border-navy hover:bg-white"
               >
                 {sec}
               </span>

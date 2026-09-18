@@ -396,9 +396,9 @@ export default function PracticeClusters() {
               <div
                 key={practice.id}
                 id={practice.id}
-                className={`flex flex-col justify-between rounded-none border bg-white p-7 transition-all duration-300 ${
+                className={`flex flex-col justify-between rounded-[var(--radius-card-sm)] border bg-white p-7 transition-all duration-300 ${
                   isExpanded
-                    ? "border-gold shadow-none ring-1 ring-gold/30"
+                    ? "border-blue-accent shadow-sm ring-1 ring-blue-accent/30"
                     : "border-navy/10 shadow-none hover:border-navy/30"
                 }`}
               >
@@ -406,7 +406,7 @@ export default function PracticeClusters() {
                   {/* Top Bar */}
                   <div className="flex items-center justify-between border-b border-navy/10 pb-3">
                     <div className="flex items-center gap-2.5">
-                      <span className="flex h-7 w-7 items-center justify-center rounded bg-navy text-xs font-mono font-bold text-gold-light">
+                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-navy text-xs font-mono font-bold text-white">
                         {practice.num}
                       </span>
                       <span className="text-[12px] font-mono font-medium text-navy/60">
@@ -425,7 +425,7 @@ export default function PracticeClusters() {
                   <h3 className="mt-4 font-serif text-[22px] font-medium text-navy">
                     {practice.title}
                   </h3>
-                  <p className="mt-1 text-[13.5px] font-medium text-gold">
+                  <p className="mt-1 text-[13.5px] font-medium text-blue-accent">
                     {practice.tagline}
                   </p>
                   
@@ -434,14 +434,14 @@ export default function PracticeClusters() {
                   </p>
 
                   {/* Deliverables List (Always or Expanded) */}
-                  <div className="mt-5 rounded-none border border-navy/5 bg-sand p-5">
+                  <div className="mt-5 rounded-[var(--radius-card-sm)] border border-navy/5 bg-sand p-5">
                     <span className="block text-[11.5px] font-mono font-semibold uppercase tracking-wider text-navy">
                       Core Deliverables &amp; Specialized Services:
                     </span>
                     <ul className="mt-3 space-y-2">
                       {(isExpanded ? practice.deliverables : practice.deliverables.slice(0, 4)).map((item) => (
                         <li key={item} className="flex items-start gap-2.5 text-[13.5px] text-ink/75">
-                          <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-none bg-gold" />
+                          <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-full bg-blue-accent" />
                           <span>{item}</span>
                         </li>
                       ))}

@@ -71,8 +71,8 @@ export default function DeliveryModel() {
             </p>
           </div>
 
-          <div className="rounded-none border border-navy/10 bg-sand p-8">
-            <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-gold">
+          <div className="rounded-[var(--radius-card)] border border-navy/10 bg-sand p-8">
+            <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
               The FSM Mantra
             </span>
             <h3 className="mt-2 font-serif text-[24px] font-medium text-navy">
@@ -102,10 +102,10 @@ export default function DeliveryModel() {
             {channels.map((chan) => (
               <div
                 key={chan.title}
-                className="flex flex-col justify-between rounded-none border border-navy/10 bg-sand-2 p-6 transition-all duration-200 hover:border-navy hover:shadow-none"
+                className="flex flex-col justify-between rounded-[var(--radius-card-sm)] border border-navy/10 bg-white p-6 transition-all duration-200 hover:border-navy hover:shadow-xs"
               >
                 <div>
-                  <span className="inline-block rounded bg-navy/5 px-2 py-0.5 text-[11px] font-medium text-navy">
+                  <span className="inline-block rounded-full bg-navy/5 px-3 py-1 text-[11px] font-medium text-navy">
                     {chan.tag}
                   </span>
                   <h4 className="mt-3 font-serif text-[18px] font-medium text-navy">
@@ -121,15 +121,15 @@ export default function DeliveryModel() {
         </div>
 
         {/* 8-Stage Delivery Pipeline */}
-        <div className="mt-20 rounded-none border border-navy/10 bg-navy p-8 text-white md:p-12">
+        <div className="mt-20 rounded-[var(--radius-card)] border border-navy/10 bg-navy p-8 text-white md:p-12">
           <div className="mb-10 text-center">
-            <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-gold">
+            <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-bright">
               End-to-End Pipeline
             </span>
             <h3 className="mt-2 font-serif text-[26px] font-medium text-white md:text-[34px]">
               The FSM Cross-Border Delivery Model
             </h3>
-            <p className="mx-auto mt-2 max-w-2xl text-[14.5px] text-ivory/70">
+            <p className="mx-auto mt-2 max-w-2xl text-[14.5px] text-white/70">
               From requirement definition to verified measurable outcomes.
             </p>
           </div>
@@ -138,10 +138,10 @@ export default function DeliveryModel() {
             {pipelineStages.map((stage) => (
               <div
                 key={stage.step}
-                className="relative rounded-none border border-white/10 bg-white/5 p-5 transition-colors hover:border-gold/50 hover:bg-white/10"
+                className="relative rounded-[var(--radius-card-sm)] border border-white/10 bg-white/5 p-5 transition-colors hover:border-white/30 hover:bg-white/10"
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold text-gold">
+                  <span className="font-mono text-xs font-bold text-white/90">
                     STAGE {stage.step}
                   </span>
                   <span className="text-white/30">&rarr;</span>
@@ -149,7 +149,7 @@ export default function DeliveryModel() {
                 <h4 className="mt-3 font-serif text-[16.5px] font-medium text-white">
                   {stage.title}
                 </h4>
-                <p className="mt-1 text-[13px] text-ivory/70">
+                <p className="mt-1 text-[13px] text-white/70">
                   {stage.desc}
                 </p>
               </div>
@@ -158,7 +158,7 @@ export default function DeliveryModel() {
         </div>
 
         {/* Mobilization & Operational Support */}
-        <div className="mt-20 grid grid-cols-1 items-center gap-12 rounded-none border border-navy/10 bg-sand p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-12">
+        <div className="mt-20 grid grid-cols-1 items-center gap-12 rounded-[var(--radius-card)] border border-navy/10 bg-sand p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-12">
           <div>
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Operational Infrastructure
@@ -174,14 +174,14 @@ export default function DeliveryModel() {
             </p>
           </div>
 
-          <div className="rounded-none border border-navy/10 bg-white p-6 shadow-none">
-            <span className="font-mono text-xs font-semibold uppercase tracking-wider text-gold">
+          <div className="rounded-[var(--radius-card-sm)] border border-navy/10 bg-white p-6 shadow-xs">
+            <span className="font-mono text-xs font-semibold uppercase tracking-wider text-blue-accent">
               Comprehensive Field Support
             </span>
             <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {logistics.map((item) => (
                 <div key={item} className="flex items-start gap-2 py-1 text-[12.5px] text-navy">
-                  <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>{item}</span>

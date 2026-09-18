@@ -14,7 +14,7 @@ export default function About() {
         </div>
 
         {/* Pull Quote Spotlight Banner */}
-        <div className="relative mb-16 border-l-4 border-gold bg-[#f8f9fa] p-8 md:p-12">
+        <div className="relative mb-16 border-l-4 border-navy bg-[#f8f9fa] p-8 md:p-12">
           <blockquote className="font-serif text-[22px] font-light italic leading-relaxed text-navy md:text-[28px] lg:text-[30px]">
             &ldquo;Unlike firms that focus solely on compliance or reporting,
             FSM ensures development investments generate tangible results and

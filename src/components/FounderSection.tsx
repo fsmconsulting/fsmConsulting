@@ -59,7 +59,7 @@ export default function FounderSection({
             </p>
 
             {/* Subtle Divider */}
-            <div className="my-4 h-0.5 w-12 bg-gold" />
+            <div className="my-4 h-0.5 w-12 bg-navy/30" />
 
             {/* Bio Paragraph */}
             <p className="text-[13.5px] md:text-[14px] leading-[1.65] text-ink/80">
@@ -70,10 +70,10 @@ export default function FounderSection({
 
         {/* Row 2: Quote Block (below the bio/portrait row) */}
         <div className="mt-12 md:mt-16 pt-10 md:pt-12 border-t border-navy/10">
-          <div className="max-w-4xl border-l-4 border-gold pl-6 md:pl-10 py-2">
+          <div className="max-w-4xl border-l-4 border-navy pl-6 md:pl-10 py-2">
             {/* Decorative Quote Icon & Eyebrow */}
             <div className="flex items-center gap-3 mb-3">
-              <Quote className="h-6 w-6 text-gold shrink-0" aria-hidden="true" />
+              <Quote className="h-6 w-6 text-navy/60 shrink-0" aria-hidden="true" />
               <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-accent">
                 {founderData.quoteEyebrow}
               </span>
