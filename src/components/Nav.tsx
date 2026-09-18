@@ -15,7 +15,6 @@ const mainNavLinks = [
     { href: "/#network", label: "Our Network" },
 ];
 
-export default function Nav({ transparent = false }: { transparent?: boolean } = {}) {
 export default function Nav({ transparent = false }: { transparent?: boolean }) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [mobileSectorsOpen, setMobileSectorsOpen] = useState(false);
@@ -36,14 +35,11 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
             <Link
                 href={`/sectors/${s.id}`}
                 onClick={() => setSectorsDropdownOpen(false)}
-                className="group flex items-center justify-between rounded-[var(--radius-card-sm)] border border-white/10 bg-navy-2/60 px-3.5 py-2.5 transition-colors duration-200 hover:border-white/30 hover:bg-navy-2"
-                className="group flex items-center justify-between rounded-[var(--radius-card-sm)] border border-white/10 bg-navy-2/60 px-3.5 py-2.5 transition-colors duration-200 hover:border-gold/40 hover:bg-navy-2"
+                className="group flex items-center justify-between border border-white/10 bg-navy-2/60 px-3.5 py-2.5 transition-colors duration-200 hover:border-gold/40 hover:bg-navy-2"
             >
-                <span className="text-[12.5px] font-medium text-gray-200 transition-colors duration-200 group-hover:text-white">
                 <span className="text-[12.5px] font-medium text-gray-200 transition-colors duration-200 group-hover:text-gold-light">
                     {s.title}
                 </span>
-                <span className="text-[11px] text-white/50 transition-all duration-200 group-hover:text-white group-hover:translate-x-1">
                 <span className="text-[11px] text-gold-light/70 transition-all duration-200 group-hover:text-gold-light group-hover:translate-x-1">
                     &rarr;
                 </span>
@@ -91,50 +87,28 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
         : [];
 
     const shell = transparent
-        ? "absolute inset-x-0 top-0 z-50 text-white bg-transparent border-none"
-        ? "absolute inset-x-0 top-0 z-50 text-white"
+        ? "absolute inset-x-0 top-0 z-50 bg-transparent text-white"
         : "sticky top-0 z-50 border-b border-navy/10 bg-white text-navy transition-all";
-
-    const linkBase = transparent
-        ? "font-medium text-white/80 hover:text-white after:bg-white/70"
-        : "font-medium text-navy/75 hover:text-navy after:bg-navy/40";
-        ? "font-normal text-white/85 hover:text-white"
-        : "font-medium text-navy/75 hover:text-navy";
-    const linkActive = transparent
-        ? "font-bold text-white after:bg-white"
-        : "font-bold text-navy after:bg-navy";
-    const brandColor = transparent ? "text-white" : "text-navy";
-        ? "font-medium text-white"
-        : "font-semibold text-navy";
+    const utilityCls = transparent
+        ? "border-b border-white/15 bg-transparent text-[12px] text-white/70"
+        : "border-b border-navy/10 bg-[#001326] text-[12px] text-gray-400";
+    const brandCls = transparent ? "text-white" : "text-navy";
+    const linkActiveCls = transparent
+        ? "font-bold text-white after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-full after:bg-white"
+        : "font-bold text-navy after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-full after:bg-gold";
+    const linkIdleCls = transparent
+        ? "font-medium text-white/85 hover:text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white/70 after:transition-all hover:after:w-full"
+        : "font-medium text-navy/75 hover:text-navy after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gold-light after:transition-all hover:after:w-full";
 
     return (
-        <header className="sticky top-0 z-50 border-b border-navy/10 bg-white text-navy transition-all">
+        <header className={shell}>
             {/* Top Utility Bar */}
-            <div className="border-b border-navy/10 bg-[#001326] text-[12px] text-gray-400">
+            <div className={utilityCls}>
                 <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1.5 md:px-10">
                     <div className="flex items-center gap-4">
-                        <span className="font-medium text-white/90">Global Reach &middot; Africa Delivery</span>
+                        <span className="font-medium text-gold-light">Global Reach &middot; Africa Delivery</span>
                         <span className="hidden text-white/20 md:inline">|</span>
                         <span className="hidden md:inline text-gray-300">Abuja &middot; Regional Network</span>
-        <header className={shell}>
-            {/* Top Utility Bar (only on regular pages, not transparent hero) */}
-            {!transparent && (
-                <div className="border-b border-navy/10 bg-[#001326] text-[12px] text-gray-400">
-                    <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1.5 md:px-10">
-                        <div className="flex items-center gap-4">
-                            <span className="font-medium text-white/90">Global Reach &middot; Africa Delivery</span>
-                            <span className="hidden text-white/20 md:inline">|</span>
-                            <span className="hidden md:inline text-gray-300">Abuja &middot; Regional Network</span>
-                        </div>
-                        <div className="flex items-center gap-6">
-                            <a href="mailto:info@fsmconsulting.com" className="text-gray-300 transition-colors hover:text-white">
-                                info@fsmconsulting.com
-                            </a>
-                            <span className="text-white/20">|</span>
-                            <a href="tel:+2349040009512" className="text-gray-300 transition-colors hover:text-white">
-                                +234 904 000 9512
-                            </a>
-                        </div>
                     </div>
                     <div className="flex items-center gap-6">
                         <a href="mailto:info@fsmconsulting.com" className="text-gray-300 transition-colors hover:text-white">
@@ -147,19 +121,14 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                     </div>
                 </div>
             </div>
-            )}
 
             {/* Main Header */}
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
-            <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-6 py-5 md:px-10">
                 <div className="flex items-center gap-6">
                     {/* Mobile Menu Toggle Button */}
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="flex items-center gap-2 text-[14px] font-medium text-navy transition-colors hover:text-blue-accent lg:hidden"
-                        className={`flex items-center gap-2 text-[14px] font-medium transition-colors lg:hidden ${
-                            transparent ? "text-white hover:text-white/70" : "text-navy hover:text-blue-accent"
-                        }`}
+                        className={`flex items-center gap-2 text-[14px] font-medium transition-colors lg:hidden ${transparent ? "text-white hover:text-white/70" : "text-navy hover:text-gold-light"}`}
                         aria-label="Toggle navigation menu"
                     >
                         <svg
@@ -191,39 +160,24 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                         </div>
                         {/* Brand wordmark */}
                         <div className="flex flex-col leading-none">
-                            <span className="font-serif text-[20px] font-semibold tracking-tight text-navy">
-                            <span className={`font-serif text-[20px] font-semibold tracking-tight ${brandColor}`}>
+                            <span className={`font-serif text-[20px] font-semibold tracking-tight ${brandCls}`}>
                                 FSM Consulting
                             </span>
-                            <span className="font-serif text-[20px] font-semibold tracking-tight text-navy pl-[7.5ch]">
-                            <span className={`font-serif text-[20px] font-semibold tracking-tight ${brandColor} pl-[7.5ch]`}>
+                            <span className={`font-serif text-[20px] font-semibold tracking-tight pl-[7.5ch] ${brandCls}`}>
                                 Limited
                             </span>
                         </div>
-                    {/* Logo / Brand — wordmark only, matching the reference's plain typographic mark */}
-                    <Link href="/" className="group flex items-center gap-2">
-                        <span
-                            className={`font-serif text-[21px] italic tracking-tight ${
-                                transparent ? "text-white" : "text-navy"
-                            }`}
-                        >
-                            FSM Consulting.
-                        </span>
                     </Link>
                 </div>
 
                 {/* Desktop Navigation Links */}
                 <nav className="hidden items-center gap-8 text-[14px] lg:flex">
-                <nav className="hidden items-center gap-8 text-[13.5px] lg:flex">
                     <Link
                         href="/"
                         className={`relative py-1.5 transition-colors ${
-                        className={`relative py-1.5 transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:transition-all ${
                             isActive("/")
-                                ? "font-bold text-navy after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-full after:bg-navy"
-                                : "font-medium text-navy/75 hover:text-navy after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-navy/40 after:transition-all hover:after:w-full"
-                                ? `${linkActive} after:w-full`
-                                : `${linkBase} after:w-0 hover:after:w-full`
+                                ? linkActiveCls
+                                : linkIdleCls
                         }`}
                     >
                         Home
@@ -232,14 +186,10 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                     <Link
                         href="/about"
                         className={`relative py-1.5 transition-colors ${
-                        className={`relative py-1.5 transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:transition-all ${
                             isActive("/about")
-                                ? "font-bold text-navy after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-full after:bg-navy"
-                                : "font-medium text-navy/75 hover:text-navy after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-navy/40 after:transition-all hover:after:w-full"
-                                ? `${linkActive} after:w-full`
-                                : `${linkBase} after:w-0 hover:after:w-full`
+                                ? linkActiveCls
+                                : linkIdleCls
                         }`}
-                        className={`transition-colors ${isActive("/about") ? linkActive : linkBase}`}
                     >
                         About
                     </Link>
@@ -247,23 +197,17 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                     <Link
                         href="/services"
                         className={`relative py-1.5 transition-colors ${
-                        className={`relative py-1.5 transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:transition-all ${
                             isActive("/services")
-                                ? "font-bold text-navy after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-full after:bg-navy"
-                                : "font-medium text-navy/75 hover:text-navy after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-navy/40 after:transition-all hover:after:w-full"
-                                ? `${linkActive} after:w-full`
-                                : `${linkBase} after:w-0 hover:after:w-full`
+                                ? linkActiveCls
+                                : linkIdleCls
                         }`}
-                        className={`transition-colors ${isActive("/services") ? linkActive : linkBase}`}
                     >
                         Services &amp; Capabilities
-                        Services
                     </Link>
 
                     {/* Sectors Interactive Dropdown Trigger */}
                     <div
                         className="group/sectors relative py-1.5"
-                        className="group/sectors relative"
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
@@ -272,12 +216,8 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                             onClick={() => setSectorsDropdownOpen(!sectorsDropdownOpen)}
                             className={`flex items-center gap-1.5 cursor-pointer py-1.5 transition-colors focus:outline-none ${
                                 isSectorsActive
-                                    ? "font-bold text-navy"
-                                    : "font-medium text-navy/75 hover:text-navy"
-                                    ? linkActive
-                                    : linkBase
-                            className={`flex cursor-pointer items-center gap-1.5 transition-colors focus:outline-none ${
-                                isSectorsActive ? linkActive : linkBase
+                                    ? (transparent ? "font-bold text-white" : "font-bold text-navy")
+                                    : (transparent ? "font-medium text-white/85 hover:text-white" : "font-medium text-navy/75 hover:text-navy")
                             }`}
                             aria-label="Toggle Sectors Menu"
                             aria-expanded={sectorsDropdownOpen}
@@ -285,10 +225,8 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                             <span>Sectors</span>
                             <svg
                                 className={`h-3.5 w-3.5 transition-transform duration-200 ${
-                                    sectorsDropdownOpen ? "rotate-180 text-navy" : "text-navy/60"
+                                    sectorsDropdownOpen ? (transparent ? "rotate-180 text-white" : "rotate-180 text-navy") : (transparent ? "text-white/70" : "text-navy/60")
                                 }`}
-                                    sectorsDropdownOpen ? "rotate-180" : ""
-                                } ${transparent ? "text-white/80" : "text-navy/60"}`}
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -296,11 +234,11 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-                        {/* Navy underline - expands on hover or when dropdown is open */}
+                        {/* Gold underline - expands on hover or when dropdown is open */}
                         <span
-                            className={`absolute bottom-0 left-0 h-[2px] bg-navy/40 transition-all duration-200 ${
+                            className={`absolute bottom-0 left-0 h-[2px] bg-gold-light transition-all duration-200 ${
                                 isSectorsActive
-                                    ? "w-full bg-navy h-[2.5px]"
+                                    ? "w-full bg-gold h-[2.5px]"
                                     : sectorsDropdownOpen
                                     ? "w-full"
                                     : "w-0 group-hover/sectors:w-full"
@@ -314,8 +252,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <div className="rounded-[var(--radius-card)] border border-navy/10 bg-navy p-6 shadow-xl">
-                                <div className="bento-card border border-navy/10 bg-navy p-6">
+                                <div className="border border-navy/10 bg-navy p-6">
                                     {/* 4 Thematic Columns */}
                                     <div className="grid grid-cols-4 gap-4">
                                         {/* Column 1: Governance & Digital */}
@@ -353,37 +290,26 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
 
                     {/* Delivery Ecosystem */}
                     <Link
-                        href="/#ecosystem"
-                        className="font-medium text-navy/75 hover:text-navy relative py-1.5 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-navy after:transition-all hover:after:w-full"
+                        href="/delivery-ecosystem"
+                        className={`relative py-1.5 ${linkIdleCls}`}
                     >
                         Delivery Ecosystem
                     </Link>
 
                     {/* Our Network */}
                     <Link
-                        href="/#network"
-                        className="font-medium text-navy/75 hover:text-navy relative py-1.5 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-navy after:transition-all hover:after:w-full"
-                        className={`transition-colors ${linkBase}`}
+                        href="/network"
+                        className={`relative py-1.5 ${linkIdleCls}`}
                     >
                         Our Network
-                    </Link>
-
-                    <Link href="/#contact" className={`transition-colors ${linkBase}`}>
-                        Contact
                     </Link>
                 </nav>
 
                 {/* Right CTA and Search */}
-                {/* Search (utility, kept out of the main link row) */}
                 <div className="flex items-center gap-4">
                     <button
                         onClick={() => setSearchOpen(!searchOpen)}
-                        className="hidden p-2 text-navy/60 hover:text-navy md:block"
-                        className={`hidden p-2 md:block transition-colors ${
-                            transparent ? "text-white/80 hover:text-white" : "text-navy/60 hover:text-navy"
-                        className={`hidden p-2 md:block ${
-                            transparent ? "text-white/70 hover:text-white" : "text-navy/60 hover:text-navy"
-                        }`}
+                        className={`hidden p-2 md:block ${transparent ? "text-white/70 hover:text-white" : "text-navy/60 hover:text-navy"}`}
                         aria-label="Search"
                         title="Search"
                     >
@@ -393,17 +319,11 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                     </button>
 
                     <Link
-                        href="/#contact"
+                        href="/contact"
                         className="group inline-flex items-center gap-2 bg-navy px-5 py-2.5 text-[13px] font-medium uppercase tracking-[0.06em] text-white transition-colors duration-200 hover:bg-navy-2"
-                        className={`pill-btn group hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-[13px] font-medium transition-colors duration-200 ${
-                            transparent
-                                ? "bg-white text-navy hover:bg-white/90 shadow-sm"
-                                : "bg-navy text-white hover:bg-navy-2"
-                        }`}
                     >
                         <span className="inline-block">Discuss an assignment</span>
                         <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
-                        <span className="pill-btn-arrow">&rarr;</span>
                     </Link>
                 </div>
             </div>
@@ -468,53 +388,26 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
             )}
 
             {/* Mobile Drawer */}
-            {/* Mobile full-screen menu — editorial stacked links, matching the reference's mobile pattern */}
             {mobileMenuOpen && (
                 <div className="border-t border-navy/10 bg-white px-6 py-6 lg:hidden max-h-[85vh] overflow-y-auto">
-                    {/* Mobile Direct Contacts */}
-                    <div className="mb-4 flex items-center justify-between border-b border-navy/10 pb-3 text-[12px] text-navy/70">
-                        <a href="mailto:info@fsmconsulting.com" className="font-medium hover:text-navy">
-                            info@fsmconsulting.com
-                        </a>
-                        <span>&middot;</span>
-                        <a href="tel:+2349040009512" className="font-medium hover:text-navy">
-                            +234 904 000 9512
-                        </a>
-                    </div>
-
                     <nav className="flex flex-col gap-3 text-[15px] font-medium text-navy">
                         <Link
                             href="/"
-                <div className="fixed inset-0 z-[60] flex flex-col overflow-y-auto bg-white px-6 pb-8 pt-6 text-navy lg:hidden">
-                    <div className="flex items-center justify-between">
-                        <button
                             onClick={() => setMobileMenuOpen(false)}
                             className={`border-b pb-2.5 transition-colors ${
-                                isActive("/") ? "border-navy font-bold text-navy" : "border-navy/10 font-medium text-navy/75 hover:text-navy"
+                                isActive("/") ? "border-gold font-bold text-navy" : "border-navy/10 font-medium text-navy/75 hover:text-navy"
                             }`}
-                            className="flex items-center gap-2 text-navy"
-                            aria-label="Close navigation menu"
                         >
                             Home
                         </Link>
-                            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                        <span className="font-serif text-[19px] italic tracking-tight text-navy">
-                            FSM Consulting.
-                        </span>
-                    </div>
 
                         <Link
                             href="/about"
                             onClick={() => setMobileMenuOpen(false)}
                             className={`border-b pb-2.5 transition-colors ${
-                                isActive("/about") ? "border-navy font-bold text-navy" : "border-navy/10 font-medium text-navy/75 hover:text-navy"
+                                isActive("/about") ? "border-gold font-bold text-navy" : "border-navy/10 font-medium text-navy/75 hover:text-navy"
                             }`}
                         >
-                    <nav className="mt-12 flex flex-col gap-1">
-                        <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="font-serif text-[32px] leading-[1.35] text-navy">
                             About
                         </Link>
 
@@ -522,31 +415,18 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                             href="/services"
                             onClick={() => setMobileMenuOpen(false)}
                             className={`border-b pb-2.5 transition-colors ${
-                                isActive("/services") ? "border-navy font-bold text-navy" : "border-navy/10 font-medium text-navy/75 hover:text-navy"
+                                isActive("/services") ? "border-gold font-bold text-navy" : "border-navy/10 font-medium text-navy/75 hover:text-navy"
                             }`}
-                        <Link href="/services" onClick={() => setMobileMenuOpen(false)} className="font-serif text-[32px] leading-[1.35] text-navy">
-                            Services
-                        </Link>
-                        <button
-                            type="button"
-                            onClick={() => setMobileSectorsOpen(!mobileSectorsOpen)}
-                            className="flex items-center gap-3 text-left font-serif text-[32px] leading-[1.35] text-navy"
                         >
                             Services &amp; Capabilities
                         </Link>
 
-                        {/* Mobile Accordion for Sectors (collapsed by default) */}
+                        {/* Mobile Accordion for Sectors */}
                         <div className="border-b border-navy/10 pb-2.5">
                             <button
                                 type="button"
                                 onClick={() => setMobileSectorsOpen(!mobileSectorsOpen)}
                                 className="flex w-full items-center justify-between py-1 text-left font-medium text-navy"
-                            Sectors
-                            <svg
-                                className={`h-5 w-5 text-navy/50 transition-transform duration-200 ${mobileSectorsOpen ? "rotate-180" : ""}`}
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
                             >
                                 <span className={isSectorsActive ? "font-bold text-navy" : "text-navy/75"}>
                                     Sectors (15 Verticals)
@@ -564,7 +444,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                             </button>
 
                             {mobileSectorsOpen && (
-                                <div className="mt-2 space-y-1.5 pl-3 border-l-2 border-navy/20 animate-in fade-in duration-200">
+                                <div className="mt-2 space-y-1.5 pl-3 border-l-2 border-gold/40 animate-in fade-in duration-200">
                                     {sectorsData.map((sector) => (
                                         <Link
                                             key={sector.id}
@@ -572,7 +452,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                                             onClick={() => setMobileMenuOpen(false)}
                                             className="block py-1 text-[13px] text-navy/80 hover:text-blue-accent"
                                         >
-                                            <span className="font-mono text-[10px] text-blue-accent mr-1.5">{sector.num}</span>
+                                            <span className="font-mono text-[10px] text-gold mr-1.5">{sector.num}</span>
                                             {sector.title}
                                         </Link>
                                     ))}
@@ -581,7 +461,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                         </div>
 
                         <Link
-                            href="/#ecosystem"
+                            href="/delivery-ecosystem"
                             onClick={() => setMobileMenuOpen(false)}
                             className="border-b border-navy/10 pb-2.5 font-medium text-navy/75 hover:text-navy"
                         >
@@ -589,66 +469,23 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                         </Link>
 
                         <Link
-                            href="/#network"
+                            href="/network"
                             onClick={() => setMobileMenuOpen(false)}
                             className="border-b border-navy/10 pb-2.5 font-medium text-navy/75 hover:text-navy"
                         >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        {mobileSectorsOpen && (
-                            <div className="mb-2 mt-1 grid grid-cols-2 gap-x-4 gap-y-2 border-l-2 border-navy/10 pl-4">
-                                {sectorsData.map((sector) => (
-                                    <Link
-                                        key={sector.id}
-                                        href={`/sectors/${sector.id}`}
-                                        onClick={() => setMobileMenuOpen(false)}
-                                        className="text-[13.5px] text-navy/70"
-                                    >
-                                        {sector.title}
-                                    </Link>
-                                ))}
-                            </div>
-                        )}
-                        <Link href="/#network" onClick={() => setMobileMenuOpen(false)} className="font-serif text-[32px] leading-[1.35] text-navy">
                             Our Network
                         </Link>
-                        <Link href="/#contact" onClick={() => setMobileMenuOpen(false)} className="font-serif text-[32px] leading-[1.35] text-navy">
-                            Contact
-                        </Link>
-                    </nav>
 
                         <div className="pt-2">
                             <Link
-                                href="/#contact"
+                                href="/contact"
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="pill-btn flex w-full items-center justify-center bg-navy py-3 text-center text-[13px] font-medium text-white hover:bg-navy-2"
-                    {/* Quick-access sector chips — same purpose as the reference's location chips, real content */}
-                    <div className="mt-10 flex flex-wrap gap-2">
-                        {["Governance", "Agriculture", "Health Systems", "Energy"].map((label) => (
-                            <span
-                                key={label}
-                                className="rounded-full border border-navy/15 px-4 py-1.5 text-[12.5px] font-medium text-navy/70"
+                                className="flex w-full items-center justify-center bg-navy py-3 text-center text-[13px] font-medium uppercase tracking-[0.06em] text-white hover:bg-navy-2"
                             >
-                                <span>Discuss an assignment</span>
-                                <span className="pill-btn-arrow ml-2">&rarr;</span>
+                                Discuss an assignment &rarr;
                             </Link>
                         </div>
                     </nav>
-                                {label}
-                            </span>
-                        ))}
-                    </div>
-
-                    <div className="mt-auto space-y-1 border-t border-navy/10 pt-6 text-[14px]">
-                        <a href="tel:+2349040009512" className="block font-medium text-navy">
-                            +234 904 000 9512
-                        </a>
-                        <a href="mailto:info@fsmconsulting.com" className="block text-navy/70">
-                            info@fsmconsulting.com
-                        </a>
-                        <p className="pt-2 text-navy/50">Abuja, Federal Capital Territory, Nigeria</p>
-                    </div>
                 </div>
             )}
         </header>

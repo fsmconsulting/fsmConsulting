@@ -1,307 +1,750 @@
-# FSM Digital Experience — Creative & UX Source of Truth
+# FSM Consulting — Digital Experience
 
-> **Read this before `DESIGN_SYSTEM.md`, and read both before touching any
-> UI in this repo.** This document is the highest-level creative authority
-> for the FSM Consulting Limited website. `DESIGN_SYSTEM.md` is the
-> implementation of what this document decides — tokens, component classes,
-> code-level rules. If the two ever seem to conflict, this document wins,
-> and `DESIGN_SYSTEM.md` should be corrected to match it.
+## 0. Purpose
 
-```
-             FSM CORPORATE PROFILE
-                     │
-                     ▼
-        ┌──────────────────────────┐
-        │ FSM_DIGITAL_EXPERIENCE.md│   ← this file: reference UI, UX
-        │                          │     philosophy, layout grammar,
-        │                          │     responsive art direction
-        └────────────┬─────────────┘
-                     ▼
-        ┌──────────────────────────┐
-        │ DESIGN_SYSTEM.md         │   ← colors, type, radius, spacing,
-        │                          │     component classes, motion tokens
-        └────────────┬─────────────┘
-                     ▼
-                COMPONENTS → PAGES
-```
+This document defines the creative direction and digital experience for the FSM Consulting website.
 
-`AGENTS.md` points every AI agent working on this repo to read this file
-first, then `DESIGN_SYSTEM.md`, before designing or building anything.
+The website should translate the supplied Conceptzilla consulting references into an FSM-specific digital experience.
 
-## The actual instruction, stated precisely
+The references are the visual foundation.
 
-Not: *"Build an FSM design system inspired by Prism."*
+FSM's corporate profile is the content and institutional foundation.
 
-This is: **the three Conceptzilla "Website Design for Consulting Firm"
-Dribbble references are the visual foundation of FSM's entire digital
-experience. Rebuild FSM's website using that design language, with FSM's
-brand and real content replacing Prism's. Every future AI working on this
-site — Claude, Codex, Antigravity, Cursor, or otherwise — must preserve
-this visual DNA, not reinterpret it into a generic "premium consulting
-site."**
+The result must feel like FSM — not a copied Conceptzilla website and not a generic consulting template.
 
-```
-   REFERENCE UI/UX GRAMMAR
-            +
-     FSM BRAND
-            +
-FSM CORPORATE PROFILE (content, positioning, services, delivery model,
-regional network, sectors, Impact 360)
-            =
-   FSM DIGITAL EXPERIENCE
-```
+---
 
-The reference supplies composition, proportion, whitespace, surface
-treatment, navigation structure, card behavior, and responsive
-transformation. FSM supplies brand identity, voice, and every fact on the
-page. Never let the reference's own brand (green, "Prism.", its invented
-copy) leak through — and never let FSM's rebuild drift into a generic
-SaaS-card aesthetic that isn't actually what the reference does either.
+# 1. Creative North Star
 
-## Reference fidelity — the rule everything else follows
+The target experience is:
 
-The three supplied Dribbble shots are the primary visual reference for
-this project. Do not reinterpret them into a generic "premium consulting
-website." Preserve their visual grammar across the FSM site:
+> **International advisory polish × African development delivery intelligence**
 
-- composition and proportion
-- whitespace and canvas (large white/neutral canvas, image doing most of
-  the work — not a wall of cards)
-- rounded-surface treatment (contained panels, not universal card-ification)
-- hero construction (one large inset photo panel with integrated nav and
-  editorial headline, not a separate nav bar plus a floating text card)
-- image treatment (full-bleed within its container, duotone/grayscale for
-  mood shots, natural color for people/context shots)
-- editorial typography hierarchy (a few large deliberate moments, not
-  uniform card headings everywhere)
-- card composition (cards vary in density and purpose — a stat tile, a
-  case-study block, and a service tile are not the same shape or weight)
-- navigation structure (minimal, overlaid on the hero photo, no separate
-  utility bar)
-- CTA treatment (pill buttons used deliberately — primary actions only)
-- information density (some sections are sparse and quiet, others dense —
-  this contrast is intentional, not inconsistency)
-- case-study presentation (visually dominant, information-rich,
-  horizontally oriented — not a generic blog card)
-- responsive transformation (mobile is redesigned per-component, not the
-  desktop layout shrunk and stacked)
-- interaction philosophy (one orchestrated motion moment, quiet
-  hover/press states elsewhere)
+FSM should feel like an organization capable of operating between:
 
-FSM's brand replaces the reference's brand. The reference's UI/UX
-language remains the foundation underneath it.
+- governments
+- development partners
+- international financial institutions
+- private-sector organizations
+- technical experts
+- country-level implementation networks
+- communities and field environments
 
-## Brand color — extracted from FSM, not copied from the reference
+The website must communicate that FSM understands both:
 
-The reference's palette (green + near-black + white) is **not** to be
-copied. FSM's own identity determines the palette; the reference only
-determines how that palette *behaves* (restrained, one dark neutral
-dominant, one accent used sparingly, everything else neutral).
+**strategy and execution.**
 
-- Primary color relationship comes from the FSM logo and corporate
-  profile: a navy/deep-blue dominant, paired with a gold accent, is what
-  the actual logo supports — this was verified against the supplied FSM
-  logo file, not assumed from "consulting = navy/gold" convention.
-- Gold is retained **because** it is genuinely present in the FSM mark,
-  not as a reflexive "consulting firm" choice. If a future brand refresh
-  changes the logo, this palette must be re-derived from the new logo,
-  not carried over by habit.
-- The resulting palette stays restrained: one neutral canvas (white/sand),
-  one dark surface color (navy) used the way the reference uses near-black
-  — for contrast and emphasis, never as the default background — and gold
-  as the only accent, used sparingly (hover states, small highlights,
-  the FSM italic wordmark treatment).
-- Do not add a second accent color. See `DESIGN_SYSTEM.md`'s color table
-  for the exact tokens.
+It should feel:
 
-## Why, not just what — the component philosophy
+- serious
+- technically credible
+- editorial
+- contemporary
+- institutional
+- confident
+- human
+- regionally grounded
+- implementation-oriented
 
-`DESIGN_SYSTEM.md` documents implementation classes (`.bento-card`,
-`.pill-btn`, `.delivery-card` and so on). Those are *how*. This is *why*:
+---
 
-- Cards create **contained moments of information** — a stat, a case
-  study, a service. They are not a default wrapper for every piece of
-  content on the page. If a section reads better as plain text on the
-  canvas (like a centered stat line, or a section intro), leave it
-  uncarded. Over-carding is the single easiest way to drift from the
-  reference into generic SaaS territory.
-- Large editorial text creates **visual pauses** between dense
-  information — it's a breathing moment, not decoration.
-- Images are **content**, not decoration. A photo should carry meaning
-  (a real place, a real activity) — never a stock texture filling space.
-- Dark surfaces create **contrast and emphasis**. Navy is used the way
-  the reference uses near-black: for the hero photo card, for one bento
-  tile in a stat grid, for the closing CTA panel. It is never the
-  default section background.
-- Rounded surfaces create **physical separation** between distinct
-  pieces of content — they are a structural device, not a stylistic
-  layer applied to make the site "feel modern."
-- Pill CTAs are **actions**, used for the primary thing you actually want
-  someone to do on that screen. Not every link needs to be a pill, and
-  not every pill needs a trailing arrow (see `DESIGN_SYSTEM.md`'s
-  genericness-avoidance section).
+# 2. Primary Visual Reference
 
-## Reference anatomy
+The supplied Conceptzilla consulting references are the primary visual reference for the website.
 
-Document what the reference actually does, section by section, so a
-future agent building a new section can check its structure against a
-real pattern rather than inventing one.
+The target is not simply the same colors or individual components.
 
-### Hero
+The target is the same underlying visual grammar:
 
-Reference behavior:
+- composition
+- proportions
+- typography
+- whitespace
+- image scale
+- card usage
+- section rhythm
+- grid alignment
+- navigation behavior
+- CTA treatment
+- information density
+- responsive behavior
+- mobile recomposition
 
-```
-┌──────────────────────────────────────┐
-│  [logo]      nav links       [CTA]    │  ← nav overlaid on photo,
-│                                        │     transparent, white text
-│              PHOTO                    │
-│         (full-bleed within            │
-│          the rounded panel)           │
-│                                        │
-│  Editorial headline                   │
-│  Supporting copy                      │
-│  [ CTA ]   text link                  │
-└──────────────────────────────────────┘
-   ↑ the whole hero is ONE inset, rounded panel on a white/sand page
-     background — not an edge-to-edge viewport photo with a separate
-     nav bar above it
-```
+Study the references as complete page compositions.
 
-FSM version: same composition. Different imagery (FSM's own
-architecture/skyline photography), typography (Source Serif 4 + IBM Plex
-Sans, not the reference's faces), copy (FSM's real positioning), brand
-colors (navy/gold, not green), and CTA text ("Discuss an assignment").
-Implemented in `Hero.tsx` + `Nav.tsx`'s `transparent` mode.
+Do not reduce them to:
 
-### Stat / value section
+"rounded cards + serif heading + dark background."
 
-The reference uses **compact structured statements**, not enormous
-generic cards — a plain centered stat line ("20+ years advising Fortune
-500 clients") directly on the white canvas above the logo row, and
-*separately* a proper mixed-size bento grid elsewhere (25 years / 40+
-countries / brand tile). Both patterns exist in the reference; use each
-where it actually appears rather than bento-ifying everything. FSM
-translates the plain-stat-line pattern into the `FunderLogoStrip.tsx`
-intro line, and the bento-grid pattern into `BentoStats.tsx` — using only
-real, sourced FSM numbers (corporate profile is the source of truth,
-never invented).
+That would miss the actual design language.
 
-### Services / expertise section
+---
 
-Not generic uniform 3-column icon cards. The reference uses a controlled
-modular grid — light neutral-gray fill, generous padding, large radius,
-heading + short description + "Learn more →" text link, no icon, no
-border, no shadow. FSM should preserve that visual behavior
-(`DeliveryModelSection.tsx`) while using its real capabilities (Global
-Expertise, Regional Access, National Capability, Local Knowledge) as the
-content, not the reference's legal-practice list.
+# 3. The Core Visual Grammar
 
-### Case studies / project evidence
+The visual system is fundamentally:
 
-The reference's case-study cards are visually dominant, information-rich,
-and horizontally paired (Challenge / Impact, with a "Learn More" pill),
-in saturated dark-green/sage fills with a regional/global filter toggle —
-not an ordinary blog-style card.
+> **Editorial composition + structured containment + meaningful imagery.**
 
-**FSM does not currently have enough verified, client-approved
-case-study material to populate this pattern with real content.** Do not
-invent case studies, deal figures, or client outcomes to fill it. This
-rule already exists in `DESIGN_SYSTEM.md` and stays in force. The
-component should still be *designed* now (structure, color treatment,
-toggle interaction) so it's ready to receive real FSM material the moment
-the client supplies it — ship it as a clearly marked placeholder state,
-not as fabricated content.
+The references alternate between different modes of composition.
 
-### Insights
+Examples:
 
-Reference uses a large featured image card plus smaller secondary cards
-in a mixed grid, not a uniform list. FSM's `FeaturedInsightsSection.tsx`
-follows this.
+- open editorial layouts
+- contained cards
+- large image surfaces
+- typography-led sections
+- structured grids
+- dark institutional sections
+- case-study compositions
+- insight compositions
 
-### Closing / contact
+The site should therefore have visual rhythm.
 
-Reference uses a rounded dark (near-black) panel, inset from the page
-edge like the hero, with a white pill primary CTA. FSM's `Closing.tsx`
-follows this using navy instead of near-black.
+A useful mental model:
 
-## Responsive art direction (not just breakpoint testing)
+**Open → Contained → Open → Visual → Contained → Open → Visual**
 
-**Mobile is not a breakpoint adaptation. Mobile is a deliberate
-composition of the same visual language.** Checking a component at
-375px/768px/1280px and confirming nothing visibly breaks is necessary but
-not sufficient — it's QA, not design. For every major composition, decide
-deliberately:
+Not:
 
-- **Desktop** — what's dominant? (e.g. hero: the photo and nav share the
-  panel, headline sits at roughly 40% width)
-- **Tablet** — what collapses, and into what? (e.g. a 4-column bento grid
-  becomes 2-column; a 2-column insight grid becomes 1-column with the
-  featured card first)
-- **Mobile** — what becomes dominant? The reference's mobile hero doesn't
-  shrink the desktop photo-plus-side-text layout — the photo becomes a
-  full-width vertical surface with the white text panel taking over the
-  lower portion of the screen, redesigned for the narrow viewport rather
-  than compressed into it. FSM's `Hero.tsx` already does this (the bento
-  card goes full-bleed-within-gutter, text panel sits at the bottom of a
-  taller photo area).
-- **Interaction** — what changes from hover to touch? Hover-only
-  affordances (arrow-slide on link hover, card lift on hover) should have
-  no missing-information cost on touch — the arrow or "Learn more" text
-  must already be visibly present, not revealed only by a hover state
-  that touch devices can't trigger.
+**Card → Card → Card → Card**
 
-Document this per-section as new components are built, not just "tested
-responsive, looks fine."
+Cards are important.
 
-## The reference test — before building anything new
+They are not the entire identity.
 
-Before creating a new component or section, an agent should ask in order:
+---
 
-1. **Does this exist in the reference language?** If yes, follow it
-   (see Reference Anatomy above, and extend that section for the new
-   pattern once found).
-2. **If not, does it belong to an established FSM pattern already built
-   in this repo?** If yes, extend that pattern rather than inventing a
-   parallel one.
-3. **If neither, is a new component genuinely necessary?** If yes, create
-   it — but make it visually native to the system: same radius tokens,
-   same motion curve, same restraint on accent color and card-ification.
-4. **Does it look like it came from a different website?** If yes,
-   reject it and go back to step 1.
+# 4. Why the References Feel Premium
 
-## Visual QA — before calling any page done
+The references achieve their visual quality through:
 
-Inspect every finished page against these, explicitly, not just "does it
-build and does it look okay at a glance":
+### Typography
 
-- **Reference fidelity** — does this actually feel like the selected
-  reference, structurally, not just in having rounded corners?
-- **Institutional credibility** — does it read as a serious
-  development-delivery consultancy, not a generic startup template?
-- **Composition** — are there deliberate visual relationships between
-  elements, or is this just sections stacked in a column?
-- **Hierarchy** — can you tell what's most important on the screen
-  within a second?
-- **Information density** — is any section too empty (feels unfinished)
-  or too crowded (feels like a wall of cards)?
-- **Image quality and intent** — does the photography feel chosen for a
-  reason, or is it filling space?
-- **Responsiveness** — does mobile feel *designed*, per the Responsive
-  Art Direction section above, rather than compressed?
-- **Interaction** — is motion purposeful (one orchestrated moment) or
-  scattered (fade-up on every card)?
-- **Consistency** — could another AI agent look at this page and know
-  how to build the next one in the same voice?
-- **Originality** — check this page against the generic-AI-tell list in
-  `DESIGN_SYSTEM.md`'s genericness-avoidance section. Did something
-  generic slip back in?
+Large editorial headlines create hierarchy.
 
-## What this document is for
+### Whitespace
 
-Six months from now, someone should be able to say "build a new Climate &
-Resilience sector page" and get something that belongs beside the
-existing pages — not a fresh reinterpretation. That's the point of
-writing this down: the beauty of the result should be the default outcome
-of following this document, not something that has to be re-argued for
-every new page.
+Sections have room to breathe.
+
+### Composition
+
+Elements are positioned deliberately rather than simply placed in standard UI grids.
+
+### Containment
+
+Cards appear where information naturally forms a unit.
+
+### Imagery
+
+Images contribute meaning rather than decoration.
+
+### Restraint
+
+There are relatively few visual ingredients, but they are used deliberately.
+
+### Responsive art direction
+
+Mobile is composed intentionally rather than being a desktop layout stacked vertically.
+
+FSM must preserve these qualities.
+
+---
+
+# 5. FSM Brand Translation
+
+The reference visual language must be translated into FSM's world.
+
+The reference's dominant institutional color is translated into FSM's:
+
+**deep blue / navy**
+
+Gold is not part of the new visual system.
+
+Do not introduce another decorative accent color.
+
+FSM should use:
+
+- deep blue
+- lighter blue variations
+- porcelain/light neutral
+- white
+- dark text
+- muted neutral text
+
+The color system defined in `DESIGN_SYSTEM.md` is authoritative for implementation.
+
+---
+
+# 6. Photography Direction
+
+Photography is important to the experience.
+
+The preferred visual context is:
+
+- African cities
+- infrastructure
+- project sites
+- development projects
+- public institutions
+- professionals in real working environments
+- field implementation
+- transport
+- agriculture
+- health
+- education
+- urban development
+- climate/resilience
+- communities
+- technical/project environments
+
+Photography should feel documentary and credible.
+
+Avoid generic corporate stock imagery.
+
+Avoid using imagery simply because it "looks premium."
+
+Every major image should contribute to the story.
+
+---
+
+# 7. African Context
+
+The site should communicate Africa through actual delivery context.
+
+Do not rely on:
+
+- decorative Africa maps everywhere
+- flags
+- tribal patterns
+- stereotypical imagery
+- poverty imagery
+- safari imagery
+- exaggerated cultural decoration
+
+FSM's African identity comes from:
+
+- regional access
+- national capability
+- local knowledge
+- implementation environments
+- project delivery
+- country networks
+- technical expertise
+- field presence
+
+---
+
+# 8. Homepage Experience
+
+The homepage should establish FSM progressively.
+
+The user should move through this understanding:
+
+### 1. This is serious.
+
+Strong hero and typography.
+
+### 2. They understand development.
+
+Positioning and expertise.
+
+### 3. They understand implementation.
+
+Services, delivery model and Impact 360.
+
+### 4. They have technical and regional depth.
+
+Sectors, network and delivery ecosystem.
+
+### 5. I know how to engage them.
+
+Clear closing CTA and contact path.
+
+---
+
+# 9. Homepage Composition
+
+The homepage can generally follow this rhythm:
+
+1. Navigation
+2. Hero
+3. Positioning / value
+4. Services / capabilities
+5. Development/delivery framework
+6. FSM Impact 360™
+7. Delivery ecosystem
+8. Case studies where verified
+9. Insights
+10. Reach / network
+11. Closing CTA
+12. Footer
+
+This is a compositional guide, not a rigid template.
+
+Sections may be combined, reordered or omitted when the content and visual rhythm require it.
+
+Do not add sections simply because a consulting website usually has them.
+
+---
+
+# 10. Hero
+
+The hero is the primary visual statement.
+
+It should use:
+
+- large imagery
+- strong editorial typography
+- concise supporting copy
+- clear primary CTA
+- generous spacing
+- restrained navigation
+
+Core positioning:
+
+> **Africa's Development Delivery Partner**
+
+Supporting messaging should be grounded in FSM's actual corporate profile.
+
+Primary CTA:
+
+> **Discuss an assignment**
+
+The hero should immediately establish:
+
+**development + delivery + Africa + institutional credibility**
+
+---
+
+# 11. Hero Responsive Behavior
+
+Desktop and mobile must be treated as distinct compositions.
+
+Desktop may use:
+
+- large image composition
+- typography positioned over or alongside the image
+- transparent/integrated navigation
+- strong horizontal composition
+
+Mobile should deliberately recompose the same idea.
+
+Possible structure:
+
+**large image → editorial content surface → CTA**
+
+The exact implementation should follow the supplied mobile reference behavior.
+
+Do not simply shrink the desktop hero.
+
+---
+
+# 12. Positioning
+
+FSM's positioning can be communicated through:
+
+- Global Expertise
+- Regional Access
+- National Capability
+- Local Knowledge
+
+This section should generally use an open editorial composition.
+
+Do not automatically place each item into a card.
+
+The purpose is to communicate institutional capability and reach.
+
+---
+
+# 13. Services / Capabilities
+
+FSM's services should be presented as a structured overview.
+
+Relevant areas include:
+
+- Technical Expert Mobilization
+- Development Effectiveness Services
+- Project Assurance
+- Implementation Acceleration
+- MEAL
+- Governance & Public Sector Reform
+- Environmental & Social Safeguards
+- Land Governance & Investment Advisory
+- Digital Transformation & Data Solutions
+- Crisis, Resilience & Adaptive Development
+- Jobs & Economic Transformation
+- Procurement & Fiduciary Excellence
+- PPP & Investment Facilitation
+
+The complete approved list must come from the corporate profile.
+
+Services can use rounded cards.
+
+However:
+
+**do not turn the whole website into a card grid.**
+
+---
+
+# 14. FSM Impact 360™
+
+FSM Impact 360™ is one of the key conceptual frameworks.
+
+It represents:
+
+1. Identify Priorities
+2. Measure Baselines
+3. Plan for Delivery
+4. Accelerate Implementation
+5. Check Progress
+6. Track Outcomes
+
+Visually, this should feel like a methodology/process.
+
+Use:
+
+- sequence
+- numbering
+- directional relationships
+- typography
+- spacing
+- restrained visual connectors
+
+Avoid turning it into six generic feature cards.
+
+---
+
+# 15. Delivery Ecosystem
+
+FSM's delivery chain:
+
+**CLIENT REQUIREMENT → FSM TECHNICAL LEADERSHIP → GLOBAL/REGIONAL EXPERTISE → COUNTRY PARTNER & LOCAL ACCESS → CONSULTANT MOBILIZATION → FIELD & IMPLEMENTATION SUPPORT → QUALITY ASSURANCE → MEASURABLE RESULTS**
+
+This should visually communicate movement from requirement to measurable result.
+
+The structure should feel like a delivery system rather than a decorative diagram.
+
+---
+
+# 16. Development Ecosystem
+
+FSM operates across:
+
+- governments
+- development partners
+- international financial institutions
+- private sector
+- CSOs
+- technical experts
+- local and regional networks
+
+The website should communicate this ecosystem without implying relationships that are not verified.
+
+Organizations listed in the corporate profile as target/client categories are not automatically FSM clients or partners.
+
+---
+
+# 17. Case Studies
+
+Case studies should have substantial visual weight.
+
+The Conceptzilla references use case studies as major visual/content compositions.
+
+FSM should follow that treatment.
+
+However:
+
+FSM currently does not have a verified approved public case-study library.
+
+Therefore:
+
+**Do not invent case studies.**
+
+Do not create fictional:
+
+- clients
+- projects
+- outcomes
+- project values
+- impact statistics
+- testimonials
+- partnerships
+
+If approved material is unavailable, preserve the visual structure with a restrained publication-pending state.
+
+---
+
+# 18. Insights
+
+Insights should feel editorial.
+
+A featured article may be visually dominant with supporting articles around it.
+
+Use:
+
+- imagery
+- publication metadata
+- strong titles
+- concise summaries
+- varied proportions
+
+Do not create fake thought leadership simply to fill space.
+
+---
+
+# 19. Network
+
+FSM has national presence across Nigeria's 36 states and FCT and a regional/international network model.
+
+The network experience should communicate:
+
+- national reach
+- country-level access
+- regional expertise
+- local implementation capability
+- cross-border mobilization
+- field support
+
+Do not turn this into a decorative map-first experience.
+
+The map, if used, should support the story.
+
+---
+
+# 20. Sectors
+
+FSM's sector expertise includes areas such as:
+
+- agriculture
+- health
+- education
+- infrastructure and urban development
+- climate
+- gender and social inclusion
+- land
+- governance
+- financial management
+- digital transformation
+- data analytics
+
+Sector pages should feel like editorial institutional pages.
+
+Do not create a directory-like collection of identical cards.
+
+---
+
+# 21. Interior Pages
+
+Interior pages should belong to the same visual system as the homepage.
+
+They should use:
+
+- shorter editorial headers
+- strong typography
+- consistent spacing
+- restrained card usage
+- meaningful imagery
+- deep blue strategically
+- consistent CTA treatment
+
+A new page must look like it belongs to the same website.
+
+---
+
+# 22. Navigation
+
+Navigation should be minimal and confident.
+
+Desktop:
+
+- clean primary navigation
+- restrained utility information
+- clear CTA
+
+Mobile:
+
+- deliberate full navigation composition
+- large readable links
+- clear close control
+- useful contact/location information
+
+Do not create a complicated corporate mega-menu unless the information architecture genuinely requires it.
+
+---
+
+# 23. Interaction
+
+Interaction should support the experience.
+
+Preferred:
+
+- subtle card lift
+- image zoom
+- CTA movement
+- navigation transitions
+- viewport reveals
+
+Avoid:
+
+- parallax
+- 3D tilt
+- bouncing
+- excessive stagger
+- decorative floating objects
+- constant motion
+
+Motion should feel intentional.
+
+---
+
+# 24. Mobile Is a Designed Experience
+
+Mobile must be considered during design, not after desktop implementation.
+
+The supplied mobile references demonstrate that the composition itself changes.
+
+Mobile may alter:
+
+- order
+- scale
+- image ratio
+- card proportions
+- spacing
+- typography
+- alignment
+- metadata
+- navigation
+- section composition
+
+Do not treat responsive work as a CSS cleanup phase.
+
+---
+
+# 25. Information Density
+
+The references balance dense information with breathing room.
+
+FSM must do the same.
+
+Avoid:
+
+### Too dense
+
+- excessive cards
+- excessive copy
+- tiny typography
+- too many statistics
+- crowded grids
+
+### Too empty
+
+- giant blank areas with no compositional purpose
+- oversized headings with no supporting substance
+- decorative sections without information
+
+Every section should have a reason to exist.
+
+---
+
+# 26. Content Integrity
+
+The visual experience must never outrun the available evidence.
+
+The corporate profile is the primary source for FSM claims.
+
+Never invent:
+
+- clients
+- partnerships
+- awards
+- testimonials
+- project outcomes
+- statistics
+- years of experience
+- project values
+- team credentials
+- financial claims
+
+When evidence is missing:
+
+**design around the absence rather than inventing content.**
+
+---
+
+# 27. Design System Relationship
+
+`FSM_DIGITAL_EXPERIENCE.md` defines:
+
+**creative direction and experience.**
+
+`DESIGN_SYSTEM.md` defines:
+
+**implementation-level visual rules.**
+
+When deciding whether something belongs visually:
+
+1. Check this document for creative direction.
+2. Check `DESIGN_SYSTEM.md` for implementation rules.
+3. Check the FSM corporate profile for content truth.
+
+---
+
+# 28. Reference Test
+
+Before adding a visual pattern, ask:
+
+### 1.
+
+Does this exist in the supplied Conceptzilla visual language?
+
+If yes, follow it.
+
+### 2.
+
+If not, does an existing FSM pattern solve the problem?
+
+If yes, reuse it.
+
+### 3.
+
+If not, is a new pattern genuinely necessary?
+
+If yes, create it using the same visual grammar.
+
+### 4.
+
+Does it make the site look like another website?
+
+If yes, reject it.
+
+---
+
+# 29. Final Experience Test
+
+The finished website should make a serious prospective client think:
+
+> "These people understand development delivery."
+
+It should not make them think:
+
+> "This is a nice template."
+
+The design should communicate capability before decoration.
+
+---
+
+# 30. Final Principle
+
+The Conceptzilla references determine:
+
+**how the experience looks, moves, breathes and behaves.**
+
+FSM determines:
+
+**what the experience says.**
+
+The website succeeds when those two become one coherent experience:
+
+> **A contemporary, editorial, internationally credible digital presence for an Africa-based development delivery and intelligence platform.**
+> **A contemporary, editorial, internationally credible digital presence for an Africa-based development delivery and intelligence platform.**

@@ -1,208 +1,1248 @@
 # FSM Consulting — Design System
 
-> **Read `FSM_DIGITAL_EXPERIENCE.md` first, then this file, before
-> touching any UI in this repo.** That document is the creative/UX
-> source of truth (why the reference looks the way it does, layout
-> grammar, responsive art direction, the "reference test" for new
-> components); this file is its implementation — the canonical spec for
-> tokens, component classes, and code-level rules. If you are an AI agent
-> (Claude, Codex, Antigravity, Cursor, etc.) asked to build a new section,
-> page, or component, follow both documents — don't invent a new visual
-> style. If something here is ambiguous or a new pattern is genuinely
-> needed, extend both files in the same commit that introduces the
-> pattern.
+## 0. Purpose
 
-## Origin
+This document defines the visual and interaction system for the FSM Consulting website.
 
-The visual language is adapted from a reference UI ("Prism.", a fictional
-consulting-firm concept by Conceptzilla on Dribbble) and remapped onto
-FSM Consulting's own brand (navy + gold, from the FSM logo) and its real
-corporate content (see `FSM Consulting - Corporate Profile.pdf`, provided
-by the client). We are not cloning Prism's brand — we are reusing its
-**shape language and interaction patterns** with FSM's own colors, type,
-and content.
+The website must reproduce the visual grammar, composition, rhythm, information density, typography hierarchy, card usage, imagery, navigation behavior, and responsive behavior of the supplied Conceptzilla consulting references while using FSM's own brand, verified content, and development-sector context.
 
-## Brand colors (source of truth: `src/app/globals.css` `@theme inline`)
+This is not a generic "premium consulting website."
 
-| Token | Hex | Use |
-|---|---|---|
-| `--color-navy` | `#061a29` | Primary dark — nav, footer, hero card accents, dark bento tiles |
-| `--color-navy-2` | `#09263a` | Hover state for navy surfaces |
-| `--color-navy-3` | `#12364b` | Tertiary dark surface |
-| `--color-blue-accent` | `#1d4961` | Links, eyebrow labels, secondary interactive text |
-| `--color-gold` | `#c6a15b` | Accent only — never a second primary. Hover states, small highlights |
-| `--color-gold-light` | `#d7b970` | Gold hover |
-| `--color-sand` | `#f5f3ee` | Section background alternate to white |
-| `--color-ink` | `#152532` | Body text |
-| `--color-ink-muted` | `#61717c` | Secondary/supporting text |
-| `--color-line` | `#d9ddd9` | Borders |
+It is not a SaaS interface.
 
-Do not introduce new brand colors without updating this table.
+It is not a bento dashboard.
 
-## Typography
+It is not an NGO/government template.
 
-- **Display / serif** — `Source Serif 4`, self-hosted as `@font-face` in
-  `src/app/fonts.css` pointing at `.woff2` files in `public/fonts/`.
-  **Do not** switch back to `next/font/google` or a bare
-  `@import "@fontsource/...")` — both have failed in this project
-  (Google Fonts is blocked in the cloud sandbox; the `@fontsource` bare
-  import fails to resolve under Turbopack/Tailwind v4 on Windows). If you
-  need another weight/style, download the `.woff2` from the installed
-  `@fontsource` package (or fontsource CDN) and add an `@font-face` rule
-  by hand — never re-add the package import.
-- **Interface / sans** — `IBM Plex Sans`, same self-hosting approach.
-- Headlines use the serif at editorial scale (30–46px for H1, per
-  `Hero.tsx`). Body copy is always the sans.
-- The FSM logotype in dark bento tiles (see `BentoStats.tsx`) is set in
-  serif italic — this echoes the reference's "Prism." wordmark treatment.
+It is not a literal copy of the reference website.
 
-## Shape language — "Bento + Pill"
+The target is:
 
-This is the core visual signature. Two radius tokens, defined in
-`globals.css`:
+**Conceptzilla's visual language + FSM's institutional identity + FSM's actual development-delivery content.**
 
-```css
---radius-card: 24px;     /* .bento-card — all cards, tiles, photo frames */
---radius-card-sm: 16px;  /* smaller nested cards, e.g. mega-menu items */
---radius-pill: 999px;    /* .pill-btn — every primary/secondary CTA button */
-```
+---
 
-Rules:
+# 1. Design North Star
 
-1. **Cards are rounded 24px, never sharp, never a small 2–4px radius.**
-   Use the `.bento-card` utility class (add `.bento-card--hover` for the
-   translateY(-4px) hover lift used throughout).
-2. **Buttons are full pill shape**, not rectangular, not slightly rounded.
-   Use `.pill-btn` (+ `.pill-btn-arrow` on the trailing arrow span) for
-   every call-to-action — primary (navy bg / white text) and inverted
-   (white bg / navy text on dark sections) alike. **`.pill-btn` does NOT
-   set `display`** — always add Tailwind's own `inline-flex items-center`
-   (or `hidden lg:inline-flex items-center` for a responsive CTA)
-   alongside it in the `className`. This is deliberate: a plain CSS rule
-   in `globals.css` and a Tailwind utility class have the same
-   specificity, so whichever is declared later in the compiled
-   stylesheet wins — and this file's custom rules are declared *after*
-   `@import "tailwindcss"`, so a `display` in `.pill-btn` would silently
-   defeat `hidden`/`lg:inline-flex` on every breakpoint. The same trap
-   bit `.duotone-navy` (a `position` in that rule broke the hero photo's
-   `absolute inset-0`) — as a rule, **never declare `display` or
-   `position` in a plain custom class in this file; always let Tailwind
-   utilities on the element own those two properties.**
-3. **Mixed-size grids ("bento grids")** — when laying out stats, service
-   summaries, or highlights, vary card spans (`col-span-1`, `col-span-2`)
-   rather than a uniform grid. See `BentoStats.tsx` for the reference
-   implementation: two 1-col stat tiles, one 2-col dark brand tile, two
-   more 1-col tiles.
-4. Photography sits in full-bleed, edge-to-edge frames — never with
-   internal padding or a border. Apply `.duotone-navy` when the image is
-   part of a dark/moody hero moment (grayscale + navy multiply-blend
-   gradient); leave photography natural-color in lighter editorial
-   sections (e.g. the corporate profile's Africa/team imagery).
+FSM should feel like:
 
-## Motion / microinteractions
+> **An internationally credible development advisory and delivery firm with deep African implementation intelligence.**
 
-Defined in `globals.css`, respecting `prefers-reduced-motion`:
+The visual experience must communicate:
 
-- `.bento-card--hover:hover` → `translateY(-4px)`, 0.28s
-  `cubic-bezier(0.16, 1, 0.3, 1)`.
-- `.pill-btn:hover` → `translateY(-2px)`; `.pill-btn-arrow` slides 4px on
-  hover via the parent's `:hover .pill-btn-arrow` rule.
-- `.img-hover-zoom:hover img` → `scale(1.045)`, 0.6s — use for any card
-  or link that wraps a photograph.
-- `.reveal-up` + `Reveal.tsx` — a tiny `IntersectionObserver` wrapper
-  component. Wrap any section/tile that should fade+rise into view on
-  scroll: `<Reveal delay={120}><Card /></Reveal>`. Don't hand-roll a new
-  scroll animation approach; extend `Reveal.tsx` if you need variants.
-- The hero card uses a one-shot CSS keyframe (`.hero-card-enter`) rather
-  than `Reveal`, since it's above the fold and should animate
-  immediately on load, not on scroll.
+- institutional credibility
+- technical competence
+- implementation experience
+- clarity
+- restraint
+- regional intelligence
+- modernity
+- confidence
+- seriousness
+- accessibility
 
-Keep motion subtle. No parallax, no 3D tilt, no bounce easing — everything
-uses the same `cubic-bezier(0.16, 1, 0.3, 1)` "ease-out-expo-ish" curve
-for a consistent, quiet feel.
+The site should feel:
 
-## Layout patterns by section type
+**Editorial. Institutional. Structured. Human. Precise. Contemporary.**
 
-- **Hero** — full-bleed duotone photo, bottom-left (or bottom-full-width
-  on mobile) white bento card overlapping the image, containing eyebrow
-  label, serif H1, supporting paragraph, pill CTA + text link. See
-  `Hero.tsx` / `HeroBackground.tsx`.
-- **Nav** — slim dark utility bar (contact info) above a white main bar:
-  logo lockup left, links center/right, pill CTA far right. Dropdowns
-  (e.g. the Sectors mega-menu) are dark bento cards containing smaller
-  rounded (`--radius-card-sm`) link tiles.
-- **Stat / brand bento grid** — see `BentoStats.tsx`. Use real, sourced
-  numbers only (corporate profile is the source of truth) — never invent
-  metrics, matching the existing "no invented stats" rule already in
-  this codebase.
-- **Service/capability grid** — `.delivery-card` bento tiles with a
-  border, hover lift, and "Learn more →" affordance.
-- **Logo strip** — grayscale, evenly spaced, marquee-scrolling on
-  desktop. Already implemented in `FunderLogoStrip.tsx` — reuse as-is
-  for any additional logo lockup needs.
+It should not feel:
 
-## Responsiveness
+**Generic. Corporate-template-like. Startup-ish. Over-designed. AI-generated. Dashboard-like.**
 
-Mobile-first is mandatory — this was an explicit client priority.
+---
 
-- Every new component must be checked at 375px (mobile), 768px (tablet),
-  and 1280px+ (desktop) before being considered done.
-- Bento grids collapse from 4-col → 2-col → stacked; never let a bento
-  tile go below ~140px min-height or text starts clipping.
-- The hero card's `max-w-[600px]` cap keeps it readable on desktop while
-  naturally going full-width (minus the page gutter) on mobile — don't
-  hardcode a fixed width.
-- Touch targets (buttons, nav links) stay ≥44px tall.
+# 2. Reference Fidelity
 
-## Avoiding generic "AI-generated" tells
+The supplied Conceptzilla consulting references are the primary visual reference for the website.
 
-This site follows the `/frontend-design` skill's guidance on top of everything
-above. The bento/pill shape language and photography direction come straight
-from the client's chosen reference — keep those. But apply restraint on the
-parts of that reference that are *also* the commonest generic-AI defaults:
+Reference fidelity means reproducing the underlying design grammar, not copying artwork or content.
 
-- **No ALL-CAPS tracked-letter-spacing eyebrow labels as a reflex.** The Hero
-  originally had one ("GLOBAL EXPERTISE · AFRICA DELIVERY") sitting above the
-  H1 for no structural reason — it was removed. Only add an eyebrow/label
-  when it encodes real structure (a category tag on an insight card, a
-  section context like "MEAL" or "Governance" — those stay, in sentence case
-  or small caps, never tracked-out all-caps as decoration).
-- **One orchestrated motion moment per section, not motion on every tile.**
-  `BentoStats.tsx` used to wrap each of its five tiles in its own
-  `<Reveal delay={...}>` with a staggered delay — a textbook "fade-and-slide-
-  up on each card" pattern. It's now a single `<Reveal>` around the whole
-  grid, so the section arrives as one moment, not five. Follow this pattern:
-  wrap the *container*, not each child, unless a genuinely sequential reveal
-  is the point.
-- **Arrow suffixes (`→`) are a deliberate choice, not a blanket default.**
-  Keep them where the reference itself uses them (primary pill CTAs, "Learn
-  more" service links) but don't append one to every single link just
-  because it's available — e.g. insight-card links and the footer nav don't
-  get one.
-- **Numbered markers (01/02/03) only for genuine sequences.** Nothing on
-  this site is currently numbered — don't add numbering to the service grid
-  or capability cards; they're a set, not a sequence.
-- **Middle-dot-joined meta strings ("A · B · C") are used sparingly** — fine
-  for the nav utility bar's short locale tag, not for repeating across every
-  section header.
+The implementation should study and preserve:
 
-When in doubt: does this choice come from the client's reference or FSM's
-actual content, or is it just the easiest default? If the latter, cut it.
+- overall composition
+- section rhythm
+- proportions
+- whitespace
+- typography scale
+- typography hierarchy
+- grid behavior
+- image treatment
+- card proportions
+- rounded surface treatment
+- navigation behavior
+- CTA treatment
+- information density
+- section transitions
+- case-study presentation
+- insights presentation
+- mobile recomposition
+- responsive spacing
+- visual hierarchy
 
-## What NOT to do
+Do not reduce the references to a collection of UI components.
 
-- Don't reintroduce heavy drop shadows or sharp corners — an earlier
-  pass in this repo's history deliberately flattened those in favor of
-  borders; the bento language now deliberately reintroduces *rounded*
-  corners but still no heavy shadows (cards use border + hover-lift, not
-  `box-shadow` glow).
-- Don't add a second accent color. Gold is the only accent; everything
-  else is navy/ink/sand/white.
-- Don't fetch fonts from Google Fonts or any external CDN at build/runtime
-  — self-hosted `.woff2` only (see Typography section above).
-- Don't invent client stats, testimonials, or case studies for FSM. The
-  corporate profile PDF is the only source of truth for claims; if a
-  section in the reference design (e.g. a "case studies" bento card)
-  needs content FSM hasn't supplied, either omit it or mark it clearly
-  as a placeholder ("Case study — pending client content") rather than
-  fabricating numbers.
+The references work because the **whole page composition** is intentional.
+
+---
+
+# 3. Core Layout Philosophy
+
+The primary design language is:
+
+## Editorial composition + structured containment.
+
+The page should alternate naturally between:
+
+- open editorial sections
+- contained card sections
+- large image compositions
+- structured grids
+- typography-led sections
+- dark institutional surfaces
+
+The site must NOT turn every section into cards.
+
+A useful mental model is:
+
+**Open → Contained → Open → Visual → Contained → Open → Visual**
+
+not:
+
+**Card → Card → Card → Card → Card**
+
+Cards are a structural tool, not the identity of the website.
+
+---
+
+# 4. When to Use Cards
+
+Cards should exist when the content represents a naturally contained unit.
+
+Appropriate uses include:
+
+- services
+- capabilities
+- case studies
+- insights
+- selected expertise
+- image + text combinations
+- specific CTA compositions
+- grouped information
+
+Cards should NOT automatically be used for:
+
+- every paragraph
+- every statistic
+- every section heading
+- navigation
+- simple value statements
+- ordinary editorial copy
+- every grid item
+
+A section can use cards without becoming a "card grid."
+
+---
+
+# 5. Card Language
+
+Cards should feel like the Conceptzilla references.
+
+Characteristics:
+
+- generous internal spacing
+- controlled rounded corners
+- strong typography hierarchy
+- restrained borders
+- little or no shadow
+- meaningful imagery where appropriate
+- clear relationship between heading and supporting content
+- deliberate proportions
+- consistent alignment
+
+Cards should not look like:
+
+- SaaS dashboard widgets
+- pricing cards
+- Material UI panels
+- glassmorphism
+- floating neumorphic boxes
+- heavily shadowed UI components
+
+### Radius
+
+Primary large surfaces:
+
+`24px`
+
+Secondary surfaces:
+
+`16px`
+
+Small controls:
+
+`999px`
+
+Radius should be consistent but not mechanically applied to every element.
+
+---
+
+# 6. Open Editorial Layouts
+
+Some of the most important sections should remain open.
+
+Use open composition for:
+
+- positioning statements
+- value propositions
+- introductory copy
+- expertise narratives
+- strategic statements
+- reach/network information
+- selected statistics
+- section introductions
+
+These sections should rely on:
+
+- typography
+- spacing
+- alignment
+- whitespace
+- rules/dividers
+- image placement
+
+rather than containers.
+
+---
+
+# 7. Typography
+
+Typography is one of the primary visual characteristics of the reference.
+
+Use the existing self-hosted fonts:
+
+- **Source Serif 4** — major editorial/headline typography
+- **IBM Plex Sans** — body, navigation, metadata, UI and supporting typography
+
+Do not introduce another font.
+
+Do not use Google Fonts.
+
+Do not use system font substitutions when the existing fonts are available.
+
+---
+
+## 7.1 Headline Character
+
+Headlines should be:
+
+- large
+- confident
+- editorial
+- tightly composed
+- readable
+- visually dominant
+
+Avoid excessive uppercase typography.
+
+Avoid excessive letter spacing.
+
+Avoid making every heading look like a label.
+
+The serif headline should create the editorial character of the site.
+
+---
+
+## 7.2 Suggested Type Scale
+
+These are starting points, not rigid values.
+
+### Hero
+
+Desktop:
+
+`56–88px`
+
+Mobile:
+
+`42–56px`
+
+### Major Section Heading
+
+Desktop:
+
+`44–64px`
+
+Mobile:
+
+`36–46px`
+
+### Card Heading
+
+Desktop:
+
+`24–32px`
+
+Mobile:
+
+`22–28px`
+
+### Body
+
+Desktop:
+
+`16–18px`
+
+Mobile:
+
+`16–17px`
+
+### Metadata
+
+`11–14px`
+
+Typography must scale based on composition rather than blindly following a fixed scale.
+
+---
+
+# 8. Color System
+
+FSM's visual identity is based on deep institutional blue.
+
+Gold is retired.
+
+Do not reintroduce gold as an accent.
+
+Do not introduce a second decorative accent color.
+
+### Primary Institutional Blue
+
+```txt
+#07131E
+Secondary Blue
+#122434
+Deep Blue
+#1A3246
+Supporting Blue
+#24455E
+Light Blue
+#38668A
+Primary Light Canvas
+#F4F5F7
+Primary Text
+#0D1721
+Muted Text
+#5A6876
+Divider
+#E1E5E9
+
+White:
+
+#FFFFFF
+9. Color Usage
+
+Deep blue should function similarly to the dominant dark institutional color in the Conceptzilla references.
+
+It is for:
+
+major contrast sections
+hero overlays where appropriate
+closing CTA
+important emphasis
+navigation contrast
+selected large surfaces
+institutional moments
+
+It is NOT the default background of the entire website.
+
+Avoid stacking multiple dark-blue sections consecutively.
+
+Light/porcelain sections should provide visual breathing room.
+
+10. Hero
+
+The hero is one of the most important reference translations.
+
+The desktop hero should use:
+
+a large photographic composition
+strong typography
+substantial whitespace
+clear hierarchy
+restrained supporting copy
+one primary CTA
+minimal secondary action
+
+The hero should feel like a major editorial composition rather than a standard SaaS landing-page hero.
+
+Image Direction
+
+Prefer:
+
+African urban environments
+infrastructure
+development projects
+institutions
+field implementation
+professionals working in real environments
+transport
+communities
+public infrastructure
+project sites
+regional development activity
+
+Avoid generic:
+
+Silicon Valley imagery
+Western skyscrapers
+handshake stock photography
+staged corporate boardrooms
+generic laptops
+abstract technology imagery
+
+Photography should communicate development and delivery, not simply "business."
+
+11. Hero Navigation
+
+Desktop navigation should integrate naturally into the hero composition.
+
+The navigation should be:
+
+minimal
+confident
+clean
+spacious
+low-noise
+
+Avoid utility-bar-heavy navigation.
+
+Do not create unnecessary layers above the primary navigation.
+
+Navigation should feel like part of the visual composition.
+
+12. Hero CTA
+
+Primary CTA:
+
+Discuss an assignment
+
+Use a pill-shaped action.
+
+The pill is a functional CTA language, not a universal styling rule.
+
+Primary CTA characteristics:
+
+high contrast
+compact
+clear
+generous touch target
+subtle hover movement
+
+Avoid multiple competing pill buttons.
+
+13. Interior Page Headers
+
+Interior pages should not replicate the full homepage hero.
+
+Use a shorter editorial header.
+
+It may use:
+
+large typography
+controlled supporting copy
+light or blue background
+optional image
+rounded major surface where appropriate
+
+The header should establish context quickly without consuming the entire viewport.
+
+14. Section Rhythm
+
+The website must have strong visual rhythm.
+
+Do not make every section visually identical.
+
+Sections should intentionally alternate between:
+
+light
+dark
+image-led
+typography-led
+open
+contained
+dense
+spacious
+
+Whitespace is an active design element.
+
+Do not fill empty space simply because it exists.
+
+15. Value / Positioning Sections
+
+Value propositions should generally use an open editorial grid.
+
+FSM's core positioning can be represented through:
+
+Global Expertise
+Regional Access
+National Capability
+Local Knowledge
+
+These should not automatically become four identical cards.
+
+Prefer:
+
+large typography
+short supporting copy
+structured columns
+subtle dividers
+deliberate spacing
+
+The content should feel like an institutional statement rather than feature cards.
+
+16. Services and Capabilities
+
+Services can use cards because they represent distinct offerings.
+
+However, the card system must remain editorial.
+
+Each card should contain:
+
+service/capability title
+concise description
+optional supporting metadata
+restrained "Learn more" interaction
+
+Avoid:
+
+icons on every card
+huge decorative numbers
+excessive borders
+shadows
+gradients
+unnecessary badges
+
+The card itself should provide the structure.
+
+17. FSM Impact 360™
+
+FSM Impact 360™ is a process and should visually communicate progression.
+
+Stages:
+
+Identify Priorities
+Measure Baselines
+Plan for Delivery
+Accelerate Implementation
+Check Progress
+Track Outcomes
+
+This should not become a generic six-card feature grid.
+
+It should communicate:
+
+sequence → progression → delivery → results
+
+Use typography, numbering, lines, spacing and directional relationships where appropriate.
+
+Numbering is acceptable here because this is an actual sequence.
+
+18. Delivery Ecosystem
+
+The delivery chain is:
+
+CLIENT REQUIREMENT → FSM TECHNICAL LEADERSHIP → GLOBAL/REGIONAL EXPERTISE → COUNTRY PARTNER & LOCAL ACCESS → CONSULTANT MOBILIZATION → FIELD & IMPLEMENTATION SUPPORT → QUALITY ASSURANCE → MEASURABLE RESULTS
+
+This is a process diagram/content structure.
+
+Do not force it into unrelated decorative cards.
+
+It should visually communicate a delivery system.
+
+19. Case Studies
+
+Case studies should follow the visual weight of the references.
+
+They are substantial content objects.
+
+Use:
+
+large imagery where available
+strong titles
+concise challenge/context
+delivery/approach
+impact/outcome when verified
+clear category or region metadata
+
+Case studies can use large rounded surfaces.
+
+They should feel significantly more substantial than ordinary service cards.
+
+Important content rule
+
+FSM currently does not have an approved public case-study library with verified project outcomes.
+
+Therefore:
+
+DO NOT INVENT CASE STUDIES.
+
+Do not fabricate:
+
+clients
+project values
+impact numbers
+outcomes
+dates
+partnerships
+testimonials
+project names
+
+If approved case studies are unavailable, create a restrained placeholder/state that preserves the intended visual structure without pretending that fictional work exists.
+
+20. Insights
+
+Insights should follow the editorial reference language.
+
+Use a featured article with supporting articles where actual content exists.
+
+The composition can combine:
+
+one dominant image/content surface
+smaller secondary content blocks
+metadata
+publication title
+concise descriptions
+
+Do not make every insight identical.
+
+Do not use fake articles simply to populate the grid.
+
+21. Development / Financing Framework Strip
+
+If displaying organizations or development-financing frameworks, the presentation must clearly communicate what they represent.
+
+Do NOT imply:
+
+client relationships
+funding relationships
+partnerships
+completed projects
+
+unless those relationships are explicitly verified and approved.
+
+The visual treatment should remain understated.
+
+22. Statistics and Reach
+
+Use only verified facts.
+
+Supported example:
+
+36 States + FCT
+
+FSM also has a stated Pan-African/regional network.
+
+Do not manufacture:
+
+number of projects
+number of clients
+years of experience
+countries served as a numerical claim unless verified
+millions/billions delivered
+success percentages
+team-size statistics
+
+Numbers should be used because they communicate something real, not because the design expects statistics.
+
+23. Africa Network
+
+The regional network should communicate:
+
+Africa-based expertise
+country-level access
+local implementation capability
+cross-border mobilization
+professional networks
+regional delivery
+
+Avoid stereotypical "Africa" visual clichés.
+
+Do not use:
+
+decorative Africa-map overload
+tribal patterns
+flags everywhere
+generic safari imagery
+poverty imagery
+
+The African identity should come through actual development context and delivery capability.
+
+24. Closing CTA
+
+The closing CTA should be a major contained surface.
+
+Use:
+
+deep FSM blue
+strong editorial headline
+concise supporting copy
+white/light CTA pill
+generous internal spacing
+rounded corners
+
+It should feel like a natural conclusion to the page.
+
+25. Footer
+
+The footer should be compact and institutional.
+
+Include relevant:
+
+FSM identity
+navigation
+services/capabilities
+contact
+locations/network
+legal information
+social/company links where appropriate
+
+Do not turn the footer into a huge sitemap.
+
+26. Imagery
+
+Photography is part of the storytelling system.
+
+Images should communicate:
+
+people + places + implementation + infrastructure + institutions + development
+
+Images should feel documentary/editorial rather than stock-heavy.
+
+Where appropriate:
+
+full-bleed images
+rounded image surfaces
+image crops
+large horizontal compositions
+image + text combinations
+
+Avoid decorative image usage that adds no meaning.
+
+27. Image Treatment
+
+Images should generally remain natural.
+
+Avoid:
+
+heavy gradients
+aggressive duotones
+excessive overlays
+artificial color grading
+decorative filters
+
+Dark overlays may be used when required for readable hero typography.
+
+The image should still feel like a real photograph.
+
+28. Grid
+
+The grid should provide structure without becoming visually obvious.
+
+Use:
+
+strong alignment
+asymmetric compositions where useful
+generous gutters
+varied column widths
+intentional empty space
+
+Do not force every section into the same grid.
+
+The reference uses different compositions while maintaining a consistent underlying alignment system.
+
+29. Width
+
+Large content should not become excessively wide.
+
+Use a consistent maximum content width.
+
+Major visual surfaces may extend closer to the viewport edge.
+
+Editorial text should remain comfortably readable.
+
+Avoid long lines of body text.
+
+30. Spacing
+
+Spacing should feel generous.
+
+Large sections require substantial vertical breathing room.
+
+Prefer fewer, larger spacing decisions over many tiny gaps.
+
+Do not compress sections merely to reduce page length.
+
+Whitespace is part of the visual identity.
+
+31. Responsive Design
+
+Responsive behavior is a first-class design requirement.
+
+Mobile is NOT:
+
+desktop layout → stack everything vertically
+
+Mobile is:
+
+a deliberate recomposition of the same visual experience.
+
+The supplied mobile references must be studied directly.
+
+32. Mobile Hero
+
+The mobile hero should become a deliberate vertical composition.
+
+Possible structure:
+
+image → content surface → CTA
+
+or another composition faithful to the supplied reference.
+
+The hero should retain:
+
+strong typography
+meaningful image scale
+whitespace
+clear CTA
+visual hierarchy
+
+Do not shrink the desktop hero until everything technically fits.
+
+33. Mobile Typography
+
+Do not simply scale desktop typography proportionally.
+
+Mobile headlines should remain visually dominant.
+
+Use:
+
+large serif headings
+controlled line length
+strong contrast
+deliberate line breaks where appropriate
+
+Avoid tiny headings created solely to fit the viewport.
+
+34. Mobile Cards
+
+Cards remain cards on mobile when their content benefits from containment.
+
+However:
+
+widths should become natural
+internal padding should remain generous
+card proportions may change
+images may change crop
+content ordering may change
+horizontal compositions may become vertical
+unnecessary metadata may be removed
+
+Do not blindly preserve desktop dimensions.
+
+35. Mobile Navigation
+
+Mobile navigation should be simple and spacious.
+
+It should provide:
+
+primary navigation
+important locations/contact information
+clear close interaction
+large touch targets
+readable typography
+
+Do not create a tiny desktop navbar inside a mobile drawer.
+
+Avoid unnecessarily long unstructured lists.
+
+If a large service/sector list exists, organize it intelligently.
+
+36. Responsive Recomposition Rule
+
+For every major desktop section, ask:
+
+"If this section were designed specifically for mobile, how would the reference compose it?"
+
+Then implement that composition.
+
+Do not rely on:
+
+flex-direction: column;
+
+as the entire mobile strategy.
+
+Responsive changes may include:
+
+order
+width
+image ratio
+crop
+typography
+padding
+alignment
+card size
+section spacing
+visibility of secondary metadata
+navigation behavior
+37. Interaction
+
+Interaction should be subtle.
+
+Use motion to clarify:
+
+hierarchy
+hover state
+navigation
+image interaction
+section entry
+
+Do not use motion simply because the site can animate.
+
+38. Motion Rules
+
+Preferred easing:
+
+cubic-bezier(0.16, 1, 0.3, 1)
+
+Appropriate interactions:
+
+card lift: approximately -4px
+CTA lift: approximately -2px
+arrow movement: approximately 4px
+image scale: approximately 1.045
+subtle reveal on viewport entry
+
+Avoid:
+
+parallax
+3D tilt
+bouncing cards
+excessive stagger animations
+spinning elements
+constant floating objects
+scroll-jacking
+
+Motion should remain subordinate to the content.
+
+39. One Orchestrated Moment
+
+Each major page/section may have a primary visual interaction or reveal moment.
+
+Do not animate every component independently.
+
+The experience should feel controlled rather than busy.
+
+40. Accessibility
+
+All interactions must support:
+
+keyboard navigation
+visible focus states
+readable contrast
+semantic HTML
+appropriate heading hierarchy
+meaningful alt text
+touch targets of at least 44px
+reduced-motion preferences
+
+Never hide essential content behind hover-only interactions.
+
+41. Performance
+
+Images should be optimized.
+
+Use appropriate:
+
+dimensions
+compression
+lazy loading where appropriate
+responsive image sizing
+
+Do not ship unnecessarily large images.
+
+Avoid introducing heavy animation libraries or 3D libraries without a real requirement.
+
+42. Components
+
+Reuse components where the visual pattern is genuinely repeated.
+
+Examples:
+
+Nav
+Footer
+PageHeader
+CTA
+ServiceCard
+InsightCard
+CaseStudy
+Reveal
+ImageSurface
+
+Do not create abstractions simply to force visually different sections into one component.
+
+A component should represent a real recurring pattern.
+
+43. Component Naming
+
+Names should describe the content/pattern.
+
+Good:
+
+ServiceCard
+InsightCard
+CaseStudy
+DeliveryModelSection
+ImpactFramework
+NetworkSection
+PageHeader
+
+Avoid vague names such as:
+
+Box
+Thing
+Section1
+PremiumCard
+MagicGrid
+BentoBlock
+44. Page Grammar
+Homepage
+
+The homepage should generally follow the reference's editorial rhythm:
+
+Navigation
+Hero
+Positioning / value
+Services / capabilities
+Development / delivery framework
+Impact / delivery methodology
+Case studies, only when verified
+Insights
+Reach / network
+Closing CTA
+Footer
+
+This order may change when the content or reference composition requires it.
+
+Do not mechanically reproduce a section list.
+
+45. Service Page Grammar
+
+A service page should establish:
+
+Page header
+What the capability means
+Why it matters
+Delivery approach
+Relevant expertise
+Supporting sectors/use cases
+Related insights
+CTA
+
+Use editorial composition before adding cards.
+
+46. Sector Page Grammar
+
+Sector pages should communicate:
+
+sector context
+FSM role
+relevant capabilities
+implementation perspective
+related expertise
+supporting content
+CTA
+
+Do not make sector pages look like a directory of identical cards.
+
+47. About Page
+
+The About page should communicate:
+
+who FSM is
+what FSM does
+how FSM works
+values
+technical depth
+regional access
+delivery philosophy
+
+Avoid stacking multiple full-screen dark sections.
+
+Deep blue should be used strategically.
+
+48. Content Authority
+
+Content must come from approved FSM materials.
+
+Primary source:
+
+FSM Corporate Profile
+
+Additional approved project-specific material may be used where available.
+
+Never invent:
+
+clients
+case studies
+outcomes
+statistics
+testimonials
+awards
+partnerships
+project values
+team credentials
+years of experience
+financial figures
+
+If information is unavailable, design around the absence rather than fabricating it.
+
+49. FSM Brand Translation
+
+The reference's visual identity must be translated into FSM's context.
+
+Reference:
+
+international consulting / institutional / modern
+
+FSM:
+
+development delivery / Africa / implementation / institutional / technical
+
+The design should therefore use real contextual imagery and real FSM language.
+
+Do not turn the site into an "African-themed" website.
+
+FSM's African identity should be communicated through:
+
+delivery context
+regional network
+local access
+project environments
+infrastructure
+institutions
+implementation intelligence
+50. What Must Never Happen
+
+Never allow the website to drift into:
+
+generic SaaS
+startup landing page
+dashboard UI
+NGO template
+government portal
+luxury brand aesthetic
+excessive minimalism
+excessive glassmorphism
+excessive gradients
+excessive shadows
+icon-grid design
+card-everything design
+bento-everything design
+fake corporate statistics
+fake case studies
+fake testimonials
+fake client logos
+fake partnerships
+AI-generated visual clichés
+51. Design Decision Hierarchy
+
+When making a design decision, use this order:
+
+1. Conceptzilla reference grammar
+
+Does the decision belong to the visual language of the references?
+
+2. FSM brand
+
+Does it feel like FSM?
+
+3. Content
+
+Does the treatment make sense for the information?
+
+4. Usability
+
+Is it clear and easy to use?
+
+5. Responsiveness
+
+Does the composition work deliberately across desktop, tablet and mobile?
+
+6. Implementation
+
+Can it be implemented cleanly without unnecessary complexity?
+
+Do not sacrifice the visual language simply because a generic UI pattern is easier to implement.
+
+52. Visual QA
+
+Before considering a page complete, check:
+
+Reference fidelity
+Does the page feel visually related to the supplied Conceptzilla references?
+Is the section rhythm comparable?
+Are typography and whitespace treated similarly?
+Are cards used with similar restraint?
+Are large image compositions present where appropriate?
+Institutional credibility
+Does this feel like a serious development consulting firm?
+Does the content hierarchy communicate expertise?
+Does it avoid startup/SaaS aesthetics?
+Composition
+Is there enough whitespace?
+Are sections visually differentiated?
+Is the page relying too heavily on cards?
+Are image proportions intentional?
+Responsive behavior
+Does mobile feel designed rather than stacked?
+Are typography and spacing still strong?
+Are cards still usable?
+Does navigation remain clean?
+Are important actions accessible?
+Content integrity
+Is every factual claim supported?
+Are there invented statistics?
+Are there invented clients?
+Are there invented case studies?
+Are there unsupported partnerships or outcomes?
+Generic-AI test
+
+Ask:
+
+"Could this exact page belong to any random AI-generated consulting website?"
+
+If yes, redesign the composition.
+
+53. Final Principle
+
+The website should not announce its design system.
+
+It should simply feel exceptionally well designed.
+
+The goal is not to show that FSM has cards, grids, pills, animations or rounded corners.
+
+The goal is to create a coherent visual experience where:
+
+typography + imagery + whitespace + cards + composition + information hierarchy + responsive behavior
+
+work together as one system.
+
+The reference determines the visual grammar.
+
+FSM determines the story.
+
+The result should feel like:
+
+FSM Consulting — Africa's Development Delivery Partner
+
+with the visual confidence and editorial discipline of the supplied Conceptzilla references.
+

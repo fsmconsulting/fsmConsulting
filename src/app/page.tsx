@@ -1,10 +1,10 @@
 import Hero from "@/components/Hero";
 import ValueAdvantage from "@/components/ValueAdvantage";
 import FunderLogoStrip from "@/components/FunderLogoStrip";
-import DeliveryModelSection from "@/components/DeliveryModelSection";
-import CaseStudies from "@/components/CaseStudies";
+import KeyFigures from "@/components/KeyFigures";
+import PositioningPillars from "@/components/positioning/PositioningPillars";
+import ImpactProcess from "@/components/ImpactProcess";
 import FeaturedInsightsSection from "@/components/FeaturedInsightsSection";
-import BentoStats from "@/components/BentoStats";
 import Closing from "@/components/Closing";
 import Footer from "@/components/Footer";
 
@@ -15,10 +15,10 @@ export default function Home() {
         <Hero />
         <ValueAdvantage />
         <FunderLogoStrip />
-        <DeliveryModelSection />
-        <CaseStudies />
+        <KeyFigures />
+        <PositioningPillars />
+        <ImpactProcess />
         <FeaturedInsightsSection />
-        <BentoStats />
         <Closing />
       </main>
       <Footer />

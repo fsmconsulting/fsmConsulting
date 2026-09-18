@@ -6,8 +6,8 @@ export default function HeroBackground() {
       {/* Background Image: HeroBg behind the animation */}
       <div className="absolute inset-0">
         <Image
-          src="/images/insights/project-delivery.jpg"
-          alt="Technical implementation and project delivery planners at work"
+          src="/HeroBg.webp"
+          alt="Aerial view across Lagos, Nigeria, toward the Lagos Island skyline"
           fill
           priority
           sizes="100vw"
