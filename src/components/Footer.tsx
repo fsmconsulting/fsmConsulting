@@ -3,18 +3,17 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#001326] text-gray-400">
+    <footer className="border-t border-white/10 bg-navy text-gray-400">
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
-        
         {/* Top Branding Section */}
         <div className="flex flex-col justify-between gap-6 border-b border-white/10 pb-12 lg:flex-row lg:items-center">
           <div className="flex items-center gap-4">
             <Image
               src="/FSMLogo.png"
               alt="FSM Consulting Logo"
-              width={80}
-              height={74}
-              className="h-14 w-auto md:h-16 object-contain"
+              width={70}
+              height={65}
+              className="h-12 w-auto md:h-14 object-contain brightness-110"
               unoptimized
             />
             <span className="font-serif text-[22px] font-medium tracking-tight text-white md:text-[24px]">
@@ -30,7 +29,6 @@ export default function Footer() {
 
         {/* 4-Column Directory Grid */}
         <div className="grid grid-cols-2 gap-10 py-12 md:grid-cols-4 lg:gap-12">
-          
           {/* Practice Areas */}
           <div>
             <h4 className="font-serif text-[15px] font-medium text-white">
@@ -38,34 +36,34 @@ export default function Footer() {
             </h4>
             <ul className="mt-4 space-y-2.5 text-[13.5px]">
               <li>
-                <a href="/services" className="hover:text-white transition-colors">
+                <Link href="/services" className="hover:text-white transition-colors">
                   Project Assurance &amp; IVA
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services" className="hover:text-white transition-colors">
+                <Link href="/services" className="hover:text-white transition-colors">
                   MEAL &amp; Outcome Harvesting
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services" className="hover:text-white transition-colors">
+                <Link href="/services" className="hover:text-white transition-colors">
                   Governance &amp; Safeguards
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services" className="hover:text-white transition-colors">
+                <Link href="/services" className="hover:text-white transition-colors">
                   Digital Systems &amp; GIS Dashboards
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services" className="hover:text-white transition-colors">
+                <Link href="/services" className="hover:text-white transition-colors">
                   Procurement &amp; Fiduciary
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Sectors */}
+          {/* Key Sectors */}
           <div>
             <h4 className="font-serif text-[15px] font-medium text-white">
               Key Sectors
@@ -121,24 +119,29 @@ export default function Footer() {
             </h4>
             <ul className="mt-4 space-y-2.5 text-[13.5px]">
               <li>
-                <a href="/about" className="hover:text-white transition-colors">
+                <Link href="/about" className="hover:text-white transition-colors">
                   About FSM Consulting
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#ecosystem" className="hover:text-white transition-colors">
+                <Link href="/delivery-ecosystem" className="hover:text-white transition-colors">
                   Delivery Ecosystem
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#network" className="hover:text-white transition-colors">
+                <Link href="/network" className="hover:text-white transition-colors">
                   Regional Network Reach
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#contact" className="hover:text-white transition-colors">
-                  Executive Advisory Inquiries
-                </a>
+                <Link href="/insights" className="hover:text-white transition-colors">
+                  Perspectives &amp; Insights
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-white transition-colors">
+                  Executive Inquiries
+                </Link>
               </li>
             </ul>
           </div>
@@ -151,12 +154,12 @@ export default function Footer() {
             <div className="mt-4 space-y-2 text-[13.5px] leading-relaxed">
               <p className="text-gray-300">Abuja, Federal Capital Territory, Nigeria</p>
               <p>
-                <a href="mailto:info@fsmconsulting.com" className="hover:text-blue-bright transition-colors">
+                <a href="mailto:info@fsmconsulting.com" className="hover:text-white transition-colors">
                   info@fsmconsulting.com
                 </a>
               </p>
               <p>
-                <a href="tel:+2349040009512" className="hover:text-blue-bright transition-colors">
+                <a href="tel:+2349040009512" className="hover:text-white transition-colors">
                   +234 904 000 9512
                 </a>
               </p>
@@ -167,7 +170,6 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
         </div>
 
         {/* Bottom Utility Bar */}
@@ -178,14 +180,18 @@ export default function Footer() {
             <span className="font-mono text-gray-400">RC: 9616494</span>
           </div>
           <div className="flex items-center gap-6">
-            <a href="#" className="transition-colors duration-200 hover:text-gray-300 cursor-pointer">Confidentiality &amp; Code of Conduct</a>
-            <a href="#" className="transition-colors duration-200 hover:text-gray-300 cursor-pointer">Terms of Engagement</a>
-            <a href="#top" className="inline-flex items-center gap-1 text-blue-bright transition-all duration-200 hover:brightness-125 hover:-translate-y-0.5">
-              Back to top <span className="inline-block transition-transform duration-300 hover:animate-bounce">&uarr;</span>
+            <Link href="/contact" className="transition-colors duration-200 hover:text-gray-300">
+              Confidentiality &amp; Code of Conduct
+            </Link>
+            <Link href="/contact" className="transition-colors duration-200 hover:text-gray-300">
+              Terms of Engagement
+            </Link>
+            <a href="#top" className="inline-flex items-center gap-1 text-blue-bright transition-all duration-200 hover:brightness-125">
+              <span>Back to top</span>
+              <span>&uarr;</span>
             </a>
           </div>
         </div>
-
       </div>
     </footer>
   );

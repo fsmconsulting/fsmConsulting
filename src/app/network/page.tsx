@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Nav from "@/components/Nav";
 import PageHeader from "@/components/PageHeader";
 import NetworkBreakdown from "@/components/network/NetworkBreakdown";
 import NetworkCoverage from "@/components/network/NetworkCoverage";
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 export default function NetworkPage() {
   return (
     <>
+      <Nav />
       <main>
         <PageHeader
           eyebrow="Our Network"

@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* FSM Consulting — Premium Institutional Design System */
-  --color-navy: #061a29;
-  --color-navy-2: #09263a;
-  --color-navy-3: #12364b;
-  --color-blue-accent: #1d4961;
-  --color-blue-bright: #2f6e8c;
+  /* FSM Consulting — Institutional Design System */
+  --color-navy: #07131e;
+  --color-navy-2: #122434;
+  --color-navy-3: #1a3246;
+  --color-blue-accent: #24455e;
+  --color-blue-bright: #38668a;
 
-  /* Zero Gold Rule: Gold palette fully retired and remapped to midnight blues */
-  --color-gold: #1d4961;
-  --color-gold-light: #2f6e8c;
+  /* Primary Light Canvas & Neutrals */
+  --color-canvas: #f4f5f7;
+  --color-sand: #f4f5f7;
+  --color-sand-2: #e1e5e9;
 
-  --color-sand: #f5f3ee;
-  --color-sand-2: #ede9df;
+  --color-ink: #0d1721;
+  --color-ink-muted: #5a6876;
+  --color-ivory: #f4f5f7;
+  --color-line: #e1e5e9;
 
-  --color-ink: #152532;
-  --color-ink-muted: #61717c;
-  --color-ivory: #f5f3ee;
-  --color-line: #d9ddd9;
-
-  /* Shape language */
-  --radius-card: 32px;
-  --radius-card-sm: 20px;
+  /* Surface & Shape language */
+  --radius-surface: 24px;
+  --radius-surface-sm: 16px;
+  --radius-card: 24px;
+  --radius-card-sm: 16px;
   --radius-pill: 999px;
 
   /* Typography */
@@ -43,72 +43,8 @@ body {
 }
 
 ::selection {
-  background-color: #061a29;
+  background-color: var(--color-navy);
   color: #ffffff;
-}
-
-/* ── Hero Background Animations ── */
-@keyframes blob-drift-1 {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-
-  33% {
-    transform: translate(60px, 40px) scale(1.08);
-  }
-
-  66% {
-    transform: translate(-30px, 70px) scale(0.95);
-  }
-
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-}
-
-@keyframes blob-drift-2 {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-
-  33% {
-    transform: translate(-50px, -30px) scale(1.1);
-  }
-
-  66% {
-    transform: translate(40px, -60px) scale(0.92);
-  }
-
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-}
-
-@keyframes mesh-spin {
-  0% {
-    transform: rotate(0deg) scale(1.05);
-  }
-
-  50% {
-    transform: rotate(4deg) scale(1.08);
-  }
-
-  100% {
-    transform: rotate(0deg) scale(1.05);
-  }
-}
-
-.hero-blob-1 {
-  animation: blob-drift-1 4s ease-in-out infinite;
-}
-
-.hero-blob-2 {
-  animation: blob-drift-2 5s ease-in-out infinite;
-}
-
-.hero-mesh {
-  transform-origin: center center;
-  animation: mesh-spin 6s ease-in-out infinite alternate;
 }
 
 /* ── Funder Logo Strip ── */
@@ -1041,26 +977,33 @@ body {
 /* === FSM design-system layer (bento / pill / reveal) === */
 /* Restored 2026-09-18. These classes are referenced by ~11 components
    (bento-card), 10 (pill-btn) and the hero photo treatment (duotone-navy).
-   They were missing from this file, so every card rendered square and
-   unstyled and the hero photo showed untreated. Colours intentionally use
-   this file's own tokens — do not hardcode hex values here. */
-
+/* === FSM Institutional Surfaces & Interactions === */
+.surface-card,
 .bento-card {
-  border-radius: var(--radius-card);
+  border-radius: var(--radius-surface);
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
 }
 
+.surface-card-hover:hover,
 .bento-card--hover:hover {
   transform: translateY(-4px);
 }
 
+.surface-card-sm {
+  border-radius: var(--radius-surface-sm);
+}
+
 .pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   border-radius: var(--radius-pill);
-  padding: 0.9rem 1.75rem;
+  padding: 0.85rem 1.65rem;
   font-size: 14.5px;
   font-weight: 500;
-  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.22s ease, box-shadow 0.22s ease;
+  line-height: 1;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.22s ease, opacity 0.22s ease;
 }
 
 .pill-btn-arrow {
@@ -1088,16 +1031,16 @@ body {
   transform: scale(1.045);
 }
 
-/* Hero photography: desaturated and darkened so white type stays legible. */
+/* Hero photography */
 .duotone-navy img {
-  filter: grayscale(1) contrast(1.28) brightness(0.78);
+  filter: contrast(1.15) brightness(0.85);
 }
 
 .duotone-navy::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(2, 6, 14, 0.25) 0%, rgba(2, 6, 14, 0.7) 100%);
+  background: linear-gradient(180deg, rgba(7, 19, 30, 0.2) 0%, rgba(7, 19, 30, 0.75) 100%);
   mix-blend-mode: multiply;
   pointer-events: none;
 }
@@ -1114,7 +1057,7 @@ body {
 }
 
 @keyframes hero-card-in {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
@@ -1124,7 +1067,7 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-card-enter { animation: none !important; }
-  .bento-card, .pill-btn, .pill-btn-arrow, .img-hover-zoom img, .reveal-up {
+  .surface-card, .surface-card-hover, .bento-card, .pill-btn, .pill-btn-arrow, .img-hover-zoom img, .reveal-up {
     transition: none !important;
   }
   .reveal-up { opacity: 1; transform: none; }

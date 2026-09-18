@@ -58,53 +58,72 @@ export default async function CapabilityDetailPage({
       <Nav />
       <main>
         {/* ── Hero ── */}
-        <section className="cap-detail-hero">
-          <div className="cap-detail-hero-inner">
-            <Link href="/#delivery-model" className="cap-detail-back">
+        <section className="bg-navy py-16 px-6 text-white md:py-24 md:px-10">
+          <div className="mx-auto max-w-5xl">
+            <Link
+              href="/#positioning"
+              className="group inline-flex items-center gap-2 text-[13.5px] font-mono text-white/70 hover:text-white transition-colors"
+            >
               <ArrowLeft size={14} strokeWidth={2} aria-hidden="true" />
-              Back to delivery model
+              <span>Back to positioning</span>
             </Link>
 
-            <div className="cap-detail-hero-icon" aria-hidden="true">
-              <Icon size={36} strokeWidth={1.25} />
+            <div className="mt-8 flex items-center gap-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-white">
+                <Icon size={30} strokeWidth={1.5} />
+              </div>
+              <span className="font-mono text-[12px] uppercase tracking-wider text-blue-bright">
+                Delivery Level {currentIndex + 1} of 4
+              </span>
             </div>
 
-            <p className="cap-detail-eyebrow">Delivery Model · {currentIndex + 1} of 4</p>
-            <h1 className="cap-detail-title">{cap.title}</h1>
-            <p className="cap-detail-summary">{cap.summary}</p>
+            <h1 className="mt-6 font-serif text-[36px] font-normal leading-tight text-white md:text-[50px]">
+              {cap.title}
+            </h1>
+            <p className="mt-4 max-w-2xl text-[17px] leading-relaxed text-white/80 md:text-[19px]">
+              {cap.summary}
+            </p>
           </div>
         </section>
 
-        {/* ── Full description ── */}
-        <section className="cap-detail-body">
-          <div className="cap-detail-body-inner">
-            <div className="cap-detail-content">
+        {/* ── Full description & Practice Links ── */}
+        <section className="bg-white px-6 py-20 md:px-10 md:py-28">
+          <div className="mx-auto max-w-5xl grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16 items-start">
+            <div className="lg:col-span-7 space-y-6 text-[16px] leading-relaxed text-ink/80">
               {cap.fullDescription.split("\n\n").map((para, i) => (
-                <p key={i} className={para.startsWith("TODO:") ? "cap-detail-todo" : ""}>
-                  {para}
-                </p>
+                <p key={i}>{para}</p>
               ))}
             </div>
 
             {/* Sidebar */}
-            <aside className="cap-detail-sidebar">
+            <aside className="lg:col-span-5 space-y-6">
               {cap.relatedServices.length > 0 && (
-                <div className="cap-detail-sidebar-block">
-                  <h3 className="cap-detail-sidebar-heading">Related services</h3>
-                  <ul className="cap-detail-sidebar-list">
+                <div className="surface-card border border-navy/10 bg-canvas p-7">
+                  <h3 className="font-serif text-[17px] font-medium text-navy">
+                    Connected Practice Areas
+                  </h3>
+                  <ul className="mt-4 space-y-2 text-[13.5px] text-ink-muted">
                     {cap.relatedServices.map((s) => (
-                      <li key={s}>{s}</li>
+                      <li key={s} className="flex items-baseline gap-2">
+                        <span className="text-blue-bright">&bull;</span>
+                        <span>{s}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
               )}
 
               {cap.relatedSectors.length > 0 && (
-                <div className="cap-detail-sidebar-block">
-                  <h3 className="cap-detail-sidebar-heading">Relevant sectors</h3>
-                  <ul className="cap-detail-sidebar-list">
+                <div className="surface-card border border-navy/10 bg-canvas p-7">
+                  <h3 className="font-serif text-[17px] font-medium text-navy">
+                    Relevant Sector Verticals
+                  </h3>
+                  <ul className="mt-4 space-y-2 text-[13.5px] text-ink-muted">
                     {cap.relatedSectors.map((s) => (
-                      <li key={s}>{s}</li>
+                      <li key={s} className="flex items-baseline gap-2">
+                        <span className="text-blue-bright">&bull;</span>
+                        <span>{s}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -114,25 +133,36 @@ export default async function CapabilityDetailPage({
         </section>
 
         {/* ── Other capabilities ── */}
-        <section className="cap-detail-others">
-          <div className="cap-detail-others-inner">
-            <h2 className="cap-detail-others-heading">Explore the full delivery model</h2>
-            <div className="cap-detail-others-grid">
+        <section className="border-t border-navy/10 bg-canvas px-6 py-16 md:px-10 md:py-20">
+          <div className="mx-auto max-w-5xl">
+            <h2 className="font-serif text-[24px] font-normal text-navy md:text-[30px]">
+              Explore the full delivery model
+            </h2>
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
               {otherCaps.map((other) => {
                 const OtherIcon = iconMap[other.icon];
                 return (
                   <Link
                     key={other.slug}
                     href={`/capabilities/${other.slug}`}
-                    className="cap-detail-other-card"
+                    className="surface-card group flex flex-col justify-between border border-navy/10 bg-white p-6 transition-colors hover:border-navy/30"
                     aria-label={`Learn more about ${other.title}`}
                   >
-                    <span className="cap-detail-other-icon" aria-hidden="true">
-                      <OtherIcon size={22} strokeWidth={1.5} />
+                    <div>
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-canvas text-navy">
+                        <OtherIcon size={20} strokeWidth={1.5} />
+                      </div>
+                      <h3 className="mt-4 font-serif text-[18px] font-medium text-navy group-hover:text-blue-bright transition-colors">
+                        {other.title}
+                      </h3>
+                      <p className="mt-2 text-[13px] leading-relaxed text-ink-muted">
+                        {other.tagline}
+                      </p>
+                    </div>
+                    <span className="mt-6 inline-flex items-center gap-1.5 text-[12.5px] font-medium text-navy group-hover:text-blue-bright transition-colors">
+                      <span>Explore</span>
+                      <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
                     </span>
-                    <span className="cap-detail-other-title">{other.title}</span>
-                    <span className="cap-detail-other-desc">{other.tagline}</span>
-                    <span className="cap-detail-other-arrow" aria-hidden="true">→</span>
                   </Link>
                 );
               })}

@@ -1,29 +1,20 @@
-import Link from "next/link";
-
 export default function AboutHero() {
   return (
-    <section className="relative overflow-hidden bg-navy pt-16 pb-20 text-ivory md:pt-24 md:pb-28">
-      {/* Background ambient accents */}
-      <div className="pointer-events-none absolute inset-0 opacity-20">
-        <div className="absolute -top-24 -right-24 h-96 w-96 rounded-none bg-blue-bright/20 blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 h-80 w-80 rounded-none bg-blue-accent/20 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:32px_32px] opacity-10" />
-      </div>
-
+    <section className="relative overflow-hidden bg-navy pt-20 pb-20 text-white md:pt-28 md:pb-28">
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         {/* Top Eyebrow Tag */}
         <div className="flex flex-wrap items-center gap-3">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3.5 py-1 text-[12px] font-semibold uppercase tracking-[0.18em] text-white">
-            Corporate Profile &middot; FSM Consulting Limited
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+            Corporate Profile &middot; Institutional Overview
           </span>
-          <span className="text-[12px] tracking-wider text-white/60">
+          <span className="font-mono text-[11px] text-white/50">
             Abuja, Nigeria &bull; Pan-African Delivery
           </span>
         </div>
 
         {/* Main Heading */}
         <div className="mt-6 max-w-4xl">
-          <h1 className="font-serif text-[36px] font-medium leading-[1.12] text-white md:text-[52px] lg:text-[58px]">
+          <h1 className="font-serif text-[36px] font-normal leading-[1.12] text-white md:text-[52px] lg:text-[58px]">
             Africa&rsquo;s Development Delivery, Implementation Acceleration &amp; Project Assurance Platform.
           </h1>
           <div className="my-6 h-0.5 w-20 bg-white/30" />

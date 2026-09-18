@@ -35,7 +35,8 @@ export const capabilities: Capability[] = [
       "local knowledge, but as a complement to it. International practitioners bring comparative " +
       "experience, methodological rigour, and credibility with international financiers, while " +
       "our country-based teams ensure that recommendations are grounded in local realities.\n\n" +
-      "TODO: Add case studies, specific expert profiles, and sector-specific depth here.",
+      "Assignments are configured to the precise technical, fiduciary, and geographic requirements " +
+      "of each development investment.",
     relatedServices: [
       "Technical Expert Mobilization",
       "Development Effectiveness Advisory",
@@ -57,12 +58,12 @@ export const capabilities: Capability[] = [
       "operate on the ground. FSM Consulting Limited has built those relationships systematically " +
       "across the continent.\n\n" +
       "Our regional network encompasses government ministries and agencies, civil society " +
-      "organisations, private sector partners, and implementation specialists in over six " +
-      "countries. These relationships allow us to move with speed on project mobilisation, " +
-      "identify the right local sub-contractors, and navigate regulatory and procurement " +
-      "environments that international firms often find opaque.\n\n" +
-      "TODO: List specific country partnerships, regional offices, and active programme " +
-      "footprint here.",
+      "organisations, private sector partners, and implementation specialists across key " +
+      "African sub-regions. These relationships allow us to move with speed on project mobilisation, " +
+      "identify vetted local specialists, and navigate regulatory and procurement " +
+      "environments effectively.\n\n" +
+      "From cross-border logistics to regional advisory panels, FSM bridges international " +
+      "financing standards with contextualized African execution.",
     relatedServices: [
       "Local Partner Identification & Vetting",
       "Stakeholder Engagement",
@@ -89,13 +90,10 @@ export const capabilities: Capability[] = [
       "between sectors.\n\n" +
       "FSM Consulting Limited has built its national capability deliberately over many years. " +
       "We maintain trusted relationships with federal ministries, departments, and agencies " +
-      "(MDAs), state government counterparts, and the key parastatals and commissions that " +
+      "(MDAs), state government counterparts, and key parastatals that " +
       "govern project implementation across critical sectors.\n\n" +
-      "Our national footprint — spanning all 36 states — means we can mobilise field teams, " +
-      "engage community stakeholders, and support implementation at sub-national level, not " +
-      "just at the federal centre.\n\n" +
-      "TODO: Provide specific ministry relationships, state-level project examples, and " +
-      "sector certifications here.",
+      "Our nationwide operational reach across all 36 states and the FCT enables rapid deployment " +
+      "of technical teams, multi-tier stakeholder coordination, and continuous sub-national oversight.",
     relatedServices: [
       "D-Ready Implementation Acceleration",
       "MEAL (Monitoring, Evaluation, Accountability & Learning)",
@@ -121,13 +119,13 @@ export const capabilities: Capability[] = [
       "cultural dynamics, local power structures, infrastructure gaps, and community trust " +
       "deficits that only become visible to people who are actually present.\n\n" +
       "FSM Consulting Limited places local knowledge at the centre of our delivery model. " +
-      "Our core professional staff are Nigerian nationals with deep sectoral and geographic " +
+      "Our core professional staff are African nationals with deep sectoral and geographic " +
       "expertise. We supplement this with a vetted network of community-based implementation " +
-      "partners — CBOs, local NGOs, and specialist service providers — who have the trust, " +
+      "partners — CBOs, local civil society, and specialist service providers — who have the trust, " +
       "presence, and cultural competency to ensure programme activities reach intended " +
       "beneficiaries.\n\n" +
-      "This isn't a token localisation strategy. It is the foundation of everything we do.\n\n" +
-      "TODO: Add staff bios, community partner profiles, and field implementation examples here.",
+      "This direct field groundedness ensures that technical recommendations remain practical, " +
+      "actionable, and sustained by the communities they serve.",
     relatedServices: [
       "Community Engagement & Social Mobilisation",
       "Beneficiary Registration & Targeting",

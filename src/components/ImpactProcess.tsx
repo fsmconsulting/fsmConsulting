@@ -4,90 +4,101 @@ import { useState } from "react";
 import { impact360Stages } from "@/data/impact360Data";
 
 /**
- * FSM Impact 360™ — the signature framework.
- *
- * The acronym is the idea, so the letterforms carry the section rather than
- * sitting as small glyphs inside badges. The rule-separated setting follows
- * FSM's own treatment of this framework in the corporate profile.
- *
- * Desktop drives the detail panel from hover/focus; below md every stage's
- * description is permanently visible, so nothing is gated behind a hover a
- * touch user cannot perform.
+ * FSM Impact 360™ — Continuous Delivery Framework.
+ * Contained Institutional Surface per Design System §9 & §17.
+ * Interactive on desktop; cleanly vertical on mobile.
  */
 export default function ImpactProcess() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="bg-white px-4 py-16 md:px-10 md:py-20" aria-labelledby="impact360-heading">
-      {/* Navy is an emphasis surface here, not a section background —
-          see FSM_DIGITAL_EXPERIENCE.md §Component philosophy. */}
-      <div className="bento-card mx-auto max-w-6xl bg-navy px-6 py-14 text-ivory md:px-14 md:py-20">
-        <div className="mb-14 grid grid-cols-1 gap-6 md:grid-cols-[0.9fr_1.4fr] md:gap-8">
-          <h2 id="impact360-heading" className="font-serif text-[28px] leading-tight md:text-[38px]">
-            FSM Impact 360&trade;
-          </h2>
-          <p className="max-w-[54ch] pt-1.5 text-[16px] text-ivory/75">
-            Our working framework for every engagement — a continuous cycle, not a one-time
-            checklist. Select a stage to see what it covers.
+    <section className="bg-white px-6 py-20 md:px-10 md:py-28" aria-labelledby="impact360-heading">
+      <div className="surface-card mx-auto max-w-7xl bg-navy p-8 md:p-14 lg:p-16 text-white shadow-xl">
+        <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-end border-b border-white/15 pb-8">
+          <div>
+            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+              Proprietary Methodology &middot; Full Project Cycle
+            </span>
+            <h2 id="impact360-heading" className="mt-2 font-serif text-[30px] font-normal leading-tight md:text-[42px]">
+              FSM Impact 360&trade; Delivery Framework
+            </h2>
+          </div>
+          <p className="text-[15.5px] leading-relaxed text-white/75">
+            A continuous, closed-loop methodology connecting baseline diagnostics with ground-level
+            implementation acceleration and verified outcome tracking.
           </p>
         </div>
 
-        {/* Desktop: the acronym, set large and rule-separated */}
+        {/* Desktop: Sequential Progression Strip with Letterform Accent */}
         <div className="hidden md:block">
-          <div className="grid grid-cols-6">
+          <div className="grid grid-cols-6 border-b border-white/15">
             {impact360Stages.map((step, i) => {
               const isActive = i === active;
               return (
                 <button
                   key={step.title}
                   type="button"
+                  onClick={() => setActive(i)}
                   onMouseEnter={() => setActive(i)}
                   onFocus={() => setActive(i)}
+                  className={`group relative pb-6 text-left outline-none transition-all duration-300 cursor-pointer ${
+                    i > 0 ? "border-l border-white/10 pl-5 pr-3" : "pr-3"
+                  }`}
                   aria-pressed={isActive}
-                  className={`group px-4 pb-5 text-left outline-none transition-colors duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                    i > 0 ? "border-l border-white/15" : ""
-                  } ${isActive ? "border-b-2 border-b-blue-bright" : "border-b-2 border-b-transparent"}`}
                 >
+                  <div className="flex items-baseline justify-between">
+                    <span
+                      className={`font-serif text-[48px] lg:text-[56px] leading-none transition-colors duration-300 ${
+                        isActive ? "text-blue-bright" : "text-white/20 group-hover:text-white/45"
+                      }`}
+                    >
+                      {step.letter}
+                    </span>
+                    <span className="font-mono text-[11px] text-white/40">0{i + 1}</span>
+                  </div>
+
                   <span
-                    className={`block font-serif text-[64px] leading-none transition-colors duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:text-[76px] ${
-                      isActive ? "text-blue-bright" : "text-white/25 group-hover:text-white/45"
-                    }`}
-                  >
-                    {step.letter}
-                  </span>
-                  <span
-                    className={`mt-5 block text-[13.5px] font-medium leading-snug transition-colors duration-500 ${
-                      isActive ? "text-white" : "text-white/45"
+                    className={`mt-4 block text-[13.5px] font-medium leading-snug transition-colors duration-300 ${
+                      isActive ? "text-white font-semibold" : "text-white/50 group-hover:text-white/80"
                     }`}
                   >
                     {step.title}
                   </span>
+
+                  {/* Active Indicator Line */}
+                  <span
+                    className={`absolute bottom-0 left-0 right-0 h-[2px] transition-all duration-300 ${
+                      isActive ? "bg-blue-bright" : "bg-transparent"
+                    }`}
+                  />
                 </button>
               );
             })}
           </div>
 
-          <div className="mt-10 min-h-[56px]">
-            <p className="max-w-[64ch] text-[16px] leading-relaxed text-white/80">
+          {/* Active Detail Display */}
+          <div className="mt-8 flex items-start gap-6 pt-4">
+            <span className="font-mono text-xs uppercase tracking-wider text-blue-bright shrink-0 pt-1">
+              Stage 0{active + 1} Focus:
+            </span>
+            <p className="max-w-3xl text-[16.5px] leading-relaxed text-white/90">
               {impact360Stages[active].body}
             </p>
           </div>
         </div>
 
-        {/* Mobile: vertical progression, nothing gated behind hover */}
-        <div className="md:hidden">
-          {impact360Stages.map((step) => (
-            <div
-              key={step.title}
-              className="flex gap-5 border-b border-white/10 py-6 first:border-t first:border-white/10"
-            >
-              <span className="w-9 shrink-0 font-serif text-[40px] leading-none text-blue-bright">
-                {step.letter}
-              </span>
-              <div className="min-w-0 flex-1">
-                <h3 className="text-[15.5px] font-medium leading-snug text-white">{step.title}</h3>
-                <p className="mt-2 text-[13.5px] leading-relaxed text-white/65">{step.body}</p>
+        {/* Mobile: Vertical Sequential Progression (Never gated behind hover) */}
+        <div className="divide-y divide-white/10 md:hidden">
+          {impact360Stages.map((step, i) => (
+            <div key={step.title} className="py-5 first:pt-0">
+              <div className="flex items-center gap-4">
+                <span className="font-serif text-[32px] font-medium text-blue-bright">{step.letter}</span>
+                <div>
+                  <span className="font-mono text-[10px] uppercase text-blue-bright">Step 0{i + 1}</span>
+                  <h3 className="text-[15px] font-semibold text-white">{step.title}</h3>
+                </div>
               </div>
+              <p className="mt-2 pl-10 text-[13.5px] leading-relaxed text-white/70">{step.body}</p>
             </div>
           ))}
         </div>

@@ -23,24 +23,23 @@ const tiers = [
 
 export default function NetworkBreakdown() {
   return (
-    <section className="bg-white px-4 py-20 md:px-10 md:py-28">
+    <section className="bg-white px-6 py-20 md:px-10 md:py-28">
       <div className="mx-auto max-w-6xl">
-        <h2 className="font-serif text-[26px] font-medium text-navy md:text-[32px]">
+        <h2 className="font-serif text-[28px] font-normal text-navy md:text-[36px]">
           How the network is structured
         </h2>
-        <p className="mt-3 max-w-[60ch] text-[15px] leading-relaxed text-ink-muted">
-          These are four distinct things, and we keep them distinct rather than implying a
-          uniform office footprint across the continent.
+        <p className="mt-3 max-w-[60ch] text-[15.5px] leading-relaxed text-ink-muted">
+          Four distinct operating tiers designed to deploy specialized technical capability with localized contextual grounding.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
           {tiers.map((t) => (
-            <div key={t.label} className="bento-card bento-card--hover bg-sand px-7 py-7">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-blue-accent">
+            <div key={t.label} className="surface-card border border-navy/10 bg-canvas p-8">
+              <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-blue-bright">
                 {t.label}
               </p>
-              <p className="mt-2 font-serif text-[18px] font-medium text-navy">{t.detail}</p>
-              <p className="mt-3 text-[14px] leading-relaxed text-ink-muted">{t.body}</p>
+              <p className="mt-2 font-serif text-[20px] font-medium text-navy">{t.detail}</p>
+              <p className="mt-3 text-[14.5px] leading-relaxed text-ink-muted">{t.body}</p>
             </div>
           ))}
         </div>

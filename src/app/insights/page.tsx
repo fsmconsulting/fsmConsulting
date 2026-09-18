@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Nav from "@/components/Nav";
 import PageHeader from "@/components/PageHeader";
 import InsightsIndex from "@/components/insights/InsightsIndex";
 import Closing from "@/components/Closing";
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function InsightsPage() {
   return (
     <>
+      <Nav />
       <main>
         <PageHeader
           eyebrow="Insights"

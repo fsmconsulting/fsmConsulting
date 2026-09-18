@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Nav from "@/components/Nav";
 import PageHeader from "@/components/PageHeader";
 import ContactPanel from "@/components/contact/ContactPanel";
 import Footer from "@/components/Footer";
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      <Nav />
       <main>
         <PageHeader
           eyebrow="Contact"

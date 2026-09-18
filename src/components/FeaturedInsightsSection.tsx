@@ -12,71 +12,72 @@ export default function FeaturedInsightsSection({
   heading = "Perspectives on development delivery",
   insightsList = insights,
 }: FeaturedInsightsSectionProps) {
-  // Pull the most recent featured insight for hero placement
+  // Pull the most recent featured insight
   const featured = insightsList.find((item) => item.featured) || insightsList[0];
 
-  // Pull up to 3 secondary insights
+  // Pull secondary insights
   const secondary = insightsList.filter((item) => item.slug !== featured.slug).slice(0, 3);
 
   return (
     <section
       id="featured-insights"
-      className="bg-sand px-4 py-20 md:px-10 md:py-28"
+      className="bg-white px-6 py-20 md:px-10 md:py-28"
       aria-labelledby="insights-heading"
     >
-      <div className="mx-auto max-w-6xl">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <h2 id="insights-heading" className="font-serif text-[26px] font-medium text-navy md:text-[34px]">
-            Perspectives on development delivery
-          </h2>
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-12 flex flex-wrap items-end justify-between gap-6 border-b border-navy/15 pb-8">
+          <div>
+            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+              Editorial Insights &middot; Sector Perspectives
+            </span>
+            <h2 id="insights-heading" className="mt-2 font-serif text-[30px] font-normal text-navy md:text-[40px]">
+              {heading}
+            </h2>
+          </div>
           <Link
             href="/insights"
-            className="text-[14px] font-medium text-navy/70 transition-colors duration-200 hover:text-navy"
+            className="group inline-flex items-center gap-1.5 text-[14px] font-medium text-navy hover:text-blue-bright transition-colors"
           >
-            View all insights
+            <span>View all perspectives</span>
+            <span className="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
           </Link>
         </div>
 
-        <div
-          className={`mt-8 grid grid-cols-1 gap-3 md:mt-10 md:gap-4 ${
-            secondary.length > 0 ? "md:grid-cols-3" : ""
-          }`}
-        >
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
+          {/* Featured Dominant Editorial Block (7 Cols) */}
           {featured && (
             <Link
               href={`/insights/${featured.slug}`}
-              className={`bento-card bento-card--hover img-hover-zoom group col-span-1 flex flex-col overflow-hidden bg-white md:flex-row ${
-                secondary.length > 0 ? "md:col-span-2 md:row-span-2 md:flex-col" : ""
-              }`}
+              className="surface-card group col-span-1 flex flex-col overflow-hidden border border-navy/10 bg-canvas transition-colors duration-300 hover:border-navy/30 lg:col-span-7"
               aria-label={`Read featured insight: ${featured.title}`}
             >
-              <div className="relative aspect-[16/10] w-full overflow-hidden md:w-1/2 md:aspect-auto">
+              <div className="relative aspect-[16/10] w-full overflow-hidden">
                 <Image
                   src={featured.image}
                   alt={featured.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, 66vw"
-                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 58vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   priority
                 />
               </div>
-              <div className="flex flex-1 flex-col justify-between px-6 py-6 md:px-8 md:py-8">
+              <div className="flex flex-1 flex-col justify-between p-8 md:p-10">
                 <div>
-                  <span className="text-[12px] font-medium text-blue-accent">
+                  <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
                     {featured.category}
                   </span>
-                  <h3 className="mt-2 font-serif text-[22px] font-medium leading-snug text-navy md:text-[26px]">
+                  <h3 className="mt-3 font-serif text-[24px] font-medium leading-snug text-navy md:text-[30px]">
                     {featured.title}
                   </h3>
-                  <p className="mt-3 max-w-[54ch] text-[14.5px] leading-relaxed text-ink-muted">
+                  <p className="mt-3.5 max-w-[54ch] text-[15px] leading-relaxed text-ink-muted">
                     {featured.dek}
                   </p>
                 </div>
-                <div className="mt-6 flex items-center gap-2 text-[13px] text-ink-muted">
+                <div className="mt-8 flex items-center gap-3 border-t border-navy/10 pt-4 font-mono text-[12px] text-ink-muted">
                   <span>{featured.author}</span>
                   {featured.date && (
                     <>
-                      <span aria-hidden="true">&middot;</span>
+                      <span aria-hidden="true">&bull;</span>
                       <time>{featured.date}</time>
                     </>
                   )}
@@ -85,33 +86,36 @@ export default function FeaturedInsightsSection({
             </Link>
           )}
 
-          {secondary.map((item) => (
-            <Link
-              key={item.slug}
-              href={`/insights/${item.slug}`}
-              className="bento-card bento-card--hover img-hover-zoom group flex items-center gap-4 overflow-hidden bg-white p-3 md:flex-col md:items-stretch md:p-0"
-              aria-label={`Read insight: ${item.title}`}
-            >
-              <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-[var(--radius-card-sm)] md:h-40 md:w-full md:rounded-none">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 768px) 80px, 33vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="min-w-0 flex-1 md:px-6 md:py-5">
-                <span className="text-[11px] font-medium text-blue-accent">
-                  {item.category}
-                </span>
-                <h3 className="mt-1 truncate text-[15px] font-medium text-navy md:whitespace-normal">
-                  {item.title}
-                </h3>
-                <time className="mt-1 block text-[12.5px] text-ink-muted">{item.date}</time>
-              </div>
-            </Link>
-          ))}
+          {/* Secondary Editorial Stories Column (5 Cols) */}
+          <div className="col-span-1 flex flex-col gap-4 lg:col-span-5">
+            {secondary.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/insights/${item.slug}`}
+                className="surface-card-sm group flex flex-1 flex-col justify-between border border-navy/10 bg-canvas p-6 transition-colors duration-300 hover:border-navy/30 md:p-7"
+                aria-label={`Read insight: ${item.title}`}
+              >
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
+                      {item.category}
+                    </span>
+                    <time className="font-mono text-[11px] text-ink-muted">{item.date}</time>
+                  </div>
+                  <h3 className="mt-2.5 font-serif text-[18px] font-medium leading-snug text-navy md:text-[20px]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 line-clamp-2 text-[13.5px] leading-relaxed text-ink-muted">
+                    {item.dek}
+                  </p>
+                </div>
+                <div className="mt-4 pt-3 border-t border-navy/10 flex items-center justify-between text-[12.5px] text-ink-muted">
+                  <span>{item.author}</span>
+                  <span className="text-navy group-hover:translate-x-1 transition-transform">&rarr;</span>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>

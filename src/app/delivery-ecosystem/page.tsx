@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Nav from "@/components/Nav";
 import PageHeader from "@/components/PageHeader";
 import DeliveryChain from "@/components/delivery-ecosystem/DeliveryChain";
 import Closing from "@/components/Closing";
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function DeliveryEcosystemPage() {
   return (
     <>
+      <Nav />
       <main>
         <PageHeader
           eyebrow="Delivery Ecosystem"
