@@ -123,7 +123,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
                 </p>
               </div>
 
-              <div className="surface-card border border-navy/10 bg-canvas p-8 md:p-10 lg:col-span-6">
+              <div className="surface-card bg-canvas p-8 md:p-10 lg:col-span-6">
                 <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
                   Strategic Imperative
                 </span>
@@ -133,11 +133,11 @@ export default async function SectorDetailPage({ params }: PageProps) {
                 <p className="mt-4 text-[14.5px] leading-relaxed text-ink-muted">
                   {sector.strategicContext}
                 </p>
-                <div className="mt-6 border-t border-navy/10 pt-4 flex flex-wrap gap-2">
+                <div className="mt-6 pt-2 flex flex-wrap gap-2">
                   {sector.targetClients.map((client, idx) => (
                     <span
                       key={idx}
-                      className="surface-card-sm border border-navy/10 bg-white px-3 py-1 font-mono text-[11px] text-navy"
+                      className="surface-card-sm bg-white px-3 py-1 font-mono text-[11px] text-navy"
                     >
                       {client}
                     </span>
@@ -151,7 +151,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
         {/* Core Focus Areas */}
         <section className="bg-canvas px-6 py-20 md:px-10 md:py-28">
           <div className="mx-auto max-w-7xl">
-            <div className="border-b border-navy/15 pb-8 mb-12">
+            <div className="mb-12">
               <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
                 Practice Scope
               </span>
@@ -167,18 +167,17 @@ export default async function SectorDetailPage({ params }: PageProps) {
               {sector.focusAreas.map((area, index) => (
                 <div
                   key={index}
-                  className="surface-card border border-navy/10 bg-white p-8 md:p-9 flex flex-col justify-between"
+                  className="surface-card bg-white p-8 md:p-9 flex flex-col justify-between"
                 >
                   <div>
-                    <span className="font-mono text-[11px] text-blue-bright">0{index + 1}</span>
-                    <h3 className="mt-2 font-serif text-[20px] font-medium text-navy">
+                    <h3 className="font-serif text-[20px] font-medium text-navy">
                       {area.title}
                     </h3>
                     <p className="mt-3 text-[14px] leading-relaxed text-ink-muted">
                       {area.description}
                     </p>
                   </div>
-                  <ul className="mt-6 space-y-2 border-t border-navy/10 pt-4">
+                  <ul className="mt-6 space-y-2 pt-2">
                     {area.highlights.map((item, hIdx) => (
                       <li key={hIdx} className="text-[13px] text-navy/85 flex items-baseline gap-2">
                         <span className="text-blue-bright">&bull;</span>
@@ -204,12 +203,10 @@ export default async function SectorDetailPage({ params }: PageProps) {
                 <h2 className="mt-2 font-serif text-[26px] font-normal text-navy md:text-[32px]">
                   Specialized interventions
                 </h2>
-                <div className="mt-6 divide-y divide-navy/10 border-y border-navy/10">
+                <div className="mt-6 divide-y divide-navy/10">
                   {sector.interventions.map((intervention, iIdx) => (
                     <div key={iIdx} className="py-4 flex items-start gap-4">
-                      <span className="font-mono text-[12px] font-semibold text-blue-bright pt-0.5 shrink-0">
-                        {String(iIdx + 1).padStart(2, "0")}
-                      </span>
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-bright" />
                       <p className="text-[14.5px] leading-relaxed text-navy">{intervention}</p>
                     </div>
                   ))}
@@ -218,7 +215,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
 
               {/* Sidebar: Deployed Experts & Aligned Services (5 cols) */}
               <div className="space-y-6 lg:col-span-5">
-                <div className="surface-card border border-navy/10 bg-canvas p-7">
+                <div className="surface-card bg-canvas p-7">
                   <h3 className="font-serif text-[18px] font-medium text-navy">
                     Deployed technical specialists
                   </h3>
@@ -226,7 +223,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
                     {sector.expertRoles.map((role, rIdx) => (
                       <span
                         key={rIdx}
-                        className="surface-card-sm border border-navy/10 bg-white px-3 py-1 font-mono text-[11.5px] text-navy"
+                        className="surface-card-sm bg-white px-3 py-1 font-mono text-[11.5px] text-navy"
                       >
                         {role}
                       </span>
@@ -234,8 +231,8 @@ export default async function SectorDetailPage({ params }: PageProps) {
                   </div>
                 </div>
 
-                <div className="surface-card border border-navy/10 bg-canvas p-7">
-                  <div className="flex items-center justify-between border-b border-navy/10 pb-3">
+                <div className="surface-card bg-canvas p-7">
+                  <div className="flex items-center justify-between pb-3">
                     <h3 className="font-serif text-[18px] font-medium text-navy">
                       Aligned practice areas
                     </h3>
@@ -247,7 +244,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
                     {sector.serviceCapabilities.map((cap, cIdx) => (
                       <div
                         key={cIdx}
-                        className="surface-card-sm border border-navy/10 bg-white px-3.5 py-2 text-[13px] font-medium text-navy"
+                        className="surface-card-sm bg-white px-3.5 py-2 text-[13px] font-medium text-navy"
                       >
                         {cap}
                       </div>
@@ -261,7 +258,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
 
         {/* Related Sectors Strip */}
         {relatedSectorItems.length > 0 && (
-          <section className="border-t border-navy/10 bg-canvas px-6 py-16 md:px-10 md:py-20">
+          <section className="bg-canvas px-6 py-16 md:px-10 md:py-20">
             <div className="mx-auto max-w-7xl">
               <h2 className="font-serif text-[24px] font-normal text-navy md:text-[28px]">
                 Related development sectors
@@ -271,7 +268,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
                   <Link
                     key={rel.id}
                     href={`/sectors/${rel.id}`}
-                    className="surface-card group flex flex-col justify-between border border-navy/10 bg-white p-6 transition-colors hover:border-navy/30"
+                    className="surface-card group flex flex-col justify-between bg-white p-6 transition-colors"
                   >
                     <div>
                       <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">

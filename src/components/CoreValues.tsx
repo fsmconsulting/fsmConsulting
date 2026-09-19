@@ -31,7 +31,7 @@ export default function CoreValues() {
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-[0.9fr_1.4fr] md:mb-14">
           <h2 className="font-serif text-[28px] leading-tight text-navy md:text-[34px]">
-            Our core values
+            Core values
           </h2>
           <p className="max-w-[54ch] pt-1.5 text-[16px] text-ink/70">
             The principles that guide how we work with governments,

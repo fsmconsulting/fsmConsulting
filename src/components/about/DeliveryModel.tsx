@@ -121,44 +121,46 @@ export default function DeliveryModel() {
         </div>
 
         {/* 8-Stage Delivery Pipeline */}
-        <div className="mt-20 rounded-[var(--radius-card)] border border-navy/10 bg-navy p-8 text-white md:p-12">
-          <div className="mb-10 text-center">
-            <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-bright">
+        <div className="mt-20 rounded-[var(--radius-card)] border border-navy/10 bg-navy p-4 text-white sm:p-8 md:p-12">
+          <div className="mb-6 text-center sm:mb-10">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-bright sm:text-[12px]">
               End-to-End Pipeline
             </span>
-            <h3 className="mt-2 font-sans text-[26px] font-bold text-white md:text-[34px]">
+            <h3 className="mt-2 font-sans text-[22px] font-bold text-white sm:text-[26px] md:text-[34px]">
               The FSM Cross-Border Delivery Model
             </h3>
-            <p className="mx-auto mt-2 max-w-2xl text-[14.5px] text-white/70">
+            <p className="mx-auto mt-2 max-w-2xl text-[13px] text-white/70 sm:text-[14.5px]">
               From requirement definition to verified measurable outcomes.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-2.5 sm:gap-4 lg:grid-cols-4">
             {pipelineStages.map((stage) => (
               <div
                 key={stage.step}
-                className="relative rounded-[var(--radius-card-sm)] border border-white/10 bg-white/5 p-5 transition-colors hover:border-white/30 hover:bg-white/10"
+                className="relative flex flex-col justify-between rounded-[var(--radius-card-sm)] border border-white/10 bg-white/5 p-3 transition-colors hover:border-white/30 hover:bg-white/10 sm:p-5"
               >
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold text-white/90">
-                    STAGE {stage.step}
-                  </span>
-                  <span className="text-white/30">&rarr;</span>
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-[10px] font-bold text-white/90 sm:text-xs">
+                      STAGE {stage.step}
+                    </span>
+                    <span className="text-[11px] text-white/30 sm:text-sm">&rarr;</span>
+                  </div>
+                  <h4 className="mt-2 font-sans text-[13px] font-semibold leading-snug text-white sm:mt-3 sm:text-[16.5px]">
+                    {stage.title}
+                  </h4>
+                  <p className="mt-1 text-[11px] leading-snug text-white/70 sm:text-[13px] sm:leading-normal">
+                    {stage.desc}
+                  </p>
                 </div>
-                <h4 className="mt-3 font-sans text-[16.5px] font-semibold text-white">
-                  {stage.title}
-                </h4>
-                <p className="mt-1 text-[13px] text-white/70">
-                  {stage.desc}
-                </p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Mobilization & Operational Support */}
-        <div className="mt-20 grid grid-cols-1 items-center gap-12 rounded-[var(--radius-card)] border border-navy/10 bg-sand p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-12">
+        <div className="mt-20 grid grid-cols-1 items-center gap-12 rounded-[var(--radius-card)] bg-sand p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-12">
           <div>
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Operational Infrastructure

@@ -1,45 +1,4 @@
-const pillars = [
-  {
-    num: "01",
-    title: "Design Better Programs",
-    desc: "Structuring evidence-based interventions, theory of change, and results frameworks aligned with client development objectives.",
-  },
-  {
-    num: "02",
-    title: "Deliver Projects Effectively",
-    desc: "Providing implementation acceleration, delivery units, and project readiness (D-Ready) advisory to keep projects on track.",
-  },
-  {
-    num: "03",
-    title: "Measure Results Accurately",
-    desc: "Conducting rigorous baseline studies, mid-term reviews, impact evaluations, and setting up robust MEAL frameworks.",
-  },
-  {
-    num: "04",
-    title: "Strengthen Institutions",
-    desc: "Diagnostics, organizational development, executive leadership training, and public financial management reforms.",
-  },
-  {
-    num: "05",
-    title: "Manage Risks Proactively",
-    desc: "Implementing environmental and social safeguards (ESMP, SEP), fiduciary controls, and risk-based assurance reviews.",
-  },
-  {
-    num: "06",
-    title: "Improve Governance Systems",
-    desc: "Advising on public sector modernization, regulatory reform, and business enabling environment overhauls.",
-  },
-  {
-    num: "07",
-    title: "Enhance Service Delivery",
-    desc: "Optimizing government delivery processes, citizen engagement mechanisms, and frontline public service performance.",
-  },
-  {
-    num: "08",
-    title: "Demonstrate Real Impact",
-    desc: "Generating empirical proof of value through independent verification, social audits, and third-party monitoring.",
-  },
-];
+
 
 export default function ExecutiveSummary() {
   return (
@@ -47,7 +6,7 @@ export default function ExecutiveSummary() {
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         
         {/* Section Header */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div>
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Executive Summary &middot; Institutional Mandate
@@ -63,9 +22,21 @@ export default function ExecutiveSummary() {
             <p className="mt-4 text-[15.5px] leading-relaxed text-ink/70">
               We specialize in bridging the gap between strategy and execution by supporting clients to move faster from project concepts to development outcomes through implementation acceleration, project readiness (D-Ready) support, institutional strengthening, monitoring and evaluation, independent verification, and results-based delivery services.
             </p>
+
+            <p className="mt-4 text-[15.5px] leading-relaxed text-ink/70">
+              Our network brings together highly experienced professionals from international development organizations, government institutions, multilateral agencies, academia, donor-funded programs, and the private sector.
+            </p>
+
+            <p className="mt-4 text-[15.5px] leading-relaxed text-ink/70">
+              Our team comprises development economists, implementation specialists, policy advisors, procurement and fiduciary experts, governance professionals, monitoring and evaluation specialists, environmental and social safeguard experts, engineers, financial management professionals, legal practitioners, digital transformation experts, and sector specialists.
+            </p>
+
+            <p className="mt-4 text-[15.5px] leading-relaxed text-ink/70">
+              FSM Consulting Limited is uniquely positioned as a Development Delivery and Results Partner, helping clients accelerate implementation, strengthen institutional performance, create pathways for jobs and economic growth, enhance resilience in times of crisis, improve procurement and fiduciary systems, and leverage technology to deliver development outcomes more efficiently.
+            </p>
           </div>
 
-          <div className="flex flex-col justify-center rounded-[var(--radius-card)] border border-navy/10 bg-sand p-8 md:p-10">
+          <div className="flex flex-col rounded-[var(--radius-card)] border border-navy/10 bg-sand p-8">
             <div className="border-b border-navy/10 pb-4">
               <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
                 The FSM Value Proposition
@@ -80,40 +51,6 @@ export default function ExecutiveSummary() {
             <div className="mt-6 rounded-[var(--radius-card-sm)] border-l-4 border-navy bg-white p-4 text-[14px] italic text-navy">
               &ldquo;Transforming resources into results, policies into action, and investments into sustainable development impact.&rdquo;
             </div>
-          </div>
-        </div>
-
-        {/* 8 Ways We Help Organizations */}
-        <div className="mt-20">
-          <div className="mb-10 text-center md:text-left">
-            <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
-              Core Capabilities
-            </span>
-            <h3 className="mt-2 font-serif text-[26px] font-medium text-navy md:text-[32px]">
-              How FSM Empowers Development Organizations
-            </h3>
-            <p className="mt-2 max-w-2xl text-[15px] text-ink/70">
-              Our work is guided by international best practices, evidence-based methodologies, and a commitment to practical solutions that create lasting value.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {pillars.map((pillar) => (
-              <div
-                key={pillar.num}
-                className="group relative rounded-[var(--radius-card-sm)] border border-navy/10 bg-white p-6 transition-all duration-300 hover:border-navy hover:shadow-xs"
-              >
-                <span className="block font-serif text-[22px] font-semibold text-blue-accent transition-transform duration-300 group-hover:scale-105">
-                  {pillar.num}
-                </span>
-                <h4 className="mt-3 font-serif text-[18px] font-medium text-navy">
-                  {pillar.title}
-                </h4>
-                <p className="mt-2 text-[14px] leading-relaxed text-ink/70">
-                  {pillar.desc}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
 

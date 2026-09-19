@@ -2,222 +2,109 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Building2, Sprout, ShieldCheck } from "lucide-react";
-
-interface CaseStudy {
-  id: string;
-  category: "Regional" | "Global";
-  icon: typeof Building2;
-  client: string;
-  clientType: string;
-  title: string;
-  challenge: string;
-  relevance: string[];
-  impact: string;
-}
-
-const caseStudies: CaseStudy[] = [
-  {
-    id: "social-protection",
-    category: "Global",
-    icon: ShieldCheck,
-    client: "WORLD BANK-SUPPORTED PROGRAMME",
-    clientType: "SOCIAL PROTECTION & DEVELOPMENT SYSTEMS",
-    title: "Social Protection & Delivery Systems",
-    challenge:
-      "Strengthening implementation systems, multi-agency coordination, safeguards adherence, and verifiable delivery tracking under international financing covenants.",
-    relevance: [
-      "Social protection systems",
-      "Institutional strengthening",
-      "Implementation support",
-      "Development effectiveness",
-    ],
-    impact:
-      "Clearly documented improvements and delivery results established strictly on verified project evidence and third-party monitoring benchmarks.",
-  },
-  {
-    id: "risk-management",
-    category: "Regional",
-    icon: Sprout,
-    client: "WORLD BANK PFORR / IPF ASSISTANCE",
-    clientType: "ENVIRONMENTAL & SOCIAL RISK MANAGEMENT",
-    title: "Labour & Social Safeguards Systems",
-    challenge:
-      "Strengthening labour and social risk management, establishing active Grievance Redress (GRM), and operationalising the Labour Management Plan (LMP).",
-    relevance: [
-      "Social safeguards (ESS2)",
-      "Labour Management Plan",
-      "Grievance Redress (GRM)",
-      "Stakeholder engagement",
-      "Security management",
-    ],
-    impact:
-      "Sensitisation, institutional awareness, strengthened implementation arrangements, and integration of LMP requirements into ground delivery.",
-  },
-  {
-    id: "programme-design",
-    category: "Regional",
-    icon: Building2,
-    client: "GOVERNMENT / PARTNER ASSIGNMENT",
-    clientType: "PROGRAMME DESIGN & READINESS (D-READY)",
-    title: "Development Programme Readiness",
-    challenge:
-      "Translating a high-priority sovereign development mandate into a structured, bankable, and implementable multi-sector investment programme.",
-    relevance: [
-      "Feasibility assessment",
-      "Programme design",
-      "Results frameworks",
-      "Implementation planning",
-      "Investment readiness",
-    ],
-    impact:
-      "Delivered a comprehensive, decision-ready programme and investment framework structured for immediate sovereign and financier approval.",
-  },
-];
+import { caseStudiesData } from "@/data/caseStudiesData";
 
 export default function CaseStudies() {
   const [activeTab, setActiveTab] = useState<"All" | "Regional" | "Global">("All");
 
-  const displayList = caseStudies.filter(
+  const displayList = caseStudiesData.filter(
     (c) => activeTab === "All" || c.category === activeTab
   );
 
   return (
     <section
       id="case-studies"
-      className="bg-canvas px-6 md:px-12 py-16 md:py-24 border-t border-navy/10"
+      className="bg-[#F3F6F9] px-6 py-16 md:px-12 md:py-24 border-t border-[#D3DBE3]"
       aria-labelledby="case-studies-heading"
     >
       <div className="mx-auto max-w-7xl">
-        {/* Header row: Title on left, Filters on right */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 mb-10 md:mb-14">
-          <div>
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+        {/* Header row: Editorial Headline + Segment Filter Controls */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16">
+          <div className="max-w-2xl">
+            <span className="font-mono text-[11px] uppercase tracking-[0.14em] font-bold text-[#2251FF] block">
               Evidence &middot; Verified Engagements
             </span>
             <h2
               id="case-studies-heading"
-              className="mt-1 text-[30px] sm:text-[34px] md:text-[38px] font-serif font-normal text-navy tracking-tight"
+              className="mt-2 font-serif text-[32px] sm:text-[38px] md:text-[44px] font-semibold text-[#051C2C] leading-[1.08] tracking-tight"
             >
               Case studies
             </h2>
+            <p className="mt-3 text-[15.5px] md:text-[16.5px] leading-relaxed text-[#2B4052]">
+              Demonstrated technical leadership, safeguards compliance, and delivery acceleration across sovereign and multilateral partner assignments.
+            </p>
           </div>
 
-          <div className="flex items-center gap-4">
-            {/* Pill filter toggle: All | Regional | Global */}
-            <div className="inline-flex items-center rounded-full bg-white p-1 text-[13px] font-medium text-navy border border-navy/10 shadow-2xs">
-              <button
-                type="button"
-                onClick={() => setActiveTab("All")}
-                className={
-                  "rounded-full px-4 py-1.5 transition-all duration-200 cursor-pointer " +
-                  (activeTab === "All"
-                    ? "bg-navy text-white font-semibold shadow-xs"
-                    : "text-navy/70 hover:text-navy")
-                }
-              >
-                All
-              </button>
-              <button
-                type="button"
-                onClick={() => setActiveTab("Regional")}
-                className={
-                  "rounded-full px-4 py-1.5 transition-all duration-200 cursor-pointer " +
-                  (activeTab === "Regional"
-                    ? "bg-navy text-white font-semibold shadow-xs"
-                    : "text-navy/70 hover:text-navy")
-                }
-              >
-                Regional
-              </button>
-              <button
-                type="button"
-                onClick={() => setActiveTab("Global")}
-                className={
-                  "rounded-full px-4 py-1.5 transition-all duration-200 cursor-pointer " +
-                  (activeTab === "Global"
-                    ? "bg-navy text-white font-semibold shadow-xs"
-                    : "text-navy/70 hover:text-navy")
-                }
-              >
-                Global
-              </button>
-            </div>
+          {/* Segmented Filter Control */}
+          <div className="inline-flex items-center border border-[#D3DBE3] bg-white p-1 rounded-[2px] self-start md:self-end">
+            {(["All", "Regional", "Global"] as const).map((tab) => {
+              const isActive = activeTab === tab;
+              return (
+                <button
+                  key={tab}
+                  type="button"
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-4 py-1.5 text-[13px] font-semibold tracking-wide rounded-[2px] transition-colors duration-150 cursor-pointer ${
+                    isActive
+                      ? "bg-[#051C2C] text-white"
+                      : "text-[#566B7D] hover:text-[#051C2C] hover:bg-[#F3F6F9]"
+                  }`}
+                >
+                  {tab}
+                </button>
+              );
+            })}
           </div>
         </div>
 
-        {/* High-Readability Surface Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        {/* High-Contrast Editorial Cards with Prominent Navy Shadow */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {displayList.map((item) => (
-            <div
+            <Link
               key={item.id}
-              className="group rounded-[24px] bg-white p-7 sm:p-8 lg:p-9 text-navy flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl border border-navy/10 shadow-xs"
+              href={`/case-studies/${item.slug}`}
+              className="group relative flex flex-col justify-between rounded-[2px] border border-[#D3DBE3] bg-white p-7 sm:p-8 transition-all duration-300 hover:-translate-y-2 shadow-[0_16px_36px_rgba(5,28,44,0.18),0_4px_12px_rgba(5,28,44,0.12)] hover:shadow-[0_24px_52px_rgba(5,28,44,0.32),0_8px_20px_rgba(5,28,44,0.2)] hover:border-[#2251FF]/60"
             >
+              {/* Top Accent Line on hover */}
+              <div className="absolute inset-x-0 top-0 h-[3px] bg-[#2251FF] opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
+
               <div>
-                {/* Top Logo & Entity Name */}
-                <div className="flex flex-col items-center text-center pb-6 border-b border-navy/10">
-                  <h3 className="font-semibold tracking-wider text-[13px] text-navy uppercase">
+                {/* Meta Header */}
+                <div className="flex items-center justify-between gap-3 border-b border-[#D3DBE3] pb-4">
+                  <span className="font-mono text-[10.5px] font-bold tracking-[0.1em] text-[#2251FF] uppercase truncate">
                     {item.client}
-                  </h3>
-                  <span className="font-mono text-[10.5px] tracking-wider text-blue-bright uppercase mt-1 font-medium">
+                  </span>
+                  <span className="shrink-0 font-mono text-[10.5px] font-medium uppercase tracking-wider text-[#566B7D] border border-[#D3DBE3] bg-[#F3F6F9] px-2 py-0.5 rounded-[2px]">
+                    {item.category}
+                  </span>
+                </div>
+
+                {/* Sub-label & Major Heading */}
+                <div className="mt-5">
+                  <span className="block font-mono text-[11px] font-medium tracking-wide uppercase text-[#566B7D]">
                     {item.clientType}
                   </span>
+                  <h3 className="mt-2 font-serif text-[24px] sm:text-[26px] font-semibold text-[#051C2C] leading-[1.2] group-hover:text-[#2251FF] transition-colors">
+                    {item.title}
+                  </h3>
                 </div>
 
-                {/* Challenge Section */}
-                <div className="mt-6">
-                  <span className="text-[11.5px] font-mono font-semibold uppercase tracking-wider text-navy/70 block">
-                    Challenge
-                  </span>
-                  <p className="mt-2 text-[14px] leading-relaxed text-ink">
-                    {item.challenge}
-                  </p>
-                </div>
-
-                {/* FSM Relevance Tags */}
-                <div className="mt-5">
-                  <span className="text-[11.5px] font-mono font-semibold uppercase tracking-wider text-navy/70 block mb-2">
-                    FSM Relevance
-                  </span>
-                  <div className="flex flex-wrap gap-1.5">
-                    {item.relevance.map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="rounded-md bg-canvas px-2.5 py-1 font-mono text-[11px] text-navy font-medium border border-navy/10"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Impact / Outcome Section */}
-                <div className="mt-6 border-t border-navy/10 pt-5">
-                  <span className="text-[11.5px] font-mono font-semibold uppercase tracking-wider text-blue-accent block">
-                    Verified Outcome
-                  </span>
-                  <p className="mt-2 text-[14px] leading-relaxed text-navy font-medium">
-                    {item.impact}
-                  </p>
-                </div>
+                {/* Short Description */}
+                <p className="mt-4 text-[15px] leading-relaxed text-[#2B4052]">
+                  {item.shortDescription}
+                </p>
               </div>
 
-              {/* Bottom pill button */}
-              <div className="mt-8 pt-4 border-t border-navy/10">
-                <Link
-                  href="/services"
-                  className="pill-btn w-full bg-canvas hover:bg-navy text-navy hover:text-white border border-navy/15 justify-center py-2.5 text-[13px] font-semibold transition-all duration-200"
-                >
-                  <span>Explore Capabilities</span>
-                  <span className="pill-btn-arrow">&rarr;</span>
-                </Link>
+              {/* Text-driven Link with Animated Arrow */}
+              <div className="mt-8 border-t border-[#D3DBE3] pt-5">
+                <span className="ds-link--arrow text-[14px] font-semibold text-[#2251FF] group-hover:text-[#1A3FD6] transition-colors">
+                  Read full case study
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
     </section>
   );
 }
-
-

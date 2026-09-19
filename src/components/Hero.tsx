@@ -25,20 +25,19 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2.5">
             <span className="h-1.5 w-1.5 rounded-full bg-blue-bright" />
             <span className="font-mono text-[11px] sm:text-[12px] uppercase tracking-[0.22em] text-blue-bright">
-              Advisory &middot; Implementation &middot; Assurance
+              Global Expertise &middot; Regional Access &middot; Local Capability &middot; Measurable Results
             </span>
           </div>
 
           {/* Large Editorial Headline (Source Serif 4) */}
           <h1 className="mt-5 font-serif text-[44px] sm:text-[58px] md:text-[72px] lg:text-[84px] xl:text-[90px] font-normal leading-[1.02] tracking-tight text-white max-w-[17ch]">
-            Africa&rsquo;s Development Delivery Partner.
+            FSM Consulting Limited
           </h1>
 
           {/* Grounded Corporate Profile Narrative */}
           <p className="mt-6 md:mt-8 max-w-[54ch] text-[16px] sm:text-[17.5px] md:text-[18.5px] leading-[1.65] text-white/80 font-normal">
-            Bridging the gap between ambitious strategy and ground-level execution. We partner with
-            governments, development partners, and international financial institutions to translate
-            investments into measurable results, institutional strength, and sustainable impact.
+            From Nigeria to Africa and Beyond, FSM Connects the Right people, Partnerships and Technical
+Capabilities to Deliver Complex Development Assignments Where They Matter Most.
           </p>
 
           {/* Primary Action & Secondary Direction */}

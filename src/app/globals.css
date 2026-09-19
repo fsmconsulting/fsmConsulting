@@ -299,20 +299,16 @@ body {
 
 /* Fade mask at edges */
 .sector-strip-mask {
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 32px,
-    black calc(100% - 32px),
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 32px,
-    black calc(100% - 32px),
-    transparent 100%
-  );
+  mask-image: linear-gradient(to right,
+      transparent 0%,
+      black 32px,
+      black calc(100% - 32px),
+      transparent 100%);
+  -webkit-mask-image: linear-gradient(to right,
+      transparent 0%,
+      black 32px,
+      black calc(100% - 32px),
+      transparent 100%);
 }
 
 /* Scroll track */
@@ -329,6 +325,7 @@ body {
 .sector-strip-track::-webkit-scrollbar {
   display: none;
 }
+
 .sector-strip-track {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -1057,8 +1054,15 @@ body {
 }
 
 @keyframes hero-card-in {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-card-enter {
@@ -1070,6 +1074,7 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -1087,10 +1092,26 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-card-enter { animation: none !important; }
-  .animate-marquee-infinite { animation: none !important; }
-  .surface-card, .surface-card-hover, .bento-card, .pill-btn, .pill-btn-arrow, .img-hover-zoom img, .reveal-up {
+  .hero-card-enter {
+    animation: none !important;
+  }
+
+  .animate-marquee-infinite {
+    animation: none !important;
+  }
+
+  .surface-card,
+  .surface-card-hover,
+  .bento-card,
+  .pill-btn,
+  .pill-btn-arrow,
+  .img-hover-zoom img,
+  .reveal-up {
     transition: none !important;
   }
-  .reveal-up { opacity: 1; transform: none; }
+
+  .reveal-up {
+    opacity: 1;
+    transform: none;
+  }
 }

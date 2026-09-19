@@ -62,13 +62,6 @@ export default function AboutHero() {
         {/* CTA links */}
         <div className="mt-10 flex flex-wrap items-center gap-4">
           <a
-            href="#mandate"
-            className="pill-btn inline-flex items-center bg-white px-6 py-3 text-[14.5px] font-semibold text-navy transition-colors hover:bg-white/90"
-          >
-            <span>Explore Corporate Mandate</span>
-            <span className="pill-btn-arrow ml-2">&rarr;</span>
-          </a>
-          <a
             href="/services"
             className="pill-btn inline-flex items-center border border-white/30 px-6 py-3 text-[14.5px] font-semibold text-white transition-colors hover:bg-white/10"
           >

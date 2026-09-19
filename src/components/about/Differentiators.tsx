@@ -68,23 +68,20 @@ export default function Differentiators() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 divide-y divide-navy/15">
           {differentiators.map((diff) => (
             <div
               key={diff.num}
-              className="flex flex-col justify-between rounded-[var(--radius-card-sm)] border border-navy/10 bg-white p-7 shadow-none transition-all duration-200 hover:border-navy hover:shadow-xs"
+              className="py-5 transition-colors duration-150 sm:py-6 md:py-7"
             >
-              <div>
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-sm font-bold text-blue-accent">
-                    {diff.num}
-                  </span>
-                  <span className="h-2 w-2 rounded-full bg-navy/20" />
-                </div>
-                <h3 className="mt-4 font-serif text-[19px] font-medium text-navy">
+              <div className="grid grid-cols-[36px_1fr] gap-x-4 gap-y-2 md:grid-cols-[60px_320px_1fr] md:items-baseline md:gap-8 lg:grid-cols-[70px_360px_1fr] lg:gap-10">
+                <span className="font-mono text-[13px] font-semibold text-blue-accent md:text-[15px]">
+                  {diff.num}
+                </span>
+                <h3 className="font-serif text-[17px] font-medium leading-snug text-navy md:text-[20px] md:col-auto">
                   {diff.title}
                 </h3>
-                <p className="mt-2.5 text-[14px] leading-relaxed text-ink/75">
+                <p className="col-start-2 text-[14px] leading-relaxed text-ink/75 md:col-auto md:text-[15px]">
                   {diff.desc}
                 </p>
               </div>

@@ -415,9 +415,21 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                   className="flex w-full items-center justify-between font-serif text-[28px] font-medium leading-tight text-white/65 hover:text-white cursor-pointer"
                 >
                   <span>Sectors</span>
-                  <span className="font-sans text-[20px] text-white/40">
-                    {mobileSectorsOpen ? "−" : "+"}
-                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`text-white/40 transition-transform duration-300 ${mobileSectorsOpen ? "rotate-180" : "rotate-0"}`}
+                    aria-hidden="true"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
                 </button>
                 {mobileSectorsOpen && (
                   <div className="mt-4 grid grid-cols-1 gap-2 border-l border-white/20 pl-4">
