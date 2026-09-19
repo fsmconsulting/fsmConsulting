@@ -2,15 +2,19 @@ export default function PageHeader({
   eyebrow,
   title,
   intro,
+  className = "pt-16 md:pt-20",
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   intro: string;
+  className?: string;
 }) {
   return (
-    <section className="bg-navy pb-16 pt-16 text-ivory md:pb-20 md:pt-20">
+    <section className={`bg-navy pb-16 text-ivory md:pb-20 ${className}`}>
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <p className="mb-4 text-[13px] font-semibold uppercase tracking-wider text-blue-bright">{eyebrow}</p>
+        {eyebrow && (
+          <p className="mb-4 text-[13px] font-semibold uppercase tracking-wider text-blue-bright">{eyebrow}</p>
+        )}
         <h1 className="max-w-[18ch] font-serif text-[34px] font-medium leading-[1.12] text-white md:text-[46px]">
           {title}
         </h1>

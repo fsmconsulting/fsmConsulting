@@ -18,7 +18,7 @@ export default function NetworkPage() {
       <Nav transparent />
       <main>
         <PageHeader
-          eyebrow="Our Network"
+          className="pt-24 md:pt-32"
           title="A regional network built for delivery, not just presence."
           intro="Headquartered in Abuja, with country partnerships and a multidisciplinary professional bench across Africa."
         />

@@ -2,15 +2,6 @@ export default function ServicesHero() {
   return (
     <section className="relative overflow-hidden bg-navy pt-20 pb-20 text-white md:pt-28 md:pb-28">
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
-        {/* Top Eyebrow Tag */}
-        <div className="flex flex-wrap items-center gap-3">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
-            Services &amp; Capabilities &middot; Practice Architecture
-          </span>
-          <span className="font-mono text-[11px] text-white/50">
-            14 Practice Areas &bull; Pan-African Reach
-          </span>
-        </div>
 
         {/* Main Heading */}
         <div className="mt-6 max-w-4xl">

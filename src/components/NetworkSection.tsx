@@ -10,15 +10,15 @@ const coverage = [
 
 export default function NetworkSection() {
   return (
-    <section id="network" className="bg-canvas py-20 px-6 md:px-10 md:py-28" aria-labelledby="network-heading">
+    <section id="network" className="bg-canvas py-16 px-6 md:px-10 md:py-24" aria-labelledby="network-heading">
       <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
-          {/* Editorial Narrative Column (6 Cols) */}
-          <div className="lg:col-span-6">
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-14">
+          {/* Editorial Narrative Column (7 Cols) */}
+          <div className="lg:col-span-7">
             <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
               Geographic Scope &middot; Regional Delivery Bench
             </span>
-            <h2 id="network-heading" className="mt-2 font-serif text-[32px] font-normal leading-tight text-navy md:text-[44px]">
+            <h2 id="network-heading" className="mt-2 font-serif text-[32px] font-normal leading-tight text-navy md:text-[42px]">
               Built for sovereign and cross-border delivery.
             </h2>
 
@@ -46,40 +46,42 @@ export default function NetworkSection() {
             </div>
           </div>
 
-          {/* Regional Footprint Matrix Card (6 Cols, 24px Surface) */}
-          <div className="surface-card border border-navy/10 bg-white p-8 md:p-10 lg:col-span-6 shadow-sm">
-            <div className="border-b border-navy/10 pb-4 flex items-baseline justify-between">
-              <div>
-                <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
-                  Operational Presence
-                </span>
-                <h3 className="mt-1 font-serif text-[22px] font-medium text-navy">
-                  Regional Delivery Footprint
-                </h3>
-              </div>
-              <span className="font-mono text-[11px] text-ink-muted">Active</span>
-            </div>
-
-            <div className="divide-y divide-navy/10 mt-2">
-              {coverage.map((row) => (
-                <div key={row.region} className="flex flex-col justify-between py-4 sm:flex-row sm:items-center">
-                  <div>
-                    <span className="text-[14.5px] font-semibold text-navy">
-                      {row.region}
-                    </span>
-                    <p className="text-[13.5px] text-ink-muted">
-                      {row.places}
-                    </p>
-                  </div>
-                  <span className="surface-card-sm mt-1 inline-block self-start border border-navy/10 bg-canvas px-3 py-1 font-mono text-[11px] text-navy sm:mt-0 sm:self-center">
-                    {row.tag}
+          {/* Compact Regional Footprint Card (5 Cols) */}
+          <div className="lg:col-span-5">
+            <div className="surface-card-sm border border-navy/10 bg-white p-5 sm:p-6 shadow-sm">
+              <div className="flex items-center justify-between border-b border-navy/10 pb-3.5">
+                <div>
+                  <span className="block font-mono text-[10px] uppercase tracking-wider text-blue-bright">
+                    Operational Presence
                   </span>
+                  <h3 className="mt-0.5 font-serif text-[17px] font-medium text-navy">
+                    Regional Delivery Footprint
+                  </h3>
                 </div>
-              ))}
-            </div>
+                <span className="font-mono text-[11px] text-ink-muted">Active</span>
+              </div>
 
-            <div className="mt-6 border-t border-navy/10 pt-4 text-[12px] font-mono text-ink-muted">
-              Coordinating multi-tier delivery teams with localized compliance &amp; field ground-truthing.
+              <div className="divide-y divide-navy/5">
+                {coverage.map((row) => (
+                  <div key={row.region} className="flex items-center justify-between gap-3 py-2.5">
+                    <div className="min-w-0 pr-1">
+                      <span className="block text-[13px] font-semibold text-navy leading-snug">
+                        {row.region}
+                      </span>
+                      <p className="text-[12px] text-ink-muted leading-tight mt-0.5">
+                        {row.places}
+                      </p>
+                    </div>
+                    <span className="shrink-0 font-mono text-[11px] text-ink-muted text-right whitespace-nowrap">
+                      {row.tag}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-3.5 border-t border-navy/10 pt-3 text-[11px] leading-relaxed text-ink-muted font-sans">
+                Coordinating multi-tier delivery teams with localized compliance &amp; field ground-truthing.
+              </div>
             </div>
           </div>
         </div>

@@ -515,6 +515,7 @@ export const sectorsData: SectorItem[] = [
     ],
     relatedSectors: ["governance-public-administration", "private-sector-development", "infrastructure-development"],
   },
+
   {
     id: "digital-economy",
     heroImage: "/digitalEconomy.webp",

@@ -46,29 +46,52 @@ export default function KeyFigures() {
           </h2>
         </div>
 
-        {/* Open Ruled Platform Metric Strip */}
-        <div className="grid grid-cols-1 divide-y divide-navy/15 border-y border-navy/15 sm:grid-cols-2 sm:divide-y-0 sm:divide-x lg:grid-cols-4">
-          {figures.map((f) => (
-            <div
-              key={f.label}
-              className="py-8 sm:py-6 sm:px-8 first:sm:pl-0 last:sm:pr-0 flex flex-col justify-between"
-            >
-              <div>
-                <p className="flex items-baseline gap-2 font-serif text-[42px] font-normal leading-none text-navy md:text-[50px]">
-                  <span>{f.value}</span>
-                  {f.unit && (
-                    <span className="text-[17px] font-sans font-medium text-blue-bright md:text-[19px]">
-                      {f.unit}
+        {/* Open Ruled Platform Metric Strip: 2x2 grid on mobile, 1x4 on desktop */}
+        <div className="grid grid-cols-2 border-y border-navy/15 lg:grid-cols-4">
+          {figures.map((f, i) => {
+            const isFirstRow = i < 2;
+            const isOddCol = i % 2 === 1;
+
+            return (
+              <div
+                key={f.label}
+                className={`flex flex-col justify-between py-6 sm:py-7 lg:py-8 ${
+                  isFirstRow ? "border-b border-navy/15 lg:border-b-0" : ""
+                } ${
+                  isOddCol
+                    ? "border-l border-navy/15 pl-4 sm:pl-6 lg:px-8 lg:last:pr-0"
+                    : "pr-4 sm:pr-6 lg:px-8 lg:first:pl-0"
+                } ${
+                  i === 2 ? "lg:border-l lg:border-navy/15" : ""
+                }`}
+              >
+                <div>
+                  <p className="flex flex-wrap items-baseline gap-1.5 font-serif leading-none text-navy sm:gap-2">
+                    <span
+                      className={
+                        f.value === "Pan-African"
+                          ? "text-[22px] sm:text-[34px] md:text-[42px] lg:text-[50px]"
+                          : "text-[32px] sm:text-[40px] md:text-[46px] lg:text-[50px]"
+                      }
+                    >
+                      {f.value}
                     </span>
-                  )}
+                    {f.unit && (
+                      <span className="font-sans text-[13px] font-medium text-blue-bright sm:text-[16px] md:text-[19px]">
+                        {f.unit}
+                      </span>
+                    )}
+                  </p>
+                  <h3 className="mt-3 text-[13.5px] font-semibold text-navy sm:mt-4 sm:text-[15px]">
+                    {f.label}
+                  </h3>
+                </div>
+                <p className="mt-1.5 text-[12px] leading-relaxed text-ink-muted sm:mt-2 sm:text-[13.5px]">
+                  {f.detail}
                 </p>
-                <h3 className="mt-4 text-[15px] font-semibold text-navy">{f.label}</h3>
               </div>
-              <p className="mt-2 text-[13.5px] leading-relaxed text-ink-muted">
-                {f.detail}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

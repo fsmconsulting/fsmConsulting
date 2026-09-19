@@ -107,19 +107,6 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
   return (
     <header className={shell}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 lg:py-5">
-        {/* Mobile menu button */}
-        <button
-          onClick={() => setMobileMenuOpen(true)}
-          className={`flex items-center gap-2 p-1 lg:hidden ${
-            transparent ? "text-white" : "text-navy"
-          }`}
-          aria-label="Open navigation menu"
-        >
-          <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <span className="font-mono text-xs uppercase tracking-wider">Menu</span>
-        </button>
 
         {/* Logo / Brand */}
         <Link href="/" className="group flex items-center gap-3">
@@ -279,17 +266,32 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
             </svg>
           </button>
 
-          <Link
-            href="/contact"
-            className={`pill-btn ${
-              transparent
-                ? "bg-white text-navy hover:bg-white/90"
-                : "bg-navy text-white hover:bg-navy-2"
+          <div className="hidden md:inline-flex">
+            <Link
+              href="/contact"
+              className={`pill-btn ${
+                transparent
+                  ? "bg-white text-navy hover:bg-white/90"
+                  : "bg-navy text-white hover:bg-navy-2"
+              }`}
+            >
+              <span>Discuss an assignment</span>
+              <span className="pill-btn-arrow">&rarr;</span>
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setMobileMenuOpen(true)}
+            className={`flex items-center p-1 lg:hidden ${
+              transparent ? "text-white" : "text-navy"
             }`}
+            aria-label="Open navigation menu"
           >
-            <span>Discuss an assignment</span>
-            <span className="pill-btn-arrow">&rarr;</span>
-          </Link>
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </div>
 

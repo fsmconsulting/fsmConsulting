@@ -102,9 +102,9 @@ export default function SectorDirectory() {
           <div className="rounded-[var(--radius-card)] border border-navy/15 bg-white p-8 shadow-none md:p-10 sticky top-28">
             <div className="flex flex-wrap items-center justify-between gap-4 border-b border-navy/10 pb-4">
               <div>
-                <span className="font-mono text-xs font-semibold uppercase tracking-wider text-blue-accent">
-                  Sector {activeSector.num} &middot; {activeSector.categoryLabel}
-                </span>
+
+
+
                 <h3 className="mt-1 font-serif text-[26px] font-medium text-navy md:text-[30px]">
                   {activeSector.title}
                 </h3>

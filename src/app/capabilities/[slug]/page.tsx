@@ -72,9 +72,7 @@ export default async function CapabilityDetailPage({
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-white">
                 <Icon size={30} strokeWidth={1.5} />
               </div>
-              <span className="font-mono text-[12px] uppercase tracking-wider text-blue-bright">
-                Delivery Level {currentIndex + 1} of 4
-              </span>
+              
             </div>
 
             <h1 className="mt-6 font-serif text-[36px] font-normal leading-tight text-white md:text-[50px]">

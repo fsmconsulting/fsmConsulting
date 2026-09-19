@@ -62,9 +62,9 @@ export default async function SectorDetailPage({ params }: PageProps) {
 
           <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pt-32 pb-14 md:px-10 md:pt-36 md:pb-16">
             <div className="max-w-3xl">
-              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
-                Sector {sector.num} of 15 &middot; {sector.categoryLabel}
-              </span>
+  
+
+  
               <h1 className="mt-3 font-serif text-[34px] font-normal leading-[1.1] text-white md:text-[50px]">
                 {sector.title}
               </h1>
