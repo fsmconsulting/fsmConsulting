@@ -12,7 +12,18 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "FSM Consulting Limited | Africa's Development Delivery Partner",
   description: "FSM Consulting Limited connects people, partnerships, and technical capability governments and development partners need to move projects from concept to lasting impact.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/FSMLogo.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+  },
 };
+
 
 export default function RootLayout({
   children,
