@@ -5,6 +5,8 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Closing from "@/components/Closing";
 import { practicesData, getPracticeBySlug } from "@/data/practicesData";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
+import ServiceJsonLd from "@/components/seo/ServiceJsonLd";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -23,8 +25,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${practice.title} | Practice Area | FSM Consulting Limited`,
+    title: `${practice.title} | Practice Area`,
     description: practice.tagline,
+    alternates: {
+      canonical: `/services/${practice.slug}`,
+    },
+    openGraph: {
+      title: `${practice.title} | Practice Area | FSM Consulting Limited`,
+      description: practice.tagline,
+      url: `https://fsmconsulting.org/services/${practice.slug}`,
+    },
   };
 }
 
@@ -38,6 +48,19 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Services & Capabilities", url: "/services" },
+          { name: practice.title, url: `/services/${practice.slug}` },
+        ]}
+      />
+      <ServiceJsonLd
+        name={practice.title}
+        description={practice.tagline}
+        url={`https://fsmconsulting.org/services/${practice.slug}`}
+        clusterName={practice.cluster}
+      />
       <Nav />
       <main className="bg-white">
         {/* Editorial Article Header */}

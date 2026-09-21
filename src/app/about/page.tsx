@@ -11,17 +11,34 @@ import TargetClients from "@/components/about/TargetClients";
 import QualityAssurance from "@/components/about/QualityAssurance";
 import Closing from "@/components/Closing";
 import Footer from "@/components/Footer";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "About Us | Corporate Profile | FSM Consulting Limited",
+  title: "About Us | Corporate Profile",
   description:
-    "FSM Consulting Limited is Africa's Development Delivery, Implementation Acceleration, and Project Assurance platform, dedicated to helping governments, development partners, IFIs, and the private sector transform investments into measurable results and sustainable impact.",
+    "Africa's development delivery, implementation acceleration, and project assurance platform helping governments and IFIs transform investments into lasting impact.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Us | FSM Consulting Limited",
+    description:
+      "Africa's development delivery, implementation acceleration, and project assurance platform helping governments and IFIs transform investments into lasting impact.",
+    url: "https://fsmconsulting.org/about",
+  },
 };
 
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "About Us", url: "/about" },
+        ]}
+      />
       <Nav transparent />
+
       <main>
         <AboutHero />
         <ExecutiveSummary />

@@ -8,6 +8,7 @@ import {
   capabilities,
   getCapabilityBySlug,
 } from "@/data/capabilitiesData";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 
 /* ── Static params ── */
 export function generateStaticParams() {
@@ -24,8 +25,16 @@ export async function generateMetadata({
   const cap = getCapabilityBySlug(slug);
   if (!cap) return { title: "Capability Not Found | FSM Consulting Limited" };
   return {
-    title: `${cap.title} | Delivery Capability | FSM Consulting Limited`,
+    title: `${cap.title} | Delivery Capability`,
     description: cap.summary,
+    alternates: {
+      canonical: `/capabilities/${cap.slug}`,
+    },
+    openGraph: {
+      title: `${cap.title} | Delivery Capability | FSM Consulting Limited`,
+      description: cap.summary,
+      url: `https://fsmconsulting.org/capabilities/${cap.slug}`,
+    },
   };
 }
 
@@ -43,6 +52,13 @@ export default async function CapabilityDetailPage({
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Services & Capabilities", url: "/services" },
+          { name: cap.title, url: `/capabilities/${cap.slug}` },
+        ]}
+      />
       <Nav />
       <main className="bg-white">
         {/* Editorial Article Header */}

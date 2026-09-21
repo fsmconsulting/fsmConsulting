@@ -5,16 +5,32 @@ import NetworkSection from "@/components/NetworkSection";
 import NetworkBreakdown from "@/components/network/NetworkBreakdown";
 import Closing from "@/components/Closing";
 import Footer from "@/components/Footer";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Our Network | FSM Consulting Limited",
+  title: "Our Network",
   description:
-    "FSM Consulting Limited's regional delivery network — headquarters, country partners, professional network, and cross-border delivery access.",
+    "FSM Consulting Limited's regional delivery network — headquartered in Abuja with country partnerships and a multidisciplinary professional bench across Africa.",
+  alternates: {
+    canonical: "/network",
+  },
+  openGraph: {
+    title: "Our Network | FSM Consulting Limited",
+    description:
+      "Headquartered in Abuja with country partnerships and a multidisciplinary professional bench across West, Central, and East Africa.",
+    url: "https://fsmconsulting.org/network",
+  },
 };
 
 export default function NetworkPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Our Network", url: "/network" },
+        ]}
+      />
       <Nav transparent />
       <main>
         <PageHeader

@@ -151,9 +151,9 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <button
-              type="button"
-              onClick={() => setSectorsDropdownOpen(!sectorsDropdownOpen)}
+            <Link
+              href="/sectors"
+              onClick={() => setSectorsDropdownOpen(false)}
               className={`flex items-center gap-1.5 cursor-pointer py-1 transition-colors focus:outline-none ${
                 isSectorsActive
                   ? transparent
@@ -163,7 +163,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                   ? "font-normal text-white/80 hover:text-white"
                   : "font-normal text-ink-muted hover:text-navy"
               }`}
-              aria-label="Toggle Sectors Menu"
+              aria-label="Sectors Overview"
               aria-expanded={sectorsDropdownOpen}
             >
               <span>Sectors</span>
@@ -177,7 +177,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
               </svg>
-            </button>
+            </Link>
 
             {/* Indicator underline */}
             <span
@@ -433,6 +433,13 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                 </button>
                 {mobileSectorsOpen && (
                   <div className="mt-4 grid grid-cols-1 gap-2 border-l border-white/20 pl-4">
+                    <Link
+                      href="/sectors"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="py-1.5 text-[14px] font-semibold text-blue-bright hover:underline"
+                    >
+                      Explore All 15 Sectors &rarr;
+                    </Link>
                     {sectorsData.map((sector) => (
                       <Link
                         key={sector.id}

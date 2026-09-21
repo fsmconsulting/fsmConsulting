@@ -6,6 +6,8 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Closing from "@/components/Closing";
 import { insights } from "@/data/insightsData";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
+import ArticleJsonLd from "@/components/seo/ArticleJsonLd";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -24,8 +26,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${item.title} | FSM Consulting Limited`,
+    title: item.title,
     description: item.dek,
+    alternates: {
+      canonical: `/insights/${item.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      title: `${item.title} | FSM Consulting Limited`,
+      description: item.dek,
+      url: `https://fsmconsulting.org/insights/${item.slug}`,
+      images: [{ url: item.image.startsWith("/") ? item.image : `/${item.image}` }],
+    },
   };
 }
 
@@ -39,6 +51,21 @@ export default async function InsightDetailPage({ params }: PageProps) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Perspectives & Insights", url: "/#insights" },
+          { name: item.title, url: `/insights/${item.slug}` },
+        ]}
+      />
+      <ArticleJsonLd
+        title={item.title}
+        description={item.dek}
+        url={`https://fsmconsulting.org/insights/${item.slug}`}
+        image={item.image}
+        datePublished={item.date}
+        authorName={item.author}
+      />
       <Nav transparent />
       <main>
         <article>

@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Closing from "@/components/Closing";
 import { caseStudiesData } from "@/data/caseStudiesData";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -23,8 +24,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${item.title} | Case Study | FSM Consulting Limited`,
+    title: `${item.title} | Case Study`,
     description: item.shortDescription,
+    alternates: {
+      canonical: `/case-studies/${item.slug}`,
+    },
+    openGraph: {
+      title: `${item.title} | Case Study | FSM Consulting Limited`,
+      description: item.shortDescription,
+      url: `https://fsmconsulting.org/case-studies/${item.slug}`,
+    },
   };
 }
 
@@ -38,6 +47,13 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Case Studies", url: "/#case-studies" },
+          { name: item.title, url: `/case-studies/${item.slug}` },
+        ]}
+      />
       <Nav />
       <main className="bg-white">
         {/* Editorial Article Header */}

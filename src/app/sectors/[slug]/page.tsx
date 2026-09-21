@@ -6,6 +6,7 @@ import HeroBackground from "@/components/HeroBackground";
 import Closing from "@/components/Closing";
 import Footer from "@/components/Footer";
 import { sectorsData, getSectorBySlug } from "@/data/sectorsData";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -26,8 +27,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${sector.title} | FSM Consulting Limited`,
-    description: sector.overview,
+    title: `${sector.title} | Development Sector`,
+    description: sector.tagline,
+    alternates: {
+      canonical: `/sectors/${sector.id}`,
+    },
+    openGraph: {
+      title: `${sector.title} | FSM Consulting Limited`,
+      description: sector.tagline,
+      url: `https://fsmconsulting.org/sectors/${sector.id}`,
+    },
   };
 }
 
@@ -50,6 +59,13 @@ export default async function SectorDetailPage({ params }: PageProps) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Sectors", url: "/sectors" },
+          { name: sector.title, url: `/sectors/${sector.id}` },
+        ]}
+      />
       <main>
         {/* Shorter Editorial Header (Design System §13) */}
         <section className="relative overflow-hidden bg-navy text-white min-h-[480px] md:min-h-[540px] flex flex-col justify-between">

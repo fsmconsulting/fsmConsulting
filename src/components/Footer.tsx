@@ -109,6 +109,11 @@ export default function Footer() {
                   WASH (Water &amp; Sanitation)
                 </Link>
               </li>
+              <li className="pt-1">
+                <Link href="/sectors" className="text-blue-bright hover:underline font-medium transition-colors">
+                  View All 15 Sectors &rarr;
+                </Link>
+              </li>
             </ul>
           </div>
 
