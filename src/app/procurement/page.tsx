@@ -7,56 +7,50 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Procurement & Due Diligence Pack | FSM Consulting Limited",
   description:
-    "Official corporate due diligence package for procurement officers, task team leaders, and bid directors. Download verified capability statements, registration details, and compliance policies.",
+    "Official corporate due diligence package for procurement officers, task team leaders, and bid directors. Request capability statements, registration details, and institutional policies.",
 };
 
 const dueDiligenceDownloads: DownloadItem[] = [
   {
-    title: "FSM Consulting Corporate Profile (2026 Edition)",
-    description: "Official comprehensive corporate profile detailing 14 practice areas, Impact 360™ framework, leadership bench, and delivery network.",
+    title: "FSM Consulting Corporate Profile",
+    description: "Official comprehensive corporate profile detailing 14 practice areas, delivery network, and executive leadership.",
     fileType: "PDF",
-    fileSize: "2.4 MB",
-    href: "#",
+    status: "on-request",
     category: "Corporate Profile",
   },
   {
-    title: "2-Page Executive Capability Statement",
-    description: "Compact briefing statement designed for rapid inclusion in consortium bids, donor vendor files, and shortlist assessments.",
+    title: "Executive Capability Statement",
+    description: "Compact briefing statement designed for inclusion in consortium bids, donor vendor files, and shortlist assessments.",
     fileType: "PDF",
-    fileSize: "480 KB",
-    href: "#",
+    status: "on-request",
     category: "Capability Statement",
   },
   {
-    title: "Anti-Bribery, Corruption & Fiduciary Code",
+    title: "Anti-Corruption Framework & Ethical Conduct Policy",
     description: "Institutional policy document governing interactions with public officials, partners, and zero tolerance for illicit commissions.",
     fileType: "PDF",
-    fileSize: "320 KB",
-    href: "#",
+    status: "on-request",
     category: "Governance & Ethics",
   },
   {
-    title: "Protection from Sexual Exploitation & Abuse (PSEA)",
-    description: "Operational safeguarding code of conduct mandatory for all deployed consultants, field teams, and survey enumerators.",
+    title: "Safeguarding Policy",
+    description: "Operational safeguarding code of conduct applicable to all deployed consultants, field teams, and survey enumerators.",
     fileType: "PDF",
-    fileSize: "290 KB",
-    href: "#",
+    status: "on-request",
     category: "Safeguarding",
   },
   {
-    title: "Data Protection & Privacy Policy (NDPA Aligned)",
-    description: "Technical standards governing field survey data collection, beneficiary anonymization, and secure cloud storage.",
+    title: "Data Protection Policy",
+    description: "Standards governing field survey data collection, beneficiary confidentiality, and information security.",
     fileType: "PDF",
-    fileSize: "310 KB",
-    href: "#",
+    status: "on-request",
     category: "Information Security",
   },
   {
-    title: "Quality Assurance & Independent Verification Protocol",
-    description: "Four-tier QA methodology establishing technical review, evidence audit, and partner sign-off procedures.",
+    title: "Quality Assurance & Management Framework",
+    description: "Quality management systems establishing technical review, evidence validation, and client sign-off procedures.",
     fileType: "PDF",
-    fileSize: "450 KB",
-    href: "#",
+    status: "on-request",
     category: "Quality Assurance",
   },
 ];
@@ -64,36 +58,34 @@ const dueDiligenceDownloads: DownloadItem[] = [
 export default function ProcurementPage() {
   return (
     <div className="min-h-screen bg-white text-[#07131e] antialiased">
-      {/* 1. Interior Hero */}
       <InteriorHero
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Procurement Due Diligence" },
+          { label: "Procurement Pack" },
         ]}
-        title="Procurement & Due Diligence Package"
-        subtitle="One-stop due diligence information for procurement officers, task team leaders, and consortium bid directors evaluating FSM Consulting Limited."
-        ctaText="Request Specific Filing"
-        ctaHref="/contact"
+        title="Procurement & Due Diligence Dossier"
+        subtitle="Institutional credentials, corporate registration data, and official governance policies for procurement officers and consortium leads."
+        ctaText="Request Due Diligence Pack"
+        ctaHref={`mailto:${contactInfo.email}?subject=Due%20Diligence%20Inquiry%20-%20Procurement`}
       />
 
       <main>
-        {/* 2. Statutory Legal Identity Card */}
         <section className="px-6 md:px-12 py-16 md:py-24 border-b border-gray-100">
           <div className="mx-auto max-w-7xl">
             <SectionHeader
-              eyebrow="Corporate Identity"
-              title="Statutory & Registration Record"
-              subtitle="Verified corporate information registered with statutory regulatory bodies in Nigeria:"
+              eyebrow="Corporate Credentials"
+              title="Statutory Registration & Verification"
+              subtitle="Key organizational facts for vendor registries, expressions of interest (EOIs), and request for proposal (RFP) evaluations:"
             />
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-10">
-              <div className="lg:col-span-8 rounded-[24px] bg-[#F4F5F7] p-8 md:p-10 border border-gray-200/80">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div className="lg:col-span-8 rounded-[24px] bg-[#F4F5F7] p-8 sm:p-10 border border-gray-200/80">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <div>
                     <span className="block font-mono text-[11px] uppercase tracking-wider text-gray-500">
-                      Registered Legal Name
+                      Official Entity Name
                     </span>
-                    <p className="mt-1 text-[17px] font-bold text-[#07131e]">
+                    <p className="mt-1 text-[18px] font-bold text-[#07131e]">
                       FSM Consulting Limited
                     </p>
                   </div>
@@ -103,7 +95,7 @@ export default function ProcurementPage() {
                       Registration Number (CAC)
                     </span>
                     <p className="mt-1 text-[17px] font-bold text-[#07131e] font-mono">
-                      RC: 9616494
+                      RC: {contactInfo.rcNumber}
                     </p>
                   </div>
 
@@ -121,7 +113,7 @@ export default function ProcurementPage() {
                       Headquarters
                     </span>
                     <p className="mt-1 text-[16px] font-semibold text-gray-800">
-                      Abuja, Federal Capital Territory, Nigeria
+                      {contactInfo.address}
                     </p>
                   </div>
 
@@ -136,31 +128,25 @@ export default function ProcurementPage() {
 
                   <div>
                     <span className="block font-mono text-[11px] uppercase tracking-wider text-gray-500">
-                      Bank Reference Availability
+                      Bank Reference
                     </span>
                     <p className="mt-1 text-[16px] font-semibold text-gray-800">
-                      Available on request for formal EOI/RFP
+                      Available on request for formal EOI/RFP submissions
                     </p>
                   </div>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-gray-200 text-[13.5px] text-[#5A6876] flex items-center gap-2">
-                  <ShieldCheck className="h-5 w-5 text-[#2F5FA8] shrink-0" />
-                  <span>
-                    Tax Clearance, PENCOM, ITF, and NSITF compliance documents are maintained current and provided directly to evaluation committees.
-                  </span>
                 </div>
               </div>
 
               <div className="lg:col-span-4">
                 <DarkCard
                   badge="Due Diligence Desk"
+                  icon={ShieldCheck}
                   title="Direct Verification"
                   subtitle="Need confidential verification or specific portal vendor registration numbers?"
                 >
                   <div className="mt-4 space-y-3 text-[14px]">
                     <p className="text-gray-300">
-                      Our commercial desk provides customized capability packages within 24 hours of notification.
+                      Our commercial desk provides customized capability packages and answers evaluation queries directly.
                     </p>
                     <div className="pt-2">
                       <a
@@ -178,13 +164,12 @@ export default function ProcurementPage() {
           </div>
         </section>
 
-        {/* 3. Official Policy & Document Downloads */}
         <section className="bg-[#F4F5F7] px-6 md:px-12 py-16 md:py-24 border-b border-gray-200/70">
           <div className="mx-auto max-w-7xl">
             <SectionHeader
               eyebrow="Downloadable Governance Pack"
               title="Official Policies & Capability Documents"
-              subtitle="Direct downloads of our core institutional statements, governance codes, and operational standards:"
+              subtitle="Governance statements, institutional codes, and operational standards available upon request:"
             />
 
             <div className="space-y-4 mt-8">
@@ -202,4 +187,3 @@ export default function ProcurementPage() {
     </div>
   );
 }
-

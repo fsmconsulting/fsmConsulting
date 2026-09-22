@@ -57,7 +57,7 @@ export default function Hero({
   );
 
   const resolvedSubtitle = subtitle ?? (
-    "We combine decades of development expertise with an execution-first perspective, guiding global companies and sovereign partners through complex challenges with clarity, precision, and trust."
+    "We combine multidisciplinary development expertise with an execution-first perspective, guiding global companies and sovereign partners through complex challenges with clarity, precision, and trust."
   );
 
   const isActiveLink = (href: string) => {

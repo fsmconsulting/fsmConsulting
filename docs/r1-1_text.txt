@@ -1,0 +1,580 @@
+﻿<w:p w14:paraId="2162D97F" w14:textId="380799BF" w:rsidR="00CE0A90" w:rsidRPr="00AE7EB6" w:rsidRDefault="00AE7EB6" w:rsidP="00CE0A90"><w:pPr><w:jc w:val="center"/><w:rPr><w:b/><w:color w:val="002060"/><w:sz w:val="20"/><w:szCs w:val="20"/></w:rPr></w:pPr><w:r w:rsidRPr="00AE7EB6"><w:rPr><w:b/><w:bCs/><w:color w:val="002060"/><w:sz w:val="20"/><w:szCs w:val="20"/></w:rPr><w:t xml:space="preserve">From Nigeria to Africa and Beyond, FSM Connects the Right people, Partnerships and Technical Capabilities to Deliver Complex Development Assignments Where They Matter Most.
+From Nigeria to Africa and Beyond, FSM Connects the Right people, Partnerships and Technical Capabilities to Deliver Complex Development Assignments Where They Matter Most.
+GLOBAL EXPERTISE | REGIONAL ACCESS | LOCAL CAPABILITY | MEASURABLE RESULTS
+GLOBAL EXPERTISE | REGIONAL ACCESS | LOCAL CAPABILITY | MEASURABLE RESULTS
+Supporting Governments, Development Partners, International Financial Institutions, and the Private Sector
+to Accelerate Implementation, Deliver Results, and Create Lasting Development Impact
+Supporting Governments, Development Partners, International Financial Institutions, and the Private Sector
+to Accelerate Implementation, Deliver Results, and Create Lasting Development Impact
+CONTENTS
+<w:tab w:val="right" w:leader="dot" w:pos="9016"/></w:tabs><w:ind w:left="1710"/><w:rPr><w:rFonts w:asciiTheme="minorHAnsi" w:eastAsiaTheme="minorEastAsia" w:hAnsiTheme="minorHAnsi"/><w:noProof/><w:kern w:val="0"/><w:sz w:val="22"/><w:szCs w:val="22"/><w14:ligatures w14:val="none"/></w:rPr></w:pPr><w:r><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:instrText xml:space="preserve"> TOC \o "1-3" \h \z \u </w:instrText></w:r><w:r><w:fldChar w:fldCharType="separate"/></w:r><w:hyperlink w:anchor="_Toc238591140" w:history="1"><w:r w:rsidR="00925B4A" w:rsidRPr="00F03D4B"><w:rPr><w:rStyle w:val="Hyperlink"/><w:noProof/></w:rPr><w:t>Executive Summary</w:r><w:r w:rsidR="00925B4A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r w:rsidR="00925B4A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591140 \h </w:instrText></w:r><w:r w:rsidR="00925B4A"><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r w:rsidR="00925B4A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>3
+<w:tab w:val="right" w:leader="dot" w:pos="9016"/></w:tabs><w:ind w:left="1710"/><w:rPr><w:rFonts w:asciiTheme="minorHAnsi" w:eastAsiaTheme="minorEastAsia" w:hAnsiTheme="minorHAnsi"/><w:noProof/><w:kern w:val="0"/><w:sz w:val="22"/><w:szCs w:val="22"/><w14:ligatures w14:val="none"/></w:rPr></w:pPr><w:hyperlink w:anchor="_Toc238591141" w:history="1"><w:r w:rsidRPr="00F03D4B"><w:rPr><w:rStyle w:val="Hyperlink"/><w:noProof/></w:rPr><w:t>About FSM Consulting Limited</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591141 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>5
+Our Vision</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591142 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>6
+<w:p w14:paraId="5956CBB2" w14:textId="07CB0943" w:rsidR="00724792" w:rsidRPr="00925B4A" w:rsidRDefault="00724792"><w:pPr><w:rPr><w:b/><w:bCs/><w:color w:val="0D2551"/><w:sz w:val="72"/><w:szCs w:val="72"/></w:rPr></w:pPr><w:r w:rsidRPr="00925B4A"><w:rPr><w:b/><w:bCs/><w:color w:val="0D2551"/><w:sz w:val="72"/><w:szCs w:val="72"/></w:rPr><w:t>CONTENTS
+CONTENTS
+Our Core Values</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591144 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>6
+Our Positioning</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591145 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>6
+<w:tab w:val="right" w:leader="dot" w:pos="9016"/></w:tabs><w:ind w:left="1710"/><w:rPr><w:rFonts w:asciiTheme="minorHAnsi" w:eastAsiaTheme="minorEastAsia" w:hAnsiTheme="minorHAnsi"/><w:noProof/><w:kern w:val="0"/><w:sz w:val="22"/><w:szCs w:val="22"/><w14:ligatures w14:val="none"/></w:rPr></w:pPr><w:hyperlink w:anchor="_Toc238591146" w:history="1"><w:r w:rsidRPr="00F03D4B"><w:rPr><w:rStyle w:val="Hyperlink"/><w:noProof/></w:rPr><w:t>Why Partner with FSM Consulting Limited</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591146 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>7
+<w:tab w:val="right" w:leader="dot" w:pos="9016"/></w:tabs><w:ind w:left="1710"/><w:rPr><w:rFonts w:asciiTheme="minorHAnsi" w:eastAsiaTheme="minorEastAsia" w:hAnsiTheme="minorHAnsi"/><w:noProof/><w:kern w:val="0"/><w:sz w:val="22"/><w:szCs w:val="22"/><w14:ligatures w14:val="none"/></w:rPr></w:pPr><w:hyperlink w:anchor="_Toc238591147" w:history="1"><w:r w:rsidRPr="00F03D4B"><w:rPr><w:rStyle w:val="Hyperlink"/><w:noProof/></w:rPr><w:t>Our Service Offerings</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591147 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>13
+1. Development Effectiveness Services</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591148 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>13
+2. Project Assurance Services</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591149 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>14
+3. Monitoring, Evaluation, Accountability and Learning (MEAL)</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591150 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>14
+4. Governance and Public Sector Reform</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591151 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>15
+5. Environmental and Social Safeguards</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591152 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>15
+6. Land Governance and Investment Advisory</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591153 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>15
+7. Digital Transformation and Data Solutions</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591154 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>16
+8. Capacity Development and Technical Assistance</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591155 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:b/><w:bCs/><w:noProof/><w:webHidden/></w:rPr><w:t>Error! Bookmark not defined.
+<w:tab w:val="right" w:leader="dot" w:pos="9016"/></w:tabs><w:ind w:left="1710"/><w:rPr><w:rFonts w:asciiTheme="minorHAnsi" w:eastAsiaTheme="minorEastAsia" w:hAnsiTheme="minorHAnsi"/><w:noProof/><w:kern w:val="0"/><w:sz w:val="22"/><w:szCs w:val="22"/><w14:ligatures w14:val="none"/></w:rPr></w:pPr><w:hyperlink w:anchor="_Toc238591156" w:history="1"><w:r w:rsidRPr="00F03D4B"><w:rPr><w:rStyle w:val="Hyperlink"/><w:noProof/></w:rPr><w:t>Sector Expertise</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591156 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>18
+<w:tab w:val="right" w:leader="dot" w:pos="9016"/></w:tabs><w:ind w:left="1710"/><w:rPr><w:rFonts w:asciiTheme="minorHAnsi" w:eastAsiaTheme="minorEastAsia" w:hAnsiTheme="minorHAnsi"/><w:noProof/><w:kern w:val="0"/><w:sz w:val="22"/><w:szCs w:val="22"/><w14:ligatures w14:val="none"/></w:rPr></w:pPr><w:hyperlink w:anchor="_Toc238591157" w:history="1"><w:r w:rsidRPr="00F03D4B"><w:rPr><w:rStyle w:val="Hyperlink"/><w:noProof/></w:rPr><w:t>Our Technical Expert Network</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591157 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>18
+<w:tab w:val="right" w:leader="dot" w:pos="9016"/></w:tabs><w:ind w:left="1710"/><w:rPr><w:rFonts w:asciiTheme="minorHAnsi" w:eastAsiaTheme="minorEastAsia" w:hAnsiTheme="minorHAnsi"/><w:noProof/><w:kern w:val="0"/><w:sz w:val="22"/><w:szCs w:val="22"/><w14:ligatures w14:val="none"/></w:rPr></w:pPr><w:hyperlink w:anchor="_Toc238591158" w:history="1"><w:r w:rsidRPr="00F03D4B"><w:rPr><w:rStyle w:val="Hyperlink"/><w:noProof/></w:rPr><w:t>Our Differentiators</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591158 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>19
+<w:tab w:val="right" w:leader="dot" w:pos="9016"/></w:tabs><w:ind w:left="1710"/><w:rPr><w:rFonts w:asciiTheme="minorHAnsi" w:eastAsiaTheme="minorEastAsia" w:hAnsiTheme="minorHAnsi"/><w:noProof/><w:kern w:val="0"/><w:sz w:val="22"/><w:szCs w:val="22"/><w14:ligatures w14:val="none"/></w:rPr></w:pPr><w:hyperlink w:anchor="_Toc238591159" w:history="1"><w:r w:rsidRPr="00F03D4B"><w:rPr><w:rStyle w:val="Hyperlink"/><w:noProof/></w:rPr><w:t>Our Approach</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591159 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>19
+<w:tab w:val="right" w:leader="dot" w:pos="9016"/></w:tabs><w:ind w:left="1710"/><w:rPr><w:rFonts w:asciiTheme="minorHAnsi" w:eastAsiaTheme="minorEastAsia" w:hAnsiTheme="minorHAnsi"/><w:noProof/><w:kern w:val="0"/><w:sz w:val="22"/><w:szCs w:val="22"/><w14:ligatures w14:val="none"/></w:rPr></w:pPr><w:hyperlink w:anchor="_Toc238591160" w:history="1"><w:r w:rsidRPr="00F03D4B"><w:rPr><w:rStyle w:val="Hyperlink"/><w:noProof/></w:rPr><w:t>Target Clients</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591160 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>20
+<w:tab w:val="right" w:leader="dot" w:pos="9016"/></w:tabs><w:ind w:left="1710"/><w:rPr><w:rFonts w:asciiTheme="minorHAnsi" w:eastAsiaTheme="minorEastAsia" w:hAnsiTheme="minorHAnsi"/><w:noProof/><w:kern w:val="0"/><w:sz w:val="22"/><w:szCs w:val="22"/><w14:ligatures w14:val="none"/></w:rPr></w:pPr><w:hyperlink w:anchor="_Toc238591161" w:history="1"><w:r w:rsidRPr="00F03D4B"><w:rPr><w:rStyle w:val="Hyperlink"/><w:noProof/></w:rPr><w:t>Quality Assurance</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591161 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>20
+<w:tab w:val="right" w:leader="dot" w:pos="9016"/></w:tabs><w:ind w:left="1710"/><w:rPr><w:rFonts w:asciiTheme="minorHAnsi" w:eastAsiaTheme="minorEastAsia" w:hAnsiTheme="minorHAnsi"/><w:noProof/><w:kern w:val="0"/><w:sz w:val="22"/><w:szCs w:val="22"/><w14:ligatures w14:val="none"/></w:rPr></w:pPr><w:hyperlink w:anchor="_Toc238591162" w:history="1"><w:r w:rsidRPr="00F03D4B"><w:rPr><w:rStyle w:val="Hyperlink"/><w:noProof/></w:rPr><w:t>Our Commitment</w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:instrText xml:space="preserve"> PAGEREF _Toc238591162 \h </w:instrText></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr></w:r><w:r><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r><w:r w:rsidR="00BC0A3A"><w:rPr><w:noProof/><w:webHidden/></w:rPr><w:t>20
+Executive Summary
+FSM Consulting Limited is a multidisciplinary development delivery, implementation acceleration, and project assurance firm dedicated to helping governments, development partners, international financial institutions, and private sector organizations transform investments into measurable results and sustainable impact.
+We specialize in bridging the gap between strategy and execution by supporting clients to move faster from project concepts to development outcomes through implementation acceleration, project readiness (D-Ready) support, institutional strengthening, monitoring and evaluation, independent verification, and results-based delivery services.
+Our network brings together highly experienced professionals from international development organizations, government institutions, multilateral agencies, academia, donor-funded programs, and the private sector.
+Our team comprises development economists, implementation specialists, policy advisors, procurement and fiduciary experts, governance professionals, monitoring and evaluation specialists, environmental and social safeguard experts, engineers, financial management professionals, legal practitioners, digital transformation experts, and sector specialists.
+FSM Consulting Limited is uniquely positioned as a Development Delivery and Results Partner, helping clients accelerate implementation, strengthen institutional performance, create pathways for jobs and economic growth, enhance resilience in times of crisis, improve procurement and fiduciary systems, and leverage technology to deliver development outcomes more efficiently.
+Our distinctive value proposition lies in combining Implementation Acceleration, Project Readiness (D-Ready), Jobs and Economic Growth Advisory, Crisis and Resilience Support, Procurement and Fiduciary Excellence, and Technology-Enabled Development Delivery within a single integrated platform.
+By combining evidence-based advisory services with hands-on implementation support, project assurance, and innovative digital solutions, FSM Consulting Limited helps clients deliver projects faster, achieve stronger results, strengthen accountability, and create lasting impact for communities and economies across Africa.
+FSM Consulting Limited specializes in supporting projects financed by:
+FSM DELIVERY ECOSYSTEM: FROM GLOBAL EXPERTISE TO LOCAL IMPACT
+FSM Consulting Limited is an Africa-based Development Solutions, Delivery and Professional Contracting Partner that combines global expertise, regional access and local implementation capability to transform investments into measurable and sustainable results.
+About FSM Consulting Limited
+FSM Consulting Limited is Africa’s Development Delivery and Intelligence platform – a firm that combines strategy, project assurance, implementation, technology, and talent into a single ecosystem.
+FSM consulting also serves as an advisory firm dedicated to improving performance, accountability, transparency, and sustainability of development interventions. Our work is guided by international best practices, evidence-based methodologies, and a commitment to delivering practical solutions that create lasting value.
+We help organizations:
+01
+02
+03
+04
+Design better programs
+Deliver projects effectively
+Measure results accurately
+Strengthen institutions
+05
+06
+07
+08
+Manage risks proactively
+Improve governance systems
+Enhance service delivery
+Demonstrate development impact
+Our Vision
+To become Africa's leading Development Effectiveness and Project Assurance firm, recognized for advancing accountability, innovation, and sustainable development outcomes.
+Our Mission
+To support governments, development partners, and organizations in achieving measurable development results through evidence-based advisory services, project assurance, institutional strengthening, and strategic technical support.
+Our Core Values
+Integrity - We uphold the highest standards of ethics, transparency, and professionalism.
+Excellence - We deliver quality services that consistently exceed expectations.
+Innovation - We apply creative thinking and technology-driven solutions to complex development challenges.
+Accountability - We promote responsible stewardship of public and development resources.
+Collaboration - We leverage multidisciplinary expertise and strategic partnerships.
+Impact - We focus on generating measurable and sustainable results.
+Our Positioning
+Development Effectiveness Specialists
+Unlike traditional consulting firms that focus solely on compliance or reporting, FSM Consulting Limited focuses on ensuring that development investments generate tangible results and lasting impact. To help clients achieve their development objectives efficiently and effectively, we combine:
+Strategic Advisory
+Technical Assistance
+Independent Verification
+Monitoring and Evaluation
+Institutional Strengthening
+Project Assurance
+Capacity Development
+FSM Impact 360TM
+I
+M
+P
+A
+C
+T
+Identify Priorities
+Measure Baselines
+Plan for Delivery
+Accelerate Implementation
+Check Progress
+Track Outcomes
+Our Regional and International Delivery Network
+FSM Consulting Limited is built for cross-border delivery.  Headquartered in Nigeria, FSM Consulting Limited is developing a regional delivery network that enables us to connect clients with the right expertise, partners and implementation capacity across Africa and, where relevant, international markets.
+Our strength is not limited to where our headquarters is located. Through strategic partnerships, country-based collaborators, professional networks and multidisciplinary experts, FSM can build country-specific delivery capacity around the requirements of each assignment.
+Our growing network provides access to expertise and delivery relationships across West, Central and East Africa, including strategic partnerships and professional networks in countries such as Senegal, Sierra Leone, Cameroon, Kenya and Uganda, with further expansion across the continent.
+We also see significant value in Africa–Asia knowledge exchange and technical cooperation, creating opportunities to connect African development challenges with relevant international experience, innovation and specialist expertise.
+What this means for our clients - When a client needs to deliver a project across borders,
+FSM can bring together:
+<w:p w14:paraId="60E847BC" w14:textId="77777777" w:rsidR="00B52491" w:rsidRPr="00933D0C" w:rsidRDefault="00B52491" w:rsidP="00B52491"><w:pPr><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr><w:r><w:rPr><w:noProof/></w:rPr><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="1DB8E598" wp14:editId="594CB43C"><wp:extent cx="378941" cy="378941"/><wp:effectExtent l="0" t="0" r="2540" b="2540"/><wp:docPr id="325849598" name="Picture 325849598"/><wp:cNvGraphicFramePr><a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/></wp:cNvGraphicFramePr><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="1" name=""/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="rId13"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="383819" cy="383819"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r><w:r w:rsidRPr="00933D0C"><w:rPr><w:b/><w:bCs/></w:rPr><w:t>International Expertise
+Specialists with international and development-finance experience.
+<w:p w14:paraId="60E847BC" w14:textId="77777777" w:rsidR="00B52491" w:rsidRPr="00933D0C" w:rsidRDefault="00B52491" w:rsidP="00B52491"><w:pPr><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr><w:r><w:rPr><w:noProof/></w:rPr><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="1DB8E598" wp14:editId="594CB43C"><wp:extent cx="378941" cy="378941"/><wp:effectExtent l="0" t="0" r="2540" b="2540"/><wp:docPr id="325849598" name="Picture 325849598"/><wp:cNvGraphicFramePr><a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/></wp:cNvGraphicFramePr><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="1" name=""/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="rId14"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="383819" cy="383819"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r><w:r w:rsidRPr="00933D0C"><w:rPr><w:b/><w:bCs/></w:rPr><w:t>International Expertise
+Specialists with international and development-finance experience.
+<w:p w14:paraId="749445C5" w14:textId="671E061A" w:rsidR="00B52491" w:rsidRPr="00933D0C" w:rsidRDefault="00B52491" w:rsidP="00B52491"><w:pPr><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr><w:r><w:rPr><w:noProof/></w:rPr><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="5159359E" wp14:editId="666ACC82"><wp:extent cx="378941" cy="378941"/><wp:effectExtent l="0" t="0" r="2540" b="2540"/><wp:docPr id="1204807304" name="Picture 1204807304"/><wp:cNvGraphicFramePr><a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/></wp:cNvGraphicFramePr><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="1" name=""/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="rId14"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="383819" cy="383819"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r><w:r w:rsidRPr="00B52491"><w:rPr><w:b/><w:bCs/></w:rPr><w:t xml:space="preserve"> Regional Expertise
+Professionals who understand African institutional, economic and development contexts.
+<w:p w14:paraId="749445C5" w14:textId="671E061A" w:rsidR="00B52491" w:rsidRPr="00933D0C" w:rsidRDefault="00B52491" w:rsidP="00B52491"><w:pPr><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr><w:r><w:rPr><w:noProof/></w:rPr><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="5159359E" wp14:editId="666ACC82"><wp:extent cx="378941" cy="378941"/><wp:effectExtent l="0" t="0" r="2540" b="2540"/><wp:docPr id="1204807304" name="Picture 1204807304"/><wp:cNvGraphicFramePr><a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/></wp:cNvGraphicFramePr><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="1" name=""/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="rId14"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="383819" cy="383819"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r><w:r w:rsidRPr="00B52491"><w:rPr><w:b/><w:bCs/></w:rPr><w:t xml:space="preserve"> Regional Expertise
+Professionals who understand African institutional, economic and development contexts.
+<w:p w14:paraId="57D53479" w14:textId="602EC40D" w:rsidR="00630D5F" w:rsidRPr="00933D0C" w:rsidRDefault="00B52491" w:rsidP="00630D5F"><w:pPr><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr><w:r><w:rPr><w:noProof/></w:rPr><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="12E02AE4" wp14:editId="3CDA300A"><wp:extent cx="378941" cy="378941"/><wp:effectExtent l="0" t="0" r="2540" b="2540"/><wp:docPr id="833156791" name="Picture 833156791"/><wp:cNvGraphicFramePr><a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/></wp:cNvGraphicFramePr><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="1" name=""/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="rId14"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="383819" cy="383819"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r><w:r w:rsidR="00630D5F" w:rsidRPr="00933D0C"><w:rPr><w:b/><w:bCs/></w:rPr><w:t>Country-Level Access
+Local partners, professionals and implementation networks who understand the operating environment.
+<w:p w14:paraId="57D53479" w14:textId="602EC40D" w:rsidR="00630D5F" w:rsidRPr="00933D0C" w:rsidRDefault="00B52491" w:rsidP="00630D5F"><w:pPr><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr><w:r><w:rPr><w:noProof/></w:rPr><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="12E02AE4" wp14:editId="3CDA300A"><wp:extent cx="378941" cy="378941"/><wp:effectExtent l="0" t="0" r="2540" b="2540"/><wp:docPr id="833156791" name="Picture 833156791"/><wp:cNvGraphicFramePr><a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/></wp:cNvGraphicFramePr><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="1" name=""/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="rId14"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="383819" cy="383819"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r><w:r w:rsidR="00630D5F" w:rsidRPr="00933D0C"><w:rPr><w:b/><w:bCs/></w:rPr><w:t>Country-Level Access
+Local partners, professionals and implementation networks who understand the operating environment.
+<w:p w14:paraId="035D86B1" w14:textId="33517576" w:rsidR="00630D5F" w:rsidRPr="00933D0C" w:rsidRDefault="00B52491" w:rsidP="00630D5F"><w:pPr><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr><w:r><w:rPr><w:noProof/></w:rPr><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="372FC8EE" wp14:editId="3F3C1A64"><wp:extent cx="378941" cy="378941"/><wp:effectExtent l="0" t="0" r="2540" b="2540"/><wp:docPr id="1023195700" name="Picture 1023195700"/><wp:cNvGraphicFramePr><a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/></wp:cNvGraphicFramePr><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="1" name=""/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="rId14"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="383819" cy="383819"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r><w:r w:rsidR="00630D5F" w:rsidRPr="00630D5F"><w:rPr><w:b/><w:bCs/></w:rPr><w:t xml:space="preserve"> Operational Mobilization
+Coordinated support to move technical teams efficiently into the field and support them throughout an assignment.
+<w:p w14:paraId="035D86B1" w14:textId="33517576" w:rsidR="00630D5F" w:rsidRPr="00933D0C" w:rsidRDefault="00B52491" w:rsidP="00630D5F"><w:pPr><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr><w:r><w:rPr><w:noProof/></w:rPr><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="372FC8EE" wp14:editId="3F3C1A64"><wp:extent cx="378941" cy="378941"/><wp:effectExtent l="0" t="0" r="2540" b="2540"/><wp:docPr id="1023195700" name="Picture 1023195700"/><wp:cNvGraphicFramePr><a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/></wp:cNvGraphicFramePr><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="1" name=""/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="rId14"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="383819" cy="383819"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r><w:r w:rsidR="00630D5F" w:rsidRPr="00630D5F"><w:rPr><w:b/><w:bCs/></w:rPr><w:t xml:space="preserve"> Operational Mobilization
+Coordinated support to move technical teams efficiently into the field and support them throughout an assignment.
+<w:p w14:paraId="197C7BC7" w14:textId="6E47062B" w:rsidR="00630D5F" w:rsidRPr="00933D0C" w:rsidRDefault="00B52491" w:rsidP="00630D5F"><w:pPr><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr><w:r><w:rPr><w:noProof/></w:rPr><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="3D5CC0FF" wp14:editId="2A64CD1B"><wp:extent cx="378941" cy="378941"/><wp:effectExtent l="0" t="0" r="2540" b="2540"/><wp:docPr id="1050090529" name="Picture 1050090529"/><wp:cNvGraphicFramePr><a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/></wp:cNvGraphicFramePr><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="1" name=""/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="rId13"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="383819" cy="383819"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r><w:r w:rsidR="00630D5F" w:rsidRPr="00630D5F"><w:rPr><w:b/><w:bCs/></w:rPr><w:t xml:space="preserve"> Multidisciplinary Capability
+Experts across project management, safeguards, governance, procurement, M&amp;E, digital transformation, infrastructure, energy, finance and other specialist areas.
+.
+<w:p w14:paraId="197C7BC7" w14:textId="6E47062B" w:rsidR="00630D5F" w:rsidRPr="00933D0C" w:rsidRDefault="00B52491" w:rsidP="00630D5F"><w:pPr><w:rPr><w:b/><w:bCs/></w:rPr></w:pPr><w:r><w:rPr><w:noProof/></w:rPr><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="3D5CC0FF" wp14:editId="2A64CD1B"><wp:extent cx="378941" cy="378941"/><wp:effectExtent l="0" t="0" r="2540" b="2540"/><wp:docPr id="1050090529" name="Picture 1050090529"/><wp:cNvGraphicFramePr><a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/></wp:cNvGraphicFramePr><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="1" name=""/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="rId13"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="383819" cy="383819"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r><w:r w:rsidR="00630D5F" w:rsidRPr="00630D5F"><w:rPr><w:b/><w:bCs/></w:rPr><w:t xml:space="preserve"> Multidisciplinary Capability
+Experts across project management, safeguards, governance, procurement, M&amp;E, digital transformation, infrastructure, energy, finance and other specialist areas.
+.
+We don’t just mobilize expertise. We mobilize the people and systems needed to deliver.
+For international and regional assignments, FSM can provide coordinated operational support to help consultants and technical teams transition efficiently into their assignment environment.
+Depending on the assignment and applicable requirements, this may include:
+Visa and immigration coordination;
+Our objective is simple:
+Remove avoidable operational barriers so that technical experts can concentrate on the work they have been engaged to deliver
+Our objective is simple:
+Remove avoidable operational barriers so that technical experts can concentrate on the work they have been engaged to deliver
+Airport arrival and departure coordination;
+Accommodation arrangements;
+Local transportation;
+Security and movement coordination;
+Field mission logistics;
+Local orientation and briefing;
+Translation and interpretation;
+Coordination with local counterparts;
+Stakeholder meeting arrangements;
+Local consultant and field-team mobilization; and
+Ongoing administrative and operational support.
+THE FSM CROSS-BORDER DELIVERY MODEL
+CLIENT REQUIREMENT
+↓
+FSM TECHNICAL LEADERSHIP
+↓
+GLOBAL / REGIONAL EXPERTISE
+↓
+COUNTRY PARTNER &amp; LOCAL ACCESS
+↓
+CONSULTANT MOBILIZATION
+↓
+FIELD &amp; IMPLEMENTATION SUPPORT
+↓
+QUALITY ASSURANCE
+↓
+MEASURABLE RESULTS
+CLIENT REQUIREMENT
+↓
+FSM TECHNICAL LEADERSHIP
+↓
+GLOBAL / REGIONAL EXPERTISE
+↓
+COUNTRY PARTNER &amp; LOCAL ACCESS
+↓
+CONSULTANT MOBILIZATION
+↓
+FIELD &amp; IMPLEMENTATION SUPPORT
+↓
+QUALITY ASSURANCE
+↓
+MEASURABLE RESULTS
+Why Partner with FSM Consulting Limited
+Delivering More Than Consulting, Creating Measurable Development Impact
+In today's increasingly complex development landscape, governments, development partners, private sector organizations, and investors require more than technical consultants. They need trusted partners capable of translating investments into measurable results, strengthening institutions, improving lives, and ensuring that development interventions achieve their intended objectives.
+FSM Consulting Limited was established to meet this need.
+We are a Development Effectiveness, Project Assurance, and Advisory Firm committed to ensuring that projects, programmes, and investments deliver sustainable outcomes and meaningful impact for the people and communities they are designed to serve. What sets us apart is our unique combination of technical excellence, local presence, sector expertise, and unwavering commitment to accountability and results.
+We Bring Together
+Exceptional Expertise
+FSM Consulting Limited operates through a network of highly experienced sector specialists, development practitioners, technical advisors, and implementation experts with extensive experience supporting projects funded by multilateral development banks, bilateral agencies, governments, and private sector institutions.
+Our experts combine global best practices with deep contextual understanding, ensuring that solutions are technically sound, practical, and responsive to local realities.
+Our multidisciplinary team includes experts in:
+Development Planning and Policy
+Project Management and Implementation Support
+Monitoring, Evaluation, Accountability and Learning (MEAL)
+Governance and Public Sector Reform
+Environmental and Social Safeguards
+Land Administration and Governance
+Agriculture and Rural Development
+Health Systems Strengthening
+Education and Skills Development
+Infrastructure and Urban Development
+Climate Change and Sustainability
+Gender Equality and Social Inclusion
+Financial Management and Procurement
+Digital Transformation and Data Analytics
+What Makes FSM Different?
+<w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:w="0" w:type="auto"/><w:tblInd w:w="-180" w:type="dxa"/><w:tblBorders><w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/></w:tblBorders><w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/></w:tblPr><w:tblGrid><w:gridCol w:w="1075"/><w:gridCol w:w="4950"/></w:tblGrid><w:tr w:rsidR="00ED7461" w14:paraId="4AF6B05E" w14:textId="77777777" w:rsidTr="003541D1"><w:tc><w:tcPr><w:tcW w:w="1075" w:type="dxa"/><w:tcBorders><w:right w:val="single" w:sz="12" w:space="0" w:color="0D2551"/></w:tcBorders></w:tcPr><w:p w14:paraId="0BE751AE" w14:textId="622106EA" w:rsidR="00ED7461" w:rsidRPr="00ED7461" w:rsidRDefault="006129CE" w:rsidP="00B0336E"><w:pPr><w:jc w:val="center"/><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/><w:b/><w:bCs/><w:color w:val="C29538"/><w:sz w:val="72"/><w:szCs w:val="72"/></w:rPr></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/><w:b/><w:bCs/><w:color w:val="C29538"/><w:sz w:val="72"/><w:szCs w:val="72"/></w:rPr><w:t>01
+Local Access. Regional Reach.
+Global Expertise.
+FSM combines the technical depth of an international consulting platform with the responsiveness and contextual understanding required for effective development delivery.
+Our model brings together:
+Global Expertise — Access to international technical specialists and comparative experience;
+Regional Access — Strategic partnerships, professional networks and delivery relationships across Africa;
+National Capability — Strong implementation capacity and institutional access within Nigeria;
+Local Knowledge — Country-based professionals, field practitioners and implementation partners; and
+Integrated Operations Support — Coordinated consultant mobilization, logistics, security and in-country assignment support.
+This integrated model enables clients to access the right expertise at the right level while reducing fragmentation and strengthening coordination, accountability and implementation efficiency.
+02
+National Presence, Regional Access and Community-Level Reach
+One of FSM Consulting Limited's greatest strengths is our ability to mobilize qualified professionals across all thirty-six states of Nigeria and the Federal Capital Territory. Through our extensive network of regional and sector specialists, we are able to access communities, institutions, project sites, and stakeholders in even the most remote and underserved locations.
+Our consultants possess deep understanding of local governance systems, cultural dynamics, languages, and implementation environments, enabling us to engage effectively with beneficiaries and stakeholders at every level. This national reach allows us to provide real-time field verification, independent oversight, and direct engagement that many traditional consulting firms are unable to achieve.
+Where others see difficult terrain, limited access, or implementation challenges, FSM Consulting Limited sees opportunities to generate evidence, build trust, and ensure accountability.
+While FSM’s core operational base and nationwide implementation ecosystem are anchored in Nigeria, our delivery model is designed to extend beyond a single-country footprint. Through strategic partnerships, country-based collaborators, consortium arrangements and a growing multidisciplinary professional network, FSM is strengthening its capacity to support assignments across key markets in West, Central and East Africa.
+Our regional access model enables FSM to combine international technical expertise with country-specific knowledge, local institutional relationships, linguistic capabilities and field-level implementation capacity. Depending on assignment requirements, FSM can mobilize appropriately qualified national, regional and international professionals and establish country-specific delivery arrangements in compliance with applicable laws, procurement requirements and client policies.
+03
+Our Regional and International
+Delivery Network
+FSM Consulting Limited combines strong national implementation capacity with a growing regional and international delivery network designed to support assignments requiring cross-border coordination, local access and rapid deployment of multidisciplinary expertise. FSM’s geographic access model is built around four complementary delivery channels:
+Direct Corporate Presence
+Assignments delivered through FSM Consulting Limited’s established corporate and operational structures.
+Strategic Partnership and Consortium Access
+Country-level delivery supported through partnerships, consortium arrangements, local professional firms and implementation organisations with relevant sectoral and institutional knowledge.
+Multidisciplinary Professional Network
+Access to vetted national, regional and international consultants, technical specialists, researchers, field practitioners and sector experts who can be mobilized according to assignment requirements.
+International Knowledge Exchange and Technical Cooperation
+Facilitation of comparative learning, peer exchange and technical collaboration between African institutions and relevant international expertise, including Africa–Asia knowledge exchange where appropriate.
+Through this integrated model, FSM is able to assemble the most appropriate combination of global expertise, regional experience and local knowledge for each assignment.
+Our regional and international delivery network supports:
+Multi-country programme implementation;
+Regional technical assistance;
+Cross-border project preparation and implementation support;
+Independent verification and third-party monitoring;
+Institutional assessments and diagnostics;
+Field research, surveys and data collection;
+Policy and institutional advisory;
+Regional capacity building and peer learning;
+Knowledge exchange and South-South cooperation;
+Rapid deployment of technical specialists;
+Local consultant and field team mobilization;
+Stakeholder and community engagement; and
+Complex and time-sensitive assignments require coordinated deployment across multiple locations.
+FSM’s approach is simple: global expertise where required, regional access where valuable, and local capability where delivery matters most.
+04
+Cross-Border Consultant Mobilization
+and Operations Support
+Successful technical delivery depends not only on the quality of expertise deployed, but also on effective mobilization, operational readiness, safety and in-country coordination.
+FSM Consulting Limited provides integrated assignment mobilization and operational support for national, regional and international consultants engaged on assignments across Nigeria and other countries within its delivery network.
+Subject to applicable immigration laws, national regulations, security requirements and client contractual arrangements, FSM can coordinate and support:
+Pre-deployment planning and assignment mobilization;
+Visa and immigration documentation support;
+Invitation letters and assignment documentation;
+Airport arrival and departure coordination;
+Accommodation arrangements;
+Local transportation and movement coordination;
+Security and safety arrangements;
+In-country orientation and assignment briefings;
+Coordination with local counterparts and implementing institutions;
+Field mission and site visit logistics;
+Stakeholder meeting coordination;
+Translation and interpretation support where required;
+Local consultant, enumerator and field team mobilization;
+Administrative and operational support throughout assignments; and
+Emergency and contingency coordination.
+FSM does not simply identify experts. We mobilize, coordinate and support integrated technical teams from deployment through delivery.
+05
+We Focus on Results,
+Not Just Deliverables
+Many consulting firms measure success by the completion of activities, submission of reports, or achievement of contractual milestones. FSM Consulting Limited measures success differently.
+We ask:
+Did the intervention improve lives?
+Did beneficiaries receive the intended benefits?
+Did institutions become stronger and more effective?
+Were resources utilized efficiently and transparently?
+Are the results sustainable beyond project completion?
+Our focus extends beyond outputs to outcomes and impact.
+We work with our clients to ensure that development investments translate into meaningful improvements in economic opportunities, public services, institutional performance, community resilience, and overall well-being.
+06
+We Verify Reality
+Through Evidence
+At FSM Consulting Limited, we believe that accountability begins with evidence. Our approach combines rigorous technical analysis with direct field engagement, allowing us to independently verify project performance and validate results.
+Rather than relying solely on reports and administrative data, we engage directly with project beneficiaries, communities, implementing agencies, civil society organizations, and other stakeholders to determine whether interventions are producing the intended outcomes.
+This commitment to evidence-based verification enables our clients to make informed decisions, manage risks effectively, and strengthen programme performance.
+07
+Transparency and Accountability
+Are at the Core of Our Work
+Trust is earned through integrity, professionalism, and transparency.
+FSM Consulting Limited maintains the highest standards of ethical conduct and professional independence in every assignment we undertake.
+We provide objective assessments, evidence-based findings, and impartial recommendations that help our clients strengthen governance, improve performance, and enhance accountability.
+Our commitment to transparency ensures that stakeholders have confidence in both our processes and our findings.
+08
+We Understand Development
+from Design to Delivery
+Our experts have worked across the entire project cycle from concept development and programme design to implementation, monitoring, evaluation, verification, and sustainability planning.
+This experience enables us to identify risks early, strengthen implementation arrangements, improve coordination among stakeholders, and support adaptive management throughout project execution.
+We understand not only how projects are designed, but also the practical realities of implementing them successfully in diverse and often challenging environments
+09
+Agile, Responsive, and
+Client-Focused
+Development challenges evolve rapidly, requiring timely and adaptive solutions.
+FSM Consulting Limited is structured to mobilize quickly, respond effectively, and deploy specialized expertise wherever and whenever it is needed.
+Our flexible operating model enables us to assemble multidisciplinary teams tailored to the unique requirements of each assignment while maintaining the highest standards of quality and professionalism.
+10
+A Trusted Partner for Sustainable Development
+FSM Consulting Limited is more than a consulting firm.
+We are a strategic partner committed to helping governments, development partners, private sector organizations, and communities achieve lasting results.
+We combine technical excellence with local knowledge, innovation with practical experience, and accountability with a relentless focus on impact.
+Our mission is simple:
+To ensure that every programme, project, and investment entrusted to us delivers measurable value, strengthens institutions, improves lives, and contributes to sustainable development.
+Our Service Offerings
+1. Technical Expert Mobilization and Professional Contracting
+Services Include:
+International and regional expert sourcing;
+National consultant deployment;
+Multidisciplinary team formation;
+Short-term and long-term technical expert contracting;
+Embedded advisory services;
+Technical assistance team management;
+Workforce and specialist deployment;
+Project Management Office and Delivery Unit staffing;
+Surge capacity for urgent assignments;
+Field team and enumerator mobilization;
+Consultant onboarding and assignment orientation;
+In-country consultant coordination;
+Technical team performance management;
+Mission and field deployment support; and
+Knowledge transfer and counterpart capacity strengthening.
+Value Proposition
+FSM provides clients with more than individual consultants. We mobilize and manage integrated technical capability tailored to the requirements of each assignment.
+This is fully consistent with FSM’s existing central positioning that the firm deploys integrated technical capability, multidisciplinary teams and Development Delivery Experts rather than operating as a traditional advisory-only firm.
+2. Development Effectiveness Services
+Supporting organizations to maximize development impact. Services include:
+Development Effectiveness Reviews
+Results-Based Management Systems
+Results Framework Design
+Performance Measurement Frameworks
+Theory of Change Development
+Program Design and Structuring
+Development Impact Assessments
+Outcome and Impact Evaluation
+Learning and Knowledge Management
+3. Project Assurance Services
+Providing independent oversight and quality assurance throughout project lifecycles. Services include:
+Independent Verification Agent (IVA) Services
+Third-Party Monitoring
+Project Performance Reviews
+Social Audits
+Technical Audits
+Compliance Verification
+Fiduciary Reviews
+Risk-Based Assurance Reviews
+Portfolio Performance Assessments
+Project Health Checks
+4. Implementation Acceleration &amp; Delivery Support
+Services include:
+Project Readiness Assessments
+Implementation Readiness Reviews
+Development-Ready (D-Ready) Advisory
+PMO Support Services
+Results Delivery Units
+Project Recovery and Turnaround Support
+Implementation Bottleneck Analysis
+Benefits Realization Tracking
+5. Monitoring, Evaluation, Accountability and Learning (MEAL)
+Helping organizations measure results and improve performance. Services include:
+Baseline Studies
+Mid-Term Reviews
+End-Line Evaluations
+Impact Assessments
+Outcome Harvesting
+Performance Monitoring Systems
+Beneficiary Feedback Mechanisms
+Citizen Engagement Assessments
+Learning Reviews
+Knowledge Management Systems
+6. Governance and Public Sector Reform
+Strengthening institutions and improving service delivery. Services include:
+Public Sector Reform Advisory
+Business Enabling Environment Reforms
+Regulatory Reform
+Institutional Diagnostics
+Organizational Development
+Public Financial Management
+Service Delivery Assessments
+Government Process Improvement
+Policy Development and Review
+Reform Implementation Support
+7. Environmental and Social Safeguards
+Promoting sustainable and inclusive development. Services include:
+Environmental and Social Assessments
+Environmental and Social Management Plans (ESMP)
+Stakeholder Engagement Plans (SEP)
+Labour Management Procedures (LMP)
+Resettlement Planning
+Social Risk Assessments
+Grievance Redress Mechanisms
+Gender and Inclusion Assessments
+Community Consultations
+ESG Advisory Services
+8. Land Governance and Investment Advisory
+Supporting responsible and inclusive land-based investments. Services include:
+FRILIA Assessments
+Land Governance Reviews
+Land Administration Reforms
+Responsible Land Investment Assessments
+Land Acquisition Audits
+Resettlement Audits
+Land Tenure Studies
+Community Engagement Processes
+9. Digital Transformation and Data Solutions
+Leveraging technology to improve development outcomes. Services include:
+Management Information Systems
+Digital Monitoring Platforms
+Data Analytics
+Business Intelligence Dashboards
+GIS Mapping
+Data Quality Assessments
+Digital Governance Solutions
+Project Performance Dashboards
+AI for Development Programmes
+Predictive Analytics
+Real-Time Project Monitoring
+Digital Delivery Tracking
+Geospatial Intelligence
+Development Data Labs
+10. Implementation Support
+Services include:
+Executive Leadership Programs
+Technical Training
+Coaching and Mentoring
+Organizational Capacity Assessments
+Knowledge Transfer Programs
+Change Management Support
+Learning Workshops
+Institutional Strengthening Programs
+11. Crisis Resilience and Adaptive Development Services
+Services include:
+Crisis Preparedness Assessments
+Business Continuity Planning
+Resilience Building Strategies
+Recovery Programme Design
+Emergency Response Monitoring
+Fragility and Conflict Assessments
+Institutional Resilience Reviews
+Disaster Risk Management Support
+12. Jobs and Economic Transformation Advisory
+Services include:
+Employment Diagnostics
+SME Development Strategies
+Youth Employment Programmes
+Local Content and Value Chain Development
+Investment Climate Assessments
+Labour Market Analysis
+Economic Inclusion Programmes
+Entrepreneurship Ecosystem Development
+13. Procurement Excellence and Fiduciary Services
+Services includes:
+Procurement Assessments
+Procurement Audits
+Bid Evaluation Support
+Donor Procurement Compliance
+Procurement Capacity Building
+Value-for-Money Assessments
+Contract Management Reviews
+14. PPP and Investment Facilitation Services
+Services include:
+PPP Project Preparation
+Feasibility Studies
+Transaction Advisory
+Investor Readiness Assessment
+Infrastructure Finance Advisory
+Stakeholder Engagement
+Investment Promotion Strategies
+Sector Expertise
+Our Technical Expert Network
+Our consultants possess extensive experience supporting projects funded by international development partners and governments across Africa. FSM Consulting Limited operates through a multidisciplinary network of experts including:
+Our Differentiators
+<w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:w="9085" w:type="dxa"/><w:tblBorders><w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/></w:tblBorders><w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/></w:tblPr><w:tblGrid><w:gridCol w:w="1075"/><w:gridCol w:w="897"/><w:gridCol w:w="7113"/></w:tblGrid><w:tr w:rsidR="00270DFA" w14:paraId="685087C7" w14:textId="77777777" w:rsidTr="00270DFA"><w:trPr><w:trHeight w:val="864"/></w:trPr><w:tc><w:tcPr><w:tcW w:w="1075" w:type="dxa"/><w:tcBorders><w:bottom w:val="dotted" w:sz="4" w:space="0" w:color="C29538"/></w:tcBorders><w:vAlign w:val="center"/></w:tcPr><w:p w14:paraId="34CD95BA" w14:textId="7F272ECB" w:rsidR="00270DFA" w:rsidRPr="00820401" w:rsidRDefault="00270DFA" w:rsidP="002B1794"><w:pPr><w:jc w:val="center"/><w:rPr><w:b/><w:bCs/><w:color w:val="C29538"/><w:sz w:val="52"/><w:szCs w:val="52"/></w:rPr></w:pPr><w:r w:rsidRPr="00820401"><w:rPr><w:b/><w:bCs/><w:color w:val="C29538"/><w:sz w:val="52"/><w:szCs w:val="52"/></w:rPr><w:t>01
+Deep Development Sector Expertise: Extensive experience working on donor-funded and government projects.
+02
+Evidence-Driven Approach: Data and evidence inform all recommendations and interventions.
+03
+Multidisciplinary Team: Integrated expertise across technical disciplines.
+04
+National and Regional Reach: Ability to deploy teams across Nigeria and Africa.
+05
+Technology-Enabled Solutions: Use of digital tools for efficient project delivery.
+06
+Independent and Objective: Commitment to impartiality and professional integrity.
+07
+Strong Stakeholder Engagement: Experience working with governments, communities, private sector and development partners.
+Our Approach
+Target Clients
+<w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:w="0" w:type="auto"/><w:tblBorders><w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/></w:tblBorders><w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/></w:tblPr><w:tblGrid><w:gridCol w:w="4508"/><w:gridCol w:w="4508"/></w:tblGrid><w:tr w:rsidR="002F1335" w14:paraId="7AB9CA12" w14:textId="77777777" w:rsidTr="002F1335"><w:tc><w:tcPr><w:tcW w:w="4508" w:type="dxa"/></w:tcPr><w:p w14:paraId="2830CDA5" w14:textId="77777777" w:rsidR="002F1335" w:rsidRPr="002F1335" w:rsidRDefault="002F1335" w:rsidP="002F1335"><w:pPr><w:jc w:val="both"/><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/><w:b/><w:bCs/><w:color w:val="C29538"/></w:rPr></w:pPr><w:r w:rsidRPr="002F1335"><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/><w:b/><w:bCs/><w:color w:val="C29538"/></w:rPr><w:t>International Financial Institutions
+World Bank Group
+African Development Bank
+Islamic Development Bank
+Development Partners
+United Nations Agencies
+European Union
+FCDO
+USAID
+GIZ
+DFIs and Foundations
+Governments
+Federal Government Ministries
+State Governments
+Local Government Authorities
+<w:tcPr><w:tcW w:w="4508" w:type="dxa"/></w:tcPr><w:p w14:paraId="419D8855" w14:textId="77777777" w:rsidR="002F1335" w:rsidRPr="002F1335" w:rsidRDefault="002F1335" w:rsidP="002F1335"><w:pPr><w:jc w:val="both"/><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/><w:b/><w:bCs/><w:color w:val="C29538"/></w:rPr></w:pPr><w:r w:rsidRPr="002F1335"><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/><w:b/><w:bCs/><w:color w:val="C29538"/></w:rPr><w:t>Private Sector Organizations
+Investors
+Financial Institutions
+Infrastructure Companies
+Agribusiness Firms
+Civil Society Organizations
+NGOs
+Foundations
+Development Networks
+Quality Assurance
+FSM Consulting Limited is committed to maintaining international standards through:
+Quality Management Systems
+Ethical Conduct Policies
+Anti-Corruption Frameworks
+Data Protection Policies
+Safeguarding Policies
+Gender Equality Policies
+Risk Management Frameworks
+Continuous Professional Development
+Our Commitment
+We are committed to helping clients transform resources into results, policies into action, and investments into sustainable development impact. Through innovation, integrity, and excellence, FSM Consulting Limited serves as a trusted partner for organizations seeking to achieve measurable and lasting change.
+FSM’s geographic footprint is delivered through a flexible country-access model comprising direct corporate presence, strategic partnerships, consortium arrangements and  multidisciplinary professional networks. This approach enables FSM to mobilize the most appropriate combination of international, regional and local expertise while complying with applicable national laws, procurement requirements and client policies.
+Board of Directors and Executive Leadership
+Executive Leadership
+FATIMA SADIQ MOHAMMED
+Chief Executive and Managing Director
+A development and governance professional with experience spanning social protection, development policy, institutional strengthening, disaster risk management, monitoring and evaluation, and World Bank-supported programmes. She has provided technical and advisory support for government and development-finance programmes, with a strong focus on translating policy and investment into practical, measurable results. As Founder and Principal Shareholder of FSM Consulting Limited, she provides the strategic leadership that brings together multidisciplinary expertise, partnerships and delivery capability to support complex development assignments across Nigeria and beyond.
+Key Areas of Responsibility
+Strategic leadership and corporate direction
+Development-finance and institutional partnerships
+Business development, client relationships and strategic engagements
+Technical quality and development effectiveness
+Mobilization and management of multidisciplinary expert teams
+Regional and international growth and partnerships
+Corporate governance, integrity and accountability
+Oversight of major assignments delivery, assurance, and institutional performance
+RABIU ADEMOH
+Non-Executive Director – Digital, Data &amp; Technology
+HADI ABDULLAH
+Non-Executive Director – Infrastructure &amp; Development
+JAFAR GARBA
+Non-Executive Director – Agriculture, Food Systems &amp; Agribusiness
+UMAR JIBRIL
+Non-Executive Director – Legal and Compliance
+………………….
+Non-Executive Director – Fiduciary
+Global Key Experts
+Multi-Disciplinary Technical Experts
+Company Certification
+<w:p w14:paraId="5DB8976A" w14:textId="77777777" w:rsidR="008C1AC2" w:rsidRPr="008C1AC2" w:rsidRDefault="008C1AC2" w:rsidP="008C1AC2"><w:pPr><w:spacing w:before="120" w:after="120"/><w:jc w:val="center"/><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/><w:b/><w:bCs/><w:color w:val="FFC000"/></w:rPr></w:pPr><w:r w:rsidRPr="008C1AC2"><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/><w:b/><w:bCs/><w:color w:val="FFC000"/></w:rPr><w:t>CONTACT INFORMATION
+FSM Consulting Limited
+Africa's Development Delivery Partner
+Accelerating Implementation • Strengthening Institutions • Delivering Measurable Results
+Supporting Governments, Development Partners, International Financial Institutions, Private Sector Organizations and Non-Governmental Institutions to Deliver Sustainable Results and Measurable Impact.
+Address: Abuja, Nigeria
+Email: info@fsmconsulting.com, support.fsmconsulting@gmail.com
+Website: www.fsmconsulting.org | Phone: +234 9040009512
+LinkedIn: FSM Consulting Limited
+<w:p w14:paraId="5DB8976A" w14:textId="77777777" w:rsidR="008C1AC2" w:rsidRPr="008C1AC2" w:rsidRDefault="008C1AC2" w:rsidP="008C1AC2"><w:pPr><w:spacing w:before="120" w:after="120"/><w:jc w:val="center"/><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/><w:b/><w:bCs/><w:color w:val="FFC000"/></w:rPr></w:pPr><w:r w:rsidRPr="008C1AC2"><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/><w:b/><w:bCs/><w:color w:val="FFC000"/></w:rPr><w:t>CONTACT INFORMATION
+FSM Consulting Limited
+Africa's Development Delivery Partner
+Accelerating Implementation • Strengthening Institutions • Delivering Measurable Results
+Supporting Governments, Development Partners, International Financial Institutions, Private Sector Organizations and Non-Governmental Institutions to Deliver Sustainable Results and Measurable Impact.
+Address: Abuja, Nigeria
+Email: info@fsmconsulting.com, support.fsmconsulting@gmail.com
+Website: www.fsmconsulting.org | Phone: +234 9040009512
+LinkedIn: FSM Consulting Limited
