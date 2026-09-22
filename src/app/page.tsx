@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import ValueAdvantage from "@/components/ValueAdvantage";
 import HomeServices from "@/components/HomeServices";
@@ -21,10 +22,17 @@ import Footer from "@/components/Footer";
  * 8. Insights Editorial Statement, 3 Cards & Show All Insights Pill
  * 9. Institutional Footer
  */
+
+export const metadata: Metadata = {
+  title: "Africa's Development Delivery Partner",
+  description:
+    "FSM Consulting Limited is an Africa-based development delivery, implementation acceleration, and project assurance firm dedicated to transforming investments into measurable results and sustainable impact.",
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#f4f5f7] text-[#07131e] antialiased selection:bg-[#0c2340] selection:text-white">
-      <main>
+      <main id="main-content">
         {/* 1. Full-bleed Photographic Hero with Integrated Header & Nav */}
         <Hero />
 
