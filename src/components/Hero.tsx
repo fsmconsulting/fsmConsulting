@@ -150,7 +150,6 @@ export default function Hero({
             <Link href="/sectors" className={getDesktopLinkClass("/sectors")}>
               Sectors
             </Link>
-            <Link href="/network" className={getDesktopLinkClass("/network")}>
             <Link href="/about/network" className={getDesktopLinkClass("/about/network")}>
               Team
             </Link>
@@ -341,7 +340,6 @@ export default function Hero({
             <Link href="/sectors" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/sectors")}>
               Sectors
             </Link>
-            <Link href="/network" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/network")}>
             <Link href="/about/network" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/about/network")}>
               Team
             </Link>
