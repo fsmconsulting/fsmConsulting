@@ -50,3 +50,9 @@ All policy downloads are currently set to "Available on request" (`on-request`) 
 
 ## 6. Legal Review (`/privacy`)
 - [ ] **Privacy Notice Legal Review**: Formal legal sign-off on the draft Privacy Notice under the Nigeria Data Protection Act (NDPA 2023).
+
+---
+
+## 7. Editorial & Perspectives (`/insights`)
+- [ ] **Original insight articles from FSM experts (target: 1 per month)**: Commission, peer-review, and publish original analytical thought pieces and field diagnostics written by FSM leadership and key sector specialists.
+

@@ -6,22 +6,30 @@ export default function InsightsIndex() {
   return (
     <section className="bg-white px-6 py-16 md:px-10 md:py-20" aria-labelledby="insights-index-heading">
       <div className="mx-auto max-w-7xl">
-        <h2 id="insights-index-heading" className="sr-only">
-          All insights
-        </h2>
+        <div className="mb-10">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#2F5FA8]">
+            Thought Leadership
+          </p>
+          <h2 id="insights-index-heading" className="mt-1 text-[28px] md:text-[36px] font-bold tracking-tight text-[#07131e]">
+            Perspectives
+          </h2>
+          <p className="mt-2 text-[15px] text-gray-600 max-w-2xl">
+            Practical knowledge, analytical frameworks, and field-tested methodologies grounded in FSM&rsquo;s core development delivery principles.
+          </p>
+        </div>
 
         {insights.length === 0 ? (
           <p className="max-w-[56ch] text-[15.5px] leading-relaxed text-gray-500">
             New perspectives are in preparation. Check back shortly.
           </p>
         ) : (
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {insights.map((item) => (
               <Link
                 key={item.slug}
                 href={`/insights/${item.slug}`}
                 className="group flex flex-col overflow-hidden rounded-[20px] border border-gray-100 bg-[#F4F5F7] transition-all hover:border-[#2F5FA8]/40 hover:shadow-md"
-                aria-label={`Read insight: ${item.title}`}
+                aria-label={`Read perspective: ${item.title}`}
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden">
                   <Image

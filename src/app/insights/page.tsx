@@ -15,7 +15,7 @@ export default function InsightsPage() {
       <InteriorHero
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Insights" },
+          { label: "Perspectives" },
         ]}
         title={
           <>
@@ -24,7 +24,7 @@ export default function InsightsPage() {
           </>
         }
         subtitle="Practical knowledge, field diagnostics, and analytical frameworks on what makes development investments translate into measurable, sustainable outcomes."
-        ctaText="Explore Publications"
+        ctaText="Explore Perspectives"
         ctaHref="#insights-index"
       />
 

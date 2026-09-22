@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { insights } from "@/data/insightsData";
 
 interface FeaturedInsightsSectionProps {
   eyebrow?: string;
@@ -14,30 +15,12 @@ interface FeaturedInsightsSectionProps {
  * - Rounded images (16/10 aspect ratio), bold titles, concise deks
  * - Light grey pill button "Show All Insights" at the bottom.
  */
-const featuredInsights = [
-  {
-    slug: "results-not-just-deliverables",
-    title: "Navigating cross-border project delivery in 2026",
-    dek: "Key institutional and logistical frameworks shaping multi-country development interventions across West and Central Africa.",
-    image: "/images/insights/project-delivery.jpg",
-  },
-  {
-    slug: "results-not-just-deliverables",
-    title: "Results-based verification in sovereign programs",
-    dek: "How independent verification agents (IVA) restore donor confidence and validate milestone-based disbursements.",
-    image: "/images/insights/governance.jpg",
-  },
-  {
-    slug: "results-not-just-deliverables",
-    title: "D-Ready: The missing link in project readiness",
-    dek: "Bridging the gap between project design notes and field-level execution readiness across priority sectors.",
-    image: "/images/insights/meal.jpg",
-  },
-];
-
 export default function FeaturedInsightsSection({
   heading = "We don’t just advise clients — we bridge the gap between ambitious strategy and ground-level execution. Our team regularly publishes insights, case analyses, and thought pieces to help organizations anticipate challenges and seize opportunities.",
 }: FeaturedInsightsSectionProps) {
+  // Show the 3 most recent insights
+  const featured = insights.slice(0, 3);
+
   return (
     <section
       id="insights"
@@ -55,9 +38,9 @@ export default function FeaturedInsightsSection({
 
         {/* 3-Column Card Grid matching reference 2433588c582ab68b20ec69ab1722d0b2.webp */}
         <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-          {featuredInsights.map((item) => (
+          {featured.map((item) => (
             <Link
-              key={item.title}
+              key={item.slug}
               href={`/insights/${item.slug}`}
               className="group flex flex-col transition-transform duration-300 hover:-translate-y-1.5"
             >
