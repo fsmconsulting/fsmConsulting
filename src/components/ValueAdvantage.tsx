@@ -4,6 +4,7 @@ import { Target, Globe2, CheckCircle2, ShieldCheck } from "lucide-react";
  * "Our value, your advantage"
  * Matches Conceptzilla Reference (media_1789744082329.webp):
  * 4-column open layout with clean icons, bold titles, and institutional copy.
+ * Grounded strictly in "FSM Consulting - Corporate Profile - r1-1.docx".
  */
 const points = [
   {
@@ -18,13 +19,13 @@ const points = [
   },
   {
     icon: CheckCircle2,
-    title: "Proven track record",
-    body: "Mobilizing multidisciplinary experts across all 36 Nigerian states and the FCT, we deliver independent verification and project readiness on complex development portfolios.",
+    title: "Evidence-based verification",
+    body: "Combining technical analysis with direct field engagement, we independently verify project performance, engage communities, and validate ground reality.",
   },
   {
     icon: ShieldCheck,
-    title: "Trusted by leading institutions",
-    body: "International financial institutions, bilateral partners, and sovereign governments rely on our technical bench for fiduciary excellence, ESMP safeguards, and accountability.",
+    title: "Multidisciplinary capability",
+    body: "Our technical bench integrates governance specialists, economists, procurement advisors, and environmental safeguards experts to support complex assignments.",
   },
 ];
 

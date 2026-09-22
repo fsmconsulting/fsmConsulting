@@ -79,7 +79,7 @@ export const insights: Insight[] = [
     featured: true,
     relatedServices: [
       { name: "Technical Expert Mobilization", slug: "expert-mobilisation" },
-      { name: "Implementation Support", slug: "implementation-support" },
+      { name: "Cross-Border Assignment Support", slug: "assignment-support" },
     ],
     body: [
       "Successful technical delivery depends not only on the quality of expertise deployed, but also on effective mobilization, operational readiness, safety, and in-country coordination.",

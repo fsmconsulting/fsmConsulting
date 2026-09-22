@@ -21,6 +21,7 @@ const navLinks = [
  * - Desktop: Exactly 6 links: About Us · Services · Sectors · Experience · Insights · Contact
  * - Mobile: Two-line hamburger icon (=)
  * - Mobile Drawer: Full-screen modal with oversized bold links, single Abuja (HQ) pill, partner reach, contacts.
+ * - Accessibility: Keyboard-closable via Escape, tap targets >= 44px, visible focus states.
  */
 export default function Nav({ transparent = false }: { transparent?: boolean }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -50,6 +51,17 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
     };
   }, [mobileMenuOpen]);
 
+  // Keyboard accessibility: close drawer on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [mobileMenuOpen]);
+
   const shellCls = transparent
     ? "absolute inset-x-0 top-0 z-50 bg-transparent text-white"
     : "sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-md text-[#07131e] transition-all";
@@ -58,19 +70,22 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
     const active = isActive(href);
     if (transparent) {
       return active
-        ? "font-semibold text-white underline underline-offset-4"
-        : "text-white/80 hover:text-white transition-colors";
+        ? "font-semibold text-white underline underline-offset-4 focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none rounded-md px-1.5 py-1"
+        : "text-white/80 hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none rounded-md px-1.5 py-1";
     }
     return active
-      ? "font-semibold text-[#2F5FA8]"
-      : "text-[#07131e]/80 hover:text-[#2F5FA8] transition-colors";
+      ? "font-semibold text-[#2F5FA8] focus-visible:ring-2 focus-visible:ring-[#2F5FA8] focus-visible:outline-none rounded-md px-1.5 py-1"
+      : "text-[#07131e]/80 hover:text-[#2F5FA8] transition-colors focus-visible:ring-2 focus-visible:ring-[#2F5FA8] focus-visible:outline-none rounded-md px-1.5 py-1";
   };
 
   return (
     <header className={shellCls}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-12">
         {/* Brand: Logo Mark + Text */}
-        <Link href="/" className="group flex items-center gap-3">
+        <Link
+          href="/"
+          className="group flex items-center gap-3 focus-visible:ring-2 focus-visible:ring-[#2F5FA8] focus-visible:outline-none rounded-lg p-1"
+        >
           <div className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-[#2F5FA8]/15 p-1.5 transition-colors group-hover:bg-[#2F5FA8]/25">
             <Image
               src="/FSMLogo.png"
@@ -87,7 +102,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
         </Link>
 
         {/* Desktop Navigation Links: exactly 6 Prism links */}
-        <nav className="hidden items-center gap-8 lg:gap-10 text-[15px] font-medium lg:flex">
+        <nav className="hidden items-center gap-6 lg:gap-8 text-[15px] font-medium lg:flex">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className={getLinkCls(link.href)}>
               {link.label}
@@ -95,11 +110,11 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
           ))}
         </nav>
 
-        {/* Mobile Two-Line Hamburger Button */}
+        {/* Mobile Two-Line Hamburger Button: >= 44px tap target */}
         <button
           type="button"
           onClick={() => setMobileMenuOpen(true)}
-          className={`flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full lg:hidden ${
+          className={`flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full lg:hidden focus-visible:ring-2 focus-visible:ring-[#2F5FA8] focus-visible:outline-none cursor-pointer ${
             transparent ? "text-white hover:bg-white/10" : "text-[#07131e] hover:bg-gray-100"
           }`}
           aria-label="Open navigation menu"
@@ -111,16 +126,22 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
 
       {/* Mobile Menu Modal */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[100] flex flex-col justify-between bg-white text-[#07131e] p-6 sm:p-8 animate-in fade-in duration-200 lg:hidden overflow-y-auto">
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile Navigation"
+          className="fixed inset-0 z-[100] flex flex-col justify-between bg-white text-[#07131e] p-6 sm:p-8 animate-in fade-in duration-200 lg:hidden overflow-y-auto"
+        >
           {/* Header */}
           <div className="flex items-center justify-between pb-6 border-b border-gray-100">
             <span className="text-[22px] font-bold tracking-tight text-[#07131e]">
               FSM Consulting<span className="text-[#2F5FA8]">.</span>
             </span>
+            {/* Close button: >= 44px tap target */}
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-[#07131e] hover:bg-gray-200 transition-colors"
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-gray-100 text-[#07131e] hover:bg-gray-200 focus-visible:ring-2 focus-visible:ring-[#2F5FA8] focus-visible:outline-none transition-colors cursor-pointer"
               aria-label="Close navigation menu"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -130,13 +151,13 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
           </div>
 
           {/* Large Menu Items: exactly 6 Prism links */}
-          <nav className="flex flex-col gap-6 py-8 text-[32px] sm:text-[36px] font-bold tracking-tight text-[#07131e]">
+          <nav className="flex flex-col gap-5 py-8 text-[32px] sm:text-[36px] font-bold tracking-tight text-[#07131e]">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="hover:text-[#2f5fa8] transition-colors"
+                className="py-1 hover:text-[#2f5fa8] focus-visible:text-[#2f5fa8] focus-visible:outline-none transition-colors"
               >
                 {link.label}
               </Link>
@@ -157,10 +178,16 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
             </div>
             <p className="text-[12px] text-[#5A6876] mb-3">{partnerAccessText}</p>
             <div className="flex flex-col gap-1 text-[13px] text-[#07131e]">
-              <a href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`} className="hover:text-[#2F5FA8]">
+              <a
+                href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
+                className="hover:text-[#2F5FA8] py-1 inline-block"
+              >
                 {contactInfo.phone}
               </a>
-              <a href={`mailto:${contactInfo.email}`} className="hover:text-[#2F5FA8]">
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="hover:text-[#2F5FA8] py-1 inline-block"
+              >
                 {contactInfo.email}
               </a>
             </div>
