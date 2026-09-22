@@ -117,6 +117,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/careers",
+        destination: "/experts",
+        permanent: true,
+      },
+      {
         source: "/network",
         destination: "/about/network",
         permanent: true,

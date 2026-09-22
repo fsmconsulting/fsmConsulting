@@ -36,13 +36,17 @@ All policy downloads are currently set to "Available on request" (`on-request`) 
 ---
 
 ## 4. Corporate & Regulatory Registrations (`/procurement`, Footer)
-- [ ] **Confirm statutory registrations (Tax, PENCOM, ITF, NSITF, SCUML)**: Confirm availability and currency of statutory registrations and regulatory compliance certificates (FIRS/Tax Clearance, PENCOM, ITF, NSITF, SCUML).
+- [ ] **Confirm statutory registrations & compliance clearances (Tax, PENCOM, ITF, NSITF, SCUML)**: Confirm availability and currency of statutory registrations and regulatory compliance certificates (FIRS/Tax Clearance Certificate, PENCOM compliance certificate, Industrial Training Fund, NSITF, and SCUML).
 - [ ] **Confirm CAC RC Number**: Confirm whether `RC: 9616494` is the exact Corporate Affairs Commission registration number for FSM Consulting Limited before production launch.
-- [ ] **Tax & Statutory Compliance Clearances**: Confirm availability of Tax Clearance Certificate (TCC), PENCOM compliance certificate, Industrial Training Fund (ITF), and NSITF clearances for procurement submissions.
 - [ ] **Bank Reference Letter**: Formal bank comfort / reference letter from primary corporate financial institution for tender submissions.
 
 ---
 
-## 5. Legal Review (`/privacy`)
-- [ ] **Privacy Notice Legal Review**: Formal legal sign-off on the draft Privacy Notice under the Nigeria Data Protection Act (NDPA 2023).
+## 5. Commercial Partnerships & Operations (`/partner-with-us`, `/experts`)
+- [ ] **Confirm teaming models FSM will accept**: Formal confirmation of commercial teaming arrangements accepted by FSM Consulting Limited (Joint Venture, Lead Sub-Consultant, Local Implementation Partner, Mobilisation & Logistics Only).
+- [ ] **Confirm whether a form backend/CRM should replace mailto forms**: Confirm requirement for database/CRM backend (e.g. Supabase, HubSpot) for partner inquiries and consultant roster applications.
 
+---
+
+## 6. Legal Review (`/privacy`)
+- [ ] **Privacy Notice Legal Review**: Formal legal sign-off on the draft Privacy Notice under the Nigeria Data Protection Act (NDPA 2023).
