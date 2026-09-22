@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 import { contactInfo } from "@/data/siteData";
+import { openMailto } from "@/lib/mailto";
 
 export default function PartnerEnquiryForm() {
   const [formData, setFormData] = useState({
@@ -17,11 +18,10 @@ export default function PartnerEnquiryForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `Teaming Enquiry: ${formData.firmName || "Partner Submission"} - ${formData.tenderRef || "African Assignment"}`
-    );
-    const body = encodeURIComponent(
-`Firm Name: ${formData.firmName}
+    openMailto({
+      to: contactInfo.email,
+      subject: `Teaming Enquiry: ${formData.firmName || "Partner Submission"} - ${formData.tenderRef || "African Assignment"}`,
+      body: `Firm Name: ${formData.firmName}
 Contact Name: ${formData.contactName}
 Contact Email: ${formData.email}
 Tender / Opportunity Reference: ${formData.tenderRef}
@@ -30,9 +30,8 @@ Submission Deadline: ${formData.deadline}
 
 Assignment Scope & Proposed Teaming:
 ${formData.message}
-`
-    );
-    window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${body}`;
+`,
+    });
   };
 
   return (

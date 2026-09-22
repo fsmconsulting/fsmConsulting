@@ -1,7 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin } from "lucide-react";
+import Link from "next/link";
+import { Mail, Phone, MapPin, Globe } from "lucide-react";
+import { contactInfo } from "@/data/siteData";
+import { openMailto } from "@/lib/mailto";
+
+const enquiryTypes = [
+  { value: "Commission work", label: "Commission work" },
+  { value: "Partnership", label: "Partnership", link: "/partner-with-us", linkText: "View teaming models" },
+  { value: "Join expert network", label: "Join expert network", link: "/experts", linkText: "Join roster" },
+  { value: "Procurement documents", label: "Procurement documents", link: "/procurement", linkText: "View document register" },
+  { value: "Media / other", label: "Media / other" },
+];
 
 const interestAreas = [
   "Implementation Acceleration",
@@ -14,13 +25,37 @@ const interestAreas = [
 ];
 
 export default function ContactPanel() {
-  const [status, setStatus] = useState<"idle" | "submitting" | "sent">("idle");
+  const [enquiryType, setEnquiryType] = useState("Commission work");
+  const [formData, setFormData] = useState({
+    name: "",
+    organization: "",
+    email: "",
+    phone: "",
+    country: "",
+    interest: interestAreas[0],
+    message: "",
+  });
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus("submitting");
-    window.setTimeout(() => setStatus("sent"), 500);
-  }
+    openMailto({
+      to: contactInfo.email,
+      subject: `Enquiry [${enquiryType}]: ${formData.name}${formData.organization ? ` - ${formData.organization}` : ""}`,
+      body: `Enquiry Type: ${enquiryType}
+Full Name: ${formData.name}
+Organization / Institution: ${formData.organization}
+Email Address: ${formData.email}
+Phone Number: ${formData.phone}
+Country / Location: ${formData.country}
+Area of Interest: ${formData.interest}
+
+Message / Assignment Details:
+${formData.message}
+`,
+    });
+  };
+
+  const selectedTypeObj = enquiryTypes.find((t) => t.value === enquiryType);
 
   return (
     <section id="contact-panel" className="bg-white px-6 py-20 md:px-10 md:py-28">
@@ -35,7 +70,7 @@ export default function ContactPanel() {
           </h2>
           <p className="mt-4 max-w-[46ch] text-[15px] leading-relaxed text-gray-600">
             Tell us about the assignment, program, or delivery challenge you&rsquo;re
-            facing. A member of the FSM leadership team will respond directly.
+            facing. Our leadership team responds directly to formal and technical inquiries.
           </p>
 
           <div className="mt-10 space-y-6">
@@ -43,113 +78,219 @@ export default function ContactPanel() {
               <Mail className="mt-0.5 h-[18px] w-[18px] text-[#2F5FA8]" strokeWidth={2} />
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-gray-400">Email</p>
-                <a href="mailto:info@fsmconsulting.com" className="text-[15px] font-semibold text-[#07131e] hover:text-[#2F5FA8] transition-colors">
-                  info@fsmconsulting.com
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  className="text-[15px] font-semibold text-[#07131e] hover:text-[#2F5FA8] transition-colors"
+                >
+                  {contactInfo.email}
                 </a>
               </div>
             </div>
+
             <div className="flex items-start gap-3">
               <Phone className="mt-0.5 h-[18px] w-[18px] text-[#2F5FA8]" strokeWidth={2} />
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-gray-400">Phone</p>
-                <a href="tel:+2349040009512" className="text-[15px] font-semibold text-[#07131e] hover:text-[#2F5FA8] transition-colors">
-                  +234 904 000 9512
+                <a
+                  href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
+                  className="text-[15px] font-semibold text-[#07131e] hover:text-[#2F5FA8] transition-colors"
+                >
+                  {contactInfo.phone}
                 </a>
               </div>
             </div>
+
             <div className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-[18px] w-[18px] text-[#2F5FA8]" strokeWidth={2} />
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-gray-400">Headquarters</p>
-                <p className="text-[15px] text-[#07131e] font-medium">Abuja, Federal Capital Territory, Nigeria</p>
+                <p className="text-[15px] text-[#07131e] font-medium">{contactInfo.address}</p>
+                <p className="text-[13px] text-gray-500 mt-0.5">Abuja, Nigeria</p>
               </div>
             </div>
+
+            {contactInfo.linkedin && (
+              <div className="flex items-start gap-3">
+                <Globe className="mt-0.5 h-[18px] w-[18px] text-[#2F5FA8]" strokeWidth={2} />
+                <div>
+                  <p className="font-mono text-[11px] uppercase tracking-wider text-gray-400">LinkedIn</p>
+                  <a
+                    href={contactInfo.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[15px] font-semibold text-[#07131e] hover:text-[#2F5FA8] transition-colors"
+                  >
+                    FSM Consulting Limited &rarr;
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
         {/* Engagement form */}
-        <form onSubmit={handleSubmit} className="rounded-[24px] border border-gray-100 bg-[#F4F5F7] p-8 md:p-10 lg:col-span-7 shadow-sm">
-          {status === "sent" ? (
-            <div className="flex min-h-[320px] flex-col items-center justify-center text-center">
-              <p className="text-[24px] font-bold text-[#07131e]">Inquiry received</p>
-              <p className="mt-2 max-w-[36ch] text-[14.5px] text-gray-600">
-                Thank you — a member of the FSM team will be in touch shortly.
-              </p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-              <Field label="Name" name="name" required />
-              <Field label="Organization" name="organization" />
-              <Field label="Email" name="email" type="email" required />
-              <Field label="Phone" name="phone" type="tel" />
-              <Field label="Country" name="country" />
-              <div>
-                <label htmlFor="interest" className="block text-[13px] font-medium text-[#07131e]">
-                  Area of interest
-                </label>
-                <select
-                  id="interest"
-                  name="interest"
-                  className="mt-1.5 w-full rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 text-[14px] text-[#07131e] outline-none focus:border-[#2F5FA8]"
-                >
-                  {interestAreas.map((a) => (
-                    <option key={a}>{a}</option>
-                  ))}
-                </select>
-              </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="message" className="block text-[13px] font-medium text-[#07131e]">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={5}
-                  className="mt-1.5 w-full rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 text-[14px] text-[#07131e] outline-none focus:border-[#2F5FA8]"
-                />
-              </div>
-              <div className="sm:col-span-2">
+        <form
+          onSubmit={handleSubmit}
+          className="rounded-[24px] border border-gray-100 bg-[#F4F5F7] p-8 md:p-10 lg:col-span-7 shadow-sm"
+        >
+          {/* Enquiry Type Selector */}
+          <div className="mb-6">
+            <label htmlFor="contact-enquiryType" className="block text-[13px] font-semibold text-[#07131e] mb-2">
+              Enquiry Type *
+            </label>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              {enquiryTypes.map((type) => (
                 <button
-                  type="submit"
-                  disabled={status === "submitting"}
-                  className="inline-flex items-center justify-center rounded-full bg-[#2F5FA8] px-7 py-3 text-[14.5px] font-semibold text-white shadow-md hover:bg-[#264E8C] transition-all disabled:opacity-60 cursor-pointer"
+                  key={type.value}
+                  type="button"
+                  onClick={() => setEnquiryType(type.value)}
+                  className={`px-3.5 py-2.5 rounded-xl text-[13px] font-medium text-left transition-all border ${
+                    enquiryType === type.value
+                      ? "bg-[#2F5FA8] text-white border-[#2F5FA8] shadow-sm"
+                      : "bg-white text-[#07131e] border-gray-200 hover:border-[#2F5FA8]/40"
+                  }`}
                 >
-                  {status === "submitting" ? "Sending…" : "Submit Inquiry"}
+                  {type.label}
                 </button>
-              </div>
+              ))}
             </div>
-          )}
+
+            {selectedTypeObj?.link && (
+              <p className="mt-2 text-[12.5px] text-gray-500">
+                Looking for specific procedures?{" "}
+                <Link
+                  href={selectedTypeObj.link}
+                  className="font-semibold text-[#2F5FA8] hover:underline"
+                >
+                  {selectedTypeObj.linkText} &rarr;
+                </Link>
+              </p>
+            )}
+          </div>
+
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <div>
+              <label htmlFor="contact-name" className="block text-[13px] font-medium text-[#07131e]">
+                Full Name <span className="text-[#2F5FA8]">*</span>
+              </label>
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                required
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                className="mt-1.5 w-full rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 text-[14px] text-[#07131e] outline-none focus:border-[#2F5FA8]"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="contact-organization" className="block text-[13px] font-medium text-[#07131e]">
+                Organization / Institution
+              </label>
+              <input
+                id="contact-organization"
+                name="organization"
+                type="text"
+                value={formData.organization}
+                onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
+                className="mt-1.5 w-full rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 text-[14px] text-[#07131e] outline-none focus:border-[#2F5FA8]"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="contact-email" className="block text-[13px] font-medium text-[#07131e]">
+                Email Address <span className="text-[#2F5FA8]">*</span>
+              </label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                required
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className="mt-1.5 w-full rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 text-[14px] text-[#07131e] outline-none focus:border-[#2F5FA8]"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="contact-phone" className="block text-[13px] font-medium text-[#07131e]">
+                Phone Number
+              </label>
+              <input
+                id="contact-phone"
+                name="phone"
+                type="tel"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                className="mt-1.5 w-full rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 text-[14px] text-[#07131e] outline-none focus:border-[#2F5FA8]"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="contact-country" className="block text-[13px] font-medium text-[#07131e]">
+                Country / Location
+              </label>
+              <input
+                id="contact-country"
+                name="country"
+                type="text"
+                value={formData.country}
+                onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                placeholder="e.g. Nigeria, Senegal, Kenya"
+                className="mt-1.5 w-full rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 text-[14px] text-[#07131e] outline-none focus:border-[#2F5FA8]"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="contact-interest" className="block text-[13px] font-medium text-[#07131e]">
+                Primary Area of Interest
+              </label>
+              <select
+                id="contact-interest"
+                name="interest"
+                value={formData.interest}
+                onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
+                className="mt-1.5 w-full rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 text-[14px] text-[#07131e] outline-none focus:border-[#2F5FA8]"
+              >
+                {interestAreas.map((a) => (
+                  <option key={a} value={a}>
+                    {a}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="sm:col-span-2">
+              <label htmlFor="contact-message" className="block text-[13px] font-medium text-[#07131e]">
+                Message / Assignment Details <span className="text-[#2F5FA8]">*</span>
+              </label>
+              <textarea
+                id="contact-message"
+                name="message"
+                required
+                rows={5}
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                placeholder="Outline assignment scope, timeline, geographic location, or institutional inquiry..."
+                className="mt-1.5 w-full rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 text-[14px] text-[#07131e] outline-none focus:border-[#2F5FA8]"
+              />
+            </div>
+
+            <div className="sm:col-span-2 pt-2">
+              <button
+                type="submit"
+                className="inline-flex items-center justify-center rounded-full bg-[#2F5FA8] px-8 py-3.5 text-[14.5px] font-semibold text-white shadow-md hover:bg-[#264E8C] transition-all cursor-pointer"
+              >
+                Send enquiry
+              </button>
+              <span className="ml-4 text-[13px] text-gray-500">
+                Opens your email client
+              </span>
+            </div>
+          </div>
         </form>
       </div>
     </section>
-  );
-}
-
-function Field({
-  label,
-  name,
-  type = "text",
-  required,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  required?: boolean;
-}) {
-  return (
-    <div>
-      <label htmlFor={name} className="block text-[13px] font-medium text-[#07131e]">
-        {label}
-        {required && <span className="text-[#2F5FA8]"> *</span>}
-      </label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        required={required}
-        className="mt-1.5 w-full rounded-xl border border-gray-200 bg-white px-3.5 py-2.5 text-[14px] text-[#07131e] outline-none focus:border-[#2F5FA8]"
-      />
-    </div>
   );
 }

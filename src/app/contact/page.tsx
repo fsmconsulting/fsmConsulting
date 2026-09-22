@@ -17,14 +17,9 @@ export default function ContactPage() {
           { label: "Home", href: "/" },
           { label: "Contact" },
         ]}
-        title={
-          <>
-            Start a Conversation with Our<br />
-            Advisory &amp; Delivery Leadership
-          </>
-        }
+        title="Contact FSM Consulting"
         subtitle="Reach FSM Consulting Limited directly in Abuja, or tell us about your assignment, upcoming tender, or delivery challenge."
-        ctaText="Send an Inquiry"
+        ctaText="Send Enquiry"
         ctaHref="#contact-panel"
       />
 

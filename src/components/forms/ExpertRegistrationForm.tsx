@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 import { contactInfo } from "@/data/siteData";
+import { openMailto } from "@/lib/mailto";
 
 const disciplines = [
   "Development Planning and Policy",
@@ -34,11 +35,10 @@ export default function ExpertRegistrationForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `Expert Roster Application: ${formData.fullName} - ${formData.discipline}`
-    );
-    const body = encodeURIComponent(
-`Full Name: ${formData.fullName}
+    openMailto({
+      to: contactInfo.email,
+      subject: `Expert Roster Application: ${formData.fullName} - ${formData.discipline}`,
+      body: `Full Name: ${formData.fullName}
 Email Address: ${formData.email}
 Country of Residence: ${formData.country}
 Primary Technical Discipline: ${formData.discipline}
@@ -49,9 +49,8 @@ Brief Professional Summary:
 ${formData.message}
 
 (Note: Please remember to attach your CV / Resume to this email before sending.)
-`
-    );
-    window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${body}`;
+`,
+    });
   };
 
   return (

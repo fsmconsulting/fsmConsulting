@@ -12,4 +12,6 @@ export const contactInfo = {
   phone: "+234 904 000 9512",
   address: "Abuja, Federal Capital Territory, Nigeria",
   rcNumber: cacRegistrationNumber,
+  linkedin: "https://www.linkedin.com/company/fsm-consulting-limited",
 };
+
