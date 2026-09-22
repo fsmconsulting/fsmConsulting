@@ -326,61 +326,61 @@ export default function PracticeClusters() {
   const filtered = activeCluster === "all" ? practices : practices.filter((p) => p.cluster === activeCluster);
 
   return (
-    <section className="bg-sand py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+    <section id="practice-clusters" className="bg-[#f4f5f7] py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-14">
         
         {/* Section Header */}
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-3xl">
-            <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
+            <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#2F5FA8]">
               Core Practice Catalog &middot; 14 Capabilities
             </span>
-            <h2 className="mt-2 font-serif text-[32px] font-medium text-navy md:text-[42px]">
+            <h2 className="mt-2 text-[32px] md:text-[42px] font-bold tracking-tight text-[#07131e]">
               Fourteen Specialized Practice Areas
             </h2>
-            <p className="mt-3 text-[16px] text-ink/75">
+            <p className="mt-3 text-[16px] text-gray-600">
               Explore our full service directory, including specialized deliverables, methodological frameworks, and institutional value propositions.
             </p>
           </div>
 
-          {/* Cluster Filter Buttons */}
+          {/* Cluster Filter Buttons matching reference pill grammar */}
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setActiveCluster("all")}
-              className={`rounded px-4 py-2 text-[13px] font-medium transition-all ${
+              className={`rounded-full px-5 py-2 text-[13px] font-semibold transition-all cursor-pointer ${
                 activeCluster === "all"
-                  ? "bg-navy text-white shadow-none"
-                  : "bg-white text-navy border border-navy/10 hover:bg-navy/5"
+                  ? "bg-[#2F5FA8] text-white shadow-md"
+                  : "bg-white text-gray-700 border border-gray-200 hover:text-[#2F5FA8] hover:border-[#2F5FA8]/40"
               }`}
             >
               All 14 Practices
             </button>
             <button
               onClick={() => setActiveCluster("delivery")}
-              className={`rounded px-4 py-2 text-[13px] font-medium transition-all ${
+              className={`rounded-full px-5 py-2 text-[13px] font-semibold transition-all cursor-pointer ${
                 activeCluster === "delivery"
-                  ? "bg-navy text-white shadow-none"
-                  : "bg-white text-navy border border-navy/10 hover:bg-navy/5"
+                  ? "bg-[#2F5FA8] text-white shadow-md"
+                  : "bg-white text-gray-700 border border-gray-200 hover:text-[#2F5FA8] hover:border-[#2F5FA8]/40"
               }`}
             >
               Delivery &amp; MEAL (01–05)
             </button>
             <button
               onClick={() => setActiveCluster("governance")}
-              className={`rounded px-4 py-2 text-[13px] font-medium transition-all ${
+              className={`rounded-full px-5 py-2 text-[13px] font-semibold transition-all cursor-pointer ${
                 activeCluster === "governance"
-                  ? "bg-navy text-white shadow-none"
-                  : "bg-white text-navy border border-navy/10 hover:bg-navy/5"
+                  ? "bg-[#2F5FA8] text-white shadow-md"
+                  : "bg-white text-gray-700 border border-gray-200 hover:text-[#2F5FA8] hover:border-[#2F5FA8]/40"
               }`}
             >
               Governance &amp; Safeguards (06–09)
             </button>
             <button
               onClick={() => setActiveCluster("innovation")}
-              className={`rounded px-4 py-2 text-[13px] font-medium transition-all ${
+              className={`rounded-full px-5 py-2 text-[13px] font-semibold transition-all cursor-pointer ${
                 activeCluster === "innovation"
-                  ? "bg-navy text-white shadow-none"
-                  : "bg-white text-navy border border-navy/10 hover:bg-navy/5"
+                  ? "bg-[#2F5FA8] text-white shadow-md"
+                  : "bg-white text-gray-700 border border-gray-200 hover:text-[#2F5FA8] hover:border-[#2F5FA8]/40"
               }`}
             >
               Data, Economy &amp; PPP (10–14)
@@ -396,57 +396,57 @@ export default function PracticeClusters() {
               <div
                 key={practice.id}
                 id={practice.id}
-                className={`flex flex-col justify-between rounded-[var(--radius-card-sm)] border bg-white p-7 transition-all duration-300 ${
+                className={`flex flex-col justify-between rounded-[24px] border bg-white p-7 md:p-8 transition-all duration-300 ${
                   isExpanded
-                    ? "border-blue-accent shadow-sm ring-1 ring-blue-accent/30"
-                    : "border-navy/10 shadow-none hover:border-navy/30"
+                    ? "border-[#2F5FA8] shadow-lg ring-1 ring-[#2F5FA8]/30"
+                    : "border-gray-200/80 shadow-xs hover:border-[#2F5FA8]/40 hover:-translate-y-1 hover:shadow-md"
                 }`}
               >
                 <div>
                   {/* Top Bar */}
-                  <div className="flex items-center justify-between border-b border-navy/10 pb-3">
+                  <div className="flex items-center justify-between border-b border-gray-100 pb-3">
                     <div className="flex items-center gap-2.5">
-                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-navy text-xs font-mono font-bold text-white">
+                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#2F5FA8] text-xs font-mono font-bold text-white shadow-xs">
                         {practice.num}
                       </span>
-                      <span className="text-[12px] font-mono font-medium text-navy/60">
+                      <span className="text-[12px] font-mono font-medium text-gray-500">
                         {practice.clusterLabel}
                       </span>
                     </div>
                     <button
                       onClick={() => setExpandedPractice(isExpanded ? null : practice.id)}
-                      className="text-xs font-semibold text-blue-accent hover:underline"
+                      className="text-xs font-semibold text-[#2F5FA8] hover:underline cursor-pointer"
                     >
                       {isExpanded ? "Collapse Scope" : "Expand Scope &rarr;"}
                     </button>
                   </div>
 
                   {/* Title & Tagline */}
-                  <h3 className="mt-4 font-serif text-[22px] font-medium text-navy">
+                  <h3 className="mt-4 text-[21px] md:text-[22px] font-bold tracking-tight text-[#07131e]">
                     {practice.title}
                   </h3>
-                  <p className="mt-1 text-[13.5px] font-medium text-blue-accent">
+                  <p className="mt-1 text-[13.5px] font-medium text-[#2F5FA8]">
                     {practice.tagline}
                   </p>
                   
-                  <p className="mt-3 text-[14.5px] leading-relaxed text-ink/80">
+                  <p className="mt-3 text-[14.5px] leading-relaxed text-gray-600">
                     {practice.summary}
                   </p>
 
                   {/* Deliverables List (Always or Expanded) */}
-                  <div className="mt-5 rounded-[var(--radius-card-sm)] border border-navy/5 bg-sand p-5">
-                    <span className="block text-[11.5px] font-mono font-semibold uppercase tracking-wider text-navy">
+                  <div className="mt-5 rounded-[16px] border border-gray-100 bg-[#f4f5f7] p-5">
+                    <span className="block text-[11.5px] font-mono font-semibold uppercase tracking-wider text-[#07131e]">
                       Core Deliverables &amp; Specialized Services:
                     </span>
                     <ul className="mt-3 space-y-2">
                       {(isExpanded ? practice.deliverables : practice.deliverables.slice(0, 4)).map((item) => (
-                        <li key={item} className="flex items-start gap-2.5 text-[13.5px] text-ink/75">
-                          <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-full bg-blue-accent" />
+                        <li key={item} className="flex items-start gap-2.5 text-[13.5px] text-gray-700">
+                          <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-full bg-[#2F5FA8]" />
                           <span>{item}</span>
                         </li>
                       ))}
                       {!isExpanded && practice.deliverables.length > 4 && (
-                        <li className="pt-1 text-[12px] font-medium text-navy/60">
+                        <li className="pt-1 text-[12px] font-medium text-gray-500">
                           + {practice.deliverables.length - 4} additional specialized deliverables (click expand)
                         </li>
                       )}
@@ -455,12 +455,12 @@ export default function PracticeClusters() {
                 </div>
 
                 {/* Client Value Proposition Box */}
-                <div className="mt-5 border-t border-navy/10 pt-4">
+                <div className="mt-5 border-t border-gray-100 pt-4">
                   <div className="flex items-start gap-2">
-                    <span className="text-xs font-bold text-navy uppercase tracking-wider">
+                    <span className="text-xs font-bold text-[#07131e] uppercase tracking-wider">
                       Client Value:
                     </span>
-                    <p className="text-[13px] italic text-ink/70">
+                    <p className="text-[13px] italic text-gray-600">
                       {practice.clientValue}
                     </p>
                   </div>

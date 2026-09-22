@@ -10,16 +10,16 @@ import Link from "next/link";
  */
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#07131e] text-gray-400 antialiased" aria-labelledby="footer-heading">
+    <footer className="border-t-2 border-[#2F5FA8] bg-[#07131e] text-gray-400 antialiased" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">Footer</h2>
       
       <div className="mx-auto max-w-7xl px-8 lg:px-14 py-16 lg:py-20">
         {/* Top Branding & Regional Footprint Bar */}
         <div className="flex flex-col justify-between gap-8 border-b border-white/10 pb-12 lg:flex-row lg:items-center">
           <div>
-            <Link href="/" className="inline-block">
-              <span className="text-[26px] lg:text-[28px] font-bold tracking-tight text-white hover:text-white/90 transition-colors">
-                FSM Consulting.
+            <Link href="/" className="inline-block group">
+              <span className="text-[26px] lg:text-[28px] font-bold tracking-tight text-white group-hover:text-white/90 transition-colors">
+                FSM Consulting<span className="text-[#2F5FA8]">.</span>
               </span>
             </Link>
             <p className="mt-2 text-[14.5px] text-gray-400 max-w-lg leading-relaxed">
@@ -29,14 +29,19 @@ export default function Footer() {
 
           {/* Regional Presence Badges matching reference style */}
           <div className="flex flex-col items-start lg:items-end gap-3">
-            <span className="font-mono text-[11px] uppercase tracking-wider text-gray-400">
+            <span className="font-mono text-[11px] uppercase tracking-wider text-[#9BC2F5]">
               Regional Delivery Footprint
             </span>
             <div className="flex flex-wrap gap-2">
               {["Abuja (HQ)", "Lagos", "Dakar", "Nairobi"].map((city) => (
                 <span
                   key={city}
-                  className="rounded-full bg-white/5 border border-white/10 px-3.5 py-1 text-[12px] font-medium text-white/90"
+                  className={
+                    "rounded-full px-3.5 py-1 text-[12px] font-medium transition-colors " +
+                    (city === "Abuja (HQ)"
+                      ? "bg-[#2F5FA8] border border-[#2F5FA8] text-white font-semibold shadow-sm"
+                      : "bg-[#2F5FA8]/10 border border-[#2F5FA8]/30 text-[#9BC2F5] hover:border-[#2F5FA8]/60")
+                  }
                 >
                   {city}
                 </span>
@@ -168,10 +173,10 @@ export default function Footer() {
                   +234 904 000 9512
                 </a>
               </p>
-              <div className="pt-2">
+              <div className="pt-3">
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-[#2f5fa8] hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#2F5FA8] px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-md hover:bg-[#264E8C] transition-all"
                 >
                   <span>Schedule a Consultation</span>
                   <span>&rarr;</span>
@@ -197,7 +202,7 @@ export default function Footer() {
             </Link>
             <a
               href="#top"
-              className="inline-flex items-center gap-1 font-medium text-[#2f5fa8] hover:text-white transition-colors"
+              className="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-[#2F5FA8]/40 px-3.5 py-1.5 text-[12.5px] font-semibold text-[#9BC2F5] hover:bg-[#2F5FA8] hover:text-white transition-all"
             >
               <span>Back to top</span>
               <span>&uarr;</span>

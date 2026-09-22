@@ -63,18 +63,18 @@ const sectors = [
 
 export default function TargetClients() {
   return (
-    <section className="bg-sand py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+    <section className="bg-white py-20 md:py-28 border-b border-gray-100">
+      <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-14">
         
         {/* Header */}
         <div className="max-w-3xl">
-          <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#2F5FA8]">
             Institutional Ecosystem &middot; Who We Serve
           </span>
-          <h2 className="mt-2 font-serif text-[32px] font-medium text-navy md:text-[42px]">
+          <h2 className="mt-2 text-[32px] md:text-[42px] font-bold tracking-tight text-[#07131e]">
             Target Client Segments &amp; Sector Expertise
           </h2>
-          <p className="mt-3 text-[16px] text-ink/70">
+          <p className="mt-3 text-[16px] text-gray-600">
             FSM Consulting Limited focuses on supporting projects, reforms, and programs across public institutions, multilateral and bilateral development entities, and private sector partners.
           </p>
         </div>
@@ -84,20 +84,20 @@ export default function TargetClients() {
           {clientSegments.map((segment) => (
             <div
               key={segment.category}
-              className="rounded-[var(--radius-card-sm)] border border-navy/10 bg-white p-7 transition-all duration-200 hover:border-navy hover:shadow-xs"
+              className="rounded-[20px] border border-gray-100 bg-[#F4F5F7] p-7 transition-all duration-200 hover:border-[#2F5FA8]/40 hover:shadow-md"
             >
-              <div className="border-b border-navy/10 pb-3">
-                <span className="font-mono text-xs font-semibold text-blue-accent">
+              <div className="border-b border-gray-200/80 pb-3">
+                <span className="font-mono text-xs font-semibold text-[#2F5FA8]">
                   TARGET CATEGORY
                 </span>
-                <h3 className="mt-1 font-serif text-[18.5px] font-medium text-navy">
+                <h3 className="mt-1 text-[18.5px] font-bold text-[#07131e]">
                   {segment.category}
                 </h3>
               </div>
               <ul className="mt-4 space-y-2">
                 {segment.institutions.map((inst) => (
-                  <li key={inst} className="flex items-start gap-2 text-[13.5px] text-ink/75">
-                    <span className="text-blue-accent">&rsaquo;</span>
+                  <li key={inst} className="flex items-start gap-2 text-[13.5px] text-gray-600">
+                    <span className="text-[#2F5FA8] font-bold">&rsaquo;</span>
                     <span>{inst}</span>
                   </li>
                 ))}
@@ -107,14 +107,14 @@ export default function TargetClients() {
         </div>
 
         {/* Priority Sectors Pill Grid */}
-        <div className="mt-16 rounded-[var(--radius-card)] border border-navy/10 bg-white p-8 md:p-10">
-          <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
+        <div className="mt-16 rounded-[24px] border border-gray-100 bg-[#F4F5F7] p-8 md:p-10">
+          <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#2F5FA8]">
             Multidisciplinary Roster
           </span>
-          <h3 className="mt-1 font-serif text-[22px] font-medium text-navy">
+          <h3 className="mt-1 text-[22px] font-bold tracking-tight text-[#07131e]">
             Core Sectoral Coverage
           </h3>
-          <p className="mt-2 max-w-2xl text-[14.5px] text-ink/70">
+          <p className="mt-2 max-w-2xl text-[14.5px] text-gray-600">
             Our experts bring deep technical depth across key development sectors, aligning global best practices with local operating realities.
           </p>
 
@@ -122,7 +122,7 @@ export default function TargetClients() {
             {sectors.map((sec) => (
               <span
                 key={sec}
-                className="rounded-full border border-navy/10 bg-sand px-3.5 py-1.5 text-[13px] font-medium text-navy transition-colors hover:border-navy hover:bg-white"
+                className="rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-[13px] font-medium text-[#07131e] transition-colors hover:border-[#2F5FA8] hover:text-[#2F5FA8]"
               >
                 {sec}
               </span>

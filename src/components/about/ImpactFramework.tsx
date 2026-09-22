@@ -49,51 +49,51 @@ const impactSteps = [
 
 export default function ImpactFramework() {
   return (
-    <section className="bg-sand py-20 text-ink md:py-28" aria-labelledby="impact-heading">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+    <section className="bg-white py-20 text-[#07131e] md:py-28 border-b border-gray-100" aria-labelledby="impact-heading">
+      <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-14">
         
         {/* Positioning Overview */}
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div>
-            <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
+            <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#2F5FA8]">
               Our Positioning &middot; Development Effectiveness
             </span>
-            <h2 id="impact-heading" className="mt-3 font-serif text-[32px] font-medium leading-tight text-navy md:text-[42px]">
+            <h2 id="impact-heading" className="mt-3 text-[32px] md:text-[42px] font-bold leading-tight tracking-tight text-[#07131e]">
               Specialists in generating tangible results, not just compliance.
             </h2>
-            <p className="mt-6 text-[16px] leading-relaxed text-ink/80">
+            <p className="mt-6 text-[16px] leading-relaxed text-gray-600">
               Unlike traditional consulting firms that focus solely on compliance or reporting, FSM Consulting Limited focuses on ensuring that development investments generate tangible results and lasting impact.
             </p>
-            <p className="mt-4 text-[15.5px] leading-relaxed text-ink/70">
+            <p className="mt-4 text-[15.5px] leading-relaxed text-gray-500">
               To help clients achieve their development objectives efficiently and effectively, we combine strategic advisory, technical assistance, independent verification, and hands-on operational delivery into a single integrated platform.
             </p>
 
-            <div className="mt-8 rounded-[var(--radius-card-sm)] border border-navy/10 bg-white p-5">
-              <span className="text-xs font-mono font-semibold uppercase tracking-wider text-blue-accent">
+            <div className="mt-8 rounded-[20px] border border-[#2F5FA8]/30 bg-[#2F5FA8]/5 p-6">
+              <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#2F5FA8]">
                 The FSM Advantage
               </span>
-              <p className="mt-1 text-[14.5px] text-ink/90">
+              <p className="mt-1 text-[14.5px] font-medium text-[#07131e]">
                 Moving beyond superficial advisory reports into embedded execution, continuous field verification, and demonstrable public value.
               </p>
             </div>
           </div>
 
-          <div className="rounded-[var(--radius-card)] border border-navy/10 bg-white p-8">
-            <h3 className="font-serif text-[20px] font-medium text-navy">
+          <div className="rounded-[24px] border border-gray-100 bg-[#f4f5f7] p-8 shadow-xs">
+            <h3 className="text-[20px] font-bold tracking-tight text-[#07131e]">
               Integrated Capabilities Matrix
             </h3>
-            <p className="mt-1 text-xs text-ink-muted">
+            <p className="mt-1 text-xs text-gray-500">
               Unified under our single development delivery platform
             </p>
 
-            <div className="mt-6 divide-y divide-navy/10">
+            <div className="mt-6 divide-y divide-gray-200/70">
               {integratedCapabilities.map((cap) => (
                 <div key={cap.title} className="py-3.5 first:pt-0 last:pb-0">
                   <div className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-navy" />
-                    <span className="text-[15px] font-medium text-navy">{cap.title}</span>
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#2F5FA8]" />
+                    <span className="text-[15px] font-semibold text-[#07131e]">{cap.title}</span>
                   </div>
-                  <p className="mt-1 pl-3.5 text-[13px] text-ink/70">{cap.desc}</p>
+                  <p className="mt-1 pl-3.5 text-[13px] text-gray-600">{cap.desc}</p>
                 </div>
               ))}
             </div>
@@ -101,15 +101,15 @@ export default function ImpactFramework() {
         </div>
 
         {/* FSM Impact 360™ Roadmap */}
-        <div className="mt-24 border-t border-navy/10 pt-16">
+        <div className="mt-24 border-t border-gray-100 pt-16">
           <div className="text-center">
-            <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
+            <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#2F5FA8]">
               Proprietary Delivery Architecture
             </span>
-            <h3 className="mt-2 font-serif text-[30px] font-medium text-navy md:text-[38px]">
+            <h3 className="mt-2 text-[30px] md:text-[38px] font-bold tracking-tight text-[#07131e]">
               FSM Impact 360&trade; Framework
             </h3>
-            <p className="mx-auto mt-3 max-w-2xl text-[15.5px] text-ink/75">
+            <p className="mx-auto mt-3 max-w-2xl text-[15.5px] text-gray-500">
               Our systematic working framework for every engagement, from the initial diagnostic through to independently verified, lasting outcomes.
             </p>
           </div>
@@ -118,30 +118,30 @@ export default function ImpactFramework() {
             {impactSteps.map((s, idx) => (
               <div
                 key={s.letter}
-                className="group relative flex flex-col justify-between rounded-[var(--radius-card-sm)] border border-navy/10 bg-white p-6 transition-all duration-300 hover:border-navy hover:shadow-sm"
+                className="group relative flex flex-col justify-between rounded-[20px] border border-gray-100 bg-[#f4f5f7] p-6 transition-all duration-300 hover:border-[#2F5FA8]/40 hover:bg-white hover:shadow-xl hover:-translate-y-1"
               >
                 <div>
-                  <div className="flex items-center justify-between border-b border-navy/10 pb-3">
-                    <span className="font-mono text-[11px] font-semibold text-blue-accent">
+                  <div className="flex items-center justify-between border-b border-gray-200/60 pb-3">
+                    <span className="font-mono text-[11px] font-bold text-[#2F5FA8]">
                       {s.step}
                     </span>
-                    <span className="text-[11px] text-ink-muted">Phase {idx + 1}</span>
+                    <span className="text-[11px] text-gray-400">Phase {idx + 1}</span>
                   </div>
                   
-                  <span className="mt-4 block font-serif text-[42px] font-bold leading-none text-navy transition-transform duration-300 group-hover:scale-105">
+                  <span className="mt-4 block font-mono text-[38px] font-bold leading-none text-[#2F5FA8] transition-transform duration-300 group-hover:scale-105">
                     {s.letter}
                   </span>
                   
-                  <h4 className="mt-3 font-serif text-[17px] font-medium text-navy">
+                  <h4 className="mt-3 text-[17px] font-bold tracking-tight text-[#07131e]">
                     {s.title}
                   </h4>
                   
-                  <p className="mt-2 text-[13px] leading-relaxed text-ink/70">
+                  <p className="mt-2 text-[13px] leading-relaxed text-gray-600">
                     {s.desc}
                   </p>
                 </div>
 
-                <div className="mt-6 h-0.5 w-full bg-navy/10 group-hover:bg-navy/40" />
+                <div className="mt-6 h-1 w-full rounded-full bg-gray-200 group-hover:bg-[#2F5FA8] transition-colors" />
               </div>
             ))}
           </div>

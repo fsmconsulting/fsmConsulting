@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Nav from "@/components/Nav";
-import ServicesHero from "@/components/services/ServicesHero";
+import Hero from "@/components/Hero";
 import PracticeClusters from "@/components/services/PracticeClusters";
 import DeliveryMethodology from "@/components/services/DeliveryMethodology";
 import MobilizationSupport from "@/components/services/MobilizationSupport";
@@ -17,9 +16,25 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <Nav />
+      <Hero
+        title={
+          <>
+            Integrated Technical,<br />
+            Fiduciary &amp; Delivery<br />
+            Capabilities
+          </>
+        }
+        subtitle="We provide governments, development partners, international financial institutions, and the private sector with an end-to-end suite of 14 integrated practice areas across four delivery clusters."
+        ctaText="Explore Practice Areas"
+        ctaHref="#practice-clusters"
+        stats={[
+          { value: "14 Practices", label: "Four specialized capability clusters" },
+          { value: "Independent", label: "Rigorous verification & quality assurance" },
+          { value: "Pan-African", label: "Rapid expert deployment across regions" },
+          { value: "Outcome-Led", label: "Focused on tangible public value" },
+        ]}
+      />
       <main>
-        <ServicesHero />
         <PracticeClusters />
         <DeliveryMethodology />
         <MobilizationSupport />

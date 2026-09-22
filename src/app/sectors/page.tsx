@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Nav from "@/components/Nav";
-import SectorsHero from "@/components/sectors/SectorsHero";
+import Hero from "@/components/Hero";
 import SectorDirectory from "@/components/sectors/SectorDirectory";
 import ExpertNetwork from "@/components/sectors/ExpertNetwork";
 import Closing from "@/components/Closing";
@@ -15,9 +14,25 @@ export const metadata: Metadata = {
 export default function SectorsPage() {
   return (
     <>
-      <Nav />
+      <Hero
+        title={
+          <>
+            Deep Domain Expertise<br />
+            Across Critical<br />
+            Development Sectors
+          </>
+        }
+        subtitle="Transforming policy into action across agriculture, energy, health, infrastructure, climate, governance, and jobs with profound technical knowledge and field-tested frameworks."
+        ctaText="Explore 15 Sectors"
+        ctaHref="#sector-directory"
+        stats={[
+          { value: "15 Verticals", label: "Economic & social infrastructure sectors" },
+          { value: "Full Cycle", label: "Readiness through verification & tracking" },
+          { value: "Pan-African", label: "Sovereign & cross-border operations" },
+          { value: "Fiduciary Trust", label: "Meeting international financing benchmarks" },
+        ]}
+      />
       <main>
-        <SectorsHero />
         <SectorDirectory />
         <ExpertNetwork />
         <Closing />

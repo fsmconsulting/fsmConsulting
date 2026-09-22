@@ -1,0 +1,280 @@
+<title>FSM Website Blueprint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F6F7F9; --surface:#FFFFFF; --ink:#07131E; --muted:#56657A; --line:#DCE1E8;
+  --brand:#2F5FA8; --brand-soft:#E6EDF7; --warn:#9A4B12; --warn-soft:#FBEFE4; --ok:#1E6B4A; --ok-soft:#E3F2EA;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A1520; --surface:#101E2B; --ink:#E8EDF3; --muted:#9AA9BA; --line:#22364A;
+  --brand:#7FA6E0; --brand-soft:#16294180; --warn:#F0B27F; --warn-soft:#3A241380; --ok:#7FD1A9; --ok-soft:#12302280;
+}}
+:root[data-theme="dark"]{
+  --bg:#0A1520; --surface:#101E2B; --ink:#E8EDF3; --muted:#9AA9BA; --line:#22364A;
+  --brand:#7FA6E0; --brand-soft:#16294180; --warn:#F0B27F; --warn-soft:#3A241380; --ok:#7FD1A9; --ok-soft:#12302280;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 "Public Sans",system-ui,sans-serif;padding-inline:20px;padding-block:40px 80px}
+.wrap{max-width:980px;margin:0 auto;display:grid;gap:56px}
+h1,h2,h3{text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(30px,5vw,44px);font-weight:800;letter-spacing:-.02em}
+h2{font-size:26px;font-weight:700;letter-spacing:-.01em}
+h3{font-size:18px;font-weight:700}
+p{margin:0;max-width:68ch}
+.label{font:500 12px/1.4 "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--brand)}
+.muted{color:var(--muted)}
+section{display:grid;gap:18px}
+header{display:grid;gap:14px;border-bottom:2px solid var(--ink);padding-bottom:28px}
+.thesis{font-size:20px;font-weight:600;max-width:60ch}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px;display:grid;gap:10px}
+.callout{background:var(--brand-soft);border-left:3px solid var(--brand);padding:18px 20px;border-radius:0 8px 8px 0}
+.callout.warn{background:var(--warn-soft);border-color:var(--warn)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14.5px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 12px "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}
+/* sitemap */
+.tree{font:14.5px/1.55 "IBM Plex Mono",monospace;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px;overflow-x:auto;white-space:pre;color:var(--ink)}
+.tree b{color:var(--brand);font-weight:500}
+.tree i{color:var(--muted);font-style:normal}
+/* page specs */
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px}
+summary{cursor:pointer;padding:16px 20px;display:flex;justify-content:space-between;gap:12px;align-items:baseline;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:10px}
+summary h3{font-size:17px}
+summary .url{font:13px "IBM Plex Mono",monospace;color:var(--muted);white-space:nowrap}
+.spec{padding:0 20px 20px;display:grid;gap:14px}
+.spec dl{display:grid;grid-template-columns:120px 1fr;gap:8px 16px;margin:0}
+.spec dt{font:500 12px/1.9 "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.spec dd{margin:0}
+.pill{display:inline-block;font:500 11px "IBM Plex Mono",monospace;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:99px;background:var(--brand-soft);color:var(--brand)}
+.pill.p1{background:var(--ok-soft);color:var(--ok)}
+.pill.p2{background:var(--warn-soft);color:var(--warn)}
+ol.flow{margin:0;padding-left:22px;display:grid;gap:10px}
+ol.flow li::marker{font-weight:700;color:var(--brand)}
+.sources a{color:var(--brand)}
+@media (max-width:560px){.spec dl{grid-template-columns:1fr}.spec dt{line-height:1.4}summary{flex-direction:column}}
+</style>
+
+<div class="wrap">
+
+<header>
+  <span class="label">FSM Consulting Limited · Website strategy & information architecture</span>
+  <h1>Website Blueprint</h1>
+  <p class="thesis">The site exists to make one person comfortable: the procurement officer, project manager or bid lead who has just seen FSM's name on a shortlist, consortium list or CV and has five minutes to decide whether FSM is real, capable and safe to put forward.</p>
+  <p class="muted">Built from the FSM Corporate Profile (r1-1), World Bank consultant-selection guidelines, the structure of established development consultancies (DAI, Itad) and professional-services buyer research. Current site design deliberately ignored.</p>
+</header>
+
+<section>
+  <span class="label">01 · What the research says</span>
+  <h2>How firms like FSM actually get chosen</h2>
+  <div class="grid2">
+    <div class="box"><h3>Buyers eliminate before they call</h3><p>Hinge Research finds roughly 9 in 10 buyers rule out firms before any conversation, and buyers almost always check the website, discarding even referrals that disappoint. For FSM the website is a filter it must pass, not a lead generator.</p></div>
+    <div class="box"><h3>Shortlists are built on firm evidence</h3><p>Under World Bank consultant rules, shortlisting weighs years in business, relevant experience, and technical and managerial capability of the <em>firm</em>. Key experts' CVs are not scored at that stage. The site must prove firm-level capability.</p></div>
+    <div class="box"><h3>Peers lead with work, not slogans</h3><p>DAI and Itad structure around five items: who we are, what we do / our work, insights, work with us, contact. Itad proves itself with a project portfolio and hard counts (projects, clients, countries). Careers and expert rosters are first-class paths.</p></div>
+    <div class="box"><h3>Expertise beats polish</h3><p>Buyers weight specialised expertise more each year. Published, practical knowledge (field notes, methods, explainers on IVA or FRILIA) signals a serious player far more than visual design does.</p></div>
+  </div>
+</section>
+
+<section>
+  <span class="label">02 · Positioning</span>
+  <h2>One sentence, used everywhere</h2>
+  <div class="callout"><p style="font-size:19px;font-weight:600">FSM helps development-financed projects in Africa get delivered and verified — independent assurance, rapid expert mobilisation and hands-on delivery support, with field reach across all 36 states of Nigeria and a growing regional network.</p></div>
+  <p>The profile currently uses four different identities ("Development Delivery Partner", "Delivery and Intelligence platform", "Development Effectiveness firm", "Professional Contracting Partner"). The site picks one and never deviates. Tagline to keep: <strong>Global expertise · Regional access · Local capability · Measurable results.</strong></p>
+  <div class="grid2">
+    <div class="box"><span class="label">Pillar 1</span><h3>Verify</h3><p>Independent assurance: IVA, third-party monitoring, audits, fiduciary and procurement reviews. Strongest proof point: nationwide field reach and independence.</p></div>
+    <div class="box"><span class="label">Pillar 2</span><h3>Mobilise</h3><p>The right experts in the field fast: sourcing, contracting, surge capacity, visas, security, logistics, enumerators. The consortium-partner hook.</p></div>
+    <div class="box"><span class="label">Pillar 3</span><h3>Deliver</h3><p>Getting projects ready and moving: D-Ready, PMO and delivery units, turnaround, MEAL, data systems, institutional reform.</p></div>
+  </div>
+</section>
+
+<section>
+  <span class="label">03 · Audiences</span>
+  <h2>Who arrives, and what closes the deal for each</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Audience</th><th>Arrives because</th><th>Must find within 5 minutes</th><th>Action we want</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Procurement officer</strong><br><span class="muted">PIU, ministry, MDB</span></td><td>FSM responded to an EOI or is on a shortlist</td><td>Legal registration, years active, relevant experience, leadership, integrity policies, address</td><td>Download capability statement / procurement pack</td></tr>
+      <tr><td><strong>Task team leader</strong><br><span class="muted">World Bank, AfDB, IsDB, UN, EU</span></td><td>Needs IVA / TPM / verification on a project</td><td>Method, field coverage, independence safeguards, sample outputs</td><td>Request a briefing</td></tr>
+      <tr><td><strong>International firm</strong><br><span class="muted">Consortium lead</span></td><td>Bidding in Nigeria / West Africa, needs local partner</td><td>Country access, mobilisation services, sector depth, how teaming works</td><td>Partnership enquiry</td></tr>
+      <tr><td><strong>Independent expert</strong></td><td>Saw a post or referral</td><td>What assignments exist, how the roster works</td><td>Join expert network (CV upload)</td></tr>
+      <tr><td><strong>Government official</strong></td><td>Referral, event, LinkedIn</td><td>Reform, PFM, delivery-unit experience; Nigerian context</td><td>Contact / request briefing</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <span class="label">04 · Sitemap</span>
+  <h2>Full structure</h2>
+<div class="tree"><b>/</b>                                  Home
+<b>/about</b>                             Who we are
+  /about/leadership                 CEO, board, key experts
+  /about/integrity                  Governance, policies, certification, report a concern
+  /about/network                    Where we work: Nigeria reach + regional partnership model
+<b>/services</b>                          What we do — hub, 3 pillars, 14 services
+  <i>Verify</i>
+  /services/project-assurance       IVA, TPM, audits, health checks
+  /services/procurement-fiduciary   Procurement audits, VfM, bid evaluation
+  /services/safeguards              E&S assessments, ESMP, SEP, GRM
+  /services/land-governance         FRILIA, land & resettlement audits
+  <i>Mobilise</i>
+  /services/expert-mobilisation     Sourcing, contracting, surge, PMO staffing
+  /services/assignment-support      Visas, security, logistics, field teams
+  /services/capacity-development    Training, coaching, change management
+  <i>Deliver</i>
+  /services/implementation          D-Ready, PMO, delivery units, turnaround
+  /services/meal                    Baselines, evaluations, feedback systems
+  /services/development-effectiveness  ToC, results frameworks, impact
+  /services/digital-data            MIS, dashboards, GIS, data labs
+  /services/governance-reform       PSR, PFM, regulatory reform
+  /services/jobs-economy            Employment, SME, value chains
+  /services/resilience-ppp          Crisis resilience + PPP / investment
+<b>/approach</b>                          Impact 360, cross-border delivery model, QA
+<b>/sectors</b>                           Hub + 6–8 sector pages (only where FSM has depth)
+<b>/experience</b>                        Assignments & team track record (verifiable only)
+<b>/partner-with-us</b>                   For international firms & consortium leads
+<b>/experts</b>                           Join the expert network (roster + CV upload)
+<b>/insights</b>                          Field notes, explainers, publications
+<b>/contact</b>                           Enquiry routing by type, Abuja office
+<b>/procurement</b>                       Procurement pack: one-stop due-diligence page
+<i>utility</i>  /careers · /privacy · /recruitment-fraud-notice · /accessibility</div>
+  <p class="muted">Primary navigation (6 items): About · Services · Approach · Experience · Insights · Contact. Top-right utility links: <strong>Partner with us</strong>, <strong>Join our experts</strong>, and a persistent <strong>Capability statement</strong> button. Sectors sit inside the Services mega-menu.</p>
+  <div class="callout"><p><strong>Why 14 services collapse under 3 pillars:</strong> the profile lists 14 services with equal weight, which reads as "we do everything". Grouping them as Verify / Mobilise / Deliver gives a visitor one decision at a time and keeps every service findable for search and for EOI matching.</p></div>
+</section>
+
+<section>
+  <span class="label">05 · Homepage</span>
+  <h2>Section by section</h2>
+  <ol class="flow">
+    <li><strong>Hero.</strong> The positioning sentence as headline, one-line proof beneath ("Field teams across 36 states + FCT · Regional partners in Senegal, Sierra Leone, Cameroon, Kenya, Uganda"). Two buttons: <em>Request a briefing</em> and <em>Download capability statement</em>.</li>
+    <li><strong>Three pillars.</strong> Verify · Mobilise · Deliver, each with 3–4 named services and a link. This is the whole firm in one glance.</li>
+    <li><strong>Who we serve.</strong> Four doorways: IFIs & development partners · Governments · Private sector & investors · International firms. Each links to a filtered view. Worded as "we serve", never as client logos unless contracted.</li>
+    <li><strong>Why FSM (proof, not adjectives).</strong> Field reach map of Nigeria, independence statement, multidisciplinary roster count (only a real number), mobilisation speed (only if measured).</li>
+    <li><strong>Impact 360.</strong> The six-step method as a compact diagram linking to /approach. Shows FSM has a way of working, which reassures evaluators.</li>
+    <li><strong>Experience.</strong> 3 verifiable assignments, or, pre-track-record, "Our team's experience" with named leaders and the programmes they worked on.</li>
+    <li><strong>Leadership strip.</strong> CEO photo and two-line bio, board directors by discipline. People are the credential for a young firm.</li>
+    <li><strong>Latest insight.</strong> One or two practical pieces. Signals active expertise.</li>
+    <li><strong>Split CTA band.</strong> "Commissioning work?" → briefing. "Bidding in Africa?" → partner. "Expert?" → join the network.</li>
+    <li><strong>Footer.</strong> Registration number, Abuja address, corporate email only, LinkedIn, integrity & fraud notice links.</li>
+  </ol>
+</section>
+
+<section>
+  <span class="label">06 · Page specifications</span>
+  <h2>What every page must do</h2>
+  <p class="muted"><span class="pill p1">Launch</span> needed for go-live · <span class="pill p2">Phase 2</span> after launch</p>
+
+  <details open><summary><h3>Procurement pack <span class="pill p1">Launch</span></h3><span class="url">/procurement</span></summary><div class="spec"><dl>
+    <dt>Job</dt><dd>Answer every due-diligence question on one page so an officer can complete a vendor check without emailing FSM.</dd>
+    <dt>Contains</dt><dd><ul><li>Legal name, CAC registration number, year of incorporation, TIN (as FSM chooses to disclose)</li><li>Capability statement PDF (2 pages) and full corporate profile PDF</li><li>Policies as downloads: anti-corruption, safeguarding, data protection, gender, conflict of interest, QA</li><li>Leadership summary, office address, bank reference availability "on request"</li><li>Registration on UNGM / World Bank / AfDB vendor portals once done</li></ul></dd>
+    <dt>CTA</dt><dd>Download pack · Contact business development</dd>
+    <dt>Why</dt><dd>No peer site does this well. For a firm without a long track record, being the easiest vendor to clear is a real advantage.</dd>
+  </dl></div></details>
+
+  <details><summary><h3>Services hub + 14 service pages <span class="pill p1">Launch</span></h3><span class="url">/services/*</span></summary><div class="spec"><dl>
+    <dt>Job</dt><dd>Let a TTL or bid lead confirm FSM does exactly the thing their ToR asks for, in their own vocabulary (IVA, TPM, ESMP, FRILIA, D-Ready).</dd>
+    <dt>Template</dt><dd><ul><li>The problem this solves, in the client's terms</li><li>What FSM delivers (the profile's service list)</li><li>How it works: 4–5 steps, deliverables, typical timeline</li><li>Who it's for (IFI / government / private)</li><li>Relevant experience or team credentials</li><li>Related services and sectors</li><li>CTA: request a briefing on this service</li></ul></dd>
+    <dt>Priority</dt><dd>Write Project Assurance, Expert Mobilisation, Assignment Support, Implementation and MEAL in full first. These are FSM's differentiators.</dd>
+  </dl></div></details>
+
+  <details><summary><h3>Partner with us <span class="pill p1">Launch</span></h3><span class="url">/partner-with-us</span></summary><div class="spec"><dl>
+    <dt>Job</dt><dd>Convert international firms bidding in Nigeria and West Africa into consortium partners or subcontracting clients.</dd>
+    <dt>Contains</dt><dd><ul><li>What FSM brings to a bid: local registration, nationwide field teams, national experts, safeguards & MEAL depth</li><li>The cross-border delivery model diagram (client → technical leadership → experts → country access → mobilisation → field → QA → results)</li><li>Assignment support menu: visas, invitation letters, airport, accommodation, transport, security, translation, enumerators</li><li>Teaming models: JV, sub-consultant, local partner, mobilisation-only</li><li>Countries of access, labelled honestly as partnership, not office</li></ul></dd>
+    <dt>CTA</dt><dd>Partnership enquiry form (firm, opportunity, country, deadline)</dd>
+  </dl></div></details>
+
+  <details><summary><h3>Join the expert network <span class="pill p1">Launch</span></h3><span class="url">/experts</span></summary><div class="spec"><dl>
+    <dt>Job</dt><dd>Grow the roster FSM needs for every bid, and signal to clients that the network is real.</dd>
+    <dt>Contains</dt><dd>What assignments look like, disciplines sought (the profile's 14 expert areas), how vetting works, data-protection promise, form with discipline, country, years, CV upload.</dd>
+    <dt>Note</dt><dd>Pair with a recruitment-fraud notice. Development firms are commonly impersonated in fake job offers.</dd>
+  </dl></div></details>
+
+  <details><summary><h3>About, Leadership, Integrity, Network <span class="pill p1">Launch</span></h3><span class="url">/about/*</span></summary><div class="spec"><dl>
+    <dt>About</dt><dd>Executive summary, vision, mission, values, the three pillars, a short "why FSM exists" story. No stat blocks that aren't sourced.</dd>
+    <dt>Leadership</dt><dd>Photo, full bio, programmes worked on and LinkedIn for the CEO and every director. Fill the vacant Fiduciary seat or omit it. Add a Global Key Experts section when names are cleared.</dd>
+    <dt>Integrity</dt><dd>Independence and conflict-of-interest stance (critical for IVA/TPM work), policy list, certification, whistleblowing contact.</dd>
+    <dt>Network</dt><dd>Nigeria map with 36 states + FCT coverage; regional map with partnership countries; the four access channels (direct presence, consortium, professional network, knowledge exchange). Honest labels throughout.</dd>
+  </dl></div></details>
+
+  <details><summary><h3>Experience <span class="pill p1">Launch</span></h3><span class="url">/experience</span></summary><div class="spec"><dl>
+    <dt>Job</dt><dd>The page evaluators look at hardest. Show only what can be verified.</dd>
+    <dt>Format</dt><dd>Filterable list: assignment, client/funder (with permission), country, service, year, role (lead / partner / sub), outcome in one line. Detail page: challenge, what FSM did, result.</dd>
+    <dt>Before a track record exists</dt><dd>Title it "Our team's experience" and list programmes leaders and key experts delivered in previous roles, clearly attributed as individual experience. Never show funder logos implying FSM contracts.</dd>
+  </dl></div></details>
+
+  <details><summary><h3>Approach <span class="pill p1">Launch</span></h3><span class="url">/approach</span></summary><div class="spec"><dl>
+    <dt>Contains</dt><dd>Impact 360™ (Identify → Measure → Plan → Accelerate → Check → Track), "results not deliverables" questions from the profile, evidence-based field verification, the quality assurance framework.</dd>
+  </dl></div></details>
+
+  <details><summary><h3>Contact <span class="pill p1">Launch</span></h3><span class="url">/contact</span></summary><div class="spec"><dl>
+    <dt>Job</dt><dd>Route enquiries so the right person answers quickly.</dd>
+    <dt>Contains</dt><dd>Enquiry type selector (commission work · partnership · expert · media · other), Abuja address and map, corporate email only (retire the Gmail address), phone, LinkedIn, expected response time.</dd>
+  </dl></div></details>
+
+  <details><summary><h3>Sectors <span class="pill p2">Phase 2</span></h3><span class="url">/sectors/*</span></summary><div class="spec"><dl>
+    <dt>Job</dt><dd>Search visibility and sector matching for ToRs.</dd>
+    <dt>Rule</dt><dd>Launch only sectors with a director or key expert behind them: agriculture & food systems, infrastructure & urban, digital & data, social protection, governance & PFM, land. Each page: context, services applied, people, experience.</dd>
+  </dl></div></details>
+
+  <details><summary><h3>Insights <span class="pill p2">Phase 2</span></h3><span class="url">/insights</span></summary><div class="spec"><dl>
+    <dt>Job</dt><dd>Prove expertise and give FSM something to share on LinkedIn.</dd>
+    <dt>Starter pieces</dt><dd><ul><li>What an Independent Verification Agent actually does</li><li>FRILIA explained for investors</li><li>Why projects stall before disbursement (D-Ready)</li><li>Mobilising consultants in Nigeria: a practical guide for international firms</li></ul></dd>
+    <dt>Cadence</dt><dd>One solid piece a month beats a weekly blog. Newsletter sign-up once there are six pieces.</dd>
+  </dl></div></details>
+</section>
+
+<section>
+  <span class="label">07 · Credibility rules</span>
+  <h2>What the site must never do</h2>
+  <div class="callout warn"><ul>
+    <li>Show funder or client logos unless FSM holds or held a contract and has permission. "Target clients" in the profile are targets, not clients.</li>
+    <li>Call partnership countries "offices". The only address is Abuja.</li>
+    <li>Publish numbers that aren't sourced (project counts, expert counts, "Pan-African hubs").</li>
+    <li>Present team members' past work as firm experience without attribution.</li>
+    <li>Use a Gmail address, placeholder names, or an empty board seat.</li>
+    <li>Let design outrun substance. Institutional buyers read polish without proof as a warning sign.</li>
+  </ul></div>
+</section>
+
+<section>
+  <span class="label">08 · Content FSM must supply</span>
+  <h2>Blocking inputs</h2>
+  <div class="grid2">
+    <div class="box"><h3>For launch</h3><ul><li>CAC registration details and incorporation year</li><li>Policies as PDFs (8 listed in the profile)</li><li>Leadership photos, full bios, LinkedIn URLs</li><li>Fiduciary director name or decision to omit</li><li>List of completed or ongoing assignments, with client permission status</li><li>Corporate email for all contacts</li><li>2-page capability statement</li></ul></div>
+    <div class="box"><h3>For phase 2</h3><ul><li>Key expert names and consent</li><li>Real roster size and discipline split</li><li>Partner firm names per country (with consent)</li><li>Sample (redacted) deliverables: a TPM report cover, a dashboard screenshot</li><li>Photography from actual field work</li><li>Vendor portal registrations (UNGM, World Bank, AfDB)</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <span class="label">09 · Measuring success</span>
+  <h2>What "working" means</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Metric</th><th>Signal</th><th>Tracked by</th></tr></thead>
+    <tbody>
+      <tr><td>Capability statement / procurement pack downloads</td><td>Due-diligence checks passed</td><td>Download events</td></tr>
+      <tr><td>Partnership enquiries</td><td>Consortium pipeline</td><td>Form submissions by type</td></tr>
+      <tr><td>Expert sign-ups by discipline</td><td>Bid readiness</td><td>Roster form</td></tr>
+      <tr><td>Briefing requests</td><td>Direct client demand</td><td>Contact form</td></tr>
+      <tr><td>Shortlist / consortium invitations</td><td>The real outcome</td><td>Ask "how did you find us?" on every one</td></tr>
+    </tbody>
+  </table></div>
+  <p>Traffic volume is not a goal. A site with 300 of the right visitors a month that converts shortlists is a success.</p>
+</section>
+
+<section class="sources">
+  <span class="label">Sources</span>
+  <ul class="muted">
+    <li>FSM Consulting Limited, Corporate Profile r1-1 (content source of truth)</li>
+    <li><a href="https://documents1.worldbank.org/curated/en/615761468322433244/pdf/578440PUB0REPL0nglish0Final0Jan2011.pdf">World Bank, Guidelines: Selection and Employment of Consultants</a></li>
+    <li><a href="https://thedocs.worldbank.org/en/doc/332831501878772332-0290022017/render/Proctemplaterequestforexpofinterest.pdf">World Bank, Sample Request for Expressions of Interest</a></li>
+    <li><a href="https://hingemarketing.com/blog/story/7-b2b-website-best-practices-to-enhance-your-online-presence">Hinge Marketing, B2B website best practices</a> and <a href="https://hingemarketing.com/library/article/new_study_highlights_how_buyers_buy_professional_services">How buyers buy professional services</a></li>
+    <li><a href="https://www.dai.com">DAI</a> and <a href="https://www.itad.com">Itad</a> site structures (peer benchmarks)</li>
+  </ul>
+</section>
+
+</div>

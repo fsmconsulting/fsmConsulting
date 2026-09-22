@@ -11,7 +11,7 @@ export default function InsightsIndex() {
         </h2>
 
         {insights.length === 0 ? (
-          <p className="max-w-[56ch] text-[15.5px] leading-relaxed text-ink-muted">
+          <p className="max-w-[56ch] text-[15.5px] leading-relaxed text-gray-500">
             New perspectives are in preparation. Check back shortly.
           </p>
         ) : (
@@ -20,7 +20,7 @@ export default function InsightsIndex() {
               <Link
                 key={item.slug}
                 href={`/insights/${item.slug}`}
-                className="surface-card group flex flex-col overflow-hidden border border-navy/10 bg-canvas transition-colors hover:border-navy/30"
+                className="group flex flex-col overflow-hidden rounded-[20px] border border-gray-100 bg-[#F4F5F7] transition-all hover:border-[#2F5FA8]/40 hover:shadow-md"
                 aria-label={`Read insight: ${item.title}`}
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden">
@@ -29,22 +29,22 @@ export default function InsightsIndex() {
                     alt={item.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="flex flex-1 flex-col justify-between p-8 md:p-9">
+                <div className="flex flex-1 flex-col justify-between p-7 md:p-8">
                   <div>
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-[#2F5FA8]">
                       {item.category}
                     </span>
-                    <h3 className="mt-2.5 font-serif text-[22px] font-medium leading-snug text-navy md:text-[26px]">
+                    <h3 className="mt-2 text-[20px] md:text-[22px] font-bold leading-snug tracking-tight text-[#07131e] group-hover:text-[#2F5FA8] transition-colors">
                       {item.title}
                     </h3>
-                    <p className="mt-3 max-w-[54ch] text-[14.5px] leading-relaxed text-ink-muted">
+                    <p className="mt-3 text-[14px] leading-relaxed text-gray-600">
                       {item.dek}
                     </p>
                   </div>
-                  <div className="mt-6 flex items-center justify-between border-t border-navy/10 pt-4 font-mono text-[12px] text-ink-muted">
+                  <div className="mt-6 flex items-center justify-between border-t border-gray-200/80 pt-4 text-[12.5px] text-gray-500 font-medium">
                     <span>{item.author}</span>
                     {item.date && <time>{item.date}</time>}
                   </div>

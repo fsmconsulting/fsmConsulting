@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Nav from "@/components/Nav";
-import AboutHero from "@/components/about/AboutHero";
+import Hero from "@/components/Hero";
 import ExecutiveSummary from "@/components/about/ExecutiveSummary";
 import FounderSection from "@/components/FounderSection";
 import VisionMissionValues from "@/components/about/VisionMissionValues";
@@ -21,9 +20,25 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <Nav />
+      <Hero
+        title={
+          <>
+            Africa&rsquo;s Development Delivery<br />
+            &amp; Project Assurance<br />
+            Platform
+          </>
+        }
+        subtitle="Bridging the gap between ambitious strategy and ground-level execution. We partner with governments, development partners, IFIs, and the private sector to translate investments into measurable results and sustainable impact."
+        ctaText="Explore Our Mandate"
+        ctaHref="#mandate"
+        stats={[
+          { value: "36 States + FCT", label: "Complete nationwide operational reach across Nigeria" },
+          { value: "Pan-African", label: "West, Central & East Africa regional delivery hubs" },
+          { value: "Multidisciplinary", label: "Economists, engineers, MEAL, digital & safeguard specialists" },
+          { value: "Outcome-Driven", label: "Measuring success through verifiable socio-economic impact" },
+        ]}
+      />
       <main>
-        <AboutHero />
         <ExecutiveSummary />
         <FounderSection variant="full" id="founder" />
         <VisionMissionValues />

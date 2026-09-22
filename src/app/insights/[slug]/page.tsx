@@ -42,10 +42,10 @@ export default async function InsightDetailPage({ params }: PageProps) {
       <Nav transparent />
       <main>
         <article>
-          <header className="bg-navy px-4 pb-16 pt-32 text-white md:px-10 md:pb-20 md:pt-40">
+          <header className="bg-[#07131e] px-4 pb-16 pt-32 text-white md:px-10 md:pb-20 md:pt-40">
             <div className="mx-auto max-w-3xl">
-              <span className="text-[12px] font-semibold uppercase tracking-wider text-blue-bright">{item.category}</span>
-              <h1 className="mt-3 font-serif text-[30px] font-medium leading-tight md:text-[42px]">
+              <span className="text-[12px] font-semibold uppercase tracking-wider text-[#9BC2F5]">{item.category}</span>
+              <h1 className="mt-3 text-[30px] md:text-[42px] font-bold leading-tight tracking-tight text-white">
                 {item.title}
               </h1>
               <p className="mt-4 max-w-[58ch] text-[16px] leading-relaxed text-white/75">{item.dek}</p>
@@ -62,7 +62,7 @@ export default async function InsightDetailPage({ params }: PageProps) {
           </header>
 
           <div className="relative -mt-8 px-4 md:-mt-12 md:px-10">
-            <div className="mx-auto max-w-3xl overflow-hidden rounded-[var(--radius-card)]">
+            <div className="mx-auto max-w-3xl overflow-hidden rounded-[20px] shadow-lg">
               <div className="relative aspect-[16/9] w-full">
                 <Image src={item.image} alt={item.title} fill sizes="(max-width: 768px) 100vw, 768px" className="object-cover" priority />
               </div>
@@ -76,15 +76,15 @@ export default async function InsightDetailPage({ params }: PageProps) {
                 "Development outcomes require a deliberate alignment between fiduciary standards, institutional readiness, and on-the-ground operational capability. When project execution stalls, the root cause is rarely the quality of the strategic ambition; rather, it stems from systemic bottlenecks in procurement sequencing, multi-stakeholder governance, and verified milestone tracking.",
                 "By establishing clear independent verification mechanisms and embedding seasoned technical practitioners within the delivery environment, sovereign agencies and development partners can preserve momentum, safeguard capital investments, and achieve durable, measurable results across African economies.",
               ]).map((paragraph: string, i: number) => (
-                <p key={i} className="mb-5 text-[16px] leading-relaxed text-ink last:mb-0 md:text-[17px]">
+                <p key={i} className="mb-5 text-[16px] leading-relaxed text-gray-700 last:mb-0 md:text-[17px]">
                   {paragraph}
                 </p>
               ))}
 
-              <div className="mt-12 border-t border-navy/10 pt-8">
+              <div className="mt-12 border-t border-gray-100 pt-8">
                 <Link
                   href="/insights"
-                  className="text-[14px] font-medium text-navy/70 transition-colors duration-200 hover:text-navy"
+                  className="inline-flex items-center gap-2 text-[14px] font-semibold text-[#2F5FA8] hover:underline"
                 >
                   &larr; All insights
                 </Link>

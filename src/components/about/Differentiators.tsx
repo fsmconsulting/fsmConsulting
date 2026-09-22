@@ -53,17 +53,17 @@ const differentiators = [
 
 export default function Differentiators() {
   return (
-    <section className="bg-sand-2 py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+    <section className="bg-[#F4F5F7] py-20 md:py-28 border-t border-b border-gray-100">
+      <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-14">
         
         <div className="max-w-3xl">
-          <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#2F5FA8]">
             Competitive Edge &middot; Why Partner With Us
           </span>
-          <h2 className="mt-2 font-serif text-[32px] font-medium text-navy md:text-[42px]">
+          <h2 className="mt-2 text-[32px] md:text-[42px] font-bold tracking-tight text-[#07131e]">
             What Makes FSM Consulting Different
           </h2>
-          <p className="mt-3 text-[16px] text-ink/70">
+          <p className="mt-3 text-[16px] text-gray-600">
             Delivering more than traditional consulting, creating verified, lasting development impact through ten institutional pillars.
           </p>
         </div>
@@ -72,19 +72,19 @@ export default function Differentiators() {
           {differentiators.map((diff) => (
             <div
               key={diff.num}
-              className="flex flex-col justify-between rounded-[var(--radius-card-sm)] border border-navy/10 bg-white p-7 shadow-none transition-all duration-200 hover:border-navy hover:shadow-xs"
+              className="flex flex-col justify-between rounded-[20px] border border-gray-200/80 bg-white p-7 transition-all duration-200 hover:border-[#2F5FA8]/40 hover:shadow-md"
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-sm font-bold text-blue-accent">
+                  <span className="font-mono text-sm font-bold text-[#2F5FA8]">
                     {diff.num}
                   </span>
-                  <span className="h-2 w-2 rounded-full bg-navy/20" />
+                  <span className="h-2 w-2 rounded-full bg-[#2F5FA8]/30" />
                 </div>
-                <h3 className="mt-4 font-serif text-[19px] font-medium text-navy">
+                <h3 className="mt-4 text-[19px] font-bold text-[#07131e]">
                   {diff.title}
                 </h3>
-                <p className="mt-2.5 text-[14px] leading-relaxed text-ink/75">
+                <p className="mt-2.5 text-[14px] leading-relaxed text-gray-600">
                   {diff.desc}
                 </p>
               </div>

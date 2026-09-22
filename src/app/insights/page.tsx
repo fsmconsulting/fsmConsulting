@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Nav from "@/components/Nav";
-import PageHeader from "@/components/PageHeader";
+import Hero from "@/components/Hero";
 import InsightsIndex from "@/components/insights/InsightsIndex";
 import Closing from "@/components/Closing";
 import Footer from "@/components/Footer";
@@ -14,13 +13,19 @@ export const metadata: Metadata = {
 export default function InsightsPage() {
   return (
     <>
-      <Nav />
-      <main>
-        <PageHeader
-          eyebrow="Insights"
-          title="Perspectives on development delivery."
-          intro="Our thinking on what makes development investments translate into measurable, sustainable results."
-        />
+      <Hero
+        title={
+          <>
+            Perspectives on<br />
+            Development Delivery<br />
+            &amp; Measurable Impact
+          </>
+        }
+        subtitle="Our thinking on what makes development investments translate into measurable, sustainable results across Africa's public and private sectors."
+        ctaText="Explore Insights"
+        ctaHref="#insights-index"
+      />
+      <main id="insights-index">
         <InsightsIndex />
         <Closing />
       </main>

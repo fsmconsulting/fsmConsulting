@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Nav from "@/components/Nav";
-import PageHeader from "@/components/PageHeader";
+import Hero from "@/components/Hero";
 import NetworkBreakdown from "@/components/network/NetworkBreakdown";
 import NetworkCoverage from "@/components/network/NetworkCoverage";
 import Closing from "@/components/Closing";
@@ -15,13 +14,19 @@ export const metadata: Metadata = {
 export default function NetworkPage() {
   return (
     <>
-      <Nav />
-      <main>
-        <PageHeader
-          eyebrow="Our Network"
-          title="A regional network built for delivery, not just presence."
-          intro="Headquartered in Abuja, with country partnerships and a multidisciplinary professional bench across Africa."
-        />
+      <Hero
+        title={
+          <>
+            A Regional Network<br />
+            Built for Delivery,<br />
+            Not Just Presence
+          </>
+        }
+        subtitle="Headquartered in Abuja, with country partnerships and a multidisciplinary professional bench across Africa ready to deploy on complex assignments."
+        ctaText="Explore Our Footprint"
+        ctaHref="#network-breakdown"
+      />
+      <main id="network-breakdown">
         <NetworkBreakdown />
         <NetworkCoverage />
         <Closing />

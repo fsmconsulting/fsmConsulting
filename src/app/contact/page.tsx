@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Nav from "@/components/Nav";
-import PageHeader from "@/components/PageHeader";
+import Hero from "@/components/Hero";
 import ContactPanel from "@/components/contact/ContactPanel";
 import Footer from "@/components/Footer";
 
@@ -13,13 +12,19 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <Nav />
-      <main>
-        <PageHeader
-          eyebrow="Contact"
-          title="Start a conversation"
-          intro="Reach FSM Consulting Limited directly, or tell us about the assignment through the form below."
-        />
+      <Hero
+        title={
+          <>
+            Start a Conversation<br />
+            with Our Advisory<br />
+            &amp; Delivery Team
+          </>
+        }
+        subtitle="Reach FSM Consulting Limited directly, or tell us about your assignment, program, or delivery challenge through our direct inquiry channel."
+        ctaText="Direct Inquiries"
+        ctaHref="#contact-panel"
+      />
+      <main id="contact-panel">
         <ContactPanel />
       </main>
       <Footer />

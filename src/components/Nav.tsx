@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -58,17 +59,26 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
         : "text-white/85 hover:text-white hover:underline underline-offset-4 transition-colors";
     }
     return active
-      ? "font-semibold text-[#2f5fa8] underline underline-offset-4"
-      : "text-gray-600 hover:text-[#2f5fa8] transition-colors";
+      ? "font-semibold text-[#2F5FA8] underline underline-offset-4"
+      : "text-gray-600 hover:text-[#2F5FA8] transition-colors";
   };
 
   return (
     <header className={shellCls}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-10 lg:px-14">
-        {/* Brand Mark matching reference "Prism." */}
-        <Link href="/" className="group flex items-center gap-3">
+        {/* Brand Mark matching reference "Prism." with smart logo integration */}
+        <Link href="/" className="group flex items-center gap-2.5">
+          <div className="relative flex h-7 w-7 items-center justify-center">
+            <Image
+              src="/FSMLogo.png"
+              alt="FSM Consulting Logo"
+              width={28}
+              height={28}
+              className="h-full w-auto object-contain group-hover:scale-105 transition-transform"
+            />
+          </div>
           <span className={`text-[23px] md:text-[25px] font-bold tracking-tight ${brandTextCls}`}>
-            FSM Consulting.
+            FSM Consulting<span className="text-[#2F5FA8]">.</span>
           </span>
         </Link>
 
