@@ -86,7 +86,7 @@ export default function ExperiencePage() {
                     </li>
                     <li className="flex items-start gap-2.5">
                       <CheckCircle2 className="h-4 w-4 text-[#9BC2F5] shrink-0 mt-0.5" />
-                      <span>Certified corporate statutory documentation (CAC, Tax Clearance, PENCOM, ITF).</span>
+                      <span>Corporate statutory documentation, available on request.</span>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <CheckCircle2 className="h-4 w-4 text-[#9BC2F5] shrink-0 mt-0.5" />

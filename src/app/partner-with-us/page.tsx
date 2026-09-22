@@ -14,7 +14,7 @@ const bidAdvantages = [
   {
     icon: Building2,
     title: "Full Local Registration",
-    body: "Fully incorporated in Nigeria with complete statutory compliance (CAC, Tax, PENCOM, ITF), meeting all local content eligibility criteria for international tenders.",
+    body: "Incorporated in Nigeria. Statutory documentation available on request.",
   },
   {
     icon: Globe2,

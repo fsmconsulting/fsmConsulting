@@ -67,6 +67,7 @@ export default function Hero({
     if (href === "/insights" && pathname?.startsWith("/insights")) return true;
     if (href === "/sectors" && pathname?.startsWith("/sectors")) return true;
     if (href === "/network" && pathname === "/network") return true;
+    if (href === "/about/network" && pathname === "/about/network") return true;
     if (href === "/contact" && pathname === "/contact") return true;
     return false;
   };
@@ -150,6 +151,7 @@ export default function Hero({
               Sectors
             </Link>
             <Link href="/network" className={getDesktopLinkClass("/network")}>
+            <Link href="/about/network" className={getDesktopLinkClass("/about/network")}>
               Team
             </Link>
             <Link href="/contact" className={getDesktopLinkClass("/contact")}>
@@ -340,6 +342,7 @@ export default function Hero({
               Sectors
             </Link>
             <Link href="/network" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/network")}>
+            <Link href="/about/network" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/about/network")}>
               Team
             </Link>
             <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className={getMobileLinkClass("/contact")}>

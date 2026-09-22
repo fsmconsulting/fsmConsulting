@@ -1,8 +1,6 @@
 /**
  * Delivery Cards Data
- * Represents typical assignment types across Nigeria and Regional delivery portfolios.
- * 
- * TODO: Replace with verified FSM assignments once client permission is confirmed.
+ * Typical assignment types across Nigeria and regional delivery corridors.
  */
 
 export interface DeliveryCard {
@@ -25,7 +23,7 @@ export const deliveryCards: DeliveryCard[] = [
       "Funders need confidence that results reported by implementing agencies reflect reality on the ground, including in remote and hard-to-reach locations.",
     howWeDeliver:
       "Independent field verification across all 36 states and the FCT, social and technical audits, and evidence-based findings that support disbursement and programme decisions.",
-    href: "/capabilities/national-capability",
+    href: "/services/project-assurance",
   },
   {
     id: "d-ready",
@@ -36,7 +34,7 @@ export const deliveryCards: DeliveryCard[] = [
       "Approved projects stall before effectiveness because of readiness gaps in procurement, safeguards, staffing and implementation arrangements.",
     howWeDeliver:
       "Project readiness assessments, bottleneck analysis, PMO support and delivery units that move projects from approval to implementation.",
-    href: "/services",
+    href: "/services/implementation-acceleration",
   },
   {
     id: "safeguards",
@@ -47,7 +45,7 @@ export const deliveryCards: DeliveryCard[] = [
       "Infrastructure and land-based investments carry environmental, social and resettlement risks that can delay or derail financing.",
     howWeDeliver:
       "ESMPs, stakeholder engagement plans, grievance mechanisms, FRILIA assessments and resettlement audits aligned with development-partner standards.",
-    href: "/services",
+    href: "/services/safeguards",
   },
   {
     id: "expert-mobilisation",
@@ -58,7 +56,7 @@ export const deliveryCards: DeliveryCard[] = [
       "International assignments lose weeks to visas, logistics, security and finding qualified local professionals.",
     howWeDeliver:
       "Expert sourcing and contracting, visa and invitation support, security and movement coordination, and local field-team mobilisation.",
-    href: "/capabilities/global-expertise",
+    href: "/services/expert-mobilisation",
   },
   {
     id: "meal",
@@ -69,6 +67,6 @@ export const deliveryCards: DeliveryCard[] = [
       "Multi-country programmes struggle to measure outcomes consistently across different contexts.",
     howWeDeliver:
       "Baselines, mid-term and end-line evaluations, performance monitoring systems and beneficiary feedback mechanisms.",
-    href: "/services",
+    href: "/services/meal",
   },
 ];

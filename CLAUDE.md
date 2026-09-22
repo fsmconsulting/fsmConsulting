@@ -6,6 +6,12 @@ say it, either (a) leave it out, or (b) render a clearly marked
 placeholder AND add it to docs/CLIENT_INPUTS.md. Layout adapts to
 content, never the other way round.
 
+## REPORTING RULE
+Your final summary must describe what is actually in the code, quoting real
+strings. Do not paraphrase or summarise from memory. Your Phase 3 summary
+misreported several values that the code had correctly; that must not happen
+again.
+
 @AGENTS.md
 
 # Content Source of Truth

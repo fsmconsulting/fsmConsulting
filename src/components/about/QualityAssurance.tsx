@@ -1,71 +1,49 @@
-const policies = [
-  { title: "Quality Management Systems", desc: "Rigorous internal review processes ensuring analytical precision and editorial excellence." },
-  { title: "Ethical Conduct Policies", desc: "Strict adherence to international anti-fraud, transparency, and professional integrity standards." },
-  { title: "Anti-Corruption Frameworks", desc: "Zero tolerance for corruption, bribery, or illicit inducement in any phase of delivery." },
-  { title: "Data Protection Policies", desc: "Enterprise-grade confidentiality, data governance, and strict compliance with privacy regulations." },
-  { title: "Safeguarding Policies", desc: "Robust do-no-harm protocols protecting vulnerable groups, communities, and field personnel." },
-  { title: "Gender Equality Policies", desc: "Promoting social inclusion, gender mainstreaming, and equitable community participation." },
-  { title: "Risk Management Frameworks", desc: "Proactive fiduciary, operational, security, and reputational risk mitigation architectures." },
-  { title: "Continuous Professional Development", desc: "Regular accreditation, peer reviews, and skills upgrading for our expert roster." },
-];
+import { ShieldCheck, CheckCircle2 } from "lucide-react";
+import { qaCommitments } from "@/data/companyData";
 
 export default function QualityAssurance() {
   return (
-    <section className="border-b border-gray-100 bg-white py-20 md:py-28">
+    <section className="bg-white py-20 md:py-28 border-b border-gray-100">
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-14">
         
-        {/* Header */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-          <div>
+        {/* Header Block */}
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16 items-start">
+          <div className="lg:col-span-5">
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#2F5FA8]">
-              Governance &middot; Compliance &middot; Standards
+              Governance &middot; Standards &middot; Ethics
             </span>
-            <h2 className="mt-3 text-[32px] md:text-[42px] font-bold leading-tight tracking-tight text-[#07131e]">
-              Committed to international standards and fiduciary integrity.
+            <h2 className="mt-2 text-[32px] md:text-[42px] font-bold tracking-tight text-[#07131e]">
+              Institutional Quality Assurance
             </h2>
-            <p className="mt-6 text-[16px] leading-relaxed text-gray-600">
-              FSM Consulting Limited is committed to maintaining international standards of quality, independence, and operational compliance. Our institutional protocols ensure that development partners and sovereign clients can rely fully on the integrity and accuracy of our deliverables.
-            </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-gray-500">
-              Our geographic footprint is delivered through a flexible country-access model comprising direct corporate presence, strategic partnerships, consortium arrangements, and multidisciplinary professional networks, complying strictly with applicable national laws, procurement regulations, and client policies.
+            <p className="mt-4 text-[16px] leading-relaxed text-gray-600">
+              FSM Consulting Limited is committed to maintaining international standards of professionalism, integrity, and analytical rigor in every engagement we undertake.
             </p>
           </div>
 
-          <div className="rounded-[24px] border border-white/10 bg-[#07131e] p-8 text-white shadow-xl relative overflow-hidden">
-            <div className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-[#2F5FA8]/20 blur-2xl" />
-            <div className="border-b border-white/15 pb-4 relative z-10">
-              <span className="font-mono text-xs font-semibold uppercase tracking-wider text-[#9BC2F5]">
-                Corporate Governance &amp; Registration
+          <div className="lg:col-span-7 rounded-[24px] bg-[#f4f5f7] p-8 md:p-10 border border-gray-200/80">
+            <div className="flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2F5FA8]/10 text-[#2F5FA8]">
+                <ShieldCheck className="h-5 w-5" />
               </span>
-              <h3 className="mt-1 text-[22px] font-bold tracking-tight text-white">
-                FSM Consulting Limited
+              <h3 className="text-[20px] font-bold text-[#07131e]">
+                Fiduciary Independence &amp; Legal Registration
               </h3>
             </div>
-
-            <div className="mt-6 space-y-3.5 text-[14px] text-white/80 relative z-10">
+            <p className="mt-4 text-[15px] leading-relaxed text-gray-600">
+              We operate with strict administrative and technical separation between our advisory teams and independent verification units to avoid conflicts of interest and uphold uncompromising objectivity.
+            </p>
+            <div className="mt-6 space-y-3 text-[14px] text-gray-700">
               <div className="flex items-start gap-2.5">
-                <svg className="mt-1 h-4 w-4 shrink-0 text-[#2F5FA8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
-                </svg>
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#2F5FA8]" />
                 <span>Incorporated under the Companies and Allied Matters Act, Federal Republic of Nigeria.</span>
               </div>
               <div className="flex items-start gap-2.5">
-                <svg className="mt-1 h-4 w-4 shrink-0 text-[#2F5FA8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
-                </svg>
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#2F5FA8]" />
                 <span>Fully registered and compliant with federal corporate regulatory bodies and statutory tax requirements.</span>
               </div>
               <div className="flex items-start gap-2.5">
-                <svg className="mt-1 h-4 w-4 shrink-0 text-[#2F5FA8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
-                </svg>
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#2F5FA8]" />
                 <span>Fiduciary oversight aligned with international financial institution (IFI) benchmarks.</span>
-              </div>
-              <div className="flex items-start gap-2.5">
-                <svg className="mt-1 h-4 w-4 shrink-0 text-[#2F5FA8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Full compliance with Special Control Unit Against Money Laundering (SCUML) protocols.</span>
               </div>
             </div>
           </div>
@@ -83,18 +61,18 @@ export default function QualityAssurance() {
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {policies.map((p) => (
+            {qaCommitments.map((p) => (
               <div
                 key={p.title}
                 className="rounded-[20px] border border-gray-100 bg-[#f4f5f7] p-6 transition-all duration-300 hover:border-[#2F5FA8]/40 hover:bg-white hover:shadow-lg hover:-translate-y-1"
               >
-                <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[#2F5FA8]" />
-                  <h4 className="text-[16px] font-bold tracking-tight text-[#07131e]">
-                    {p.title}
-                  </h4>
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#2F5FA8]/10 text-[#2F5FA8]">
+                  <CheckCircle2 className="h-5 w-5" />
                 </div>
-                <p className="mt-2.5 text-[13.5px] leading-relaxed text-gray-600">
+                <h4 className="mt-4 text-[17px] font-bold text-[#07131e]">
+                  {p.title}
+                </h4>
+                <p className="mt-2 text-[13.5px] leading-relaxed text-gray-600">
                   {p.desc}
                 </p>
               </div>

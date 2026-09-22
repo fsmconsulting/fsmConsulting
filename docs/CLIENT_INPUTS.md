@@ -36,6 +36,7 @@ All policy downloads are currently set to "Available on request" (`on-request`) 
 ---
 
 ## 4. Corporate & Regulatory Registrations (`/procurement`, Footer)
+- [ ] **Confirm statutory registrations (Tax, PENCOM, ITF, NSITF, SCUML)**: Confirm availability and currency of statutory registrations and regulatory compliance certificates (FIRS/Tax Clearance, PENCOM, ITF, NSITF, SCUML).
 - [ ] **Confirm CAC RC Number**: Confirm whether `RC: 9616494` is the exact Corporate Affairs Commission registration number for FSM Consulting Limited before production launch.
 - [ ] **Tax & Statutory Compliance Clearances**: Confirm availability of Tax Clearance Certificate (TCC), PENCOM compliance certificate, Industrial Training Fund (ITF), and NSITF clearances for procurement submissions.
 - [ ] **Bank Reference Letter**: Formal bank comfort / reference letter from primary corporate financial institution for tender submissions.

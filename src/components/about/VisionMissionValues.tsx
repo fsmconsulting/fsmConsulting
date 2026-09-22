@@ -1,35 +1,4 @@
-const coreValues = [
-  {
-    title: "Integrity",
-    badge: "01",
-    desc: "We uphold the highest standards of ethics, transparency, and professionalism in every interaction and engagement.",
-  },
-  {
-    title: "Excellence",
-    badge: "02",
-    desc: "We deliver quality services that consistently exceed expectations, backed by rigorous analytical and operational standards.",
-  },
-  {
-    title: "Innovation",
-    badge: "03",
-    desc: "We apply creative thinking and technology-driven solutions to solve complex, systemic development challenges.",
-  },
-  {
-    title: "Accountability",
-    badge: "04",
-    desc: "We promote responsible stewardship of public and development resources, ensuring full fiduciary alignment.",
-  },
-  {
-    title: "Collaboration",
-    badge: "05",
-    desc: "We leverage multidisciplinary expertise and strategic partnerships across national, regional, and global networks.",
-  },
-  {
-    title: "Impact",
-    badge: "06",
-    desc: "We focus relentlessly on generating measurable, sustainable, and socially transformative results for communities.",
-  },
-];
+import { vision, mission, coreValues } from "@/data/companyData";
 
 export default function VisionMissionValues() {
   return (
@@ -64,11 +33,10 @@ export default function VisionMissionValues() {
               </h3>
             </div>
             <p className="mt-6 text-[16.5px] leading-relaxed text-gray-600">
-              To become Africa&rsquo;s leading <strong className="font-semibold text-[#07131e]">Development Effectiveness and Project Assurance</strong> firm, recognized for advancing accountability, innovation, and sustainable development outcomes.
+              {vision}
             </p>
             <div className="mt-8 border-t border-gray-100 pt-4 text-xs font-semibold uppercase tracking-wider text-[#2F5FA8]">
               Pan-African Leadership &middot; Institutional Rigor
-              Nigerian roots &middot; Regional reach
             </div>
           </div>
 
@@ -84,7 +52,7 @@ export default function VisionMissionValues() {
               </h3>
             </div>
             <p className="mt-6 text-[16.5px] leading-relaxed text-gray-600">
-              To support governments, development partners, and organizations in achieving <strong className="font-semibold text-[#07131e]">measurable development results</strong> through evidence-based advisory services, project assurance, institutional strengthening, and strategic technical support.
+              {mission}
             </p>
             <div className="mt-8 border-t border-gray-100 pt-4 text-xs font-semibold uppercase tracking-wider text-[#2F5FA8]">
               Results-Driven &middot; Evidence-Based Execution
@@ -115,11 +83,10 @@ export default function VisionMissionValues() {
                     {val.title}
                   </h4>
                   <span className="font-mono text-sm font-bold text-[#2F5FA8]">
-                    {val.badge}
+                    {val.num}
                   </span>
                 </div>
-                <div className="my-3 h-1 w-8 rounded-full bg-[#2F5FA8]/30" />
-                <p className="text-[14.5px] leading-relaxed text-gray-600">
+                <p className="mt-3 text-[14.5px] leading-relaxed text-gray-600">
                   {val.desc}
                 </p>
               </div>
