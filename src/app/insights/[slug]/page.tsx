@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Closing from "@/components/Closing";
+import { CtaBand } from "@/components/templates";
 import { insights } from "@/data/insightsData";
 
 interface PageProps {
@@ -94,6 +95,7 @@ export default async function InsightDetailPage({ params }: PageProps) {
         </article>
 
         <Closing />
+        <CtaBand />
       </main>
       <Footer />
     </>

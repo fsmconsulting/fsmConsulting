@@ -1,43 +1,43 @@
 import type { Metadata } from "next";
-import Hero from "@/components/Hero";
+import { InteriorHero, CtaBand } from "@/components/templates";
 import SectorDirectory from "@/components/sectors/SectorDirectory";
 import ExpertNetwork from "@/components/sectors/ExpertNetwork";
-import Closing from "@/components/Closing";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Sectors | 15 Sector Verticals | FSM Consulting Limited",
+  title: "Sectors | Development Verticals | FSM Consulting Limited",
   description:
-    "FSM Consulting Limited's sector expertise spans governance, agriculture, health, education, infrastructure, digital economy, climate, and 8 further development verticals.",
+    "Explore FSM Consulting Limited's sector depth across agriculture, infrastructure, digital economy, health, governance, climate resilience, and public finance.",
 };
 
 export default function SectorsPage() {
   return (
-    <>
-      <Hero
+    <div className="min-h-screen bg-white text-[#07131e] antialiased">
+      <InteriorHero
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Sectors" },
+        ]}
         title={
           <>
-            Deep Domain Expertise<br />
-            Across Critical<br />
-            Development Sectors
+            Deep Domain Expertise Across<br />
+            Critical Development Verticals
           </>
         }
-        subtitle="Transforming policy into action across agriculture, energy, health, infrastructure, climate, governance, and jobs with profound technical knowledge and field-tested frameworks."
-        ctaText="Explore 15 Sectors"
+        subtitle="Translating policy and financing into field execution across agriculture, infrastructure, digital economy, climate, governance, and health."
+        ctaText="Explore Sector Directory"
         ctaHref="#sector-directory"
-        stats={[
-          { value: "15 Verticals", label: "Economic & social infrastructure sectors" },
-          { value: "Full Cycle", label: "Readiness through verification & tracking" },
-          { value: "Pan-African", label: "Sovereign & cross-border operations" },
-          { value: "Fiduciary Trust", label: "Meeting international financing benchmarks" },
-        ]}
       />
+
       <main>
-        <SectorDirectory />
+        <div id="sector-directory">
+          <SectorDirectory />
+        </div>
         <ExpertNetwork />
-        <Closing />
+        <CtaBand />
       </main>
+
       <Footer />
-    </>
+    </div>
   );
 }

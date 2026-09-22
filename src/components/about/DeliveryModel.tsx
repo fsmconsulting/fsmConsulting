@@ -171,6 +171,7 @@ export default function DeliveryModel() {
             </p>
             <p className="mt-3 text-[14.5px] leading-relaxed text-gray-600">
               FSM coordinates end-to-end assignment mobilization across Nigeria and regional hubs, ensuring teams hit the ground running with zero downtime.
+              FSM coordinates end-to-end assignment mobilization across Nigeria and partner networks across West, Central and East Africa, ensuring teams hit the ground running.
             </p>
           </div>
 

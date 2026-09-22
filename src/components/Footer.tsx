@@ -1,210 +1,196 @@
 import Link from "next/link";
 import { officeLocations, partnerAccessText, contactInfo } from "@/data/siteData";
 
-/**
- * Institutional Footer Component
- * Matches Conceptzilla visual grammar:
- * - Deep navy (#07131e) background with crisp typography and subtle borders
- * - Brand heading with "FSM Consulting." mark & regional presence badges
- * - Clean 4-column directory for Practice Areas, Priority Sectors, Institutional, and Headquarters
- * - Accent color #2f5fa8 for hover states and Back to Top
- */
 export default function Footer() {
   return (
-    <footer className="border-t-2 border-[#2F5FA8] bg-[#07131e] text-gray-400 antialiased" aria-labelledby="footer-heading">
-      <h2 id="footer-heading" className="sr-only">Footer</h2>
-      
-      <div className="mx-auto max-w-7xl px-8 lg:px-14 py-16 lg:py-20">
-        {/* Top Branding & Regional Footprint Bar */}
-        <div className="flex flex-col justify-between gap-8 border-b border-white/10 pb-12 lg:flex-row lg:items-center">
+    <footer className="border-t border-white/10 bg-[#07131e] text-white">
+      <div className="mx-auto max-w-7xl px-6 py-16 md:px-12 lg:py-20">
+        {/* Top Branding & Footprint */}
+        <div className="flex flex-col gap-6 pb-12 border-b border-white/10 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <Link href="/" className="inline-block group">
-              <span className="text-[26px] lg:text-[28px] font-bold tracking-tight text-white group-hover:text-white/90 transition-colors">
-                FSM Consulting<span className="text-[#2F5FA8]">.</span>
-              </span>
-            </Link>
-            <p className="mt-2 text-[14.5px] text-gray-400 max-w-lg leading-relaxed">
-              Africa&rsquo;s Development Delivery Partner. Turning investments into measurable results across sovereign and cross-border initiatives.
+            <span className="text-[24px] font-bold tracking-tight text-white">
+              FSM Consulting<span className="text-[#2F5FA8]">.</span>
+            </span>
+            <p className="mt-2 text-[14px] text-gray-400 max-w-[50ch]">
+              Africa&rsquo;s multidisciplinary development delivery, implementation acceleration, and project assurance partner.
             </p>
           </div>
 
-          {/* Regional Presence Badges matching reference style */}
-          <div className="flex flex-col items-start lg:items-end gap-2">
-            <span className="font-mono text-[11px] uppercase tracking-wider text-[#9BC2F5]">
-              Regional Delivery Footprint
-            </span>
-            <div className="flex flex-wrap gap-2">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+            <span className="text-[12px] font-mono uppercase tracking-wider text-gray-400">Footprint:</span>
+            <div className="flex flex-wrap items-center gap-2">
               {officeLocations.map((loc) => (
                 <span
                   key={loc.name}
-                  className="rounded-full px-3.5 py-1 text-[12px] bg-[#2F5FA8] border border-[#2F5FA8] text-white font-semibold shadow-sm"
+                  className="rounded-full bg-white/10 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-white"
                 >
                   {loc.name}
                 </span>
               ))}
+              <span className="rounded-full bg-white/5 px-3 py-1 text-[11px] text-gray-300">
+                {partnerAccessText}
+              </span>
             </div>
-            <p className="text-[12px] text-gray-400">
-              {partnerAccessText}
-            </p>
           </div>
         </div>
 
-        {/* 4-Column Directory Grid */}
-        <div className="grid grid-cols-2 gap-10 py-12 md:grid-cols-4 lg:gap-14">
-          {/* Column 1: Core Practice Areas */}
+        {/* 4 Directory Columns */}
+        <div className="grid grid-cols-2 gap-10 py-12 md:grid-cols-4 lg:gap-12">
+          {/* Column 1: Firm */}
           <div>
             <h3 className="text-[14px] font-semibold uppercase tracking-wider text-white">
-              Practice Areas
+              Firm
             </h3>
             <ul className="mt-5 space-y-3 text-[13.5px]">
               <li>
-                <Link href="/services" className="hover:text-white transition-colors">
-                  Project Assurance &amp; IVA
+                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
+                  About us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors">
-                  Implementation Acceleration
+                <Link href="/about/leadership" className="text-gray-400 hover:text-white transition-colors">
+                  Leadership
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors">
-                  MEAL &amp; Evidence Tracking
+                <Link href="/about/integrity" className="text-gray-400 hover:text-white transition-colors">
+                  Integrity
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors">
-                  Governance &amp; Safeguards
+                <Link href="/about/network" className="text-gray-400 hover:text-white transition-colors">
+                  Network
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors">
-                  Fiduciary &amp; Procurement
+                <Link href="/approach" className="text-gray-400 hover:text-white transition-colors">
+                  Approach
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 2: Priority Sectors */}
+          {/* Column 2: Services */}
           <div>
             <h3 className="text-[14px] font-semibold uppercase tracking-wider text-white">
-              Key Sectors
+              Services
             </h3>
             <ul className="mt-5 space-y-3 text-[13.5px]">
               <li>
-                <Link href="/sectors/governance-public-administration" className="hover:text-white transition-colors">
-                  Governance &amp; Public Admin
+                <Link href="/services#verify" className="text-gray-400 hover:text-white transition-colors">
+                  Verify
                 </Link>
               </li>
               <li>
-                <Link href="/sectors/agriculture-rural-development" className="hover:text-white transition-colors">
-                  Agriculture &amp; Rural Dev
+                <Link href="/services#mobilise" className="text-gray-400 hover:text-white transition-colors">
+                  Mobilise
                 </Link>
               </li>
               <li>
-                <Link href="/sectors/health-systems-strengthening" className="hover:text-white transition-colors">
-                  Health Systems
+                <Link href="/services#deliver" className="text-gray-400 hover:text-white transition-colors">
+                  Deliver
                 </Link>
               </li>
               <li>
-                <Link href="/sectors/energy-renewable-energy" className="hover:text-white transition-colors">
-                  Energy &amp; Renewables
-                </Link>
-              </li>
-              <li>
-                <Link href="/sectors/infrastructure-development" className="hover:text-white transition-colors">
-                  Infrastructure
+                <Link href="/sectors" className="text-gray-400 hover:text-white transition-colors">
+                  Sectors
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Institutional Navigation */}
+          {/* Column 3: Work with us */}
           <div>
             <h3 className="text-[14px] font-semibold uppercase tracking-wider text-white">
-              Company
+              Work with us
             </h3>
             <ul className="mt-5 space-y-3 text-[13.5px]">
               <li>
-                <Link href="/about" className="hover:text-white transition-colors">
-                  About FSM Consulting
+                <Link href="/partner-with-us" className="text-gray-400 hover:text-white transition-colors">
+                  Partner with us
                 </Link>
               </li>
               <li>
-                <Link href="/delivery-ecosystem" className="hover:text-white transition-colors">
-                  Delivery Ecosystem
+                <Link href="/experts" className="text-gray-400 hover:text-white transition-colors">
+                  Join our experts
                 </Link>
               </li>
               <li>
-                <Link href="/insights" className="hover:text-white transition-colors">
-                  Perspectives &amp; Insights
+                <Link href="/procurement" className="text-gray-400 hover:text-white transition-colors">
+                  Procurement pack
                 </Link>
               </li>
               <li>
-                <a href="#case-studies" className="hover:text-white transition-colors">
-                  Verified Case Studies
-                </a>
-              </li>
-              <li>
-                <Link href="/network" className="hover:text-white transition-colors">
-                  Advisory Bench &amp; Team
+                <Link href="/experts" className="text-gray-400 hover:text-white transition-colors">
+                  Careers &rarr;
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Headquarters & Contact */}
+          {/* Column 4: Contact */}
           <div>
             <h3 className="text-[14px] font-semibold uppercase tracking-wider text-white">
-              Headquarters
+              Contact
             </h3>
             <div className="mt-5 space-y-3 text-[13.5px] leading-relaxed">
-              <p className="text-gray-300">
-                Abuja, Federal Capital Territory,<br />Nigeria
+              <p className="text-gray-400">
+                {contactInfo.address}
               </p>
               <p>
-                <a href="mailto:info@fsmconsulting.com" className="text-gray-300 hover:text-white transition-colors">
-                  info@fsmconsulting.com
+                <a href={`mailto:${contactInfo.email}`} className="text-gray-400 hover:text-white transition-colors">
+                  {contactInfo.email}
                 </a>
               </p>
               <p>
-                <a href="tel:+2349040009512" className="text-gray-300 hover:text-white transition-colors">
-                  +234 904 000 9512
+                <a href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`} className="text-gray-400 hover:text-white transition-colors">
+                  {contactInfo.phone}
                 </a>
               </p>
-              <div className="pt-3">
+              <p>
                 <a
-                  href="#contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#2F5FA8] px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-md hover:bg-[#264E8C] transition-all"
+                  href="https://www.linkedin.com/company/fsm-consulting-limited"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1.5"
+                >
+                  LinkedIn &rarr;
+                </a>
+              </p>
+              <div className="pt-2">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#2F5FA8] px-5 py-2 text-[13px] font-semibold text-white shadow-md hover:bg-[#264E8C] transition-all"
                 >
                   <span>Schedule a Consultation</span>
                   <span>&rarr;</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Utility & Copyright Bar */}
+        {/* Bottom Bar: © FSM Consulting Limited · Privacy · Recruitment fraud notice */}
         <div className="flex flex-col justify-between gap-4 border-t border-white/10 pt-8 text-[12.5px] text-gray-500 sm:flex-row sm:items-center">
           <div className="flex flex-wrap items-center gap-3">
             <span>&copy; {new Date().getFullYear()} FSM Consulting Limited. All rights reserved.</span>
-            <span>&middot;</span>
-            <span className="font-mono text-gray-400">RC: 9616494</span>
+            <span>&bull;</span>
+            <span>CAC RC: {contactInfo.rcNumber}</span>
           </div>
+
           <div className="flex items-center gap-6">
-            <Link href="/contact" className="hover:text-gray-300 transition-colors">
-              Terms of Engagement
+            <Link href="/privacy" className="hover:text-gray-300 transition-colors">
+              Privacy
             </Link>
-            <Link href="/contact" className="hover:text-gray-300 transition-colors">
-              Confidentiality
+            <Link href="/recruitment-fraud-notice" className="hover:text-gray-300 transition-colors">
+              Recruitment fraud notice
             </Link>
             <a
               href="#top"
-              className="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-[#2F5FA8]/40 px-3.5 py-1.5 text-[12.5px] font-semibold text-[#9BC2F5] hover:bg-[#2F5FA8] hover:text-white transition-all"
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-gray-400 hover:bg-[#2F5FA8] hover:text-white transition-all"
+              aria-label="Back to top"
             >
-              <span>Back to top</span>
-              <span>&uarr;</span>
+              &uarr;
             </a>
           </div>
         </div>

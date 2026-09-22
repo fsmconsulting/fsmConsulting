@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const practices = [
   {
@@ -144,13 +145,13 @@ export default function Services() {
           <div className="text-[14.5px] text-white/75">
             Explore detailed scopes, deliverables, and methodologies across all fourteen service lines.
           </div>
-          <a
+          <Link
             href="/services"
             className="pill-btn group inline-flex items-center gap-2 bg-white px-6 py-2.5 text-[13.5px] font-semibold text-navy transition-all duration-200 hover:bg-white/90"
           >
             <span>Explore All 14 Practice Areas</span>
             <span className="pill-btn-arrow">&rarr;</span>
-          </a>
+          </Link>
         </div>
 
       </div>

@@ -68,6 +68,7 @@ export default function VisionMissionValues() {
             </p>
             <div className="mt-8 border-t border-gray-100 pt-4 text-xs font-semibold uppercase tracking-wider text-[#2F5FA8]">
               Pan-African Leadership &middot; Institutional Rigor
+              Nigerian roots &middot; Regional reach
             </div>
           </div>
 

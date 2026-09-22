@@ -17,7 +17,7 @@ const differentiators = [
   {
     num: "04",
     title: "National & Regional Reach",
-    desc: "Ability to rapidly deploy vetted teams across all 36 Nigerian states, the FCT, and expanding hubs across West, Central, and East Africa.",
+    desc: "Structured to mobilise vetted teams across all 36 Nigerian states, the FCT, and partner networks across West, Central, and East Africa.",
   },
   {
     num: "05",

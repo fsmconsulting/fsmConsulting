@@ -73,6 +73,7 @@ export default function TargetClients() {
           </span>
           <h2 className="mt-2 text-[32px] md:text-[42px] font-bold tracking-tight text-[#07131e]">
             Target Client Segments &amp; Sector Expertise
+            Clients we are built for
           </h2>
           <p className="mt-3 text-[16px] text-gray-600">
             FSM Consulting Limited focuses on supporting projects, reforms, and programs across public institutions, multilateral and bilateral development entities, and private sector partners.

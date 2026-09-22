@@ -23,6 +23,7 @@ const iconMap: Record<string, React.ElementType> = {
 export default function CaseStudies() {
   const [activeTab, setActiveTab] = useState<"Nigeria" | "Regional">("Nigeria");
   const [currentIndex, setCurrentIndex] = useState(0);
+  void currentIndex;
 
   const displayList = deliveryCards.filter(
     (c) => c.category === activeTab.toLowerCase()

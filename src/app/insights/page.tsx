@@ -1,35 +1,39 @@
 import type { Metadata } from "next";
-import Hero from "@/components/Hero";
+import { InteriorHero, CtaBand } from "@/components/templates";
 import InsightsIndex from "@/components/insights/InsightsIndex";
-import Closing from "@/components/Closing";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Insights | FSM Consulting Limited",
+  title: "Insights & Perspectives | FSM Consulting Limited",
   description:
-    "Perspectives on development effectiveness, project delivery, and evidence-based verification from FSM Consulting Limited.",
+    "Practical perspectives, field notes, and analytical viewpoints on development effectiveness, independent verification, and project acceleration across Africa.",
 };
 
 export default function InsightsPage() {
   return (
-    <>
-      <Hero
+    <div className="min-h-screen bg-white text-[#07131e] antialiased">
+      <InteriorHero
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Insights" },
+        ]}
         title={
           <>
-            Perspectives on<br />
-            Development Delivery<br />
-            &amp; Measurable Impact
+            Perspectives on Development<br />
+            Delivery &amp; Measurable Impact
           </>
         }
-        subtitle="Our thinking on what makes development investments translate into measurable, sustainable results across Africa's public and private sectors."
-        ctaText="Explore Insights"
+        subtitle="Practical knowledge, field diagnostics, and analytical frameworks on what makes development investments translate into measurable, sustainable outcomes."
+        ctaText="Explore Publications"
         ctaHref="#insights-index"
       />
+
       <main id="insights-index">
         <InsightsIndex />
-        <Closing />
+        <CtaBand />
       </main>
+
       <Footer />
-    </>
+    </div>
   );
 }

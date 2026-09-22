@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { sectorsData, sectorCategories, SectorItem } from "@/data/sectorsData";
+import { sectorsData, sectorCategories } from "@/data/sectorsData";
 
 export default function SectorDirectory() {
   const [filter, setFilter] = useState<string>("all");

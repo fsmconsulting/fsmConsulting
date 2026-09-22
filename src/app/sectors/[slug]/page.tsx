@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Closing from "@/components/Closing";
+import { CtaBand } from "@/components/templates";
 import Footer from "@/components/Footer";
 import { sectorsData, getSectorBySlug } from "@/data/sectorsData";
 
@@ -326,6 +327,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
         </section>
 
         <Closing />
+        <CtaBand />
       </main>
       <Footer />
     </>

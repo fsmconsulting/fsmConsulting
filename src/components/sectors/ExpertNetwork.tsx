@@ -70,6 +70,7 @@ export default function ExpertNetwork() {
             </p>
             <div className="mt-6 border-t border-white/10 pt-4 font-mono text-xs text-blue-bright">
               Fully Vetted Roster &bull; Surge Capacity &bull; 36 States + Regional Hubs
+              Fully Vetted Roster &bull; Surge Capacity &bull; 36 States + Partner Networks
             </div>
           </div>
         </div>
