@@ -17,7 +17,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 > You MUST read these files in order before proposing or executing ANY UI change:
 > 1. `FSM_DIGITAL_EXPERIENCE.md` (Creative & UX Source of Truth)
 > 2. `DESIGN_SYSTEM.md` (Technical & Token Implementation Truth)
-> 3. Verified Profile: `FSM Consulting - Corporate Profile - r1.pdf` (Content Source of Truth)
+> 3. Verified Profile: `FSM Consulting - Corporate Profile - r1-1.docx` (Content Source of Truth, superseding r1 PDF)
 
 ---
 

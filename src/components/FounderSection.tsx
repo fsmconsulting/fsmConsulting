@@ -20,8 +20,10 @@ export default function FounderSection({
     <section
       id={id}
       aria-label="Leadership - Founder & CEO"
-      className="bg-white py-16 md:py-24 border-t border-gray-100"
+      className="bg-white py-16 md:py-24 border-t border-gray-100 relative"
     >
+      <div id="leadership" className="absolute -top-24" />
+      <div id="founder" className="absolute -top-24" />
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         {/* Top Eyebrow */}
         <div className="mb-8 md:mb-10">

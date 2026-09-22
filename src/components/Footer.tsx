@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { officeLocations, partnerAccessText, contactInfo } from "@/data/siteData";
 
 /**
  * Institutional Footer Component
@@ -28,25 +29,23 @@ export default function Footer() {
           </div>
 
           {/* Regional Presence Badges matching reference style */}
-          <div className="flex flex-col items-start lg:items-end gap-3">
+          <div className="flex flex-col items-start lg:items-end gap-2">
             <span className="font-mono text-[11px] uppercase tracking-wider text-[#9BC2F5]">
               Regional Delivery Footprint
             </span>
             <div className="flex flex-wrap gap-2">
-              {["Abuja (HQ)", "Lagos", "Dakar", "Nairobi"].map((city) => (
+              {officeLocations.map((loc) => (
                 <span
-                  key={city}
-                  className={
-                    "rounded-full px-3.5 py-1 text-[12px] font-medium transition-colors " +
-                    (city === "Abuja (HQ)"
-                      ? "bg-[#2F5FA8] border border-[#2F5FA8] text-white font-semibold shadow-sm"
-                      : "bg-[#2F5FA8]/10 border border-[#2F5FA8]/30 text-[#9BC2F5] hover:border-[#2F5FA8]/60")
-                  }
+                  key={loc.name}
+                  className="rounded-full px-3.5 py-1 text-[12px] bg-[#2F5FA8] border border-[#2F5FA8] text-white font-semibold shadow-sm"
                 >
-                  {city}
+                  {loc.name}
                 </span>
               ))}
             </div>
+            <p className="text-[12px] text-gray-400">
+              {partnerAccessText}
+            </p>
           </div>
         </div>
 

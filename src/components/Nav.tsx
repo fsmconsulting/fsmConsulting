@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { officeLocations, partnerAccessText, contactInfo } from "@/data/siteData";
 
 /**
  * Global Navigation Component (Used across all interior pages & optionally homepage)
@@ -168,15 +169,19 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
 
           {/* Footer of mobile menu matching reference */}
           <div className="pt-6 border-t border-gray-100 text-[13px] text-gray-500">
-            <div className="flex flex-wrap gap-2 mb-4 font-mono text-[11px] uppercase tracking-wider text-[#07131e]">
-              <span className="rounded-full bg-gray-100 px-3 py-1">Abuja (HQ)</span>
-              <span className="rounded-full bg-gray-100 px-3 py-1">Lagos</span>
-              <span className="rounded-full bg-gray-100 px-3 py-1">Dakar</span>
-              <span className="rounded-full bg-gray-100 px-3 py-1">Nairobi</span>
+            <div className="mb-2 flex flex-wrap gap-2">
+              {officeLocations.map((loc) => (
+                <span key={loc.name} className="rounded-full bg-gray-100 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-[#07131e]">
+                  {loc.name}
+                </span>
+              ))}
             </div>
-            <p className="text-[#07131e] font-semibold text-[14px]">+234 904 000 9512</p>
-            <p className="text-gray-600">info@fsmconsulting.com</p>
-            <p className="mt-1 text-gray-400 text-[12px]">Abuja, Federal Capital Territory, Nigeria</p>
+            <p className="mb-4 text-[11.5px] text-gray-500 leading-normal">
+              {partnerAccessText}
+            </p>
+            <p className="text-[#07131e] font-semibold text-[14px]">{contactInfo.phone}</p>
+            <p className="text-gray-600">{contactInfo.email}</p>
+            <p className="mt-1 text-gray-400 text-[12px]">{contactInfo.address}</p>
           </div>
         </div>
       )}

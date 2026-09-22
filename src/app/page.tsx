@@ -1,21 +1,25 @@
 import Hero from "@/components/Hero";
 import ValueAdvantage from "@/components/ValueAdvantage";
 import HomeServices from "@/components/HomeServices";
+import ExpertiseRelyOn from "@/components/ExpertiseRelyOn";
 import FunderLogoStrip from "@/components/FunderLogoStrip";
 import CaseStudies from "@/components/CaseStudies";
+import ImpactNumbers from "@/components/ImpactNumbers";
 import FeaturedInsightsSection from "@/components/FeaturedInsightsSection";
 import Footer from "@/components/Footer";
 
 /**
  * FSM Consulting Homepage
- * Exactly matches Conceptzilla Reference (media_1789744082327.webp & companion reference screens):
+ * Exactly matches Conceptzilla Reference & Phase 1 Section Sequence:
  * 1. Full-Bleed Photographic Hero with Integrated Header & Nav
  * 2. "Our value, your advantage" (4-column icon & value grid)
  * 3. "Services overview" (Two-column layout: title on left, 2x2 rounded cards on right)
- * 4. "Supporting projects financed by global development partners" (Funder logo grid + slider indicator)
- * 5. "Case studies" (Regional/Global toggle, arrows, deep blue cards with Challenge & Impact)
- * 6. "We don't just advise..." (Editorial statement, 3 insight cards, Show All Insights pill)
- * 7. Institutional Footer
+ * 4. "Expertise you can rely on" (Leadership narrative, portrait, and board chips)
+ * 5. Supported Development Financing Strip with Carousel Dots
+ * 6. "Where we deliver" (Assignment Types & Delivery Capability)
+ * 7. "Our impact in numbers" (Stacked list with thin dividers & icons)
+ * 8. Insights Editorial Statement, 3 Cards & Show All Insights Pill
+ * 9. Institutional Footer
  */
 export default function Home() {
   return (
@@ -30,17 +34,23 @@ export default function Home() {
         {/* 3. "Services overview" 2x2 card grid */}
         <HomeServices />
 
-        {/* 4. Supported Development Financing Strip with Carousel Dots */}
+        {/* 4. "Expertise you can rely on" Leadership & Board Bench */}
+        <ExpertiseRelyOn />
+
+        {/* 5. Supported Development Financing Strip with Carousel Dots */}
         <FunderLogoStrip />
 
-        {/* 5. "Case studies" with Deep Navy Challenge & Impact Cards */}
+        {/* 6. "Where we deliver" with Deep Navy Delivery Cards */}
         <CaseStudies />
 
-        {/* 6. Insights Editorial Statement, 3 Cards & Show All Insights Pill */}
+        {/* 7. "Our impact in numbers" Stacked Metric List */}
+        <ImpactNumbers />
+
+        {/* 8. Insights Editorial Statement, 3 Cards & Show All Insights Pill */}
         <FeaturedInsightsSection />
       </main>
 
-      {/* 7. Institutional Footer */}
+      {/* 9. Institutional Footer */}
       <Footer />
     </div>
   );
