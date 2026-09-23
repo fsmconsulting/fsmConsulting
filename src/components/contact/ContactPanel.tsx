@@ -205,9 +205,6 @@ ${formData.message}
               >
                 Send enquiry
               </button>
-              <span className="ml-4 text-[13px] text-gray-500">
-                Opens your email client
-              </span>
             </div>
           </div>
         </form>
