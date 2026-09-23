@@ -309,7 +309,7 @@ Supporting messaging should be grounded in FSM's actual corporate profile.
 
 Primary CTA:
 
-> **Discuss an assignment**
+> **Schedule a Consultation**
 
 The hero should immediately establish:
 

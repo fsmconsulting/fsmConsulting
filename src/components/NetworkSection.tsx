@@ -40,7 +40,7 @@ export default function NetworkSection() {
                 href="/contact"
                 className="pill-btn bg-navy px-6 py-3 text-[14px] font-semibold text-white hover:bg-navy-2 transition-colors"
               >
-                <span>Discuss an assignment</span>
+                <span>Schedule a Consultation</span>
                 <span className="pill-btn-arrow">&rarr;</span>
               </Link>
             </div>

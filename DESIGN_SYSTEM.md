@@ -423,7 +423,7 @@ Navigation should feel like part of the visual composition.
 
 Primary CTA:
 
-Discuss an assignment
+Schedule a Consultation
 
 Use a pill-shaped action.
 

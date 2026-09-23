@@ -275,7 +275,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                   : "bg-navy text-white hover:bg-navy-2"
               }`}
             >
-              <span>Discuss an assignment</span>
+              <span>Schedule a Consultation</span>
               <span className="pill-btn-arrow">&rarr;</span>
             </Link>
           </div>
@@ -494,7 +494,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                   onClick={() => setMobileMenuOpen(false)}
                   className="pill-btn w-full bg-white text-navy font-semibold hover:bg-white/90 justify-center"
                 >
-                  <span>Discuss an assignment</span>
+                  <span>Schedule a Consultation</span>
                   <span className="pill-btn-arrow">&rarr;</span>
                 </Link>
               </div>

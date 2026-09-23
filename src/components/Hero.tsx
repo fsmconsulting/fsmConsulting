@@ -46,7 +46,7 @@ Capabilities to Deliver Complex Development Assignments Where They Matter Most.
               href="#contact"
               className="pill-btn bg-white px-7 py-3.5 text-[15px] font-semibold text-navy transition-all duration-200 hover:bg-white/90 hover:shadow-lg"
             >
-              <span>Discuss an assignment</span>
+              <span>Schedule a Consultation</span>
               <span className="pill-btn-arrow">&rarr;</span>
             </a>
 

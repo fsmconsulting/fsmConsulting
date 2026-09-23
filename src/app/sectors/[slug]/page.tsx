@@ -93,7 +93,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
                   href="/#contact"
                   className="pill-btn bg-white text-navy font-semibold hover:bg-white/90"
                 >
-                  <span>Discuss an assignment</span>
+                  <span>Schedule a Consultation</span>
                   <span className="pill-btn-arrow">&rarr;</span>
                 </Link>
                 <Link

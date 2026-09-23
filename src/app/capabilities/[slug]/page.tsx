@@ -222,7 +222,7 @@ export default async function CapabilityDetailPage({
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-[2px] bg-[#2251FF] px-6 py-3 font-sans text-[14px] font-semibold text-white hover:bg-[#1A3FD6] transition-colors"
               >
-                Discuss an assignment
+                Schedule a Consultation
               </Link>
             </div>
           </div>
