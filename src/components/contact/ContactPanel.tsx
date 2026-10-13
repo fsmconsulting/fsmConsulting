@@ -83,23 +83,6 @@ ${formData.message}
                 <p className="text-[13px] text-gray-500 mt-0.5">Abuja, Nigeria</p>
               </div>
             </div>
-
-            {contactInfo.linkedin && (
-              <div className="flex items-start gap-3">
-                <Globe className="mt-0.5 h-[18px] w-[18px] text-[#2F5FA8]" strokeWidth={2} />
-                <div>
-                  <p className="font-mono text-[11px] uppercase tracking-wider text-gray-400">LinkedIn</p>
-                  <a
-                    href={contactInfo.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[15px] font-semibold text-[#07131e] hover:text-[#2F5FA8] transition-colors"
-                  >
-                    FSM Consulting Limited &rarr;
-                  </a>
-                </div>
-              </div>
-            )}
           </div>
         </div>
 
