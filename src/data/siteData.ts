@@ -7,7 +7,7 @@ export const partnerAccessText = "Partner access: Senegal · Sierra Leone · Cam
 export const cacRegistrationNumber = "9616494";
 
 export const contactInfo = {
-  email: "info@fsmconsulting.com",
+  email: "info@fsmconsulting.org",
   phone: "+234 904 000 9512",
   address: "Abuja, Federal Capital Territory, Nigeria",
   rcNumber: cacRegistrationNumber,
