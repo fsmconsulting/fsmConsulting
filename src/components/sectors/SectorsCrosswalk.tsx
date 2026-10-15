@@ -50,7 +50,7 @@ export default function SectorsCrosswalk() {
           <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
             Sectoral Integration &middot; Real-World Application
           </span>
-          <h2 className="mt-2 font-serif text-[32px] font-medium text-navy md:text-[42px]">
+          <h2 className="mt-2 text-[32px] font-medium text-navy md:text-[42px]">
             Sector-Specific Capability Deployment
           </h2>
           <p className="mt-3 text-[16px] text-ink/70">
@@ -65,7 +65,7 @@ export default function SectorsCrosswalk() {
               className="flex flex-col justify-between rounded-[var(--radius-card-sm)] border border-navy/10 bg-sand p-6 transition-all duration-200 hover:border-navy hover:shadow-xs"
             >
               <div>
-                <h3 className="font-serif text-[18px] font-medium text-navy">
+                <h3 className="text-[18px] font-medium text-navy">
                   {sec.title}
                 </h3>
                 <p className="mt-2 text-[13.5px] leading-relaxed text-ink/75">
@@ -74,7 +74,7 @@ export default function SectorsCrosswalk() {
               </div>
 
               <div className="mt-5 border-t border-navy/10 pt-4">
-                <span className="block text-[11px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
+                <span className="block text-[11px] font-semibold uppercase tracking-wider text-blue-accent">
                   Core Practice Linkages:
                 </span>
                 <div className="mt-2 flex flex-wrap gap-1.5">

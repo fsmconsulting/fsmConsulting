@@ -16,7 +16,7 @@ export default function Footer() {
               className="h-12 w-auto md:h-14 object-contain brightness-110"
               unoptimized
             />
-            <span className="font-serif text-[22px] font-medium tracking-tight text-white md:text-[24px]">
+            <span className="text-[22px] font-medium tracking-tight text-white md:text-[24px]">
               FSM Consulting Limited
             </span>
           </div>
@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-10 py-12 md:grid-cols-4 lg:gap-12">
           {/* Practice Areas */}
           <div>
-            <h4 className="font-serif text-[15px] font-medium text-white">
+            <h4 className="text-[15px] font-medium text-white">
               Practice Areas
             </h4>
             <ul className="mt-4 space-y-2.5 text-[13.5px]">
@@ -65,7 +65,7 @@ export default function Footer() {
 
           {/* Key Sectors */}
           <div>
-            <h4 className="font-serif text-[15px] font-medium text-white">
+            <h4 className="text-[15px] font-medium text-white">
               Key Sectors
             </h4>
             <ul className="mt-4 space-y-2.5 text-[13.5px]">
@@ -119,7 +119,7 @@ export default function Footer() {
 
           {/* Firm & Network */}
           <div>
-            <h4 className="font-serif text-[15px] font-medium text-white">
+            <h4 className="text-[15px] font-medium text-white">
               Our Firm
             </h4>
             <ul className="mt-4 space-y-2.5 text-[13.5px]">
@@ -153,7 +153,7 @@ export default function Footer() {
 
           {/* Contact & Registered Office */}
           <div>
-            <h4 className="font-serif text-[15px] font-medium text-white">
+            <h4 className="text-[15px] font-medium text-white">
               Headquarters
             </h4>
             <div className="mt-4 space-y-2 text-[13.5px] leading-relaxed">
@@ -169,7 +169,7 @@ export default function Footer() {
                 </a>
               </p>
               <div className="pt-2">
-                <span className="inline-block border border-white/20 px-2.5 py-1 text-[11px] font-mono text-gray-400 rounded-full">
+                <span className="inline-block border border-white/20 px-2.5 py-1 text-[11px] text-gray-400 rounded-full">
                   SCUML Registered Entity
                 </span>
               </div>
@@ -182,12 +182,9 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-4">
             <span>&copy; {new Date().getFullYear()} FSM Consulting Limited. All rights reserved.</span>
             <span>&middot;</span>
-            <span className="font-mono text-gray-400">RC: 9616494</span>
+            <span className="text-gray-400">RC: 9616494</span>
           </div>
           <div className="flex items-center gap-6">
-            <Link href="/contact" className="transition-colors duration-200 hover:text-gray-300">
-              Confidentiality &amp; Code of Conduct
-            </Link>
             <Link href="/contact" className="transition-colors duration-200 hover:text-gray-300">
               Terms of Engagement
             </Link>

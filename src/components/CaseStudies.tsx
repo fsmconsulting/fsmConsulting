@@ -21,12 +21,12 @@ export default function CaseStudies() {
         {/* Header row: Editorial Headline + Segment Filter Controls */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16">
           <div className="max-w-2xl">
-            <span className="font-mono text-[11px] uppercase tracking-[0.14em] font-bold text-[#2251FF] block">
+            <span className="text-[11px] uppercase tracking-[0.14em] font-bold text-[#2251FF] block">
               Evidence &middot; Verified Engagements
             </span>
             <h2
               id="case-studies-heading"
-              className="mt-2 font-serif text-[32px] sm:text-[38px] md:text-[44px] font-semibold text-[#051C2C] leading-[1.08] tracking-tight"
+              className="mt-2 text-[32px] sm:text-[38px] md:text-[44px] font-semibold text-[#051C2C] leading-[1.08] tracking-tight"
             >
               Case studies
             </h2>
@@ -71,20 +71,20 @@ export default function CaseStudies() {
               <div>
                 {/* Meta Header */}
                 <div className="flex items-center justify-between gap-3 border-b border-[#D3DBE3] pb-4">
-                  <span className="font-mono text-[10.5px] font-bold tracking-[0.1em] text-[#2251FF] uppercase truncate">
+                  <span className="text-[10.5px] font-bold tracking-[0.1em] text-[#2251FF] uppercase truncate">
                     {item.client}
                   </span>
-                  <span className="shrink-0 font-mono text-[10.5px] font-medium uppercase tracking-wider text-[#566B7D] border border-[#D3DBE3] bg-[#F3F6F9] px-2 py-0.5 rounded-[2px]">
+                  <span className="shrink-0 text-[10.5px] font-medium uppercase tracking-wider text-[#566B7D] border border-[#D3DBE3] bg-[#F3F6F9] px-2 py-0.5 rounded-[2px]">
                     {item.category}
                   </span>
                 </div>
 
                 {/* Sub-label & Major Heading */}
                 <div className="mt-5">
-                  <span className="block font-mono text-[11px] font-medium tracking-wide uppercase text-[#566B7D]">
+                  <span className="block text-[11px] font-medium tracking-wide uppercase text-[#566B7D]">
                     {item.clientType}
                   </span>
-                  <h3 className="mt-2 font-serif text-[24px] sm:text-[26px] font-semibold text-[#051C2C] leading-[1.2] group-hover:text-[#2251FF] transition-colors">
+                  <h3 className="mt-2 text-[24px] sm:text-[26px] font-semibold text-[#051C2C] leading-[1.2] group-hover:text-[#2251FF] transition-colors">
                     {item.title}
                   </h3>
                 </div>

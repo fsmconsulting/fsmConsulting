@@ -11,7 +11,7 @@ export default function ExecutiveSummary() {
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Executive Summary &middot; Institutional Mandate
             </span>
-            <h2 className="mt-3 font-serif text-[32px] font-medium leading-tight text-navy md:text-[42px]">
+            <h2 className="mt-3 text-[32px] font-medium leading-tight text-navy md:text-[42px]">
               Bridging the gap between high-level strategy and ground-level execution.
             </h2>
             
@@ -38,10 +38,10 @@ export default function ExecutiveSummary() {
 
           <div className="flex flex-col rounded-[var(--radius-card)] border border-navy/10 bg-sand p-8">
             <div className="border-b border-navy/10 pb-4">
-              <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
+              <span className="text-[12px] font-semibold uppercase tracking-wider text-blue-accent">
                 The FSM Value Proposition
               </span>
-              <h3 className="mt-1 font-serif text-[22px] font-medium text-navy">
+              <h3 className="mt-1 text-[22px] font-medium text-navy">
                 Integrated Delivery Ecosystem
               </h3>
             </div>

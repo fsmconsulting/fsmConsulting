@@ -52,7 +52,7 @@ ${formData.message}
             <div className="flex items-start gap-3">
               <Mail className="mt-0.5 h-[18px] w-[18px] text-[#2F5FA8]" strokeWidth={2} />
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-gray-400">Email</p>
+                <p className="text-[11px] uppercase tracking-wider text-gray-400">Email</p>
                 <a
                   href={`mailto:${contactInfo.email}`}
                   className="text-[15px] font-semibold text-[#07131e] hover:text-[#2F5FA8] transition-colors"
@@ -65,7 +65,7 @@ ${formData.message}
             <div className="flex items-start gap-3">
               <Phone className="mt-0.5 h-[18px] w-[18px] text-[#2F5FA8]" strokeWidth={2} />
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-gray-400">Phone</p>
+                <p className="text-[11px] uppercase tracking-wider text-gray-400">Phone</p>
                 <a
                   href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
                   className="text-[15px] font-semibold text-[#07131e] hover:text-[#2F5FA8] transition-colors"
@@ -78,7 +78,7 @@ ${formData.message}
             <div className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-[18px] w-[18px] text-[#2F5FA8]" strokeWidth={2} />
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-gray-400">Headquarters</p>
+                <p className="text-[11px] uppercase tracking-wider text-gray-400">Headquarters</p>
                 <p className="text-[15px] text-[#07131e] font-medium">{contactInfo.address}</p>
                 <p className="text-[13px] text-gray-500 mt-0.5">Abuja, Nigeria</p>
               </div>

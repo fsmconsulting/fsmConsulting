@@ -35,7 +35,7 @@ export default function DeliveryMethodology() {
           <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
             Methodology &middot; How We Deliver
           </span>
-          <h2 id="methodology-heading" className="mt-2 font-serif text-[32px] font-medium leading-tight text-navy md:text-[42px]">
+          <h2 id="methodology-heading" className="mt-2 text-[32px] font-medium leading-tight text-navy md:text-[42px]">
             From Diagnostic Scoping to Verified Development Results.
           </h2>
           <p className="mt-4 text-[16px] leading-relaxed text-ink/80">
@@ -51,10 +51,10 @@ export default function DeliveryMethodology() {
               className="flex flex-col justify-between rounded-[var(--radius-card-sm)] border border-navy/10 bg-white p-6 transition-all duration-200 hover:border-navy hover:shadow-sm"
             >
               <div>
-                <span className="inline-block rounded-full bg-navy/5 px-3 py-1 text-[11px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
+                <span className="inline-block rounded-full bg-navy/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-blue-accent">
                   {engine.focus}
                 </span>
-                <h3 className="mt-4 font-serif text-[19px] font-medium text-navy">
+                <h3 className="mt-4 text-[19px] font-medium text-navy">
                   {engine.title}
                 </h3>
                 <p className="mt-2.5 text-[13.5px] leading-relaxed text-ink/70">
@@ -82,10 +82,10 @@ export default function DeliveryMethodology() {
         <div className="mt-16 rounded-[var(--radius-card)] border border-navy/10 bg-white p-8 md:p-10 shadow-xs">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
-              <span className="font-mono text-xs font-semibold uppercase tracking-wider text-blue-accent">
+              <span className="text-xs font-semibold uppercase tracking-wider text-blue-accent">
                 Empirical Ground-Level Rigor
               </span>
-              <h3 className="mt-2 font-serif text-[24px] font-medium text-navy md:text-[28px]">
+              <h3 className="mt-2 text-[24px] font-medium text-navy md:text-[28px]">
                 Direct Field Verification Across All 36 Nigerian States &amp; Beyond
               </h3>
               <p className="mt-3 text-[14.5px] leading-relaxed text-ink/75">
@@ -95,19 +95,19 @@ export default function DeliveryMethodology() {
 
             <div className="flex flex-col gap-3 rounded-[var(--radius-card-sm)] border border-navy/10 bg-sand p-6 text-[13.5px] text-navy">
               <div className="flex items-center gap-3">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-navy font-mono text-xs font-bold text-white">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-navy text-xs font-bold text-white">
                   1
                 </span>
                 <span>GPS &amp; Timestamped Photographic Verification</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-navy font-mono text-xs font-bold text-white">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-navy text-xs font-bold text-white">
                   2
                 </span>
                 <span>Direct Beneficiary Feedback &amp; Citizen Surveys</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-navy font-mono text-xs font-bold text-white">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-navy text-xs font-bold text-white">
                   3
                 </span>
                 <span>Technical Engineering &amp; Fiduciary Milestone Audits</span>

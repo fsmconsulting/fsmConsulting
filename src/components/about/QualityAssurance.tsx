@@ -20,7 +20,7 @@ export default function QualityAssurance() {
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Governance &middot; Compliance &middot; Standards
             </span>
-            <h2 className="mt-3 font-serif text-[32px] font-medium leading-tight text-navy md:text-[42px]">
+            <h2 className="mt-3 text-[32px] font-medium leading-tight text-navy md:text-[42px]">
               Committed to international standards and fiduciary integrity.
             </h2>
             <p className="mt-6 text-[16px] leading-relaxed text-ink/80">
@@ -33,10 +33,10 @@ export default function QualityAssurance() {
 
           <div className="rounded-[var(--radius-card)] border border-navy/15 bg-navy p-8 text-white">
             <div className="border-b border-white/15 pb-4">
-              <span className="font-mono text-xs font-semibold uppercase tracking-wider text-blue-bright">
+              <span className="text-xs font-semibold uppercase tracking-wider text-blue-bright">
                 Corporate Governance &amp; Registration
               </span>
-              <h3 className="mt-1 font-serif text-[22px] font-medium text-white">
+              <h3 className="mt-1 text-[22px] font-medium text-white">
                 FSM Consulting Limited
               </h3>
             </div>
@@ -71,10 +71,10 @@ export default function QualityAssurance() {
         {/* 8 Compliance Standards Grid */}
         <div className="mt-20">
           <div className="border-b border-navy/15 pb-4">
-            <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
+            <span className="text-[12px] font-semibold uppercase tracking-wider text-blue-accent">
               Quality Framework
             </span>
-            <h3 className="mt-1 font-serif text-[24px] font-medium text-navy md:text-[30px]">
+            <h3 className="mt-1 text-[24px] font-medium text-navy md:text-[30px]">
               Institutional Quality Assurance Protocols
             </h3>
           </div>
@@ -87,7 +87,7 @@ export default function QualityAssurance() {
               >
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-navy" />
-                  <h4 className="font-serif text-[16px] font-medium text-navy">
+                  <h4 className="text-[16px] font-medium text-navy">
                     {p.title}
                   </h4>
                 </div>

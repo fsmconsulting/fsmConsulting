@@ -12,7 +12,7 @@ export default function Sectors() {
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Sector Specialization &middot; 15 Verticals
             </span>
-            <h2 className="mt-2 font-serif text-[34px] font-normal text-navy md:text-[44px]">
+            <h2 className="mt-2 text-[34px] font-normal text-navy md:text-[44px]">
               Sectors we work across
             </h2>
           </div>
@@ -32,7 +32,7 @@ export default function Sectors() {
               className="group flex flex-col justify-between border border-gray-200 bg-[#fbfcfd] p-5 transition-all duration-200 hover:border-navy hover:bg-white hover:shadow-none hover:-translate-y-1"
             >
               <div className="flex items-start justify-between">
-                <span className="font-mono text-xs font-semibold text-gray-400 group-hover:text-blue-accent">
+                <span className="text-xs font-semibold text-gray-400 group-hover:text-blue-accent">
                   {sector.num}
                 </span>
                 <span className="text-gray-300 transition-transform group-hover:translate-x-1 group-hover:text-navy">
@@ -43,7 +43,7 @@ export default function Sectors() {
                 <span className="block text-[11px] uppercase tracking-wider text-gray-400">
                   {sector.categoryLabel}
                 </span>
-                <h3 className="mt-1 font-serif text-[15.5px] font-medium leading-snug text-navy group-hover:text-blue-accent">
+                <h3 className="mt-1 text-[15.5px] font-medium leading-snug text-navy group-hover:text-blue-accent">
                   {sector.title}
                 </h3>
               </div>

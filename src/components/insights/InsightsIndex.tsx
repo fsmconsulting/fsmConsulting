@@ -34,17 +34,17 @@ export default function InsightsIndex() {
                 </div>
                 <div className="flex flex-1 flex-col justify-between p-8 md:p-9">
                   <div>
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
+                    <span className="text-[11px] uppercase tracking-wider text-blue-bright">
                       {item.category}
                     </span>
-                    <h3 className="mt-2.5 font-serif text-[22px] font-medium leading-snug text-navy md:text-[26px]">
+                    <h3 className="mt-2.5 text-[22px] font-medium leading-snug text-navy md:text-[26px]">
                       {item.title}
                     </h3>
                     <p className="mt-3 max-w-[54ch] text-[14.5px] leading-relaxed text-ink-muted">
                       {item.dek}
                     </p>
                   </div>
-                  <div className="mt-6 flex items-center justify-between border-t border-navy/10 pt-4 font-mono text-[12px] text-ink-muted">
+                  <div className="mt-6 flex items-center justify-between border-t border-navy/10 pt-4 text-[12px] text-ink-muted">
                     <span>{item.author}</span>
                     {item.date && <time>{item.date}</time>}
                   </div>

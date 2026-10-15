@@ -8,14 +8,14 @@ export default function About() {
           <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
             Institutional Purpose &middot; Delivery Philosophy
           </span>
-          <h2 className="mt-2 font-serif text-[32px] font-normal text-navy md:text-[42px]">
+          <h2 className="mt-2 text-[32px] font-normal text-navy md:text-[42px]">
             Bridging the divide between ambitious strategy and ground-level execution.
           </h2>
         </div>
 
         {/* Pull Quote Spotlight Banner */}
         <div className="relative mb-16 border-l-4 border-navy bg-[#f8f9fa] p-8 md:p-12">
-          <blockquote className="font-serif text-[22px] font-light italic leading-relaxed text-navy md:text-[28px] lg:text-[30px]">
+          <blockquote className="text-[22px] font-light italic leading-relaxed text-navy md:text-[28px] lg:text-[30px]">
             &ldquo;Unlike firms that focus solely on compliance or reporting,
             FSM ensures development investments generate tangible results and
             lasting impact.&rdquo;
@@ -30,7 +30,7 @@ export default function About() {
           
           {/* Card 1 */}
           <div className="flex flex-col border-t border-gray-200 pt-6">
-            <h3 className="mt-3 font-serif text-[20px] font-medium text-navy">
+            <h3 className="mt-3 text-[20px] font-medium text-navy">
               Implementation Acceleration
             </h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
@@ -44,7 +44,7 @@ export default function About() {
 
           {/* Card 2 */}
           <div className="flex flex-col border-t border-gray-200 pt-6">
-            <h3 className="mt-3 font-serif text-[20px] font-medium text-navy">
+            <h3 className="mt-3 text-[20px] font-medium text-navy">
               Multidisciplinary Bench
             </h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
@@ -59,7 +59,7 @@ export default function About() {
 
           {/* Card 3 */}
           <div className="flex flex-col border-t border-gray-200 pt-6">
-            <h3 className="mt-3 font-serif text-[20px] font-medium text-navy">
+            <h3 className="mt-3 text-[20px] font-medium text-navy">
               Measured by Real Impact
             </h3>
             <p className="mt-3 text-[15px] leading-relaxed text-gray-600">

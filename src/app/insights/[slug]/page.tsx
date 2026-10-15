@@ -72,7 +72,7 @@ export default async function InsightDetailPage({ params }: PageProps) {
           <header className="bg-navy px-4 pb-16 pt-32 text-white md:px-10 md:pb-20 md:pt-40">
             <div className="mx-auto max-w-3xl">
               <span className="text-[12px] font-semibold uppercase tracking-wider text-blue-bright">{item.category}</span>
-              <h1 className="mt-3 font-serif text-[30px] font-medium leading-tight md:text-[42px]">
+              <h1 className="mt-3 text-[30px] font-medium leading-tight md:text-[42px]">
                 {item.title}
               </h1>
               <p className="mt-4 max-w-[58ch] text-[16px] leading-relaxed text-white/75">{item.dek}</p>

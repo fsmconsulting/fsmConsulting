@@ -7,11 +7,11 @@ export default function Closing() {
       {/* Major Contained Institutional Surface (Design System §24) */}
       <div className="surface-card mx-auto max-w-7xl bg-navy p-10 text-white md:p-16 lg:p-20 shadow-xl">
         <div className="max-w-3xl">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+          <span className="text-[11px] uppercase tracking-[0.2em] text-blue-bright">
             Discuss an Assignment &middot; Executive Inquiries
           </span>
 
-          <h2 id="closing-cta-heading" className="mt-4 font-serif text-[32px] font-normal leading-[1.1] md:text-[48px]">
+          <h2 id="closing-cta-heading" className="mt-4 text-[32px] font-normal leading-[1.1] md:text-[48px]">
             Partner with Africa&rsquo;s development delivery specialists.
           </h2>
 
@@ -46,7 +46,7 @@ export default function Closing() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-white/15 pt-6 font-mono text-[11.5px] text-white/50">
+        <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-white/15 pt-6 text-[11.5px] text-white/50">
           <span>Headquarters: Abuja, Federal Capital Territory, Nigeria</span>
           <span>RC: 9616494 &middot; SCUML Regulated Entity</span>
         </div>

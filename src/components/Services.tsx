@@ -70,7 +70,7 @@ export default function Services() {
             <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-bright">
               Services &amp; Capabilities
             </p>
-            <h2 className="mt-2 font-serif text-[34px] font-normal text-white md:text-[44px]">
+            <h2 className="mt-2 text-[34px] font-normal text-white md:text-[44px]">
               What we deliver
             </h2>
           </div>
@@ -100,7 +100,7 @@ export default function Services() {
 
                 {/* Title */}
                 <h3
-                  className={`mt-5 font-serif font-medium leading-snug text-white ${
+                  className={`mt-5 font-medium leading-snug text-white ${
                     idx === 0 ? "text-[24px] md:text-[28px]" : "text-[21px]"
                   }`}
                 >

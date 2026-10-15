@@ -9,10 +9,10 @@ export default function HomeServices() {
         {/* Section Header */}
         <div className="mb-14 grid grid-cols-1 gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-end border-b border-navy/15 pb-10">
           <div>
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+            <span className="text-[11px] uppercase tracking-[0.2em] text-blue-bright">
               Services &middot; Practice Areas
             </span>
-            <h2 id="home-services-heading" className="mt-2 font-serif text-[32px] font-normal leading-tight text-navy md:text-[44px]">
+            <h2 id="home-services-heading" className="mt-2 text-[32px] font-normal leading-tight text-navy md:text-[44px]">
               What we deliver across the project lifecycle.
             </h2>
           </div>

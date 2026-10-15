@@ -121,10 +121,10 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
             />
           </div>
           <div className="flex flex-col leading-none">
-            <span className={`font-serif text-[19px] font-semibold tracking-tight ${brandCls}`}>
+            <span className={`text-[19px] font-semibold tracking-tight ${brandCls}`}>
               FSM Consulting
             </span>
-            <span className={`font-serif text-[17px] tracking-tight opacity-90 pl-[7.2ch] ${brandCls}`}>
+            <span className={`text-[17px] tracking-tight opacity-90 pl-[7.2ch] ${brandCls}`}>
               Limited
             </span>
           </div>
@@ -203,7 +203,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
               >
                 <div className="surface-card border border-navy/15 bg-navy p-6 shadow-2xl">
                   <div className="mb-4 flex items-center justify-between border-b border-white/10 pb-3">
-                    <span className="font-serif text-[16px] text-white">15 Development Sectors</span>
+                    <span className="text-[16px] text-white">15 Development Sectors</span>
                     <Link
                       href="/sectors"
                       onClick={() => setSectorsDropdownOpen(false)}
@@ -214,25 +214,25 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                   </div>
                   <div className="grid grid-cols-4 gap-4">
                     <div>
-                      <span className="mb-2 block text-[11px] font-mono uppercase tracking-wider text-white/50">
+                      <span className="mb-2 block text-[11px] uppercase tracking-wider text-white/50">
                         Governance &amp; Digital
                       </span>
                       <ul className="space-y-1.5">{governanceDigital.map(renderSectorDropdownItem)}</ul>
                     </div>
                     <div>
-                      <span className="mb-2 block text-[11px] font-mono uppercase tracking-wider text-white/50">
+                      <span className="mb-2 block text-[11px] uppercase tracking-wider text-white/50">
                         Economic &amp; Finance
                       </span>
                       <ul className="space-y-1.5">{economicFinance.map(renderSectorDropdownItem)}</ul>
                     </div>
                     <div>
-                      <span className="mb-2 block text-[11px] font-mono uppercase tracking-wider text-white/50">
+                      <span className="mb-2 block text-[11px] uppercase tracking-wider text-white/50">
                         Human Capital
                       </span>
                       <ul className="space-y-1.5">{humanCapital.map(renderSectorDropdownItem)}</ul>
                     </div>
                     <div>
-                      <span className="mb-2 block text-[11px] font-mono uppercase tracking-wider text-white/50">
+                      <span className="mb-2 block text-[11px] uppercase tracking-wider text-white/50">
                         Infrastructure &amp; Climate
                       </span>
                       <ul className="space-y-1.5">{infrastructureEnv.map(renderSectorDropdownItem)}</ul>
@@ -324,7 +324,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
 
             {searchQuery.trim() && (
               <div className="mt-4 border-t border-navy/10 pt-3">
-                <span className="text-[11px] font-mono uppercase tracking-wider text-ink-muted">
+                <span className="text-[11px] uppercase tracking-wider text-ink-muted">
                   Matching Sectors ({filteredSectors.length})
                 </span>
                 <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
@@ -338,7 +338,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                       }}
                       className="surface-card border border-navy/10 bg-white p-3 transition hover:border-navy"
                     >
-                      <span className="font-serif text-[13.5px] font-medium text-navy block">
+                      <span className="text-[13.5px] font-medium text-navy block">
                         {sector.title}
                       </span>
                       <span className="line-clamp-1 text-[11.5px] text-ink-muted">
@@ -370,7 +370,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                 height={36}
                 className="h-9 w-auto object-contain brightness-125"
               />
-              <span className="font-serif text-[18px] font-semibold tracking-tight text-white">
+              <span className="text-[18px] font-semibold tracking-tight text-white">
                 FSM Consulting
               </span>
             </Link>
@@ -391,7 +391,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
               <Link
                 href="/about"
                 onClick={() => setMobileMenuOpen(false)}
-                className={`font-serif text-[28px] font-medium leading-tight transition-colors ${
+                className={`text-[28px] font-medium leading-tight transition-colors ${
                   isActive("/about") ? "text-white" : "text-white/65 hover:text-white"
                 }`}
               >
@@ -400,7 +400,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
               <Link
                 href="/services"
                 onClick={() => setMobileMenuOpen(false)}
-                className={`font-serif text-[28px] font-medium leading-tight transition-colors ${
+                className={`text-[28px] font-medium leading-tight transition-colors ${
                   isActive("/services") ? "text-white" : "text-white/65 hover:text-white"
                 }`}
               >
@@ -412,7 +412,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                 <button
                   type="button"
                   onClick={() => setMobileSectorsOpen(!mobileSectorsOpen)}
-                  className="flex w-full items-center justify-between font-serif text-[28px] font-medium leading-tight text-white/65 hover:text-white cursor-pointer"
+                  className="flex w-full items-center justify-between text-[28px] font-medium leading-tight text-white/65 hover:text-white cursor-pointer"
                 >
                   <span>Sectors</span>
                   <svg
@@ -447,7 +447,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
                         onClick={() => setMobileMenuOpen(false)}
                         className="py-1.5 text-[14px] text-white/80 hover:text-white"
                       >
-                        <span className="font-mono text-[11px] text-blue-bright mr-2">{sector.num}</span>
+                        <span className="text-[11px] text-blue-bright mr-2">{sector.num}</span>
                         {sector.title}
                       </Link>
                     ))}
@@ -458,14 +458,14 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
               <Link
                 href="/#delivery-ecosystem"
                 onClick={() => setMobileMenuOpen(false)}
-                className="font-serif text-[28px] font-medium leading-tight text-white/65 hover:text-white transition-colors"
+                className="text-[28px] font-medium leading-tight text-white/65 hover:text-white transition-colors"
               >
                 Delivery Ecosystem
               </Link>
               <Link
                 href="/network"
                 onClick={() => setMobileMenuOpen(false)}
-                className={`font-serif text-[28px] font-medium leading-tight transition-colors ${
+                className={`text-[28px] font-medium leading-tight transition-colors ${
                   isActive("/network") ? "text-white" : "text-white/65 hover:text-white"
                 }`}
               >
@@ -475,7 +475,7 @@ export default function Nav({ transparent = false }: { transparent?: boolean }) 
 
             {/* Bottom Contact & Institutional Context */}
             <div className="mt-12 border-t border-white/10 pt-8">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
+              <p className="text-[11px] uppercase tracking-wider text-blue-bright">
                 Headquarters &middot; Regional Delivery
               </p>
               <p className="mt-2 text-[14px] text-white/80">Abuja, Federal Capital Territory, Nigeria</p>

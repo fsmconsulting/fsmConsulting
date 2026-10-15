@@ -27,10 +27,10 @@ export default function FeaturedInsightsSection({
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6 border-b border-navy/15 pb-8">
           <div>
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+            <span className="text-[11px] uppercase tracking-[0.2em] text-blue-bright">
               Editorial Insights &middot; Sector Perspectives
             </span>
-            <h2 id="insights-heading" className="mt-2 font-serif text-[30px] font-normal text-navy md:text-[40px]">
+            <h2 id="insights-heading" className="mt-2 text-[30px] font-normal text-navy md:text-[40px]">
               {heading}
             </h2>
           </div>
@@ -60,17 +60,17 @@ export default function FeaturedInsightsSection({
                 </div>
                 <div className="flex flex-1 flex-col justify-between p-8 md:p-10">
                   <div>
-                    <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
+                    <span className="text-[11px] uppercase tracking-wider text-blue-bright">
                       {featured.category}
                     </span>
-                    <h3 className="mt-3 font-serif text-[24px] font-medium leading-snug text-navy md:text-[30px]">
+                    <h3 className="mt-3 text-[24px] font-medium leading-snug text-navy md:text-[30px]">
                       {featured.title}
                     </h3>
                     <p className="mt-3.5 max-w-[54ch] text-[15px] leading-relaxed text-ink-muted">
                       {featured.dek}
                     </p>
                   </div>
-                  <div className="mt-8 flex items-center justify-between border-t border-navy/10 pt-4 font-mono text-[12px] text-ink-muted">
+                  <div className="mt-8 flex items-center justify-between border-t border-navy/10 pt-4 text-[12px] text-ink-muted">
                     <div className="flex items-center gap-3">
                       <span>{featured.author}</span>
                       {featured.date && (
@@ -99,12 +99,12 @@ export default function FeaturedInsightsSection({
                 >
                   <div>
                     <div className="flex items-center justify-between">
-                      <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
+                      <span className="text-[11px] uppercase tracking-wider text-blue-bright">
                         {item.category}
                       </span>
-                      <time className="font-mono text-[11px] text-ink-muted">{item.date}</time>
+                      <time className="text-[11px] text-ink-muted">{item.date}</time>
                     </div>
-                    <h3 className="mt-2.5 font-serif text-[18px] font-medium leading-snug text-navy md:text-[20px]">
+                    <h3 className="mt-2.5 text-[18px] font-medium leading-snug text-navy md:text-[20px]">
                       {item.title}
                     </h3>
                     <p className="mt-2 line-clamp-2 text-[13.5px] leading-relaxed text-ink-muted">
@@ -139,17 +139,17 @@ export default function FeaturedInsightsSection({
               </div>
               <div className="flex flex-1 flex-col justify-between p-8 md:p-12 md:col-span-6">
                 <div>
-                  <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
+                  <span className="text-[11px] uppercase tracking-wider text-blue-bright">
                     {featured.category}
                   </span>
-                  <h3 className="mt-3 font-serif text-[26px] font-medium leading-snug text-navy md:text-[34px]">
+                  <h3 className="mt-3 text-[26px] font-medium leading-snug text-navy md:text-[34px]">
                     {featured.title}
                   </h3>
                   <p className="mt-4 max-w-[54ch] text-[15.5px] leading-relaxed text-ink-muted">
                     {featured.dek}
                   </p>
                 </div>
-                <div className="mt-8 flex items-center justify-between border-t border-navy/10 pt-5 font-mono text-[12px] text-ink-muted">
+                <div className="mt-8 flex items-center justify-between border-t border-navy/10 pt-5 text-[12px] text-ink-muted">
                   <div className="flex items-center gap-3">
                     <span>{featured.author}</span>
                     {featured.date && (

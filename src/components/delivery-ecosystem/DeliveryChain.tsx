@@ -14,10 +14,10 @@ export default function DeliveryChain() {
     >
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-3xl">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+          <span className="text-[11px] uppercase tracking-[0.2em] text-blue-bright">
             Delivery Ecosystem &middot; Operational System
           </span>
-          <h2 id="delivery-chain-heading" className="mt-2 font-serif text-[30px] font-normal text-navy md:text-[40px]">
+          <h2 id="delivery-chain-heading" className="mt-2 text-[30px] font-normal text-navy md:text-[40px]">
             An operational system connecting requirement to results.
           </h2>
           <p className="mt-4 text-[16px] leading-relaxed text-ink-muted">

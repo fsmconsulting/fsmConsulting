@@ -24,7 +24,7 @@ export default function BentoStats() {
 
             <div className="col-span-2 md:col-span-2">
               <div className="bento-card bento-card--hover flex h-full min-h-[180px] items-center justify-center bg-navy px-8 py-12 md:min-h-[220px]">
-                <span className="font-serif text-[30px] italic text-white md:text-[38px]">
+                <span className="text-[30px] italic text-white md:text-[38px]">
                   FSM Consulting.
                 </span>
               </div>
@@ -55,7 +55,7 @@ function StatTile({
   return (
     <div className="bento-card bento-card--hover flex h-full min-h-[180px] flex-col justify-between bg-white px-7 py-7 md:min-h-[220px] md:px-8 md:py-8">
       <span
-        className={`font-serif font-medium text-navy ${
+        className={`font-medium text-navy ${
           small ? "text-[24px] md:text-[29px]" : "text-[38px] md:text-[46px]"
         }`}
       >

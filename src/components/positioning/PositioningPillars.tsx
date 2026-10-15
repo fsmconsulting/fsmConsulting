@@ -27,7 +27,7 @@ export default function PositioningPillars() {
           </span>
           <h2
             id="positioning-heading"
-            className="mt-4 font-serif text-[28px] font-medium leading-[1.18] text-navy md:text-[36px]"
+            className="mt-4 text-[28px] font-medium leading-[1.18] text-navy md:text-[36px]"
           >
             Global expertise where required, regional access where valuable,
             and local capability where delivery matters most.
@@ -46,10 +46,10 @@ export default function PositioningPillars() {
               className="group block border-b border-navy/12 py-7 outline-none md:py-8"
             >
               <div className="flex items-baseline gap-5 md:gap-7">
-                <span className="w-6 shrink-0 font-serif text-[14px] text-navy/30 transition-colors duration-500 group-hover:text-blue-accent group-focus-visible:text-blue-accent">
+                <span className="w-6 shrink-0 text-[14px] text-navy/30 transition-colors duration-500 group-hover:text-blue-accent group-focus-visible:text-blue-accent">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="flex-1 font-serif text-[22px] font-medium leading-snug text-navy md:text-[28px]">
+                <h3 className="flex-1 text-[22px] font-medium leading-snug text-navy md:text-[28px]">
                   {cap.title}
                 </h3>
                 <span

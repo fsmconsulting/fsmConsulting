@@ -19,7 +19,7 @@ export default function FounderSection({
   return (
     <section
       id={id}
-      aria-label="Leadership - Founder & CEO"
+      aria-label="Board Members - Founder & CEO"
       className="bg-white py-16 md:py-24 border-t border-navy/10"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10">
@@ -49,7 +49,7 @@ export default function FounderSection({
           {/* Bio Column (Desktop ~65%) */}
           <div className="md:col-span-8 lg:col-span-8 flex flex-col justify-center">
             {/* Name */}
-            <Heading className="font-serif text-[22px] md:text-[26px] font-semibold leading-snug text-navy">
+            <Heading className="text-[22px] md:text-[26px] font-semibold leading-snug text-navy">
               {founderData.name}
             </Heading>
 
@@ -80,7 +80,7 @@ export default function FounderSection({
             </div>
 
             {/* Blockquote */}
-            <blockquote className="space-y-3.5 text-[14.5px] md:text-[15.5px] leading-[1.7] text-ink/85 font-serif italic">
+            <blockquote className="space-y-3.5 text-[14.5px] md:text-[15.5px] leading-[1.7] text-ink/85 italic">
               {variant === "homepage" ? (
                 <>
                   <p>{founderData.quoteParagraphs[0]}</p>

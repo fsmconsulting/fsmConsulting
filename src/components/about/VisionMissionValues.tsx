@@ -8,7 +8,7 @@ export default function VisionMissionValues() {
           <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
             Strategic Foundation &middot; Institutional Identity
           </span>
-          <h2 className="mt-2 font-serif text-[32px] font-medium text-navy md:text-[42px]">
+          <h2 className="mt-2 text-[32px] font-medium text-navy md:text-[42px]">
             Vision &amp; Mission
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-[16px] text-ink/70">
@@ -23,10 +23,10 @@ export default function VisionMissionValues() {
           <div className="relative overflow-hidden rounded-[var(--radius-card)] border border-navy/15 bg-white p-8 md:p-10">
             <div className="absolute top-0 left-0 h-1.5 w-full bg-navy" />
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-navy/10 font-serif text-[18px] font-bold text-navy">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-navy/10 text-[18px] font-bold text-navy">
                 V
               </span>
-              <h3 className="font-serif text-[24px] font-medium text-navy md:text-[28px]">
+              <h3 className="text-[24px] font-medium text-navy md:text-[28px]">
                 Our Vision
               </h3>
             </div>
@@ -42,10 +42,10 @@ export default function VisionMissionValues() {
           <div className="relative overflow-hidden rounded-[var(--radius-card)] border border-navy/15 bg-white p-8 md:p-10">
             <div className="absolute top-0 left-0 h-1.5 w-full bg-navy" />
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-navy/10 font-serif text-[18px] font-bold text-navy">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-navy/10 text-[18px] font-bold text-navy">
                 M
               </span>
-              <h3 className="font-serif text-[24px] font-medium text-navy md:text-[28px]">
+              <h3 className="text-[24px] font-medium text-navy md:text-[28px]">
                 Our Mission
               </h3>
             </div>

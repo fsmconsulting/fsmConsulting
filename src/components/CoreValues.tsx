@@ -30,7 +30,7 @@ export default function CoreValues() {
     <section className="bg-sand-2 py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-[0.9fr_1.4fr] md:mb-14">
-          <h2 className="font-serif text-[28px] leading-tight text-navy md:text-[34px]">
+          <h2 className="text-[28px] leading-tight text-navy md:text-[34px]">
             Core values
           </h2>
           <p className="max-w-[54ch] pt-1.5 text-[16px] text-ink/70">
@@ -42,7 +42,7 @@ export default function CoreValues() {
         <div className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {values.map((value) => (
             <div key={value.title} className="border-t border-ink/15 pt-5">
-              <h3 className="mb-2 font-serif text-[19px] font-medium text-navy">
+              <h3 className="mb-2 text-[19px] font-medium text-navy">
                 {value.title}
               </h3>
               <p className="text-[14.5px] leading-relaxed text-ink/65">

@@ -19,10 +19,10 @@ export default function PracticeClusters() {
         {/* Section Header: 14 Practices */}
         <div className="flex flex-col justify-between gap-6 border-b border-navy/12 pb-10 md:flex-row md:items-end">
           <div className="max-w-3xl">
-            <span className="font-mono text-[11.5px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
+            <span className="text-[11.5px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Core Practice Catalog &middot; 14 Disciplines
             </span>
-            <h2 id="practices-heading" className="mt-2 font-serif text-[32px] font-medium leading-tight text-navy md:text-[42px]">
+            <h2 id="practices-heading" className="mt-2 text-[32px] font-medium leading-tight text-navy md:text-[42px]">
               Fourteen Specialized Practice Areas
             </h2>
             <p className="mt-3 text-[16px] leading-relaxed text-ink-muted">
@@ -88,10 +88,10 @@ export default function PracticeClusters() {
               className="group block border-b border-navy/12 py-7 outline-none md:py-8 transition-colors hover:bg-white/40"
             >
               <div className="flex items-baseline gap-5 md:gap-7">
-                <span className="w-6 shrink-0 font-serif text-[14px] text-navy/30 transition-colors duration-500 group-hover:text-blue-accent group-focus-visible:text-blue-accent">
+                <span className="w-6 shrink-0 text-[14px] text-navy/30 transition-colors duration-500 group-hover:text-blue-accent group-focus-visible:text-blue-accent">
                   {practice.num}
                 </span>
-                <h3 className="flex-1 font-serif text-[22px] font-medium leading-snug text-navy transition-colors duration-300 group-hover:text-blue-accent md:text-[28px]">
+                <h3 className="flex-1 text-[22px] font-medium leading-snug text-navy transition-colors duration-300 group-hover:text-blue-accent md:text-[28px]">
                   {practice.title}
                 </h3>
                 <span
@@ -116,10 +116,10 @@ export default function PracticeClusters() {
         {/* Section Header: 4 Delivery Capabilities */}
         <div className="mt-24 border-t border-navy/12 pt-16">
           <div className="max-w-3xl mb-10">
-            <span className="font-mono text-[11.5px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
+            <span className="text-[11.5px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Delivery Operating Levels &middot; 4 Capabilities
             </span>
-            <h2 className="mt-2 font-serif text-[30px] font-medium leading-tight text-navy md:text-[38px]">
+            <h2 className="mt-2 text-[30px] font-medium leading-tight text-navy md:text-[38px]">
               Four Integrated Capability Layers
             </h2>
             <p className="mt-3 text-[16px] leading-relaxed text-ink-muted">
@@ -136,10 +136,10 @@ export default function PracticeClusters() {
                 className="group block border-b border-navy/12 py-7 outline-none md:py-8 transition-colors hover:bg-white/40"
               >
                 <div className="flex items-baseline gap-5 md:gap-7">
-                  <span className="w-6 shrink-0 font-serif text-[14px] text-navy/30 transition-colors duration-500 group-hover:text-blue-accent group-focus-visible:text-blue-accent">
+                  <span className="w-6 shrink-0 text-[14px] text-navy/30 transition-colors duration-500 group-hover:text-blue-accent group-focus-visible:text-blue-accent">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="flex-1 font-serif text-[22px] font-medium leading-snug text-navy transition-colors duration-300 group-hover:text-blue-accent md:text-[28px]">
+                  <h3 className="flex-1 text-[22px] font-medium leading-snug text-navy transition-colors duration-300 group-hover:text-blue-accent md:text-[28px]">
                     {cap.title}
                   </h3>
                   <span

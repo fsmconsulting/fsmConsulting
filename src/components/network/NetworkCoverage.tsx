@@ -13,7 +13,7 @@ export default function NetworkCoverage() {
         <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-blue-bright">
           Regional Delivery Footprint
         </p>
-        <h2 className="mt-2 font-serif text-[26px] font-medium md:text-[32px]">
+        <h2 className="mt-2 text-[26px] font-medium md:text-[32px]">
           Built for cross-border delivery
         </h2>
 
@@ -24,7 +24,7 @@ export default function NetworkCoverage() {
               className="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
             >
               <div className="flex items-baseline gap-4">
-                <span className="font-serif text-[15px] text-blue-bright/80">{row.num}</span>
+                <span className="text-[15px] text-blue-bright/80">{row.num}</span>
                 <span className="text-[16px] font-medium">{row.region}</span>
               </div>
               <span className="text-[14px] text-white/65 sm:text-right">{row.places}</span>

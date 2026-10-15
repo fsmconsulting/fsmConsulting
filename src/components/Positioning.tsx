@@ -13,7 +13,7 @@ export default function Positioning() {
     <section className="bg-sand py-20 md:py-24">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 md:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div>
-          <h2 className="mb-5 font-serif text-[28px] leading-tight text-navy md:text-[34px]">
+          <h2 className="mb-5 text-[28px] leading-tight text-navy md:text-[34px]">
             Development Effectiveness Specialists
           </h2>
           <p className="max-w-[56ch] text-[15.5px] leading-relaxed text-ink/75">

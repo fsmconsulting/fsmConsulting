@@ -60,7 +60,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
         <header className="border-b border-[#D3DBE3] bg-[#F3F6F9] px-6 pt-12 pb-14 md:px-12 md:pt-16 md:pb-20">
           <div className="mx-auto max-w-4xl">
             {/* Breadcrumb Navigation */}
-            <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 font-mono text-[12px] text-[#566B7D]">
+            <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-[12px] text-[#566B7D]">
               <Link href="/" className="hover:text-[#051C2C] transition-colors">
                 Home
               </Link>
@@ -73,12 +73,12 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
             </nav>
 
             {/* Content-Type Eyebrow */}
-            <span className="font-mono text-[11.5px] uppercase tracking-[0.16em] font-bold text-[#2251FF] block">
+            <span className="text-[11.5px] uppercase tracking-[0.16em] font-bold text-[#2251FF] block">
               Evidence &middot; Verified Delivery Case
             </span>
 
             {/* Main Headline */}
-            <h1 className="mt-3 font-serif text-[34px] sm:text-[44px] md:text-[52px] font-semibold text-[#051C2C] leading-[1.08] tracking-tight">
+            <h1 className="mt-3 text-[34px] sm:text-[44px] md:text-[52px] font-semibold text-[#051C2C] leading-[1.08] tracking-tight">
               {item.title}
             </h1>
 
@@ -90,7 +90,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
             {/* Engagement Metadata Strip */}
             <div className="mt-10 grid grid-cols-2 gap-6 border-t border-[#D3DBE3] pt-6 sm:grid-cols-4">
               <div>
-                <span className="block font-mono text-[10.5px] uppercase tracking-wider text-[#566B7D]">
+                <span className="block text-[10.5px] uppercase tracking-wider text-[#566B7D]">
                   Client &middot; Mandate
                 </span>
                 <span className="mt-1 block text-[13.5px] font-semibold text-[#051C2C]">
@@ -99,7 +99,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
               </div>
 
               <div>
-                <span className="block font-mono text-[10.5px] uppercase tracking-wider text-[#566B7D]">
+                <span className="block text-[10.5px] uppercase tracking-wider text-[#566B7D]">
                   Focus Discipline
                 </span>
                 <span className="mt-1 block text-[13.5px] font-semibold text-[#051C2C]">
@@ -108,7 +108,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
               </div>
 
               <div>
-                <span className="block font-mono text-[10.5px] uppercase tracking-wider text-[#566B7D]">
+                <span className="block text-[10.5px] uppercase tracking-wider text-[#566B7D]">
                   Geographic Scope
                 </span>
                 <span className="mt-1 block text-[13.5px] font-semibold text-[#051C2C]">
@@ -117,7 +117,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
               </div>
 
               <div>
-                <span className="block font-mono text-[10.5px] uppercase tracking-wider text-[#566B7D]">
+                <span className="block text-[10.5px] uppercase tracking-wider text-[#566B7D]">
                   Assurance Benchmark
                 </span>
                 <span className="mt-1 block text-[13.5px] font-semibold text-[#051C2C]">
@@ -133,10 +133,10 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
           <div className="mx-auto max-w-4xl">
             {/* Section 1: Strategic Context */}
             <section className="mb-14">
-              <span className="font-mono text-[11px] uppercase tracking-[0.14em] font-bold text-[#566B7D] block mb-2">
+              <span className="text-[11px] uppercase tracking-[0.14em] font-bold text-[#566B7D] block mb-2">
                 Strategic Context
               </span>
-              <h2 className="font-serif text-[26px] sm:text-[30px] font-semibold text-[#051C2C] leading-snug">
+              <h2 className="text-[26px] sm:text-[30px] font-semibold text-[#051C2C] leading-snug">
                 Operational Framework &amp; Mandate Baseline
               </h2>
               <div className="mt-5 space-y-4 text-[16px] leading-relaxed text-[#2B4052]">
@@ -148,10 +148,10 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
 
             {/* Section 2: The Delivery Challenge */}
             <section className="mb-14 border-t border-[#D3DBE3] pt-12">
-              <span className="font-mono text-[11px] uppercase tracking-[0.14em] font-bold text-[#566B7D] block mb-2">
+              <span className="text-[11px] uppercase tracking-[0.14em] font-bold text-[#566B7D] block mb-2">
                 Problem Diagnosis
               </span>
-              <h2 className="font-serif text-[26px] sm:text-[30px] font-semibold text-[#051C2C] leading-snug">
+              <h2 className="text-[26px] sm:text-[30px] font-semibold text-[#051C2C] leading-snug">
                 {item.article.challengeTitle}
               </h2>
               <div className="mt-5 space-y-4 text-[16px] leading-relaxed text-[#2B4052]">
@@ -163,10 +163,10 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
 
             {/* Section 3: Technical Disciplines Deployed */}
             <section className="mb-14 border-t border-[#D3DBE3] pt-12">
-              <span className="font-mono text-[11px] uppercase tracking-[0.14em] font-bold text-[#566B7D] block mb-2">
+              <span className="text-[11px] uppercase tracking-[0.14em] font-bold text-[#566B7D] block mb-2">
                 Implementation Architecture
               </span>
-              <h2 className="font-serif text-[26px] sm:text-[30px] font-semibold text-[#051C2C] leading-snug">
+              <h2 className="text-[26px] sm:text-[30px] font-semibold text-[#051C2C] leading-snug">
                 {item.article.disciplinesTitle}
               </h2>
               <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -175,7 +175,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
                     key={idx}
                     className="rounded-[2px] border border-[#D3DBE3] bg-[#F3F6F9] p-5 shadow-2xs"
                   >
-                    <h3 className="font-serif text-[18px] font-semibold text-[#051C2C]">
+                    <h3 className="text-[18px] font-semibold text-[#051C2C]">
                       {disc.name}
                     </h3>
                     <p className="mt-2 text-[14px] leading-relaxed text-[#2B4052]">
@@ -188,15 +188,15 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
 
             {/* Section 4: Verified Outcomes (Signature Callout Block) */}
             <section className="mb-14 border-t border-[#D3DBE3] pt-12">
-              <span className="font-mono text-[11px] uppercase tracking-[0.14em] font-bold text-[#2251FF] block mb-2">
+              <span className="text-[11px] uppercase tracking-[0.14em] font-bold text-[#2251FF] block mb-2">
                 Verified Evidence
               </span>
-              <h2 className="font-serif text-[26px] sm:text-[30px] font-semibold text-[#051C2C] leading-snug">
+              <h2 className="text-[26px] sm:text-[30px] font-semibold text-[#051C2C] leading-snug">
                 {item.article.outcomesTitle}
               </h2>
 
               <div className="mt-6 rounded-r-[2px] border-l-4 border-[#2251FF] bg-[#F3F6F9] p-6 sm:p-8">
-                <span className="block font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-[#2251FF]">
+                <span className="block text-[11px] font-bold uppercase tracking-[0.12em] text-[#2251FF]">
                   Third-Party Benchmark Verifications
                 </span>
                 <ul className="mt-4 space-y-3">
@@ -218,10 +218,10 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
 
             {/* Section 5: Key Delivery Takeaways */}
             <section className="mb-14 border-t border-[#D3DBE3] pt-12">
-              <span className="font-mono text-[11px] uppercase tracking-[0.14em] font-bold text-[#566B7D] block mb-2">
+              <span className="text-[11px] uppercase tracking-[0.14em] font-bold text-[#566B7D] block mb-2">
                 Delivery Insights
               </span>
-              <h2 className="font-serif text-[26px] sm:text-[30px] font-semibold text-[#051C2C] leading-snug">
+              <h2 className="text-[26px] sm:text-[30px] font-semibold text-[#051C2C] leading-snug">
                 {item.article.takeawaysTitle}
               </h2>
               <div className="mt-6 space-y-4">
@@ -241,14 +241,14 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
 
             {/* Core Practice Areas Tag Strip */}
             <div className="border-t border-[#D3DBE3] pt-8 pb-4">
-              <span className="block font-mono text-[11px] font-bold uppercase tracking-[0.1em] text-[#566B7D] mb-3">
+              <span className="block text-[11px] font-bold uppercase tracking-[0.1em] text-[#566B7D] mb-3">
                 Disciplines &amp; Thematic Focus
               </span>
               <div className="flex flex-wrap gap-2">
                 {item.relevance.map((tag, idx) => (
                   <span
                     key={idx}
-                    className="rounded-[2px] border border-[#D3DBE3] bg-[#F3F6F9] px-3 py-1 font-mono text-[12px] font-medium text-[#2B4052]"
+                    className="rounded-[2px] border border-[#D3DBE3] bg-[#F3F6F9] px-3 py-1 text-[12px] font-medium text-[#2B4052]"
                   >
                     {tag}
                   </span>
@@ -260,7 +260,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
             <div className="mt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 border-t border-[#D3DBE3] pt-8">
               <Link
                 href="/#case-studies"
-                className="inline-flex items-center gap-2 font-mono text-[13px] font-semibold text-[#051C2C] hover:text-[#2251FF] transition-colors"
+                className="inline-flex items-center gap-2 text-[13px] font-semibold text-[#051C2C] hover:text-[#2251FF] transition-colors"
               >
                 <span>&larr;</span>
                 <span>Back to Case Studies</span>
@@ -268,7 +268,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-[2px] bg-[#2251FF] px-6 py-3 font-sans text-[14px] font-semibold text-white hover:bg-[#1A3FD6] transition-colors"
+                className="inline-flex items-center justify-center rounded-[2px] bg-[#2251FF] px-6 py-3 text-[14px] font-semibold text-white hover:bg-[#1A3FD6] transition-colors"
               >
                 Schedule a Consultation
               </Link>

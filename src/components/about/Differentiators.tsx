@@ -60,7 +60,7 @@ export default function Differentiators() {
           <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
             Competitive Edge &middot; Why Partner With Us
           </span>
-          <h2 className="mt-2 font-serif text-[32px] font-medium text-navy md:text-[42px]">
+          <h2 className="mt-2 text-[32px] font-medium text-navy md:text-[42px]">
             What Makes FSM Consulting Different
           </h2>
           <p className="mt-3 text-[16px] text-ink/70">
@@ -75,10 +75,10 @@ export default function Differentiators() {
               className="py-5 transition-colors duration-150 sm:py-6 md:py-7"
             >
               <div className="grid grid-cols-[36px_1fr] gap-x-4 gap-y-2 md:grid-cols-[60px_320px_1fr] md:items-baseline md:gap-8 lg:grid-cols-[70px_360px_1fr] lg:gap-10">
-                <span className="font-mono text-[13px] font-semibold text-blue-accent md:text-[15px]">
+                <span className="text-[13px] font-semibold text-blue-accent md:text-[15px]">
                   {diff.num}
                 </span>
-                <h3 className="font-serif text-[17px] font-medium leading-snug text-navy md:text-[20px] md:col-auto">
+                <h3 className="text-[17px] font-medium leading-snug text-navy md:text-[20px] md:col-auto">
                   {diff.title}
                 </h3>
                 <p className="col-start-2 text-[14px] leading-relaxed text-ink/75 md:col-auto md:text-[15px]">

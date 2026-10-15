@@ -37,7 +37,7 @@ export default function Hero() {
   };
 
   const mobileLinkCls = (href: string) =>
-    `font-serif text-[28px] font-medium leading-tight transition-colors ${
+    `text-[28px] font-medium leading-tight transition-colors ${
       isActive(href) ? "text-white" : "text-white/65 hover:text-white"
     }`;
 
@@ -76,13 +76,13 @@ export default function Hero() {
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2.5 rounded-full bg-navy/40 backdrop-blur-sm border border-white/10 px-3.5 py-1 w-fit">
               <span className="h-1.5 w-1.5 rounded-full bg-blue-bright shadow-[0_0_8px_#2F5FA8]" />
-              <span className="font-mono text-[11px] sm:text-[12px] uppercase tracking-[0.22em] text-blue-200">
+              <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.22em] text-blue-200">
                 Global Expertise &middot; Regional Access &middot; Local Capability &middot; Measurable Results
               </span>
             </div>
 
             {/* Large Editorial Headline */}
-            <h1 className="mt-5 font-serif text-[44px] sm:text-[58px] md:text-[72px] lg:text-[84px] xl:text-[90px] font-normal leading-[1.02] tracking-tight text-white max-w-[17ch] drop-shadow-[0_2px_16px_rgba(0,0,0,0.35)]">
+            <h1 className="mt-5 text-[44px] sm:text-[58px] md:text-[72px] lg:text-[84px] xl:text-[90px] font-normal leading-[1.02] tracking-tight text-white max-w-[17ch] drop-shadow-[0_2px_16px_rgba(0,0,0,0.35)]">
               FSM Consulting Limited
             </h1>
 
@@ -112,7 +112,7 @@ export default function Hero() {
           </div>
 
           {/* Bottom Trust Markers */}
-          <div className="mt-16 md:mt-24 border-t border-white/20 pt-6 pb-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 font-mono text-[11.5px] md:text-[12px] text-white/75">
+          <div className="mt-16 md:mt-24 border-t border-white/20 pt-6 pb-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-[11.5px] md:text-[12px] text-white/75">
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
               <span>HQ: Abuja, Nigeria</span>
               <span className="hidden sm:inline text-white/40">&bull;</span>
@@ -182,7 +182,7 @@ export default function Hero() {
           {/* Eyebrow tag */}
           <div className="mb-4 flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-[#2F5FA8]" />
-            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#2F5FA8]">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-[#2F5FA8]">
               Development Delivery &middot; Implementation Acceleration
             </span>
           </div>
@@ -216,7 +216,7 @@ export default function Hero() {
           </div>
 
           {/* Trust markers strip */}
-          <div className="mt-8 pt-6 border-t border-gray-100 flex flex-wrap gap-x-5 gap-y-1.5 font-mono text-[10.5px] text-gray-400 uppercase tracking-wider">
+          <div className="mt-8 pt-6 border-t border-gray-100 flex flex-wrap gap-x-5 gap-y-1.5 text-[10.5px] text-gray-400 uppercase tracking-wider">
             <span>HQ: Abuja, Nigeria</span>
             <span>36 States + FCT</span>
             <span>Pan-African Reach</span>
@@ -243,7 +243,7 @@ export default function Hero() {
                 height={36}
                 className="h-9 w-auto object-contain brightness-125"
               />
-              <span className="font-serif text-[18px] font-semibold tracking-tight text-white">
+              <span className="text-[18px] font-semibold tracking-tight text-white">
                 FSM Consulting
               </span>
             </Link>
@@ -273,7 +273,7 @@ export default function Hero() {
                 <button
                   type="button"
                   onClick={() => setMobileSectorsOpen(!mobileSectorsOpen)}
-                  className="flex w-full items-center justify-between font-serif text-[28px] font-medium leading-tight text-white/65 hover:text-white cursor-pointer"
+                  className="flex w-full items-center justify-between text-[28px] font-medium leading-tight text-white/65 hover:text-white cursor-pointer"
                 >
                   <span>Sectors</span>
                   <svg
@@ -308,7 +308,7 @@ export default function Hero() {
                         onClick={() => setMobileMenuOpen(false)}
                         className="py-1.5 text-[14px] text-white/80 hover:text-white"
                       >
-                        <span className="font-mono text-[11px] text-blue-bright mr-2">{sector.num}</span>
+                        <span className="text-[11px] text-blue-bright mr-2">{sector.num}</span>
                         {sector.title}
                       </Link>
                     ))}
@@ -326,7 +326,7 @@ export default function Hero() {
 
             {/* Contact & institutional footer */}
             <div className="mt-12 border-t border-white/10 pt-8">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
+              <p className="text-[11px] uppercase tracking-wider text-blue-bright">
                 Headquarters &middot; Regional Delivery
               </p>
               <p className="mt-2 text-[14px] text-white/80">{contactInfo.address}</p>
@@ -344,7 +344,7 @@ export default function Hero() {
                   {officeLocations.map((loc) => (
                     <span
                       key={loc.name}
-                      className="rounded-full border border-white/15 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-white/50"
+                      className="rounded-full border border-white/15 px-2.5 py-0.5 text-[10px] uppercase tracking-wider text-white/50"
                     >
                       {loc.name}
                     </span>

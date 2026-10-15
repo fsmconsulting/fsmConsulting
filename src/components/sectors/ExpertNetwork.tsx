@@ -47,7 +47,7 @@ export default function ExpertNetwork() {
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-bright">
               Human Capital &middot; Multidisciplinary Bench
             </span>
-            <h2 className="mt-2 font-serif text-[32px] font-medium leading-tight text-white md:text-[42px]">
+            <h2 className="mt-2 text-[32px] font-medium leading-tight text-white md:text-[42px]">
               Our Technical Expert Network
             </h2>
             <p className="mt-6 text-[16px] leading-relaxed text-ivory/80">
@@ -59,16 +59,16 @@ export default function ExpertNetwork() {
           </div>
 
           <div className="rounded-[var(--radius-card-sm)] border border-white/15 bg-navy-2 p-8">
-            <span className="font-mono text-xs font-semibold uppercase tracking-wider text-blue-bright">
+            <span className="text-xs font-semibold uppercase tracking-wider text-blue-bright">
               Mobilization Capability
             </span>
-            <h3 className="mt-2 font-serif text-[22px] font-medium text-white">
+            <h3 className="mt-2 text-[22px] font-medium text-white">
               Tailored Team Formation
             </h3>
             <p className="mt-3 text-[14.5px] leading-relaxed text-ivory/75">
               We don&rsquo;t rely on one-size-fits-all consultants. For every assignment, FSM curates an optimal combination of international technical leaders, regional sector specialists, and local field practitioners with native institutional and linguistic familiarity.
             </p>
-            <div className="mt-6 border-t border-white/10 pt-4 font-mono text-xs text-blue-bright">
+            <div className="mt-6 border-t border-white/10 pt-4 text-xs text-blue-bright">
               Fully Vetted Roster &bull; Surge Capacity &bull; 36 States + Regional Hubs
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function ExpertNetwork() {
               className="flex flex-col justify-between rounded-[var(--radius-card-sm)] border border-white/10 bg-navy-3/70 p-6 transition-all duration-200 hover:border-white/30 hover:bg-navy-3"
             >
               <div>
-                <h4 className="font-serif text-[18px] font-medium text-white">
+                <h4 className="text-[18px] font-medium text-white">
                   {disc.role}
                 </h4>
                 <div className="my-3 h-0.5 w-8 bg-white/40" />

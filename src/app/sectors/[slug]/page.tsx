@@ -81,7 +81,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
   
 
   
-              <h1 className="mt-3 font-serif text-[34px] font-normal leading-[1.1] text-white md:text-[50px]">
+              <h1 className="mt-3 text-[34px] font-normal leading-[1.1] text-white md:text-[50px]">
                 {sector.title}
               </h1>
               <p className="mt-5 max-w-[56ch] text-[16px] leading-relaxed text-white/80">
@@ -110,10 +110,10 @@ export default async function SectorDetailPage({ params }: PageProps) {
               <div className="mt-12 grid grid-cols-2 gap-4 border-t border-white/15 pt-6 sm:grid-cols-3 sm:max-w-xl">
                 {sector.stats.map((stat, idx) => (
                   <div key={idx}>
-                    <span className="block font-serif text-[24px] font-normal text-white md:text-[28px]">
+                    <span className="block text-[24px] font-normal text-white md:text-[28px]">
                       {stat.value}
                     </span>
-                    <span className="mt-1 block font-mono text-[11px] uppercase text-white/60">
+                    <span className="mt-1 block text-[11px] uppercase text-white/60">
                       {stat.label}
                     </span>
                   </div>
@@ -128,10 +128,10 @@ export default async function SectorDetailPage({ params }: PageProps) {
           <div className="mx-auto max-w-7xl">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16 items-start">
               <div className="lg:col-span-6">
-                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-blue-bright">
                   Sector Context &middot; Delivery Reality
                 </span>
-                <h2 className="mt-2 font-serif text-[28px] font-normal text-navy md:text-[36px]">
+                <h2 className="mt-2 text-[28px] font-normal text-navy md:text-[36px]">
                   Navigating the implementation reality in Africa
                 </h2>
                 <p className="mt-5 text-[15.5px] leading-relaxed text-ink-muted">
@@ -140,10 +140,10 @@ export default async function SectorDetailPage({ params }: PageProps) {
               </div>
 
               <div className="surface-card bg-canvas p-8 md:p-10 lg:col-span-6">
-                <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
+                <span className="text-[11px] uppercase tracking-wider text-blue-bright">
                   Strategic Imperative
                 </span>
-                <h3 className="mt-2 font-serif text-[22px] font-medium text-navy">
+                <h3 className="mt-2 text-[22px] font-medium text-navy">
                   {sector.shortTitle || sector.title}
                 </h3>
                 <p className="mt-4 text-[14.5px] leading-relaxed text-ink-muted">
@@ -153,7 +153,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
                   {sector.targetClients.map((client, idx) => (
                     <span
                       key={idx}
-                      className="surface-card-sm bg-white px-3 py-1 font-mono text-[11px] text-navy"
+                      className="surface-card-sm bg-white px-3 py-1 text-[11px] text-navy"
                     >
                       {client}
                     </span>
@@ -168,10 +168,10 @@ export default async function SectorDetailPage({ params }: PageProps) {
         <section className="bg-canvas px-6 py-20 md:px-10 md:py-28">
           <div className="mx-auto max-w-7xl">
             <div className="mb-12">
-              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+              <span className="text-[11px] uppercase tracking-[0.2em] text-blue-bright">
                 Practice Scope
               </span>
-              <h2 className="mt-2 font-serif text-[28px] font-normal text-navy md:text-[38px]">
+              <h2 className="mt-2 text-[28px] font-normal text-navy md:text-[38px]">
                 Core focus areas
               </h2>
               <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-ink-muted">
@@ -186,7 +186,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
                   className="surface-card bg-white p-8 md:p-9 flex flex-col justify-between"
                 >
                   <div>
-                    <h3 className="font-serif text-[20px] font-medium text-navy">
+                    <h3 className="text-[20px] font-medium text-navy">
                       {area.title}
                     </h3>
                     <p className="mt-3 text-[14px] leading-relaxed text-ink-muted">
@@ -213,10 +213,10 @@ export default async function SectorDetailPage({ params }: PageProps) {
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16 items-start">
               {/* Interventions list (7 cols) */}
               <div className="lg:col-span-7">
-                <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-blue-bright">
                   Execution Capabilities
                 </span>
-                <h2 className="mt-2 font-serif text-[26px] font-normal text-navy md:text-[32px]">
+                <h2 className="mt-2 text-[26px] font-normal text-navy md:text-[32px]">
                   Specialized interventions
                 </h2>
                 <div className="mt-6 divide-y divide-navy/10">
@@ -232,14 +232,14 @@ export default async function SectorDetailPage({ params }: PageProps) {
               {/* Sidebar: Deployed Experts & Aligned Services (5 cols) */}
               <div className="space-y-6 lg:col-span-5">
                 <div className="surface-card bg-canvas p-7">
-                  <h3 className="font-serif text-[18px] font-medium text-navy">
+                  <h3 className="text-[18px] font-medium text-navy">
                     Deployed technical specialists
                   </h3>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {sector.expertRoles.map((role, rIdx) => (
                       <span
                         key={rIdx}
-                        className="surface-card-sm bg-white px-3 py-1 font-mono text-[11.5px] text-navy"
+                        className="surface-card-sm bg-white px-3 py-1 text-[11.5px] text-navy"
                       >
                         {role}
                       </span>
@@ -249,7 +249,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
 
                 <div className="surface-card bg-canvas p-7">
                   <div className="flex items-center justify-between pb-3">
-                    <h3 className="font-serif text-[18px] font-medium text-navy">
+                    <h3 className="text-[18px] font-medium text-navy">
                       Aligned practice areas
                     </h3>
                     <Link href="/services" className="text-[12px] font-medium text-blue-bright hover:text-navy">
@@ -276,7 +276,7 @@ export default async function SectorDetailPage({ params }: PageProps) {
         {relatedSectorItems.length > 0 && (
           <section className="bg-canvas px-6 py-16 md:px-10 md:py-20">
             <div className="mx-auto max-w-7xl">
-              <h2 className="font-serif text-[24px] font-normal text-navy md:text-[28px]">
+              <h2 className="text-[24px] font-normal text-navy md:text-[28px]">
                 Related development sectors
               </h2>
               <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -287,10 +287,10 @@ export default async function SectorDetailPage({ params }: PageProps) {
                     className="surface-card group flex flex-col justify-between bg-white p-6 transition-colors"
                   >
                     <div>
-                      <span className="font-mono text-[11px] uppercase tracking-wider text-blue-bright">
+                      <span className="text-[11px] uppercase tracking-wider text-blue-bright">
                         {rel.categoryLabel}
                       </span>
-                      <h3 className="mt-2 font-serif text-[17px] font-medium text-navy group-hover:text-blue-bright transition-colors">
+                      <h3 className="mt-2 text-[17px] font-medium text-navy group-hover:text-blue-bright transition-colors">
                         {rel.title}
                       </h3>
                       <p className="mt-2 line-clamp-2 text-[13px] text-ink-muted">{rel.tagline}</p>
@@ -314,13 +314,13 @@ export default async function SectorDetailPage({ params }: PageProps) {
                 &larr;
               </span>
               <div>
-                <span className="block font-mono text-[10px] uppercase tracking-wider text-ink-muted">Previous</span>
+                <span className="block text-[10px] uppercase tracking-wider text-ink-muted">Previous</span>
                 <span className="text-[13.5px] font-medium text-navy">{prevSector.title}</span>
               </div>
             </Link>
             <Link href={`/sectors/${nextSector.id}`} className="group flex items-center gap-3 text-right">
               <div>
-                <span className="block font-mono text-[10px] uppercase tracking-wider text-ink-muted">Next</span>
+                <span className="block text-[10px] uppercase tracking-wider text-ink-muted">Next</span>
                 <span className="text-[13.5px] font-medium text-navy">{nextSector.title}</span>
               </div>
               <span className="flex h-9 w-9 items-center justify-center rounded-full border border-navy/15 text-navy transition-colors group-hover:bg-navy group-hover:text-white">

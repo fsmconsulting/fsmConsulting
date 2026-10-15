@@ -9,7 +9,7 @@ export default function DeliveryModelSection() {
       aria-labelledby="delivery-model-heading"
     >
       <div className="mx-auto max-w-6xl">
-        <h2 id="delivery-model-heading" className="font-serif text-[30px] font-medium text-navy md:text-[40px]">
+        <h2 id="delivery-model-heading" className="text-[30px] font-medium text-navy md:text-[40px]">
           Services overview
         </h2>
 

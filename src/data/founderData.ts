@@ -14,7 +14,7 @@ export interface FounderData {
 export const founderData: FounderData = {
   name: "Fatima Sadiq Mohammed",
   title: "Founder, Principal Shareholder & Chief Executive Officer",
-  eyebrow: "Leadership",
+  eyebrow: "Board Members",
   bio: "Fatima Sadiq Mohammed is the Founder, Principal Shareholder and Chief Executive Officer of FSM Consulting Limited. A development and governance professional with experience across social protection, development policy, institutional strengthening, disaster risk management and development programme delivery, she leads FSM's strategic direction and multidisciplinary delivery model. Her focus is on bringing the right expertise, systems and partnerships together to turn development priorities and investments into measurable results.",
   quoteEyebrow: "From the Founder & CEO",
   quoteParagraphs: [

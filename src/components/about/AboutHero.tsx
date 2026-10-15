@@ -4,14 +4,14 @@ export default function AboutHero() {
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         {/* Top Eyebrow Tag */}
         <div className="flex flex-wrap items-center gap-3">
-          <span className="font-mono text-[11px] text-white/50">
+          <span className="text-[11px] text-white/50">
             Abuja, Nigeria &bull; Pan-African Delivery
           </span>
         </div>
 
         {/* Main Heading */}
         <div className="mt-6 max-w-4xl">
-          <h1 className="font-serif text-[36px] font-normal leading-[1.12] text-white md:text-[52px] lg:text-[58px]">
+          <h1 className="text-[36px] font-normal leading-[1.12] text-white md:text-[52px] lg:text-[58px]">
             Africa&rsquo;s Development Delivery, Implementation Acceleration &amp; Project Assurance Platform.
           </h1>
           <div className="my-6 h-0.5 w-20 bg-white/30" />
@@ -23,7 +23,7 @@ export default function AboutHero() {
         {/* Quick Highlights Strip */}
         <div className="mt-12 grid grid-cols-2 gap-4 border-t border-white/15 pt-8 sm:grid-cols-2 md:grid-cols-4 md:gap-6">
           <div className="border-l-2 border-white/30 pl-4">
-            <span className="block font-serif text-[24px] font-semibold text-white md:text-[28px]">
+            <span className="block text-[24px] font-semibold text-white md:text-[28px]">
               36 States + FCT
             </span>
             <span className="text-[13px] text-white/70">
@@ -32,7 +32,7 @@ export default function AboutHero() {
           </div>
 
           <div className="border-l-2 border-white/30 pl-4">
-            <span className="block font-serif text-[24px] font-semibold text-white md:text-[28px]">
+            <span className="block text-[24px] font-semibold text-white md:text-[28px]">
               Pan-African
             </span>
             <span className="text-[13px] text-white/70">
@@ -41,7 +41,7 @@ export default function AboutHero() {
           </div>
 
           <div className="border-l-2 border-white/30 pl-4">
-            <span className="block font-serif text-[24px] font-semibold text-white md:text-[28px]">
+            <span className="block text-[24px] font-semibold text-white md:text-[28px]">
               Multidisciplinary
             </span>
             <span className="text-[13px] text-white/70">
@@ -50,7 +50,7 @@ export default function AboutHero() {
           </div>
 
           <div className="border-l-2 border-white/30 pl-4">
-            <span className="block font-serif text-[24px] font-semibold text-white md:text-[28px]">
+            <span className="block text-[24px] font-semibold text-white md:text-[28px]">
               Outcome-Driven
             </span>
             <span className="text-[13px] text-white/70">

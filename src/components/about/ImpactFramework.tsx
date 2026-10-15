@@ -19,7 +19,7 @@ export default function ImpactFramework() {
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Our Positioning &middot; Development Effectiveness
             </span>
-            <h2 id="impact-heading" className="mt-3 font-serif text-[32px] font-medium leading-tight text-navy md:text-[42px]">
+            <h2 id="impact-heading" className="mt-3 text-[32px] font-medium leading-tight text-navy md:text-[42px]">
               Specialists in generating tangible results, not just compliance.
             </h2>
             <p className="mt-6 text-[16px] leading-relaxed text-ink/80">
@@ -30,7 +30,7 @@ export default function ImpactFramework() {
             </p>
 
             <div className="mt-8 rounded-[var(--radius-card-sm)] border border-navy/10 bg-white p-5">
-              <span className="text-xs font-mono font-semibold uppercase tracking-wider text-blue-accent">
+              <span className="text-xs font-semibold uppercase tracking-wider text-blue-accent">
                 The FSM Advantage
               </span>
               <p className="mt-1 text-[14.5px] text-ink/90">
@@ -40,7 +40,7 @@ export default function ImpactFramework() {
           </div>
 
           <div className="rounded-[var(--radius-card)] border border-navy/10 bg-white p-8">
-            <h3 className="font-serif text-[20px] font-medium text-navy">
+            <h3 className="text-[20px] font-medium text-navy">
               Integrated Capabilities Matrix
             </h3>
             <p className="mt-1 text-xs text-ink-muted">

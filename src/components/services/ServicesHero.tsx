@@ -5,7 +5,7 @@ export default function ServicesHero() {
 
         {/* Main Heading */}
         <div className="mt-6 max-w-4xl">
-          <h1 className="font-serif text-[36px] font-normal leading-[1.12] text-white md:text-[52px] lg:text-[58px]">
+          <h1 className="text-[36px] font-normal leading-[1.12] text-white md:text-[52px] lg:text-[58px]">
             Integrated Technical, Fiduciary &amp; Delivery Capabilities.
           </h1>
           <div className="my-6 h-0.5 w-20 bg-white/30" />
@@ -17,7 +17,7 @@ export default function ServicesHero() {
         {/* Quick Highlights Strip */}
         <div className="mt-12 grid grid-cols-2 gap-4 border-t border-white/15 pt-8 sm:grid-cols-2 md:grid-cols-4 md:gap-6">
           <div className="border-l-2 border-white/30 pl-4">
-            <span className="block font-serif text-[24px] font-semibold text-white md:text-[28px]">
+            <span className="block text-[24px] font-semibold text-white md:text-[28px]">
               14 Practices
             </span>
             <span className="text-[13px] text-white/70">
@@ -26,7 +26,7 @@ export default function ServicesHero() {
           </div>
 
           <div className="border-l-2 border-white/30 pl-4">
-            <span className="block font-serif text-[24px] font-semibold text-white md:text-[28px]">
+            <span className="block text-[24px] font-semibold text-white md:text-[28px]">
               Independent
             </span>
             <span className="text-[13px] text-white/70">
@@ -35,7 +35,7 @@ export default function ServicesHero() {
           </div>
 
           <div className="border-l-2 border-white/30 pl-4">
-            <span className="block font-serif text-[24px] font-semibold text-white md:text-[28px]">
+            <span className="block text-[24px] font-semibold text-white md:text-[28px]">
               Pan-African
             </span>
             <span className="text-[13px] text-white/70">
@@ -44,7 +44,7 @@ export default function ServicesHero() {
           </div>
 
           <div className="border-l-2 border-white/30 pl-4">
-            <span className="block font-serif text-[24px] font-semibold text-white md:text-[28px]">
+            <span className="block text-[24px] font-semibold text-white md:text-[28px]">
               Outcome-Led
             </span>
             <span className="text-[13px] text-white/70">

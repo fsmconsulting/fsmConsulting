@@ -15,10 +15,10 @@ export default function NetworkSection() {
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-14">
           {/* Editorial Narrative Column (7 Cols) */}
           <div className="lg:col-span-7">
-            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+            <span className="text-[11px] uppercase tracking-[0.2em] text-blue-bright">
               Geographic Scope &middot; Regional Delivery Bench
             </span>
-            <h2 id="network-heading" className="mt-2 font-serif text-[32px] font-normal leading-tight text-navy md:text-[42px]">
+            <h2 id="network-heading" className="mt-2 text-[32px] font-normal leading-tight text-navy md:text-[42px]">
               Built for sovereign and cross-border delivery.
             </h2>
 
@@ -51,14 +51,14 @@ export default function NetworkSection() {
             <div className="surface-card-sm border border-navy/10 bg-white p-5 sm:p-6 shadow-sm">
               <div className="flex items-center justify-between border-b border-navy/10 pb-3.5">
                 <div>
-                  <span className="block font-mono text-[10px] uppercase tracking-wider text-blue-bright">
+                  <span className="block text-[10px] uppercase tracking-wider text-blue-bright">
                     Operational Presence
                   </span>
-                  <h3 className="mt-0.5 font-serif text-[17px] font-medium text-navy">
+                  <h3 className="mt-0.5 text-[17px] font-medium text-navy">
                     Regional Delivery Footprint
                   </h3>
                 </div>
-                <span className="font-mono text-[11px] text-ink-muted">Active</span>
+                <span className="text-[11px] text-ink-muted">Active</span>
               </div>
 
               <div className="divide-y divide-navy/5">
@@ -72,14 +72,14 @@ export default function NetworkSection() {
                         {row.places}
                       </p>
                     </div>
-                    <span className="shrink-0 font-mono text-[11px] text-ink-muted text-right whitespace-nowrap">
+                    <span className="shrink-0 text-[11px] text-ink-muted text-right whitespace-nowrap">
                       {row.tag}
                     </span>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-3.5 border-t border-navy/10 pt-3 text-[11px] leading-relaxed text-ink-muted font-sans">
+              <div className="mt-3.5 border-t border-navy/10 pt-3 text-[11px] leading-relaxed text-ink-muted">
                 Coordinating multi-tier delivery teams with localized compliance &amp; field ground-truthing.
               </div>
             </div>

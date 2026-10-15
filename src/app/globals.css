@@ -27,17 +27,26 @@
 
   /* Typography */
   --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
-  --font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+/*
+  Emit font variables to :root so var(--font-sans) / var(--font-serif)
+  work in plain CSS rules (Tailwind v4 @theme inline doesn't emit to :root).
+*/
+:root {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Source Serif 4", ui-serif, Georgia, serif;
+}
+
 body {
   background-color: #ffffff;
   color: var(--color-ink);
-  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

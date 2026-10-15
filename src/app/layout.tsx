@@ -4,9 +4,10 @@ import "@fontsource/source-serif-4/400-italic.css";
 import "@fontsource/source-serif-4/500.css";
 import "@fontsource/source-serif-4/600.css";
 import "@fontsource/source-serif-4/700.css";
-import "@fontsource/ibm-plex-sans/400.css";
-import "@fontsource/ibm-plex-sans/500.css";
-import "@fontsource/ibm-plex-sans/600.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
 import "./globals.css";
 import OrganizationJsonLd from "@/components/seo/OrganizationJsonLd";
 
@@ -69,7 +70,7 @@ export default function RootLayout({
           <style>{`.reveal-up{opacity:1!important;transform:none!important}`}</style>
         </noscript>
       </head>
-      <body className="min-h-full bg-white text-ink font-sans antialiased">
+      <body className="min-h-full bg-white text-ink antialiased">
         <OrganizationJsonLd />
         {children}
       </body>

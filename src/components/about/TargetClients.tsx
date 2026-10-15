@@ -71,7 +71,7 @@ export default function TargetClients() {
           <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
             Institutional Ecosystem &middot; Who We Serve
           </span>
-          <h2 className="mt-2 font-serif text-[32px] font-medium text-navy md:text-[42px]">
+          <h2 className="mt-2 text-[32px] font-medium text-navy md:text-[42px]">
             Target Client Segments &amp; Sector Expertise
           </h2>
           <p className="mt-3 text-[16px] text-ink/70">
@@ -87,10 +87,10 @@ export default function TargetClients() {
               className="rounded-[var(--radius-card-sm)] border border-navy/10 bg-white p-7 transition-all duration-200 hover:border-navy hover:shadow-xs"
             >
               <div className="border-b border-navy/10 pb-3">
-                <span className="font-mono text-xs font-semibold text-blue-accent">
+                <span className="text-xs font-semibold text-blue-accent">
                   TARGET CATEGORY
                 </span>
-                <h3 className="mt-1 font-serif text-[18.5px] font-medium text-navy">
+                <h3 className="mt-1 text-[18.5px] font-medium text-navy">
                   {segment.category}
                 </h3>
               </div>
@@ -108,10 +108,10 @@ export default function TargetClients() {
 
         {/* Priority Sectors Pill Grid */}
         <div className="mt-16 rounded-[var(--radius-card)] border border-navy/10 bg-white p-8 md:p-10">
-          <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
+          <span className="text-[12px] font-semibold uppercase tracking-wider text-blue-accent">
             Multidisciplinary Roster
           </span>
-          <h3 className="mt-1 font-serif text-[22px] font-medium text-navy">
+          <h3 className="mt-1 text-[22px] font-medium text-navy">
             Core Sectoral Coverage
           </h3>
           <p className="mt-2 max-w-2xl text-[14.5px] text-ink/70">

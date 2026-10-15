@@ -60,7 +60,7 @@ export default function DeliveryModel() {
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Operating Architecture &middot; Geographic Reach
             </span>
-            <h2 className="mt-3 font-sans text-[32px] font-bold leading-tight text-navy md:text-[42px]">
+            <h2 className="mt-3 text-[32px] font-bold leading-tight text-navy md:text-[42px]">
               Built for seamless cross-border delivery across Africa.
             </h2>
             <p className="mt-6 text-[16px] leading-relaxed text-ink/80">
@@ -72,16 +72,16 @@ export default function DeliveryModel() {
           </div>
 
           <div className="rounded-[var(--radius-card)] border border-navy/10 bg-sand p-8">
-            <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
+            <span className="text-[12px] font-semibold uppercase tracking-wider text-blue-accent">
               The FSM Mantra
             </span>
-            <h3 className="mt-2 font-sans text-[24px] font-bold text-navy">
+            <h3 className="mt-2 text-[24px] font-bold text-navy">
               Global Expertise. Regional Access. Local Capability.
             </h3>
             <p className="mt-4 text-[14.5px] leading-relaxed text-ink/75">
               We remove avoidable operational barriers so that technical experts can concentrate fully on delivering technical excellence where it matters most: at the frontline of development.
             </p>
-            <div className="mt-6 border-t border-navy/10 pt-4 font-mono text-xs text-ink/60">
+            <div className="mt-6 border-t border-navy/10 pt-4 text-xs text-ink/60">
               Coverage: 36 Nigerian States + FCT &bull; West, Central &amp; East Africa
             </div>
           </div>
@@ -90,10 +90,10 @@ export default function DeliveryModel() {
         {/* 4 Delivery Channels */}
         <div className="mt-20">
           <div className="border-b border-navy/15 pb-4">
-            <span className="text-[12px] font-mono font-semibold uppercase tracking-wider text-blue-accent">
+            <span className="text-[12px] font-semibold uppercase tracking-wider text-blue-accent">
               Four Channels of Access
             </span>
-            <h3 className="mt-1 font-sans text-[24px] font-bold text-navy md:text-[30px]">
+            <h3 className="mt-1 text-[24px] font-bold text-navy md:text-[30px]">
               Complementary Delivery Mechanisms
             </h3>
           </div>
@@ -108,7 +108,7 @@ export default function DeliveryModel() {
                   <span className="inline-block rounded-full bg-navy/5 px-3 py-1 text-[11px] font-medium text-navy">
                     {chan.tag}
                   </span>
-                  <h4 className="mt-3 font-sans text-[18px] font-semibold text-navy">
+                  <h4 className="mt-3 text-[18px] font-semibold text-navy">
                     {chan.title}
                   </h4>
                   <p className="mt-2 text-[13.5px] leading-relaxed text-ink/70">
@@ -126,7 +126,7 @@ export default function DeliveryModel() {
             <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-bright sm:text-[12px]">
               End-to-End Pipeline
             </span>
-            <h3 className="mt-2 font-sans text-[22px] font-bold text-white sm:text-[26px] md:text-[34px]">
+            <h3 className="mt-2 text-[22px] font-bold text-white sm:text-[26px] md:text-[34px]">
               The FSM Cross-Border Delivery Model
             </h3>
             <p className="mx-auto mt-2 max-w-2xl text-[13px] text-white/70 sm:text-[14.5px]">
@@ -142,12 +142,12 @@ export default function DeliveryModel() {
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-[10px] font-bold text-white/90 sm:text-xs">
+                    <span className="text-[10px] font-bold text-white/90 sm:text-xs">
                       STAGE {stage.step}
                     </span>
                     <span className="text-[11px] text-white/30 sm:text-sm">&rarr;</span>
                   </div>
-                  <h4 className="mt-2 font-sans text-[13px] font-semibold leading-snug text-white sm:mt-3 sm:text-[16.5px]">
+                  <h4 className="mt-2 text-[13px] font-semibold leading-snug text-white sm:mt-3 sm:text-[16.5px]">
                     {stage.title}
                   </h4>
                   <p className="mt-1 text-[11px] leading-snug text-white/70 sm:text-[13px] sm:leading-normal">
@@ -165,7 +165,7 @@ export default function DeliveryModel() {
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Operational Infrastructure
             </span>
-            <h3 className="mt-2 font-sans text-[26px] font-bold text-navy md:text-[32px]">
+            <h3 className="mt-2 text-[26px] font-bold text-navy md:text-[32px]">
               We don&rsquo;t just mobilize expertise. We mobilize the systems needed to deliver.
             </h3>
             <p className="mt-4 text-[15px] leading-relaxed text-ink/75">
@@ -177,7 +177,7 @@ export default function DeliveryModel() {
           </div>
 
           <div className="rounded-[var(--radius-card-sm)] border border-navy/10 bg-white p-6 shadow-xs">
-            <span className="font-mono text-xs font-semibold uppercase tracking-wider text-blue-accent">
+            <span className="text-xs font-semibold uppercase tracking-wider text-blue-accent">
               Comprehensive Field Support
             </span>
             <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">

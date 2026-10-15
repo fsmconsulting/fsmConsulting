@@ -27,7 +27,7 @@ export default function ValueAdvantage() {
   return (
     <section className="bg-white px-6 py-14 md:px-10 md:py-16" aria-labelledby="value-advantage-heading">
       <div className="mx-auto max-w-6xl">
-        <h2 id="value-advantage-heading" className="font-serif text-[22px] font-medium text-navy md:text-[26px]">
+        <h2 id="value-advantage-heading" className="text-[22px] font-medium text-navy md:text-[26px]">
           Our value, your advantage
         </h2>
 

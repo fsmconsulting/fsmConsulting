@@ -4,6 +4,7 @@ import { practicesData } from "@/data/practicesData";
 import { capabilities } from "@/data/capabilitiesData";
 import { caseStudiesData } from "@/data/caseStudiesData";
 import { insights } from "@/data/insightsData";
+import { boardMembersData } from "@/data/boardMembersData";
 
 const BASE_URL = "https://fsmconsulting.org";
 
@@ -102,6 +103,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // Board Members
+  const boardMemberRoutes: MetadataRoute.Sitemap = boardMembersData.map((member) => ({
+    url: `${BASE_URL}/about/board-members/${member.id}`,
+    lastModified: lastMod,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
   return [
     ...staticRoutes,
     ...practiceRoutes,
@@ -109,5 +118,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...capabilityRoutes,
     ...caseStudyRoutes,
     ...insightRoutes,
+    ...boardMemberRoutes,
   ];
 }

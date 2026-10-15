@@ -22,10 +22,10 @@ export default function FunderLogoStrip() {
     >
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 flex flex-col items-center justify-between gap-3 text-center md:flex-row md:items-baseline md:text-left">
-          <p className="max-w-xl font-mono text-[11px] uppercase tracking-[0.16em] text-ink-muted">
+          <p className="max-w-xl text-[11px] uppercase tracking-[0.16em] text-ink-muted">
             Supporting projects financed across major multilateral, bilateral, and sovereign development frameworks:
           </p>
-          <span className="hidden font-mono text-[11px] text-ink-muted/70 md:inline">
+          <span className="hidden text-[11px] text-ink-muted/70 md:inline">
             Advisory &middot; Assurance &middot; Verification
           </span>
         </div>

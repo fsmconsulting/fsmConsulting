@@ -16,10 +16,10 @@ export default function ImpactProcess() {
       <div className="surface-card mx-auto max-w-7xl bg-navy p-6 sm:p-10 md:p-14 lg:p-16 text-white shadow-xl">
         <div className="mb-8 md:mb-12 grid grid-cols-1 gap-4 md:gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-end border-b border-white/15 pb-6 md:pb-8">
           <div>
-            <span className="font-mono text-[10.5px] md:text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+            <span className="text-[10.5px] md:text-[11px] uppercase tracking-[0.2em] text-blue-bright">
               Proprietary Methodology &middot; Full Project Cycle
             </span>
-            <h2 id="impact360-heading" className="mt-2 font-serif text-[24px] sm:text-[30px] font-normal leading-tight md:text-[42px]">
+            <h2 id="impact360-heading" className="mt-2 text-[24px] sm:text-[30px] font-normal leading-tight md:text-[42px]">
               FSM Impact 360&trade; Delivery Framework
             </h2>
           </div>
@@ -55,13 +55,13 @@ export default function ImpactProcess() {
               >
                 <div className="flex items-baseline justify-between">
                   <span
-                    className={`font-serif text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] leading-none transition-colors duration-300 ${
+                    className={`text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] leading-none transition-colors duration-300 ${
                       isActive ? "text-blue-bright" : "text-white/20 group-hover:text-white/45"
                     }`}
                   >
                     {step.letter}
                   </span>
-                  <span className="font-mono text-[10px] sm:text-[10.5px] md:text-[11px] text-white/40">
+                  <span className="text-[10px] sm:text-[10.5px] md:text-[11px] text-white/40">
                     0{i + 1}
                   </span>
                 </div>
@@ -87,7 +87,7 @@ export default function ImpactProcess() {
 
         {/* Active Detail Display */}
         <div className="mt-6 flex flex-col md:flex-row items-start gap-2 md:gap-6 pt-4 md:mt-8 md:pt-4">
-          <span className="font-mono text-[10.5px] md:text-xs uppercase tracking-wider text-blue-bright shrink-0 md:pt-1">
+          <span className="text-[10.5px] md:text-xs uppercase tracking-wider text-blue-bright shrink-0 md:pt-1">
             Stage 0{active + 1} Focus:
           </span>
           <p className="max-w-3xl text-[13px] sm:text-[14.5px] md:text-[16.5px] leading-relaxed text-white/90">

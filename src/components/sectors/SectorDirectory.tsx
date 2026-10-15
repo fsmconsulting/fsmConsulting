@@ -21,7 +21,7 @@ export default function SectorDirectory() {
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Sectoral Catalog &middot; 15 Industry Verticals
             </span>
-            <h2 className="mt-2 font-serif text-[32px] font-medium text-navy md:text-[42px]">
+            <h2 className="mt-2 text-[32px] font-medium text-navy md:text-[42px]">
               Sector Verticals &amp; Focus Areas
             </h2>
             <p className="mt-3 text-[16px] text-ink/75">
@@ -66,12 +66,12 @@ export default function SectorDirectory() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <span className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-mono font-bold ${
+                      <span className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold ${
                         isSelected ? "bg-navy text-white" : "bg-navy/10 text-navy"
                       }`}>
                         {sec.num}
                       </span>
-                      <h3 className="font-serif text-[17px] font-medium text-navy">
+                      <h3 className="text-[17px] font-medium text-navy">
                         {sec.title}
                       </h3>
                     </div>
@@ -105,7 +105,7 @@ export default function SectorDirectory() {
 
 
 
-                <h3 className="mt-1 font-serif text-[26px] font-medium text-navy md:text-[30px]">
+                <h3 className="mt-1 text-[26px] font-medium text-navy md:text-[30px]">
                   {activeSector.title}
                 </h3>
               </div>
@@ -132,7 +132,7 @@ export default function SectorDirectory() {
             <div className="mt-6 grid grid-cols-3 gap-3 rounded-[var(--radius-card-sm)] border border-navy/10 bg-[#fcfdfe] p-4 text-center">
               {activeSector.stats.map((stat, sIdx) => (
                 <div key={sIdx} className="flex flex-col">
-                  <span className="font-serif text-[20px] font-bold text-navy">{stat.value}</span>
+                  <span className="text-[20px] font-bold text-navy">{stat.value}</span>
                   <span className="text-[11px] font-medium text-gray-600">{stat.label}</span>
                 </div>
               ))}
@@ -140,7 +140,7 @@ export default function SectorDirectory() {
 
             {/* Key Focus Areas */}
             <div className="mt-6 rounded-[var(--radius-card-sm)] border border-navy/5 bg-sand p-5">
-              <h4 className="font-mono text-xs font-semibold uppercase tracking-wider text-navy">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-navy">
                 Key Strategic Focus Areas:
               </h4>
               <ul className="mt-3 space-y-2">
@@ -158,7 +158,7 @@ export default function SectorDirectory() {
 
             {/* FSM Specific Interventions */}
             <div className="mt-6">
-              <h4 className="font-mono text-xs font-semibold uppercase tracking-wider text-blue-accent">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-blue-accent">
                 Representative FSM Interventions &amp; Methodologies:
               </h4>
               <ul className="mt-3 space-y-2">
@@ -174,7 +174,7 @@ export default function SectorDirectory() {
             {/* Target Clients & Dedicated Page Link */}
             <div className="mt-8 flex flex-col gap-4 border-t border-navy/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <span className="block font-mono text-[11px] font-semibold uppercase tracking-wider text-gray-500">
+                <span className="block text-[11px] font-semibold uppercase tracking-wider text-gray-500">
                   Target Clients
                 </span>
                 <span className="text-xs text-navy/80">

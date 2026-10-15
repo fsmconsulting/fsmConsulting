@@ -38,10 +38,10 @@ export default function KeyFigures() {
     <section className="bg-canvas px-6 py-16 md:px-10 md:py-24" aria-labelledby="key-figures-heading">
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 max-w-xl">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-blue-bright">
+          <span className="text-[11px] uppercase tracking-[0.2em] text-blue-bright">
             Platform Scale &middot; Verified Presence
           </span>
-          <h2 id="key-figures-heading" className="mt-2 font-serif text-[26px] font-normal text-navy md:text-[34px]">
+          <h2 id="key-figures-heading" className="mt-2 text-[26px] font-normal text-navy md:text-[34px]">
             Grounded in verified institutional capability.
           </h2>
         </div>
@@ -66,7 +66,7 @@ export default function KeyFigures() {
                 }`}
               >
                 <div>
-                  <p className="flex flex-wrap items-baseline gap-1.5 font-serif leading-none text-navy sm:gap-2">
+                  <p className="flex flex-wrap items-baseline gap-1.5 leading-none text-navy sm:gap-2">
                     <span
                       className={
                         f.value === "Pan-African"
@@ -77,7 +77,7 @@ export default function KeyFigures() {
                       {f.value}
                     </span>
                     {f.unit && (
-                      <span className="font-sans text-[13px] font-medium text-blue-bright sm:text-[16px] md:text-[19px]">
+                      <span className="text-[13px] font-medium text-blue-bright sm:text-[16px] md:text-[19px]">
                         {f.unit}
                       </span>
                     )}

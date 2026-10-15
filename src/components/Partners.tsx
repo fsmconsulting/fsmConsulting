@@ -16,10 +16,10 @@ export default function Partners() {
         <div className="flex flex-col items-center justify-between gap-8 lg:flex-row">
           
           <div className="text-center lg:text-left">
-            <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-accent">
               Financing & Institutional Alignment
             </span>
-            <p className="mt-1 font-serif text-[18px] text-navy">
+            <p className="mt-1 text-[18px] text-navy">
               Supporting projects financed by
             </p>
           </div>
@@ -31,7 +31,7 @@ export default function Partners() {
                 className="group flex items-center gap-3 transition-colors hover:text-navy"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-blue-accent/60 group-hover:bg-blue-accent" />
-                <span className="font-serif text-[15px] font-medium tracking-tight text-gray-700 group-hover:text-navy">
+                <span className="text-[15px] font-medium tracking-tight text-gray-700 group-hover:text-navy">
                   {p}
                 </span>
               </div>

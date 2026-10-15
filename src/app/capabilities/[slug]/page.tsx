@@ -65,7 +65,7 @@ export default async function CapabilityDetailPage({
         <header className="border-b border-[#D3DBE3] bg-[#F3F6F9] px-6 pt-12 pb-14 md:px-12 md:pt-16 md:pb-20">
           <div className="mx-auto max-w-4xl">
             {/* Breadcrumb Navigation */}
-            <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 font-mono text-[12px] text-[#566B7D]">
+            <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-[12px] text-[#566B7D]">
               <Link href="/" className="hover:text-[#051C2C] transition-colors">
                 Home
               </Link>
@@ -78,12 +78,12 @@ export default async function CapabilityDetailPage({
             </nav>
 
             {/* Content-Type Eyebrow */}
-            <span className="font-mono text-[11.5px] uppercase tracking-[0.16em] font-bold text-[#2251FF] block">
+            <span className="text-[11.5px] uppercase tracking-[0.16em] font-bold text-[#2251FF] block">
               Delivery Capability &middot; Operating Dimension
             </span>
 
             {/* Main Headline */}
-            <h1 className="mt-3 font-serif text-[34px] sm:text-[44px] md:text-[52px] font-semibold text-[#051C2C] leading-[1.08] tracking-tight">
+            <h1 className="mt-3 text-[34px] sm:text-[44px] md:text-[52px] font-semibold text-[#051C2C] leading-[1.08] tracking-tight">
               {cap.title}
             </h1>
 
@@ -95,7 +95,7 @@ export default async function CapabilityDetailPage({
             {/* Metadata Strip */}
             <div className="mt-10 grid grid-cols-2 gap-6 border-t border-[#D3DBE3] pt-6 sm:grid-cols-3">
               <div>
-                <span className="block font-mono text-[10.5px] uppercase tracking-wider text-[#566B7D]">
+                <span className="block text-[10.5px] uppercase tracking-wider text-[#566B7D]">
                   Operational Tier
                 </span>
                 <span className="mt-1 block text-[13.5px] font-semibold text-[#051C2C]">
@@ -104,7 +104,7 @@ export default async function CapabilityDetailPage({
               </div>
 
               <div>
-                <span className="block font-mono text-[10.5px] uppercase tracking-wider text-[#566B7D]">
+                <span className="block text-[10.5px] uppercase tracking-wider text-[#566B7D]">
                   Model Integration
                 </span>
                 <span className="mt-1 block text-[13.5px] font-semibold text-[#051C2C]">
@@ -113,7 +113,7 @@ export default async function CapabilityDetailPage({
               </div>
 
               <div>
-                <span className="block font-mono text-[10.5px] uppercase tracking-wider text-[#566B7D]">
+                <span className="block text-[10.5px] uppercase tracking-wider text-[#566B7D]">
                   Implementation Standard
                 </span>
                 <span className="mt-1 block text-[13.5px] font-semibold text-[#051C2C]">
@@ -129,10 +129,10 @@ export default async function CapabilityDetailPage({
           <div className="mx-auto max-w-4xl">
             {/* Detailed Narrative Section */}
             <section className="mb-14">
-              <span className="font-mono text-[11px] uppercase tracking-[0.14em] font-bold text-[#566B7D] block mb-2">
+              <span className="text-[11px] uppercase tracking-[0.14em] font-bold text-[#566B7D] block mb-2">
                 Operational Dimension
               </span>
-              <h2 className="font-serif text-[26px] sm:text-[30px] font-semibold text-[#051C2C] leading-snug">
+              <h2 className="text-[26px] sm:text-[30px] font-semibold text-[#051C2C] leading-snug">
                 Strategic Rationale &amp; Ground Execution
               </h2>
               <div className="mt-6 space-y-5 text-[16.5px] leading-relaxed text-[#2B4052]">
@@ -146,7 +146,7 @@ export default async function CapabilityDetailPage({
             <section className="mb-14 border-t border-[#D3DBE3] pt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
               {cap.relatedServices.length > 0 && (
                 <div className="rounded-[2px] border border-[#D3DBE3] bg-[#F3F6F9] p-6">
-                  <span className="block font-mono text-[11px] font-bold uppercase tracking-[0.1em] text-[#566B7D] mb-3">
+                  <span className="block text-[11px] font-bold uppercase tracking-[0.1em] text-[#566B7D] mb-3">
                     Connected Practice Disciplines
                   </span>
                   <ul className="space-y-2.5">
@@ -162,7 +162,7 @@ export default async function CapabilityDetailPage({
 
               {cap.relatedSectors.length > 0 && (
                 <div className="rounded-[2px] border border-[#D3DBE3] bg-[#F3F6F9] p-6">
-                  <span className="block font-mono text-[11px] font-bold uppercase tracking-[0.1em] text-[#566B7D] mb-3">
+                  <span className="block text-[11px] font-bold uppercase tracking-[0.1em] text-[#566B7D] mb-3">
                     Relevant Sector Verticals
                   </span>
                   <ul className="space-y-2.5">
@@ -179,10 +179,10 @@ export default async function CapabilityDetailPage({
 
             {/* Other Integrated Capabilities */}
             <section className="border-t border-[#D3DBE3] pt-12">
-              <span className="font-mono text-[11px] font-bold uppercase tracking-[0.1em] text-[#566B7D] block mb-2">
+              <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#566B7D] block mb-2">
                 Integrated Delivery Model
               </span>
-              <h2 className="font-serif text-[24px] sm:text-[28px] font-semibold text-[#051C2C] leading-snug mb-8">
+              <h2 className="text-[24px] sm:text-[28px] font-semibold text-[#051C2C] leading-snug mb-8">
                 Explore Companion Delivery Capabilities
               </h2>
               <div className="border-t border-[#D3DBE3]">
@@ -193,10 +193,10 @@ export default async function CapabilityDetailPage({
                     className="group block border-b border-[#D3DBE3] py-6 transition-colors hover:bg-[#F3F6F9]/60"
                   >
                     <div className="flex items-baseline justify-between gap-4">
-                      <h3 className="font-serif text-[20px] font-medium text-[#051C2C] group-hover:text-[#2251FF] transition-colors">
+                      <h3 className="text-[20px] font-medium text-[#051C2C] group-hover:text-[#2251FF] transition-colors">
                         {other.title}
                       </h3>
-                      <span className="font-mono text-[14px] text-[#566B7D] group-hover:text-[#2251FF] group-hover:translate-x-1 transition-all">
+                      <span className="text-[14px] text-[#566B7D] group-hover:text-[#2251FF] group-hover:translate-x-1 transition-all">
                         &rarr;
                       </span>
                     </div>
@@ -212,7 +212,7 @@ export default async function CapabilityDetailPage({
             <div className="mt-14 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 border-t border-[#D3DBE3] pt-8">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 font-mono text-[13px] font-semibold text-[#051C2C] hover:text-[#2251FF] transition-colors"
+                className="inline-flex items-center gap-2 text-[13px] font-semibold text-[#051C2C] hover:text-[#2251FF] transition-colors"
               >
                 <span>&larr;</span>
                 <span>Back to Services &amp; Capabilities</span>
@@ -220,7 +220,7 @@ export default async function CapabilityDetailPage({
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-[2px] bg-[#2251FF] px-6 py-3 font-sans text-[14px] font-semibold text-white hover:bg-[#1A3FD6] transition-colors"
+                className="inline-flex items-center justify-center rounded-[2px] bg-[#2251FF] px-6 py-3 text-[14px] font-semibold text-white hover:bg-[#1A3FD6] transition-colors"
               >
                 Schedule a Consultation
               </Link>
